@@ -1,0 +1,77 @@
+3) given any two distinct numbers, there is a real number in between t hem
+a) given any two distinct numbers a and b, there is a real number c such that c is between a and b
+b) for any two numbers a b, tere exist c such that c is between a and b
+
+4) gigven any rela number, there is a real number that is greater
+a) given any real number r, there is a number s such that s is greater than r
+b) for any real number r, there exists number s such that s > r
+
+5) the reciprocal of any positive rela number is potiive
+a) given any positive rela number r, the reciprocal of r is also positive
+b) for any real number r, if r is positive, then its reciprocal is also positive
+c) if a number r is positive, then its reciprocal is positive
+
+6) the cube root of any negative real unmber is negative
+a) given any negative real number s, the cube root of s is negative
+b)for any rela number s, if s is negative, then its cube root is also negative
+c) if a real number s is negative, then its cube root is also negative
+
+7) rewrite the following statmeents less formally without using variables. determine as best as you can wheter the satements are true or false
+a) there are real numbers u and v with the property that u + v < u - v
+or There's exists a numbers u and v with the property that u  + v is less than u - v
+3 + 5 < 3 - 5 = 8 < -2 = false
+-3 + -1 < -3 - (-1) = -4 < -2 = true
+the statement is therefore true
+
+b) theres a real number x such that x square < x
+or There exists a real number x where its square is less than x
+4 x 4 < 4 = 16 < 4 = false
+-2 x -2 < -2 = 4 < -2 = false
+the statement is false
+
+c) for every positive integer n, n suqared is greater or equal than n
+or for all positive integer n, n square square is greater or euql than n
+1 x 1 >= 1 = true
+2 x 2 >= 2 = true
+333 x 333 >= 333 = true
+the statement is true
+
+d) for all real numbers a and b, the sum of absolute values |a and b| is less than or equal to absolute value of a plus absolute value of b
+| 1 + 2 | <= |1| + |2| = |3| <= |3| = true
+| -1 + 2 | <= |1| + |2| = |1| <= 3 = true
+the statement is true
+
+
+8. for every object J, if J is a square then J has four sides.
+a. all squares of has four sides
+b. every square has four sides
+c. if an object is a square, then it has four sides
+d. if J is a square, then J has four sides
+e. for every square j, j has four sides
+
+9. for every equation E, if E is quadratic, then E has at most two real solutions
+a) all quadratic equations has at most two real solutions
+b)every quadratis equation has at most two real solutions
+c)if an equation is quadratic, then it has at most two real solutions
+d)if E is a quadratic equation, then E has at most two real solutions
+e) for every quadratic equation e, e has at most two real solutios
+
+10. every nonzero real number has a reciprocal
+a) all nonzeor rela numbers have reciprocals
+b) for every nonzero rela number r, there is a reciprocal for r
+c) for every nonzeor real number r, there is a real number s such that s is a reciprocal of r
+
+11. every positive number has a positive square root
+a) all positive numbers have positie square root
+b) for every positive number e, there is a positive square root r for e
+c) for every positive number e, there is a positive number r such that r  is positive
+
+12. there is a real number whose product with every number leaves the number unchanged
+a. some number rela number n has the property that its product with every number leaves that number unchanged
+b. there is a real number r such that the product of r and every number leaves that number unchanged
+c. there is a real numebr r with the propert that for every real number s, r multiplied by s equals s
+
+13. there is a real number whose product with every real number equals zero
+a) some real number has the property that its product with every real number equals zero
+b) there is a real number a such that the product of a and every real number n equals zero
+c) there is a real number a with the property that for every real number b, a times b equals zero
