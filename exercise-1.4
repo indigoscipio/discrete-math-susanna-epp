@@ -44,4 +44,70 @@ e2 {v1, v2}
 e3 {v2, v3}
 e4 {v2}
 
-4. see image
+4-7 see image folder
+
+8.
+All edges that are incident on v1:  {e1, e2, e3}
+All vertices that are incident on v3:  {e3, e4, e5, e7}
+All edges that are adjacent to e1: {e8, e9, e2, e3}
+All loops {e6, e7}
+All parallel edges {e8, e9, e4, e5}
+Al isolted vertices: {v6}
+Degree of v3: {e7, e4, e5, e3,e3}
+
+9
+9
+All edges that are incident on v1:  {e1, e2, e7}
+All vertices that are adjacent on v3:  {v1,v2}
+All edges that are adjacent to e1: {e2,e7}
+All loops {e2, e3}
+All parallel edges {e4, e5}
+Al isolted vertices: {v4}
+Degree of v3: {e6,e7}
+
+10. a yes, i t contains printed writing
+ b yes it contains long words
+
+11. Find three other winning sequences of moves for 
+the vegetarians and the cannibals in Example 1.4.7.
+
+12. let goat = g, ferryman = f, cabbage = c, wolf = w, and boat =b
+wolf cannot be together with goat
+goat cannot be together with cabbage
+starting state: gfcwB /
+1st move - ferryman brings goat to right bank cw / fgB
+2nd move - ferryman goes back to get the wolf: fcwB / g
+3rd move - ferryman bring the wolf to right bank and picks the goat : c / gwfB
+4rth move - ferryman picks the goat and back to the left bank : gcfB / w
+5th move - ferryman brings cabbage to right bank: g / wcfB
+6th move - ferryman brings the goat to the right bank / wcfbg
+
+13. solve the vegetarian and cannlibals puzzle for case where there are 3 vegetarians and three cannibals
+to be transported from one side of a river to the other - rule: v cannot be outnumbered by c
+
+initial state: cccvvvB /
+1st move: - bring 1c and 1v to the other side = ccvv / cvB
+2snd mode: one cannibal went back and change boat seat to vv, transport them to the right bank = cccvvB  / v 
+3rd move: 2vv arrives to right bank = ccc / vvvB
+4th move: 1v gets back to pick 1c = cccvB / vv
+5th move: 1v brings back 1c = cc / vvcB
+6th move: repeat the same step again = ccvB / vvc
+7th move: 1v brings back 1c = c / vvvccB
+last move: 1v brings back 1c = / vvvcccB
+
+14. Two jugs A and B have capacities of 3 quarts and 
+5 quarts, respectively. Can you use the jugs to 
+measure out exactly 1 quart of water, while obey
+ing the following restrictions? You may fill either 
+jug to capacity from a water tap; you may empty 
+the contents of either jug into a drain; and you 
+may pour water from either jug into the other.
+
+initial state: A3q B5q
+fill to capacity = F
+empty all = E
+pour = P
+1st move: empty B = A3q B0q
+2nd move: pour all A to B = A0q B3q
+3rd move: fill A to capacity = A3q B3Q
+4th move: pour A to B = A1q B5q
