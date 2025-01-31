@@ -78,3 +78,112 @@ c = juan is a computer science major
 component statment symbolic form: m A ~c
 
 
+8. h = john is healthy
+w = john is wealthy
+s = john is wize
+
+a. john is healthy and wealthy but not wise
+(h A w) A ~s
+b. john is not walehty but he is healthy and wise
+~w A (h A s)
+c. john is neither healthy, wealthy, nor wise
+(~h A ~w A ~s)
+d. john is netiehr wealthy nor wise, but he is hearlhy
+(~h A ~s) A has
+e. john is wealthy, but is his not both healthy and wise
+w A ~(h A s)
+
+9. p = x > 5
+q = x = 5
+r = 10 > x
+a. x >= 5
+p V q
+b. 10 > x > 5
+r V p
+c 10 > x >= 5
+r V (p V q)
+
+10. p = DATAENDFLAG is off
+q = ERROR equal 0
+r = SUM is less than 1000
+express the following stneces in symbolic notation
+a. DATAENDFLAG is off, ERROR equals 0, and SUM is less than 1,000
+p A q A r
+b. DATAENDFLAG is off but ERROR is not equal to 0.
+p A ~q
+c. DATAENDFLAG is off; however, ERROR is not 0 or SUM is greater than or equal to 1,000.
+p A (~q V ~r)
+d. DATAENDFLAG is on and ERROR equals 0 but SUM is greater than or equal to 1,000.
+~p A q A ~r
+e. Either DATAENDFLAG is on or it is the case that both ERROR equals 0 and SUM is less than 1,000.
+p V (~q A r)
+
+11. In the following sentence, is the word or used in 
+its inclusive or exclusive sense? A team wins the 
+playoffs if it wins two games in a row or a total of 
+three games.
+
+p = a team wins the playoff
+q = it wins two games in a row or a total of 3 games
+it is an exclusive sense. because
+team wins two games in a row - this is a win guarantee
+total of 3 games - team can still lose (eg lose 2 games)
+so this is an either or situation / XOR
+
+12.  Write truth tables for the statement forms in 12–15
+12. ~p A q
+p   q   ~p  ~p A q
+T   T   F   F
+F   T   T   T
+T   F   F   F
+F   F   T   F
+
+13. ~(p A q) V ( p V q)
+p   q   ~p  p A q   ~(p A q)    (p V q)     ~(p A q) V ( p V q)
+T   T   F   T       F           T           T
+F   T   T   F       T           T           T
+T   F   F   F       T           T           T
+F   F   T   F       T           F           T
+
+14. p A (q A r)
+p   q   r   q A r   p A (q A r)
+T   T   T   T       T
+T   T   F   T       T
+T   F   T   F       F
+T   F   F   F       F
+F   T   T   F       F
+F   T   F   F       F
+F   F   T   T       T
+F   F   F   F       F
+
+15. p A (~q V r)
+p   q   r   ~q      (~q V r)    p A (~q V r)
+T   T   T   F       T           T
+T   T   F   F       F           F
+T   F   T   T       T           T
+T   F   F   T       T           T
+F   T   T   F       T           F
+F   T   F   F       F           F
+F   F   T   T       T           F
+F   F   F   T       T           F
+
+ Determine whether the statement forms in 16–24 are 
+logically equivalent. In each case, construct a truth table 
+and include a sentence justifying your answer. Your sen
+tence should show that you understand the meaning of 
+logical equivalence.
+
+16.  p V (p A q) and p
+p   q   (p A q)     p V (p A q)
+T   T   T           T  
+F   T   F           F
+T   F   F           T
+F   F   F           F
+yes, they are logically equivalent
+
+17. ~(p A q) and ~p A ~q
+p   q   (p A q)     p V (p A q)
+T   T   T           T  
+F   T   F           F
+T   F   F           T
+F   F   F           F
