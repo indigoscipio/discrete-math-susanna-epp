@@ -206,3 +206,120 @@ Yes, they are both equal because when p is false and t is true, since this is an
 
 20. p A c and p V c
 p   c   p A c   p V c
+T   F   F       T
+F   F   F       F
+
+those two are not logically equivalent because p A c is always false where in p V c since this is or  theres one case that it's true
+
+21. (p A q) A r and p A (q A r)
+im gonna go ahead and say its equivalent here because there's a law that orders of parenthesis dont matter (dont remember te name of the law) but let me check
+
+p   q   r   p A q   q A r   (p A q) A r     p A (q A r)
+T   T   T   T       T       T               T
+T   T   F   T       F       F               F
+T   F   T   F       F       F               F
+T   F   F   F       F       F               F
+F   T   T   F       T       F               F
+F   T   F   F       F       F               F
+F   F   T   F       F       F               F
+F   F   F   F       F       F               F
+
+yes, it appears the two are logicall equivalent as I expected
+
+
+22. p A (q V r) and (p A q) V (p A r)
+p   q   r   q V r   p A q   p A r           p A (q V r)     (p A q) V (p A r)
+T   T   T   T       T       T               T               T
+T   T   F   T       T       F               T               T
+T   F   T   T       F       T               T               T
+T   F   F   F       F       F               F               F
+F   T   T   T       F       F               F               F
+F   T   F   T       F       F               F               F
+F   F   T   T       F       F               F               F
+F   F   F   F       F       F               F               F
+
+yes, they are logically equivalent
+
+23. (p A q) v r and p A (q V r)
+p   q   r   q V r   p A q   p A (q V r)     (p A q) v r  
+T   T   T   T       T       T               T            
+T   T   F   T       T       T               T            
+T   F   T   T       F       T               T            
+T   F   F   F       F       F               F            
+F   T   T   T       F       F               T            
+F   T   F   T       F       F               F            
+F   F   T   T       F       F               T            
+F   F   F   F       F       F               F            
+
+no, those two are not logically equivalent
+
+
+24. (p V q) V (p A r) and (p V q) A r
+p   q   r   p V q   p A r   (p V q) V (p A r)       (p V q) A r
+T   T   T   T       T       T                       T
+T   T   F   T       T       T                       F
+T   F   T   T       F       T                       T
+T   F   F   T       F       T                       F
+F   T   T   T       F       T                       T
+F   T   F   T       F       T                       F
+F   F   T   F       F       F                       F
+F   F   F   F       F       F                       F
+
+no, these statements are not logically equivalent.
+
+ Use De Morgan’s laws to write negations for the state
+ments in 25–30.
+
+25. Hal is a math major and Hal’s sister is a computer 
+science major.
+p = hal is a math major
+q = hal's sister is a compsci major
+negation 
+~p A ~q = ~(p V q)
+hal's is not a math major and hal's sister is not a compsci major
+is equivalent to it is not the case that (hal is a math major or hals sister is a compsci major)
+
+26. Sam is an orange belt and Kate is a red belt.
+p = sam is an orange belt
+q = kate is ared belt
+negation: ~p A ~q = ~(p V q)
+sam is not an orange belt and kate is not a red belt
+evuivalent to it is not the case that (sam is an orange belt or kate is a red belt)
+
+27. The connector is loose or the machine is  unplugged.
+p = the ocnnector is loose
+q = the machine is unplugged
+original statment = p V q
+negation: ~(p V q) = ~p A ~q
+it is not the case that the connector is loose or the machine is unplugged
+is equivalent to the connector is not loose and the machine is plugged
+
+28.The train is late or my watch is fast
+p = train is late
+q = watch is fast
+negation: ~(p V q) = ~p A ~q
+it is not the case that the train is late or my watch is fast
+equivalent to the train is not late and watch is not fast
+
+29. This computer program has a logical error in the 
+first ten lines or it is being run with an incomplete 
+data set.
+
+p = this computer program has...
+q = it is being run with an incomplete...
+p V q
+negation: ~(p V q) = ~p A ~q
+it is not the case that this computer program has a logical error...
+equivalent to This computer program does not have a logical error... AND the it is not being run with an incomplete data set
+
+30. The dollar is at an all-time high and the stock 
+market is at a record low.
+p = the dollar is at an all time high
+q = stock market is record low
+
+p A q
+negation : ~(p A q) = ~p V ~q
+it is not the case the dollar is all time high and stock market record low
+equivalent to the dollar is all time low or stock market is record high
+
+31. 
