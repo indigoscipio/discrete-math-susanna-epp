@@ -322,4 +322,44 @@ negation : ~(p A q) = ~p V ~q
 it is not the case the dollar is all time high and stock market record low
 equivalent to the dollar is all time low or stock market is record high
 
-31. 
+31. Let s be a string of length 2 with characters from 
+{0, 1, 2}, and define statements a, b, c, and d as 
+follows:
+
+
+ a = “the first character of s is 0”
+ b = “the first character of s is 1”
+ c = “the second character of s is 1” 
+ d = “the second character of s is 2” 
+
+true = 0 and 1
+
+Describe the set of all strings for which each of 
+the following is true.
+ a. (a V b) A (c V d)
+ a. (fc0 or fc1)) A (sc1 or sc2)
+ set = {01, 11, 02, 12}
+
+ b. (~(a V b)) A (c V d)
+ b. (~a A ~b) A (c V d)
+ b. (~fc0 AND ~fc1) AND (sc1 OR sc2)
+ set = {21, 22}
+
+ c. (~a V b) A (c V ~d)
+ c. (~fc0 OR fc1) AND (sc1 OR ~sc2)
+ FC = 1 or 2, SC = 1 or 0
+ set = {11,20,10,21}
+
+  Assume x is a particular real number and use De Morgan’s 
+laws to write negations for the statements in 32–37
+
+32. -2 < x < 7
+p = -2 < x
+q = x < 7
+~p = x <= -2
+~q = x >= 7
+demorgan law = ~(p A q) = ~p V ~q
+negation =  x <= -2 V  x >= 7
+
+33. -10 < x < 2
+
