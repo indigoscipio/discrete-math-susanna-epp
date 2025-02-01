@@ -182,8 +182,27 @@ F   F   F           F
 yes, they are logically equivalent
 
 17. ~(p A q) and ~p A ~q
-p   q   (p A q)     p V (p A q)
-T   T   T           T  
-F   T   F           F
-T   F   F           T
-F   F   F           F
+p   q   (p A q)     ~(p A q)    ~p  ~q  (~p A ~q)
+T   T   T           F           F   F   F
+F   T   F           T           T   F   F
+T   F   F           T           F   T   F
+F   F   F           T           T   T   T
+
+therefore these two are not logically equivalent.  
+
+18. p v t and t
+p   t   p v t
+T   T   T
+F   T   T
+
+yes, they are equal bescause anything or'ed with tautology is always true
+
+19. p A t and p
+p   t   p A t
+T   T   T
+F   T   F
+
+Yes, they are both equal because when p is false and t is true, since this is an and its false
+
+20. p A c and p V c
+p   c   p A c   p V c
