@@ -377,12 +377,140 @@ demorgan law = ~(p V q) = ~p A ~q
 ~q = x <= 5
 negation =  2 <= x <= 5
 
-45. x <= -1 or x > 1
+35. x <= -1 or x > 1
 p = x <= -1
 q = x > 1
 deomrgan law: ~(p V q) = ~p A ~q
-~p = 
-~q = 
-negation =  2 <= x <= 5
+~p = x > -1
+~q = x <= 1
+negation =  x > -1 AND x <= 1 = 0,1
+negation = -1 < x <= 1 
+
+36. 1 > x >= -3
+p = 1 > x
+q = x >= -3
+~p = 1 <= x
+~q =  x < -3
+demorgan law = ~(p A q) = ~p V ~q
+negation = x >= 1 OR x < -3
 
 
+37. 0 > x >= -7
+p = 0 > x
+q = x >= -7
+~p = x >= 0
+~q =  x < -7
+demorgan law = ~(p A q) = ~p V ~q
+negation = x >= 0 OR x < -7
+
+In 38 and 39, imagine that num_orders and num_instock 
+are particular values, such as might occur during execu
+tion of a computer program. Write negations for the 
+following statements.
+
+p = num_orders
+q = num_instock
+
+38. (num_orders > 100 and num_instock <= 500) or 
+num_instock < 200
+(p > 100 A q <= 500 ) V q < 200
+negation of ~(p > 100 A q <= 500) = (p <= 100 V q > 500)
+negation of q < 200 = q >= 200
+final negation: (p <= 100 V q > 500) A  q >= 200
+
+39.  (num_orders < 50 and num_instock > 300) or (50 <= num_orders < 75 and num_instock > 500)
+(p < 50 A q > 300) V ((50 <= q < 75) A q > 500)
+negation of (p < 50 A q > 300) = (p >=50 V q <= 300)
+negation of (50 <= q < 75) = (p < 50 V q >= 75)
+negation of q > 500 = q <= 500
+negation of ((50 <= q < 75) A q > 500) = (q < 50 V q >= 75) V q <= 500
+final negation of (p < 50 A q > 300) V ((50 <= q < 75) A q > 500) = (p >=50 V q <= 300) A (p < 50 V q >= 75) V q <= 500
+
+
+calculation notes
+x = 50 <= q
+y = q < 75
+negation (x A y) = ~x V ~y
+q < 50 OR q >= 75
+
+50 - 74
+<49 or 75>
+
+Use truth tables to establish which of the statement 
+forms in 40–43 are tautologies and which are  
+contradictions
+40.  (p A q) V (~p V (p A ~q)
+p   q   (p A q)   ~p   ~q      (p A ~q)    (~p V (p A ~q))  (p A q) V (~p V (p A ~q))
+T   T   T         F    F       F           F                T
+F   T   F         T    F       F           T                T
+T   F   F         F    T       T           T                T
+F   F   F         T    T       F           T                T
+
+this statement is a tautology/all true
+
+
+41.  (p A ~q) A (~p V q)
+p   q   ~p   ~q      (p A ~q)   (~p V q)    (p A ~q) A (~p V q)                  
+T   T   F    F       F          T           F          
+F   T   T    F       F          T           F          
+T   F   F    T       T          F           F          
+F   F   T    T       F          T           F          
+
+this statement is a contradiction/all false
+
+42.  ((~p A q) A (q A r)) A ~q
+p   q   r   ~p  ~q  (~p A q)  (q A r)   ((~p A q) A (q A r))    ((~p A q) A (q A r)) A ~q
+T   T   T   F   F   F         T         F                       F
+T   T   F   F   F   F         F         F                       F
+T   F   T   F   T   F         F         F                       F
+T   F   F   F   T   F         F         F                       F
+F   T   T   T   F   T         T         T                       F
+F   T   F   T   F   T         F         F                       F
+F   F   T   T   T   F         F         F                       F
+F   F   F   T   T   F         F         F                       F
+
+This statement is a contradiction
+
+
+43. (~p V q) V (p A ~q)
+p   q   ~p   ~q  (~p V q) (p A ~q)  (~p V q) V (p A ~q)
+T   T   F    F   T        F         T
+F   T   T    F   T        F         T
+T   F   F    T   F        T         T
+F   F   T    T   T        F         T
+
+this statement is a tautology/all true
+
+44. recall that a < x < b means that a < x and  
+x < b. Also a <= b means that a < b or a = b.  
+Find all real numbers that satisfy the following 
+inequalities.
+
+a. 2 < x <= 0 
+x > 2  and x < = 0 = i think this is impossible, so the set is empty
+
+b. 1 <= x < -1 = i think this impossible too so empty set also
+
+
+45. Determine whether the statements in (a) and (b) 
+are logically equivalent.
+
+ a. Bob is both a math and computer science 
+major and Ann is a math major, but Ann is not 
+both a math and computer science major.
+
+ b. It is not the case that both Bob and Ann are 
+both math and computer science majors, 
+but it is the case that Ann is a math major  
+and Bob is both a math and computer 
+science major.
+
+
+p = bob is both a math and compsci major
+q = ann is a math major
+r = ann is both a math and computer sicnece major
+
+a. p A q A ~r
+b. ~(p A r) A q A p  = (~p V ~r) A q A p
+The statement is logically equivalent
+46. 
