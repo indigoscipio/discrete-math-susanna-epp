@@ -513,4 +513,156 @@ r = ann is both a math and computer sicnece major
 a. p A q A ~r
 b. ~(p A r) A q A p  = (~p V ~r) A q A p
 The statement is logically equivalent
-46. 
+
+46. p XOR q = (p V q) A ~(p A q)
+
+Find simpler statement forms that are logically 
+equivalent to p XOR p and (p XOR p) XOR p.
+
+answer:
+(p V p) A ~(p A p) 
+p XOR p = (p V p) A ~(p A p) 
+p A ~p = faslse
+
+p q p XOR q p XOR p 
+T T F       F       T       
+T F T       F       T
+F T T       F       F
+F F F       F       F
+
+F P p XOR F
+F T T
+F F F
+
+p XOR p = contradiction/false
+(p XOR p) XOR p = p
+
+b. is (p XOR q) XOR r = p XOR (q XOR r)? jusitfy your answer
+p   q   r   (p XOR q) (p XOR q) XOR r   (q XOR r)     p XOR (q XOR r)
+T   T   T   F         T                 F             T
+T   T   F   F         F                 T             F
+T   F   T   T         F                 T             F
+T   F   F   T         T                 F             T
+F   T   T   T         F                 F             F
+F   T   F   T         T                 T             T
+F   F   T   F         T                 T             T
+F   F   F   F         F                 F             F
+
+yes, it is logically equivalent. proof is the truth table above
+
+c. is (p XOR q) A r = (p A r) XOR (q A r)? justifyu your asnwer
+p   q   r   (p XOR q)   (p XOR q) A r     (p A r)     (q A r)     (p A r) XOR (q A r)
+T   T   T   F           F                 T           T           F
+T   T   F   F           F                 F           F           F
+T   F   T   T           T                 T           F           T
+T   F   F   T           F                 F           F           F
+F   T   T   T           T                 F           T           F
+F   T   F   T           F                 F           F           F
+F   F   T   F           F                 F           F           F
+F   F   F   F           F                 F           F           F
+
+
+Yes, the two are logically equivalent
+
+47. In logic and in standard English, a double negative 
+is equivalent to a positive. There is one fairly com
+mon English usage in which a “double positive” is 
+equivalent to a negative. What is it? Can you think 
+of others?
+
+Double positive example:
+Original: Yesterday it rained
+dp : It is true that Yesterday it definetely definetely rained?
+dp: good grief, fine fine
+
+In 48 and 49 below, a logical equivalence is derived from 
+Theorem 2.1.1. Supply a reason for each step.
+
+48. (p A ~q) V (p A q) = p A (~q V q) by Distributive laws? not sure
+                        = p A (q V ~q) by commutative law
+                        = p A t by  = by negation law
+                        = p  D by identity law
+
+
+49. (p V ~q) A (~p V ~q) = (~q V p) A (~q V ~p) by Commutative law
+                          = ~q V (p A ~p) by Distributive law
+                          = ~q V c  by Negation law
+                          = ~q  identity law
+          
+
+
+1. Commutative laws:
+   p ∨ q ≡ q ∨ p
+   p ∧ q ≡ q ∧ p
+
+2. Associative laws:
+   (p ∨ q) ∨ r ≡ p ∨ (q ∨ r)
+   (p ∧ q) ∧ r ≡ p ∧ (q ∧ r)
+
+3. Distributive laws:
+   p ∨ (q ∧ r) ≡ (p ∨ q) ∧ (p ∨ r)
+   p ∧ (q ∨ r) ≡ (p ∧ q) ∨ (p ∧ r)
+
+4. Identity laws:
+   p ∨ false ≡ p
+   p ∧ true ≡ p
+
+5. Negation laws:
+   p ∨ ¬p ≡ true
+   p ∧ ¬p ≡ false
+
+6. Double negative law:
+   ¬(¬p) ≡ p
+
+7. Idempotent laws:
+   p ∨ p ≡ p
+   p ∧ p ≡ p
+
+8. Universal bound laws:
+   p ∨ true ≡ true
+   p ∧ false ≡ false
+
+9. De Morgan’s laws:
+   ¬(p ∨ q) ≡ ¬p ∧ ¬q
+   ¬(p ∧ q) ≡ ¬p ∨ ¬q
+
+10. Absorption laws:
+    p ∨ (p ∧ q) ≡ p
+    p ∧ (p ∨ q) ≡ p
+
+11. Negations of true and false:
+    ¬true ≡ false
+    ¬false ≡ true
+
+
+Use Theorem 2.1.1 to verify the logical equivalences in 
+50–54. Supply a reason for each step.
+50. (p A ~q) V p = p
+step 1 = p V (p A ~q) by commutative law
+step 2 = p by absorpsion law
+
+51. p A (~q v p) = p
+step 1 = p A (p V ~q) by commutative law
+step 2 = p by absorption law
+
+
+52. (p A ~q) V (p A q) = p A (~q V q) by Distributive laws? not sure
+52. ~(p V ~q) V (~p A ~q) = ~p
+step 1. (~p A q) V (~p A ~q) by demorgans law
+step 2. ~p A (q V ~q) by distrubiton law
+step 3. ~p A t by negation law
+step 4. ~p by identity law
+
+53. ~((~p A q) V (~p A ~q)) V (p A q) = p
+step 1. (~(~p A q) A ~(~p A ~q) ) V (p A q) by demorgans law
+step 2. (p V ~q) A (p V q) V (p A q)
+step 3 p A (~q V q) V (p A Q)
+step 4 (p A t) V (p A q)
+step 5 p V (p A q) = p by absorbsion
+
+54. (p A (~(~p V q))) V (p A q) = p
+step 1: p A (p A ~q) V (p A q) by demorgans law
+step 2: p A p A (~q V q) by distributive law
+step 3: p A (~q V q) by idempotent law
+step 4: p A t by negation law
+step 5: p by identity law
