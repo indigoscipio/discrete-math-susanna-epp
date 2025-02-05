@@ -17,13 +17,13 @@ Rewrite the statements in 1–4 in if-then form.
 1. thie loop will repeat exactly N times if it does not contain a stop or a go to
 p = this loop will repat exactly n times
 q = if it does not contain a stop or a go to
-If the loop repeats n times, then it does not contain a stop or a go
+If it does no contain stop or a go to, this loop will repeat exactly n times
 
 2. i am on time for word if I catch the 8:05 bus
 p = i am on time for work
 q = i watch the 805 bus
 p -> q
-If i an on time for work then I have catched the 805 bus
+If i catch the 805 bus, then i am on time  for work
 
 3. freeze or i'll shoot
 p = freeze
@@ -36,3 +36,95 @@ p = fix my celing
 q = i wont pay my rent
 p V q = ~p V q
 if my ceiling is not fixed, then I won't pay my rent
+
+Construct truth tables for the statement forms in 5–11.
+5. ~p V q -> ~q
+p   q   ~p   ~q     (~p V q)      ~p V q -> ~q 
+T   T   F    F      T             F
+F   T   T    F      T             F
+T   F   F    T      F             T
+F   F   T    T      T             T
+
+6. (p V q) V (~p A q) -> q
+p   q   ~p   ~q     (p V q)     (~p A q)      (p V q) V (~p A q)        (p V q) V (~p A q) -> q
+T   T   F    F      T           F             T                         T
+F   T   T    F      T           T             T                         T
+T   F   F    T      T           F             T                         F
+F   F   T    T      F           F             F                         T
+
+
+7. (p A ~q) -> r
+p   q   r   ~p  ~q  ~r  (p A ~q)    (p A ~q) -> r
+T   T   T   F   F   F   F           T  
+T   T   F   F   F   T   F           T  
+T   F   T   F   T   F   T           T  
+T   F   F   F   T   T   T           F  
+F   T   T   T   F   F   F           T  
+F   T   F   T   F   T   F           T  
+F   F   T   T   T   F   F           T  
+F   F   F   T   T   T   F           T  
+    
+
+8. ~p V q -> r
+p   q   r   ~p  ~q  ~r  ~p V q      ~p V q -> r
+T   T   T   F   F   F   T           T   
+T   T   F   F   F   T   T           F   
+T   F   T   F   T   F   F           T   
+T   F   F   F   T   T   F           T   
+F   T   T   T   F   F   T           T   
+F   T   F   T   F   T   T           F   
+F   F   T   T   T   F   T           T   
+F   F   F   T   T   T   T           F   
+
+9. p A ~r <-> q V r
+p   q   r   ~p  ~q  ~r  ~p V q      ~p V q -> r
+T   T   T   F   F   F   T           T   
+T   T   F   F   F   T   T           F   
+T   F   T   F   T   F   F           T   
+T   F   F   F   T   T   F           T   
+F   T   T   T   F   F   T           T   
+F   T   F   T   F   T   T           F   
+F   F   T   T   T   F   T           T   
+F   F   F   T   T   T   T           F  
+
+
+10. (p -> r) <-> (q -> r)
+p   q   r   ~p  ~q  ~r  (p -> r)    (q -> r)    (p -> r) <-> (q -> r)
+T   T   T   F   F   F  T            T           T
+T   T   F   F   F   T  F            F           T
+T   F   T   F   T   F  T            T           T
+T   F   F   F   T   T  F            T           F
+F   T   T   T   F   F  T            T           T
+F   T   F   T   F   T  T            F           F
+F   F   T   T   T   F  T            T           T
+F   F   F   T   T   T  T            T           T
+
+
+11. (p -> (q -> r) ) <-> ((p A q) -> r)
+p   q   r   ~p  ~q  ~r  (q -> r)    (p -> (q -> r) )        (p A q)     ((p A q) -> r)          (p -> (q -> r) ) <-> ((p A q) -> r)
+T   T   T   F   F   F    T          T                       T           T                       T
+T   T   F   F   F   T    F          F                       T           F                       T
+T   F   T   F   T   F    T          T                       F           T                       T
+T   F   F   F   T   T    T          T                       F           T                       T
+F   T   T   T   F   F    T          T                       F           T                       T
+F   T   F   T   F   T    F          T                       F           T                       T
+F   F   T   T   T   F    T          T                       F           T                       T
+F   F   F   T   T   T    T          T                       F           T                       T
+
+12. Use the logical equivalence established in  
+Example 2.2.3, p V q -> r = (p -> r) A (q -> r), 
+
+to rewrite the following statement. (Assume that x 
+represents a fixed real number.)
+
+ If x > 2 or x < -2, then x^2 > 4.
+p = x > 2
+q= x < -2
+r = x^2 > 4
+
+ (p -> r) A (q -> r)
+ if x > 2 then x^2 > 4 AND if x < -2 r = x^2 > 4
+
+ Use truth tables to verify the following logical 
+equivalences. Include a few words of explanation 
+with your answers.
