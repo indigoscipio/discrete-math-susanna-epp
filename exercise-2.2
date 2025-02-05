@@ -125,6 +125,116 @@ r = x^2 > 4
  (p -> r) A (q -> r)
  if x > 2 then x^2 > 4 AND if x < -2 r = x^2 > 4
 
- Use truth tables to verify the following logical 
+Use truth tables to verify the following logical 
 equivalences. Include a few words of explanation 
 with your answers.
+
+a. p -> q = ~p V q
+p   q   ~p   ~q     (~p V q)    p -> q
+T   T   F    F      T           T
+F   T   T    F      T           T
+T   F   F    T      F           F
+F   F   T    T      T           T
+yes, these two statements are logically equivalence as shown from the truth table
+
+
+b. ~(p -> q) = p A ~q
+p   q   ~p   ~q      p -> q   ~(p -> q)      p A ~q
+T   T   F    F       T        F              F
+F   T   T    F       T        F              F
+T   F   F    T       F        T              T
+F   F   T    T       T        F              F
+Yes, these two statmeents rea logically equivalence since they have the same truth value
+
+14a. Show that the following statement forms are all 
+logically equivalent:
+a. p -> q V r, p A ~q -> r, and p A ~r -> q
+p   q   r   ~p  ~q  ~r  q V r   p -> q V r      p A ~q      p A ~q -> r         p A ~r          p A ~r -> q
+T   T   T   F   F   F   T       T               F           T                   F               T
+T   T   F   F   F   T   T       T               F           T                   T               T
+T   F   T   F   T   F   T       T               T           T                   F               T
+T   F   F   F   T   T   F       F               T           F                   T               F
+F   T   T   T   F   F   T       T               F           T                   F               T
+F   T   F   T   F   T   T       T               F           T                   F               T
+F   F   T   T   T   F   T       T               F           T                   F               T
+F   F   F   T   T   T   F       T               F           T                   F               T
+
+Yes, based on the truth table above, these 3 have the same trueth value
+
+14b. Use the logical equivalences established in part 
+(a) to rewrite the following sentence in two dif
+ferent ways. (Assume that n represents a fixed 
+integer.)
+
+ If n is prime, then n is odd or n is 2.
+ p = n is prime
+ q = n is odd
+ r = n is 2
+
+That's the first one =  p -> q V r
+2nd way:   p A ~q -> r
+if n is prime and n is even then n is 2
+
+3rd way: p A ~r -> q
+if n is prime and n is not 2, then n is odd
+
+15. Determine whether the following statement forms 
+are logically equivalent:
+
+ p -> (q -> r) and (p -> q) -> r
+ p -> (~q V r)
+ ~p V (~q V r)
+
+
+(~p V q) -> r
+~(~p V q) V r
+(p A ~q) V r
+
+p   q   r   ~p  ~q  ~r  q V r   (q -> r)    p -> (q -> r)       (p -> q)    (p -> q) -> r
+T   T   T   F   F   F   T       T           T                   T           T
+T   T   F   F   F   T   T       F           F                   T           F
+T   F   T   F   T   F   T       T           T                   F           T
+T   F   F   F   T   T   F       T           T                   F           T
+F   T   T   T   F   F   T       T           T                   T           T
+F   T   F   T   F   T   T       F           T                   T           F
+F   F   T   T   T   F   T       T           T                   T           T
+F   F   F   T   T   T   F       T           T                   T           F
+
+no, these two statements are not logically equivanlent as shown on truth table above
+
+ In 16 and 17, write each of the two statements in symbolic 
+form and determine whether they are logically equiva
+lent. Include a truth table and a few words of explanation 
+to show that you understand what it means for state
+ments to be logically equivalent.
+
+16. If you paid full price, you didn’t buy it at Crown 
+Books. You didn’t buy it at Crown Books or you 
+paid full price.
+p = paid full price
+q = didn't buy it at crown books
+p -> q
+
+you didn't buy it at crown books or you paid full price
+q V p
+I don't think these two statements are logically equivealent. the logical equivalent of if p -> q is ~p V q, not q V p.
+q V p is a converse of the original statmeent. proof on truth table below
+
+p   q   ~p   ~q     q V p    p -> q         ~p V q
+T   T   F    F      T        T              T
+F   T   T    F      T        T              T
+T   F   F    T      T        F              F
+F   F   T    T      F        T              T
+
+17. If 2 is a factor of n and 3 is a factor of n, then 6 is 
+a factor of n. 2 is not a factor of n or 3 is not a fac
+tor of n or 6 is a factor of n.
+p = 2 is a factor of n
+q = 3 is a factor of n
+r = 6 is a factor of n
+
+1st stentnce = p A q -> r
+2nd sentence = ~p V ~q V r
+
+are these two logically equivalent? my intuition says yes but lets prove it with the truth table
+
