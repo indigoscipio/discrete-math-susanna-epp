@@ -237,4 +237,186 @@ r = 6 is a factor of n
 2nd sentence = ~p V ~q V r
 
 are these two logically equivalent? my intuition says yes but lets prove it with the truth table
+p   q   r   ~p  ~q  ~r  p A q   ~p V ~q     p A q -> r      ~p V ~q V r
+T   T   T   F   F   F   T       F           T               T
+T   T   F   F   F   T   T       F           F               F
+T   F   T   F   T   F   F       T           T               T
+T   F   F   F   T   T   F       T           T               T
+F   T   T   T   F   F   F       T           T               T
+F   T   F   T   F   T   F       T           T               T
+F   F   T   T   T   F   F       T           T               T
+F   F   F   T   T   T   F       T           T               T
 
+yes, those two are logically equivalent based on the truth table.
+
+18. Write each of the following three statements in 
+symbolic form and determine which pairs are 
+logically equivalent. Include truth tables and a few 
+words of explanation.
+
+a. If it walks like a duck and it talks like a duck, then 
+it is a duck.
+p = if it walks like a duck
+q = it talks like a duck
+r = it is a duck
+(p A q) -> r
+
+b. Either it does not walk like a duck or it does not 
+talk like a duck, or it is a duck.
+(~p V ~q) V r
+
+
+c. If it does not walk like a duck and it does not talk 
+like a duck, then it is not a duck.
+(~p A ~q) -> ~r
+
+
+p   q   r    ~p  ~q  ~r     p A q  p A q -> r  ~p V ~q      (~p V ~q) V r       (~p A ~q)       (~p A ~q) -> ~r
+T   T   T    F   F   F      T      T           F            T                   F               T
+T   T   F    F   F   T      T      F           F            F                   F               T
+T   F   T    F   T   F      F      T           T            T                   F               T
+T   F   F    F   T   T      F      T           T            T                   F               T
+F   T   T    T   F   F      F      T           T            T                   F               T
+F   T   F    T   F   T      F      T           T            T                   F               T
+F   F   T    T   T   F      F      T           T            T                   T               F
+F   F   F    T   T   T      F      T           T            T                   T               T
+
+final answer: a & b is logically equivalent. c is not logically equivalent with both a and b
+
+19. True or false? The negation of “If Sue is Luiz’s 
+mother, then Ali is his cousin” is “If Sue is Luiz’s 
+mother, then Ali is not his cousin.”
+
+p = sue is luiz's mother
+q = ali is his cousin
+p -> q = ~p V q
+
+p -> ~q
+this is false.
+negation of a if-then statement shold follow this structure: p A ~q
+so the negation should be sue is luiz's mother AND ali is not his cousin
+
+20. Write negations for each of the following state
+ments. (Assume that all variables represent fixed 
+quantities or entities, as appropriate.)
+
+a. If P is a square, then P is a rectangle.
+p = p is a square
+q = p is a rectangle
+original = p -> q, negation is p A ~q = p is a square and p is not a rectangle
+
+b. If today is New Year’s Eve, then tomorrow is 
+January.
+p = today is new years eve, q = tomorrow is january = p -> q
+negation = p A ~q = today is new years eve and tomorrow is not january
+
+c. If the decimal expansion of r is terminating, then r is rational.
+p =  decimal expansion or r is terminatin
+q = r is rationsal
+p -> q, negation is p A ~q = the decimal expansion is terminating and r is irrational
+
+d. If n is prime, then n is odd or n is 2
+p = n is prime, q = n is odd, r = n is 2
+original statment = p -> (q V r)
+negation = p A ~(q V r) = p A ~q A ~r = n is prime and n is even and r is not 2
+
+e. If x is nonnegative, then x is positive or x is 0.
+p = x is nonnegative
+q = x is positive
+r = x is o
+os = p -> q V r
+negation = p A ~(q V r) = p A ~q A ~r = x is nonnegative and x is not positive and x is not 0
+
+f. if Tom is Ann’s father, then Jim is her uncle 
+and Sue is her aunt.
+p = tom is ans father, q = jim is her uncle, r = sue is her aunt
+os = p -> (q A r)
+negation = p A ~(q A r) = p A ~q V ~r = tom is anns father and jim is not her uncle or sue is not her aunt
+
+g. If n is divisible by 6, then n is divisible by 2 and n is divisible by 3.
+p = n is divisible by 6, q =  n is divisible by 2, r = n is divisible by 3.
+os = p -> q A r
+negation = p A ~(q A r) = p A ~q V ~r = n is divisible by 6 and n is not disible by 2 or n is not divisible by 3
+
+21.  Suppose that p and q are statements so that  
+p -> q is false. Find the truth values of each of 
+the following:
+a. ~p -> q
+b. p V q
+c. q -> p
+
+for p -> q to be false, q must be false and p must be true
+a. ~p -> q = true -> true = true
+b. p V q = true OR false = true
+c. q -> p = false -> true = true
+therefore, all three statements have a true truth value
+
+
+22. Write contrapositives for the statements of exercise 20
+a. If P is a square, then P is a rectangle.
+p = p is a square
+q = p is a rectangle
+original = p -> q, contrapositive is ~q -> ~p = if p is not a rectangle, then p is not a square.
+
+b. If today is New Year’s Eve, then tomorrow is 
+January.
+p = today is new years eve, q = tomorrow is january = p -> q
+contrapositive = ~q -> ~p = if tomorrow is not january then today is not new years eve
+
+c. If the decimal expansion of r is terminating, then r is rational.
+p =  decimal expansion or r is terminatin
+q = r is rationsal
+p -> q, contrapositive is ~q -> ~p = if r is irrational, then decimal expansion of n is not terminating
+
+d. If n is prime, then n is odd or n is 2
+p = n is prime, q = n is odd, r = n is 2
+original statment = p -> (q V r)
+contrapositive = ~(q V r) -> ~p = (~q A ~r) -> ~p
+if n is even and n is not 2, then n is not prime
+
+e. If x is nonnegative, then x is positive or x is 0.
+p = x is nonnegative
+q = x is positive
+r = x is o
+os = p -> q V r
+copntrapositive = ~ (q V r) -> ~p = (~q A ~r) -> ~p
+if x is not positive and x is not 0 then p is not nonnegative
+
+f. if Tom is Ann’s father, then Jim is her uncle 
+and Sue is her aunt.
+p = tom is ans father, q = jim is her uncle, r = sue is her aunt
+os = p -> (q A r)
+contrapositive = ~(q A r) -> ~p = ~q V ~r -> ~p
+if jim is not her uncle or sue is not her aunt then tom is not anns father
+
+g. If n is divisible by 6, then n is divisible by 2 and n is divisible by 3.
+p = n is divisible by 6, q =  n is divisible by 2, r = n is divisible by 3.
+os = p -> q A r
+contrapositie = ~(q A r) -> ~q = ~q V ~r -> ~q = if n is not divisible by 2 or n is not divisible by 3, then n is not divisible by 6
+
+23. Write the converse and inverse for each statement 
+of exercise 20.
+a. If P is a square, then P is a rectangle.
+p = p is a square
+q = p is a rectangle
+original = p -> q, converse = q -> p, inverse = ~p -> ~q
+conserse = if p is a rectangle, then p is a square
+inverse = if p is not a square, then p is not a rectangle
+
+
+b. If today is New Year’s Eve, then tomorrow is 
+January.
+p = today is new years eve, q = tomorrow is january = p -> q
+converse = q -> p = if tomorrow is january then today is new years eve
+inverse = ~p -> ~q = if today is not new years eve then tomorrow is not january
+
+c. p =  decimal expansion or r is terminatin
+q = r is rationsal
+converse = q -> p = if r is rational then decimal expansion of r is terminating
+inverse = ~p -> ~q = if decimal expansion of r is not terminating then r is not rational
+
+d. If n is prime, then n is odd or n is 2
+p = n is prime, q = n is odd, r = n is 2
+original statment = p -> (q V r)
+contrapositive = ~(q V r) -> ~p = (~q A ~r) -> ~p
+if n is even and n is not 2, then n is not prime
