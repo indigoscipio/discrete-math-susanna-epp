@@ -418,5 +418,96 @@ inverse = ~p -> ~q = if decimal expansion of r is not terminating then r is not 
 d. If n is prime, then n is odd or n is 2
 p = n is prime, q = n is odd, r = n is 2
 original statment = p -> (q V r)
-contrapositive = ~(q V r) -> ~p = (~q A ~r) -> ~p
-if n is even and n is not 2, then n is not prime
+converse = (q v r) -> p = if n is odd or n is two then n is prime
+inverse = ~p -> ~(q V r) = ~p -> ~q A ~r = if n is not prime then n is not odd and r n is not 2
+
+e. If x is nonnegative, then x is positive or x is 0.
+p = x is nonnegative
+q = x is positive
+r = x is o
+os = p -> q V r
+converse = q V r -> p = if x is positive or x is 0 then x is nonnegative
+inverse = ~p -> ~(q V r) = ~p -> ~q A ~r = if x is not nonnegative then x is not positive and x is not 0
+
+f. if Tom is Ann’s father, then Jim is her uncle 
+and Sue is her aunt.
+p = tom is ans father, q = jim is her uncle, r = sue is her aunt
+os = p -> (q A r)
+converse = (q A r) -> p = if jim is ann's uncle or sue is ann's aunt, then tom is ann's father
+inverse = ~p -> ~(q A r) = ~p -> ~q V ~r = if tom is not anns father then jim is not her uncle and sue is not her aunt
+
+g. If n is divisible by 6, then n is divisible by 2 and n is divisible by 3.
+p = n is divisible by 6, q =  n is divisible by 2, r = n is divisible by 3.
+os = p -> q A r
+converse = q A r -> p = if n is divisble by 2 and n is divisible by 3 then n is divisible by 6
+invserse = ~p -> ~(q A r) = ~p -> ~q V ~r = if n is not divisible by 6, then n is not divisible by 2 and n is not divisible by 3
+
+Use truth tables to establish the truth of each statement 
+in 24–27.
+
+24. A conditional statement is not logically equivalent 
+to its converse.
+
+p -> q not equal to q -> p. Proof by truth table
+p   q   p -> q     q -> p
+T   T   T          T
+F   T   T          F
+T   F   F          T
+F   F   T          T
+
+25. A conditional statement is not logically equivalent 
+to its inverse.
+p -> q is not logically equivalent to ~p -> ~q
+
+p   q   ~p   ~q     p -> q       ~p -> ~q
+T   T   F    F      T            T
+F   T   T    F      T            F
+T   F   F    T      F            T
+F   F   T    T      T            T
+
+
+26. A conditional statement and its contrapositive are 
+logically equivalent to each other.
+p -> q = ~q -> ~p
+p   q   ~p   ~q     p -> q       ~q -> ~p
+T   T   F    F      T            T
+F   T   T    F      T            T
+T   F   F    T      F            F
+F   F   T    T      T            T
+
+27. The converse and inverse of a conditional state
+ment are logically equivalent to each other.
+p   q   ~p   ~q     p -> q       ~p -> ~q    q -> p
+T   T   F    F      T            T           T
+F   T   T    F      T            F           F
+T   F   F    T      F            T           T
+F   F   T    T      T            T           T
+
+
+28. “Do you mean that you think you can find out the 
+answer to it?” said the March Hare.
+ “Exactly so,” said Alice.
+ “Then you should say what you mean,” the 
+March Hare went on.
+ “I do,” Alice hastily replied; “at least—at least 
+I mean what I say—that’s the same thing, you 
+know.”
+ “Not the same thing a bit!” said the Hatter. 
+“Why, you might just as well say that ‘I see what I 
+eat’ is the same thing as ‘I eat what I see’!”
+ —from “A Mad Tea-Party” in Alice in  
+Wonderland, by Lewis Carroll
+ The Hatter is right. “I say what I mean” is not the 
+same thing as “I mean what I say.” Rewrite each 
+of these two sentences in if-then form and explain 
+the logical relation between them. (This exercise is 
+referred to in the introduction to Chapter 4.)
+
+p = i say something
+q = i mean something
+
+p -> q = if i say something, then i mean something
+q -> p = if i mean something, then I say something
+
+these two are not logically equivalent, the only possibility when the sentence is equivalent to is its contrapositive.
+~q -> ~p = if i don't mean something, then I don't say something
