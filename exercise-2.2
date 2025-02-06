@@ -625,3 +625,153 @@ what happens
 (p A q A s) -> ~s
 this is a false statement, if the ocnlucion is false and the hyphotesis is true. therefore he lies .
 
+ Some programming languages use statements of the form 
+“r unless s” to mean that as long as s does not happen, 
+then r will happen. More formally:
+ Definition: If r and s are statements,
+ r unless s means if ~s then r
+
+ In 37–39, rewrite the statements in if-then form.
+ 37. Payment will be made on fifth unless a new hear
+ing is granted
+p = payment made on fifth
+q = a new hearing is granted
+p unless q = ~q -> r = if a new hearing is not granted, then payment willl be  made on fifth
+
+38. ann will go unless it rains
+p unless q = ~q -> r = if it does not rain then ann will go
+
+39. This door will not open unless a security code is 
+entered.
+p = door will not open, q = security code is entered
+p unless q = ~q -> p = if the security code is not entered then the door will not open
+
+ Rewrite the statements in 40 and 41 in if-then form
+40. Catching the 8:05 bus is a sufficient condition for 
+my being on time for work
+sufficient = if p then q
+p = catching the 805 bus
+q = being on time for work
+rewritten = if i catch the 805 bus, then i am on time for work
+
+
+41. Having two 45° angles is a sufficient condition for 
+this triangle to be a right triangle
+p = triangle have two 45deg angles
+q = triangle is a right triangle
+sufficient = p  -> q = if this triangle have two 45deg angles, the it is a right triangle
+
+ Use the contrapositive to rewrite the statements in 
+42 and 43 in if-then form in two ways.
+
+42. Being divisible by 3 is a necessary condition for 
+this number to be divisible by 9.
+p = number is divisible by 3
+q = number is divisible by 9
+original statement: q -> p
+necessary = ~p -> ~q = if this number is not divisible by 3 then this number is not divisible by 9
+
+43. Doing homework regularly is a necessary condi
+tion for Jim to pass the course.
+p = doing homework regularly
+q = jim pass the course
+p is necessary for q = if q happens, then p mst have happen =  q -> p = ~p -> q
+if jim is not doing homework regularly, then jim fails the course
+
+ Note that “a sufficient condition for s is r” means r 
+is a sufficient condition for s and that “a necessary 
+condition for s is r” means r is a necessary condition 
+for s. Rewrite the statements in 44 and 45 in if
+then form.
+
+44.A sufficient condition for Jon’s team to win 
+the championship is that it win the rest of 
+its games.
+p = jons team wins the champtionship
+q = jons team win the rest of it gmaes
+sufficient = q -> p
+if jons team wins rest of it games then jon wins the championship
+
+45. A necessary condition for this computer program 
+to be correct is that it not produce error messages 
+during translation.
+p = this computer program is correct
+q = it does not produce erorr mesage during trnslation
+rewritten = not produving error message is a necesary condition for it to be a correct pgogram.
+which means q is necessary for p
+which means p -> q = if this computer program is   correct then it does not produces error message during translation
+
+45.If compound X is boiling, then its temperature 
+must be at least 150°C.” Assuming that this 
+statement is true, which of the following must 
+also be true?
+
+p = compound x is boiling
+q = temperature must be at least 150c
+assume the statement is true p -> q = true
+
+a.If the temperature of compound X is at least 
+150°C, then compound X is boiling.
+q -> p this is the converse of the original statement, so not true
+
+b. If the temperature of compound X is less than 
+150°C, then compound X is not boiling.
+~q -> ~p  - this is the contrapositive - true statement
+
+c.Compound X will boil only if its temperature 
+is at least 150°C
+p -> q = true, a rewrite using only if same logical equivalence
+
+d. if compound X is not boiling, then its tempera
+ture is less than 150°C.
+~p -> ~q = this is the invrse, not true
+
+e. A necessary condition for compound X to boil 
+is that its temperature be at least 150°C.
+p -> q = true, rewrite using necessary condition
+
+f. A sufficient condition for compound X to boil 
+is that its temperature be at least 150°C.
+q -> p = its the converse of original statmenet , not true
+
+In 47–50 (a) use the logical equivalences p -> q = ~p V q  
+and p <-> q = (~p V q) A (~q V p) to rewrite the given 
+statement forms without using the symbol -> or <->, 
+and (b) use the logical equivalence p V q = ~(~p A ~q) 
+to rewrite each statement form using only A and ~.
+
+47. p A ~q -> r 
+(p A ~q) -> r
+~(p A ~q) V r
+~p V q V r
+~p V ~(~q A ~r)
+~(~(~p) A ~(~q A ~r))
+
+
+48. p V ~q -> r V q
+~(p V ~q) V r V q
+~p A q V r V q
+~p A ~(~q A ~r) V q
+~p A ~(~(~(~q A ~r)) A ~q)
+
+
+49. (p -> r) <-> (q -> r)
+(~p V r) <-> (~q V r)
+(~(~p V r) V (~q V r) ) A (~(~q V r) V (~p V r))
+(p A ~r) V (~q V r) A (q A ~r) V (~p V r)
+(p A ~r) V ~(~(~q) A ~r) A (q A ~r) V ~(~(~p) V ~r)
+~(~(p A ~r) A ~(~(~(~q) A ~r))) A (q A ~r) V ~(~(~p) V ~r)
+i don't know man i give up it feels pointless but something like this
+
+50. p -> (q -> r) <-> (p A q) -> r
+p -> (~q V r) <-> ~(p A q) -> r
+~p V (~q V r) <-> (~p V ~q) -> r
+~p V (~q V r) <-> ~(~p V ~q) V r
+~p V (~q V r) <-> p A q V r
+(~(~p V (~q V r)) V (p A q V r)) A  (~(p A q V r) V (~p V (~q V r)))
+
+Given any statement form, is it possible to find a 
+logically equivalent form that uses only , and `? 
+Justify your answer.
+
+I don't think its possible. I don't know, why would you do that?
