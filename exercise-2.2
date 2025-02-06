@@ -511,3 +511,117 @@ q -> p = if i mean something, then I say something
 
 these two are not logically equivalent, the only possibility when the sentence is equivalent to is its contrapositive.
 ~q -> ~p = if i don't mean something, then I don't say something
+
+If statement forms P and Q are logically equivalent, then 
+P <-> Q is a tautology. Conversely, if P <-> Q is a tautology, 
+then P and Q are logically equivalent. Use <-> to convert 
+each of the logical equivalences in 29–31 to a tautology. 
+Then use a truth table to verify each tautology.
+
+p & q = logically equivalent
+p <-> q = tautology
+
+29. p -> (q V r) <-> (p A ~q) -> r
+p   q   r    ~p  ~q  ~r     q V r   p -> (q V r)    (p A ~q)        (p A ~q) -> r       p -> (q V r) <-> (p A ~q) -> r
+T   T   T    F   F   F      T       T               F               T                   F
+T   T   F    F   F   T      T       T               F               T                   F
+T   F   T    F   T   F      T       T               T               T                   F
+T   F   F    F   T   T      T       F               T               F                   F
+F   T   T    T   F   F      T       T               F               T                   F
+F   T   F    T   F   T      T       T               F               T                   F
+F   F   T    T   T   F      T       T               F               T                   F
+F   F   F    T   T   T      F       T               F               T                   F
+
+yes, the two statemens are tautology
+
+30. p A (q V r) <-> (p A q) V (p A r)
+p   q   r    ~p  ~q  ~r     q V r   p A (q V r)     (p A q)     (p A r)     (p A q) V (p A r)
+T   T   T    F   F   F      T       T               T           T           T
+T   T   F    F   F   T      T       T               T           F           T
+T   F   T    F   T   F      T       T               F           T           T
+T   F   F    F   T   T      F       F               F           F           F
+F   T   T    T   F   F      T       F               F           F           F
+F   T   F    T   F   T      T       F               F           F           F
+F   F   T    T   T   F      T       F               F           F           F
+F   F   F    T   T   T      F       F               F           F           F
+
+Yes, the two statements are tautology
+
+31. p -> (q -> r) <-> (p A q) -> r
+p   q   r    ~p  ~q  ~r     (q -> r)    p -> (q -> r)       (p A q)         (p A q) -> r        p -> (q -> r) <-> (p A q) -> r
+T   T   T    F   F   F      T           T                   T               T                   T
+T   T   F    F   F   T      F           F                   T               F                   T
+T   F   T    F   T   F      T           T                   F               T                   T
+T   F   F    F   T   T      T           T                   F               T                   T
+F   T   T    T   F   F      T           T                   F               T                   T
+F   T   F    T   F   T      F           T                   F               T                   T
+F   F   T    T   T   F      T           T                   F               T                   T
+F   F   F    T   T   T      T           T                   F               T                   T
+
+Yes, the two statements are tautology.
+
+
+ Rewrite each of the statements in 32 and 33 as a conjunc
+tion of two if-then statements
+32.  This quadratic equation has two distinct real roots if, 
+and only if, its discriminant is greater than zero.
+p = quadratic equation has two distint real roots
+q = its discirminant is greater than zero
+
+p -> q A q -> p
+answer: if the quadratis equation ahs two distinct real roots, its discriminant is greater than zero and if the discriminant
+is greater han zeor, the quadratic equation has two distinct real roots
+
+33. This integer is even if, and only if, it equals twice 
+some integer
+q = this intener is even
+q = its equals twice some integer
+p -> q A q -> p
+if this integeris even then it equals twice some integer and if its equals twice some integer, this integeris even
+
+ Rewrite the statements in 34 and 35 in if-then form in two 
+ways, one of which is the contrapositive of the other. Use 
+the formal definition of “only if.”
+
+34. The Cubs will win the pennant only if they win 
+tomorrow’s game.
+p = cubs will win the pnnant
+q = they win tomorrows game
+p -> q = ~q -> ~p
+v1: the cubs lose tomorrows them then the cubs will not win the pennant
+v2: if the cubs wins the pennant, then they will have win tomorrow s game
+
+35. Sam will be allowed on Signe’s racing boat only if 
+he is an expert sailor.
+p = sam is allowed on signe's racing boat
+q = he is an expert sailor
+p -> q = ~q -> ~p
+v1: if sam is not an expert sailor, then is is not allowed on signe's racing boat
+v2: if sam is allowed on signes racing boat, then he is an expert sailor
+
+36.Taking the long view on your education, you go to 
+the Prestige Corporation and ask what you should 
+do in college to be hired when you graduate. The 
+personnel director replies that you will be hired 
+only if you major in mathematics or computer sci
+ence, get a B average or better, and take account
+ing. You do, in fact, become a math major, get a 
+B+ average, and take accounting. You return to 
+Prestige Corporation, make a formal application, 
+and are turned down. Did the personnel director 
+lie to you?
+
+
+hiring requirements ONLY IF 
+p = you major in computer sicence or mathematics
+q = get a B average or bettter
+r = take accounting
+s = you are hired
+
+(p A q A s) -> s
+
+what happens
+
+(p A q A s) -> ~s
+this is a false statement, if the ocnlucion is false and the hyphotesis is true. therefore he lies .
+
