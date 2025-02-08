@@ -131,15 +131,179 @@ T              T             F              T
 this argument is invalid because theres one occurence where all 3 premises all true but the conclusion is false specifically on row 3
 
 10.
-p1: p -> q V r
+p1: p V q -> r
 c: ~r -> ~p A ~q
 
-p   q   r    ~p  ~q  ~r    p -> q       ~q V r      r
-T   T   T    F   F   F     T            T           T
-T   T   F    F   F   T     T            F           F
-T   F   T    F   T   F     F            T           T
-T   F   F    F   T   T     F            T           F
-F   T   T    T   F   F     T            T           T
-F   T   F    T   F   T     T            F           F
-F   F   T    T   T   F     T            T           T
-F   F   F    T   T   T     T            T           F
+p   q   r    ~p  ~q  ~r    p V q        p V q -> r      ~p A ~q     ~r -> ~p A ~q
+T   T   T    F   F   F     T            T               F           T
+T   T   F    F   F   T     T            F               F           F
+T   F   T    F   T   F     T            T               F           T
+T   F   F    F   T   T     T            F               F           F
+F   T   T    T   F   F     T            T               F           T
+F   T   F    T   F   T     T            F               F           F
+F   F   T    T   T   F     F            T               T           T
+F   F   F    T   T   T     F            T               T           T
+
+Yes, this argument is valid because theres no occurence where all premises are true but the conclusion is false
+
+
+11.
+p1: p -> q V r
+p2: ~q V ~r
+c: ~p V ~r
+
+p   q   r    ~p  ~q  ~r    q V r        p -> q V r      ~q V ~r     ~p V ~r
+T   T   T    F   F   F     T            T               T           T
+T   T   F    F   F   T     T            T               T           T
+T   F   T    F   T   F     T            T               F           T
+T   F   F    F   T   T     F            F               T           T
+F   T   T    T   F   F     T            T               T           F
+F   T   F    T   F   T     T            T               T           T
+F   F   T    T   T   F     T            T               F           F
+F   F   F    T   T   T     F            T               T           T
+
+This argument is invalid because there is an occurence where all premises are true but  the ocnclusion is false, specifically on row 5 of the conclusion truth table
+
+Use truth tables to show that the following forms 
+of argument are invalid.
+12. a.
+p1 : p -> q
+p2: q
+c: p (converse error)
+
+p   q   ~p   ~q     p -> q 
+T   T   F    F      T      
+F   T   T    F      T      
+T   F   F    T      F      
+F   F   T    T      T      
+
+T  T  T
+T  T  F
+F  F  T
+T  F  F
+
+proof: theres one occurence where all premises all true but conclusion is false on row 2, therefore its not valid
+
+b.
+p1: p -> q
+p2: ~p
+c: ~q (invserse error)
+
+p   q   ~p   ~q     p -> q 
+T   T   F    F      T      
+F   T   T    F      T      
+T   F   F    T      F      
+F   F   T    T      T      
+
+T F F
+T T F
+F F T
+T T T
+
+poof: again the same as the previous one, theres a occurense where all premises all ture but conclusion false on row 2.
+
+Use truth tables to show that the argument forms referred 
+to in 13–21 are valid. Indicate which columns represent the 
+premises and which represent the conclusion, and include 
+a sentence explaining how the truth table supports your 
+answer. Your explanation should show that you understand 
+what it means for a form of argument to be valid.
+
+13. p1: p -> q
+p2: ~q
+c: ~p (modus tollen)
+
+p   q   ~p   ~q     p -> q  
+T   T   F    F      T       
+F   T   T    F      T       
+T   F   F    T      F       
+F   F   T    T      T       
+
+T  F  F
+T  F  T
+F  T  F
+T  T  T
+
+proof: argument is valid because there a case where all premises all true and no conclusion are false, theres only 1 on row 4 that satisfy this condition
+
+14. Example 2.3.3(a)
+p1: p
+c: p V q
+p   q  p V q
+T   T  T
+F   T  T
+T   F  T
+F   F  F
+proof: valid argument because on row 1 all premises are true and conclusion is also true, no false conclusion found when all premises are true.
+
+15. Example 2.3.3(b)
+p1: q
+c: p V q
+the same as question 14 - valid since it has the same truth table - all premises true and conclusion true
+
+ 16. Example 2.3.4(a)
+p1: p A q
+c: p
+p   q  p A q
+T   T  T
+F   T  F
+T   F  F
+F   F  F
+its a valid argument because on row 1 all premises are true and theres no false conclusion
+
+ 17. Example 2.3.4(b)
+p1: p A q
+c: q
+p   q  p A q
+T   T  T
+F   T  F
+T   F  F
+F   F  F
+same as 16 - valid argument on row 1 all premises true and no false conclusion
+
+
+ 18. Example 2.3.5(a)
+p1: p V q
+p2: ~q
+c: p
+p   q   ~p   ~q     p V q
+T   T   F    F      T    
+F   T   T    F      T    
+T   F   F    T      T    
+F   F   T    T      F    
+
+T  F   T
+T  F   F
+T  T   T
+F  T   F
+valid argument because on row 3 all premises are true and no false conclusion is found
+
+
+ 19. Example 2.3.5(b)
+p1: p V q
+p2: ~p
+c: q
+
+T  F   T
+T  T   T
+T  F   F
+F  T   F
+same as example 18 - all true on row 2, no occurence where conclusion is false but all premises are true is found
+
+
+20. Example 2.3.6
+p1: p -> q
+p2: q -> r
+c: p -> r
+
+p   q   r    ~p  ~q  ~r    q V r        p -> q V r      ~q V ~r     ~p V ~r
+T   T   T    F   F   F     T            T               T           T
+T   T   F    F   F   T     T            T               T           T
+T   F   T    F   T   F     T            T               F           T
+T   F   F    F   T   T     F            F               T           T
+F   T   T    T   F   F     T            T               T           F
+F   T   F    T   F   T     T            T               T           T
+F   F   T    T   T   F     T            T               F           F
+F   F   F    T   T   T     F            T               T           T
+
+ 21. Example 2.3.7
