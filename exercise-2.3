@@ -42,3 +42,104 @@ premises and which represent the conclusion, and include
 a sentence explaining how the truth table supports your 
 answer. Your explanation should show that you understand 
 what it means for a form of argument to be valid or invalid..
+
+6.
+p1 : p -> q
+p2: q -> P
+c: p V q
+
+p   q   ~p   ~q     p -> q      q -> p      p V q
+T   T   F    F      T           T           T
+F   T   T    F      T           F           T
+T   F   F    T      F           T           T
+F   F   T    T      T           T           F
+
+row 4 of p1 and p2 represnts both true premises but a invalid conclusion, thereore argument is invalid
+
+7.
+p1 :p
+p2: p -> q
+p3: ~q V r
+c: r
+
+p   q   r    ~p  ~q  ~r    p -> q       ~q V r      r
+T   T   T    F   F   F     T            T           T
+T   T   F    F   F   T     T            F           F
+T   F   T    F   T   F     F            T           T
+T   F   F    F   T   T     F            T           F
+F   T   T    T   F   F     T            T           T
+F   T   F    T   F   T     T            F           F
+F   F   T    T   T   F     T            T           T
+F   F   F    T   T   T     T            T           F
+
+yes, this argument is true because of row 1 has al premises true and conclusino is also true.
+
+8. 
+p1: p V q
+p2: p -> ~q
+p3: p -> r
+p4: r
+
+p   q   r  ~q   p V q       p -> ~q         p -> r
+T   T   T  F    T           F               T
+T   T   F  F    T           F               F
+T   F   T  T    T           T               T
+T   F   F  T    T           T               F
+F   T   T  F    T           T               T
+F   T   F  F    T           T               T
+F   F   T  T    F           T               T
+F   F   F  T    F           T               T
+
+p V q       p -> ~q         p -> r      p
+T           F               T           T
+T           F               F           T
+T           T               T           T
+T           T               F           T
+T           T               T           F
+T           T               T           F
+F           T               T           F
+F           T               T           F
+
+this argument is invalid because theres a case where all 3 premismes are all true but the conclusion is false specifically on row 5
+
+9. p1: p A q -> ~r
+p2: p V ~q
+p3: ~q -> p
+p4: ~r
+
+p   q   r  ~q   ~r  p A q  p A q -> ~r    p V ~q        ~q -> p
+T   T   T  F    F   T      F              T             T
+T   T   F  F    T   T      T              T             T
+T   F   T  T    F   F      T              T             T
+T   F   F  T    T   F      T              T             T
+F   T   T  F    F   F      T              F             T
+F   T   F  F    T   F      T              F             T
+F   F   T  T    F   F      T              T             F
+F   F   F  T    T   F      T              T             F
+
+
+p A q -> ~r    p V ~q        ~q -> p        ~r
+F              T             T              F
+T              T             T              T
+T              T             T              F
+T              T             T              T
+T              F             T              F
+T              F             T              T
+T              T             F              F
+T              T             F              T
+
+this argument is invalid because theres one occurence where all 3 premises all true but the conclusion is false specifically on row 3
+
+10.
+p1: p -> q V r
+c: ~r -> ~p A ~q
+
+p   q   r    ~p  ~q  ~r    p -> q       ~q V r      r
+T   T   T    F   F   F     T            T           T
+T   T   F    F   F   T     T            F           F
+T   F   T    F   T   F     F            T           T
+T   F   F    F   T   T     F            T           F
+F   T   T    T   F   F     T            T           T
+F   T   F    T   F   T     T            F           F
+F   F   T    T   T   F     T            T           T
+F   F   F    T   T   T     T            T           F
