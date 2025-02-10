@@ -296,14 +296,450 @@ p1: p -> q
 p2: q -> r
 c: p -> r
 
-p   q   r    ~p  ~q  ~r    q V r        p -> q V r      ~q V ~r     ~p V ~r
-T   T   T    F   F   F     T            T               T           T
-T   T   F    F   F   T     T            T               T           T
-T   F   T    F   T   F     T            T               F           T
-T   F   F    F   T   T     F            F               T           T
-F   T   T    T   F   F     T            T               T           F
-F   T   F    T   F   T     T            T               T           T
-F   F   T    T   T   F     T            T               F           F
-F   F   F    T   T   T     F            T               T           T
+p   q   r    ~p  ~q  ~r    p -> q    q -> r     p -> r
+T   T   T    F   F   F     T         T          T
+T   T   F    F   F   T     T         F          F
+T   F   T    F   T   F     F         T          T
+T   F   F    F   T   T     F         T          F
+F   T   T    T   F   F     T         T          T
+F   T   F    T   F   T     T         F          T
+F   F   T    T   T   F     T         T          T
+F   F   F    T   T   T     T         T          T
 
- 21. Example 2.3.7
+T         T          T
+T         F          F
+F         T          T
+F         T          F
+T         T          T
+T         F          T
+T         T          T
+T         T          T
+
+its a vlid statement because no case where all premises are true but conclusion flase is found.
+
+
+21. Example 2.3.7
+p1: p V q
+p2: p -> r
+p3: q -> r
+c: r
+
+p   q   r    ~p  ~q  ~r    p V q     p -> r       q -> r
+T   T   T    F   F   F     T         T            T
+T   T   F    F   F   T     T         F            F
+T   F   T    F   T   F     T         T            T
+T   F   F    F   T   T     T         F            T
+F   T   T    T   F   F     T         T            T
+F   T   F    T   F   T     T         T            F
+F   F   T    T   T   F     F         T            T
+F   F   F    T   T   T     F         T            T
+
+
+T         T            T        T
+T         F            F        F
+T         T            T        T
+T         F            T        F
+T         T            T        T
+T         T            F        F
+F         T            T        T
+F         T            T        F
+
+argument is valid because no case where all premises are true but conclusion is false is found
+
+ Use symbols to write the logical form of each argument 
+in 22 and 23, and then use a truth table to test the argu
+ment for validity. Indicate which columns represent the 
+premises and which represent the conclusion, and include 
+a few words of explanation showing that you understand 
+the meaning of validity.
+
+p1: If Tom is not on team A, then Hua is on team B.
+p2: If Hua is not on team B, then Tom is on team A.
+c: Tom is not on team A or Hua is not on team B.
+
+p = tom is on team A
+q = hua is on team B
+p1: ~p -> q
+p2: ~q -> p
+c: ~p V ~q
+
+p   q   ~p   ~q     ~p -> q     ~q -> p     ~p V ~q
+T   T   F    F      T           T           F
+F   T   T    F      T           T           T
+T   F   F    T      T           T           T
+F   F   T    T      F           F           T
+
+this argument is not valid because on row 1 of ~p v ~q truth table, theres a case where all premises are true but the conclusion is false
+
+p1: Oleg is a math major or Oleg is an economics  major.
+p2: If Oleg is a math major, then Oleg is required to take Math 362.
+c: Oleg is an economics major or Oleg is not required to take Math 362.
+
+p: oleg is a math major
+q: oleg is an economics major
+r: oleg is required to take math 362
+p1: p V q
+p2: p -> r
+c: q V ~r
+
+p   q   r    ~p  ~q  ~r    p V q     p -> r       q V ~r
+T   T   T    F   F   F     T         T            F
+T   T   F    F   F   T     T         F            T
+T   F   T    F   T   F     T         T            T
+T   F   F    F   T   T     T         F            T
+F   T   T    T   F   F     T         T            F
+F   T   F    T   F   T     T         T            T
+F   F   T    T   T   F     F         T            T
+F   F   F    T   T   T     F         T            T
+
+This argument is also not valid bcause ther's a occurence where all premises are true but the concusion is false on row 1 and 5
+
+ Some of the arguments in 24–32 are valid, whereas others 
+exhibit the converse or the inverse error. Use symbols to 
+write the logical form of each argument. If the argument 
+is valid, identify the rule of inference that guarantees its 
+validity. Otherwise, state whether the converse or the 
+inverse error is made.
+24. p1: If Jules solved this problem correctly, then Jules obtained the answer 2.
+p2: Jules obtained the answer 2.
+c: Jules solved this problem correctly.
+
+p = jules solve the math problem correctly
+q = jules obrained the answer 2
+p1: p -> q
+p2: q
+p1: p
+i believe this is a converse error, so invalid argument
+
+25. p1: this real number is rational or it is irrational
+p2: this real number is not rational
+c: this real number is irrational
+
+p = this real number is rational
+q = this real number is irrational
+p1: p V q
+p2: ~p
+c: q
+This is a valid argument (rules of inference is elimination)
+
+26. p1: If i go to the movies, i won't finish my homework
+p2: If i don't finish my homework, i won't do well on the exam tomorrow
+c: if i go to the moveies, i won't do well on the exam tomorrow
+p: i go to the movies
+q = i don't finish my homework
+r = i won't do well on the exam tomorrow
+p1: p -> q
+p2: q -> r
+c: p -> r
+This is a valid statement (by rule of transitivity)
+
+27. p1: If this number is larger than 2, then its square is larger than 4.
+p2: this number is not larger than 2
+c: the square of this number is not larger than 4
+p = this number is larger tan 2
+q = the square is larger than 4
+p1: p -> q
+p2: ~p
+c: ~q
+This argument is invalid because of inverse error
+
+28. p1: If there are as many rational numbers as there are irrational numbers, then the set of all irrational numbers is infinite.
+p2: the set of all irrational numbers is infinite
+c: there are as many rational numbers as there are irrational numberes
+p = there are as many rational numbers as there are irraitonal numbers
+q = the set of all irrational numbers is infinite
+p1: p -> q
+p2: q
+p3: p
+This argument is invalid because of converse error
+
+29. p1: If at least one of these two numbers is divisible by 6, then the product of these two numbers is divisible by 6. 
+p2: Neither of these two numbers is divisible by 6
+c: the product of thes two numbers is not divisible by 6
+p: at least one of these two numbers is divisible by 6
+q: the product of these two numbers is divisible by 6
+p1: p -> q
+p2: ~p
+c: ~q
+this is an invalid argument due to the inverse error
+
+30. p1: If this computer program is correct, then it produces the correct output when run with the test data my teacher gave me.
+p2:  This computer program produces the correct output when run with the test data my teacher gave me.
+c: this computer program is correct
+
+p: this comp program is corect
+q: it produces the correct ouput when run with test data my teacher gave me
+p1: p -> q
+p2: q
+c:  p
+this argument is invalid because of the converse error
+
+31. p1: sandra knows java and sandra knows C++
+c: sandra knows C++
+p1: p V q
+c: q
+this argument is valid because of the generalization rule of inference
+
+32. p1: if i get a christmas bonus, i'll buy a streo
+p2: if i sell my motorcycle, i ll buy a stereo
+c: if i get a christmas bonus or i sell my motorcycle, then ill buy a stereo
+
+p: i get a christmas bonus
+q: i buy a stereo
+r: i sell my motorcycle
+p1: p -> q
+p2: r -> q
+c: p V r -> q
+
+valid because of the division into cases
+
+33. Give an example (other than Example 2.3.11) of a 
+valid argument with a false conclusion.
+
+p1: all cars can fly
+p2: If all cars can fly, then all cars are aeroplanes.
+c:  Therefore, all cars are aeroplanes. (p -> q)
+
+34. Give an example (other than Example 2.3.12) of an 
+invalid argument with a true conclusion.
+
+p1: if videogames make people violence, then all videogames are dangerous
+p2: all videogames are dangerous
+c: videogames make people violence
+
+35. Explain in your own words what distinguishes a 
+valid form of argument from an invalid one.
+
+answer: a valid form of argument is where all of the premises are true and conclusion is also true. If the premises are all true but conclusion is false it's not a valid argument.
+
+36. Given the following information about a computer 
+program, find the mistake in the program.
+
+a. There is an undeclared variable or there is a 
+syntax error in the first five lines.
+p = undeclared variable
+q = syntax error in the first five lines
+p V q
+
+b. if theres a syntax error in the first five lines, then there is a missing semicolon or a variable name is mispelled
+r = theres a missing semicolon
+s = variable name is mispeled
+q -> r V s
+
+c. there is not a missing semicolon
+~r
+
+d. there is not a mispelled variable name
+~s
+
+~q
+therefore p
+
+answer: there is an undeclared variable (p)
+
+37.  In the back of an old cupboard you discover a note 
+signed by a pirate famous for his bizarre sense of 
+humor and love of logical puzzles. In the note he 
+wrote that he had hidden treasure somewhere on 
+the property. He listed five true statements (a–e 
+below) and challenged the reader to use them to 
+figure out the location of the treasure.
+
+a. If this house is next to a lake, then the treasure is not in the kitchen.
+p = house is next to a lake
+q = treasure is in the kitchen
+r = tree in the front yars is an elm
+s = treasure is buried under the flagpole
+
+p -> ~q
+
+b. if the tree in the front yard is an elm, then the trasure is in the kitchen
+r -> q
+
+c. the house is next to a lake
+p is true
+therfore ~q is true (treasure is not in the kitchen)
+and ~r is true (tree in the front yard is not an elm)
+
+d. tree in the front yard is an elm or the treasure is buried under the flagpole
+r V s
+
+e. if tree in the back yard is an oak, then the treasure is in the garage
+~r -> ~s
+
+where is the treasure hidden?
+p -> ~q
+r -> q
+p is true
+r V s
+therefore the treasure is located in the garage
+
+38 You are visiting the island described in Example 
+2.3.14 (knights & knaves) and have the following encounters with 
+natives.
+
+a) Two natives A and B address you as follows:
+A says: Both of us are knights.
+B says: A is a knave.
+what are a and b?
+
+suppose A is knight
+that makes A: both of us are knights true and makes B false
+B says a is a knave should also be true but it's a contradiction, therefore A is not a knight
+
+suppose B is knight:
+A is a knafe is true and there's no contradiction.
+
+therefore A is knave and B is knight
+
+
+b) Another two natives C and D approach you but 
+only C speaks.
+ C says: Both of us are knaves.
+ What are C and D?
+
+ suppose C is a knight.
+ Both of us are knaves - this automatically contradicts the argument (it's not possible to say c is a knight and say he's a knave)
+ therfore C is not a knight
+
+ suppose both are knights. - again impossible since C knight = contradiction
+ Suppose C is not a knight
+ what C said is false - so both of us are not knaves, which means theres 1 knight and 1 knave
+
+c. You then encounter natives E and F.
+ E says: F is a knave.
+ F says: E is a knave.
+ How many knaves are there?
+
+ Suppose E is a knight:  this means F is a knave
+ Therefore E is a knafe is not true, so E is not a knafe - this is valid
+
+ suppose F is a knight: this means E is a knave
+ therefore F is a knave is not true, so F is not a knve - also valid
+
+ suppose E and F are both knights
+this cannot be a valid argument because if E is a knight, then F must be a knave. and if F is a knight , then E is a knave.
+This is a contradiction so both of them cannot be knights
+
+ suppose E is a knave and F is a knight:
+ E says: F is a knave (false)
+ So f is a knight
+ F says: E is a knave = true - this is a valid argument
+
+ Suppose E and F are both knaves
+ E says: F is a knave (false), so F is a knight
+ F sas: E is a knave (false), so E is a knight
+ this is a contradiction, therefore there is 1 knight and 1 knave
+
+d. Finally, you meet a group of six natives, U, V, 
+W, X, Y, and Z, who speak to you as follows:
+U: none of us is a knight
+V: at least three of us are knights
+W: at most three of us are knights
+X: exactly five of us are knights
+Y: exactly two of us are knights
+Z: exactly one of us is a knight
+
+Suppose U is a knight. 
+None of us is a knight = true
+Contradiction -> total number of knight is not 0
+Therfore U is a knave
+
+Suppose V is a knight
+At least three of us are knights >= 3
+U = none of us is a knight = false
+V = at least three of us are knights = true
+W: at most three of us are knights = true
+X = exactly five of us are knights = false
+Y = exactly two of us are knights = true
+Z = exactly one of us is a knight = false
+
+39. The famous detective Percule Hoirot was called in 
+to solve a baffling murder mystery. He determined 
+the following facts:
+a. Lord Hazelton, the murdered man, was killed 
+by a blow on the head with a brass candlestick.
+b, Either Lady Hazelton or a maid, Sara, was in 
+the dining room at the time of the murder.
+c. If the cook was in the kitchen at the time of the 
+murder, then the butler killed Lord Hazelton 
+d. If Lady Hazelton was in the dining room at the 
+time of the murder, then the chauffeur killed 
+Lord Hazelton.
+e. If the cook was not in the kitchen at the time 
+of the murder, then Sara was not in the dining 
+room when the murder was committed.
+f. If Sara was in the dining room at the time the 
+murder was committed, then the wine steward 
+killed Lord Hazelton.
+
+X = kill
+
+p = lord hazleton
+q = lady hazleton
+r = sara (maid)
+s = cook
+t = butler
+u = chauffeur
+v = wine steward
+
+A = blow on the head with brass candlestick
+B = dining room
+C = kitchen
+
+a. p X a
+b. qB V rB
+c. sC -> t X p
+d. qB -> u X p
+e. ~sC -> ~rB
+f. rB -> v X p
+
+Susppose qB v Rb is true
+this makes u X p true (chauffeur killed lord hazleton)
+and also makes v X p true (wine chauffer killed lord hazleton)
+
+suppose sC is true, this maes t X p true (butler killed lord hazleton)
+qB v rB is true (lady hazleton and sara is in the dining room) is true
+qB -> u X p is true (hauffeur killed lord hazleton) - this is a contraditction therefore sC -> t x P is false (butler didn't kill lord hazleton)
+
+
+suppose ~sC is true, this makes ~rB true (sara is not in the dining room)
+which makes v X p not true (wine steward iddn't kill lord hazleton)
+which makse qB v ~rB = qB is true
+if qB is true, then u X p is true (cahauffeur kils lord hazleton)
+
+41. Sharky, a leader of the underworld, was killed by 
+one of his own band of four henchmen. Detective 
+Sharp interviewed the men and determined that all 
+were lying except for one. He deduced who killed 
+Sharky on the basis of the following statements:
+a. Socko: Lefty killed Sharky.
+b. Fats: Muscles didn’t kill Sharky.
+c. Lefty: Muscles was shooting craps with Socko when Sharky was knocked off.
+d. Muscles: Lefty didn’t kill Sharky.
+
+Who did kill Sharky?
+
+X = kill
+C = shooting craps
+
+l = Lefty
+so = Socko
+sh = Sharky
+f = fats
+m = muscles
+
+a. lXsh
+b. ~mXsh
+c. mCso
+d. ~lXsh
+
+suppose lXsh is true
+this makes lefty the killer, making mCso false - lefty could be the kiler
+
+suppose ~mXsh is true
+this makes mCso true
+which makes A false since socko was off with muscles
+which makes muscles true, therefore lefty is not the killer
+
+suppose mCso is true
