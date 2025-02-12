@@ -768,6 +768,8 @@ total: 3 false: therefore muscle is the killer
 the valid argument forms listed in Table 2.3.1 to deduce the 
 conclusion from the premises, giving a reason for each step as 
 in Example 2.3.8. Assume all variables are statement variables.
+
+NOTE; TABLE 2.3.1 ONT EXERCISE 2.3.1!!!!!!!!!!!
 41. a. ~p V q -> r
 b. s V ~q
 c. ~t
@@ -775,5 +777,147 @@ d. p -> t
 e. ~p A r -> ~s
 f. therefore ~q
 
-a. ~p V q -> r
-b. 
+Step 1
+p -> t
+~t
+therefore ~q
+
+step 2
+~p V q
+~p
+therefore ~p V q is true
+
+step 3
+~p V q -> r
+~p V q
+r is true
+
+step 4
+~ p A r
+~p
+r
+~p A r is true
+
+
+step 6
+~p A r -> ~s
+~p A r
+therefore ~s is true
+
+s V ~q
+~s
+threfore ~q
+
+
+42.
+a. p V q
+b. q -> r
+c. p A s -> t
+d. ~r
+e. ~q -> u A s
+f. therefore t
+
+step 1: derive b and d
+q -> r
+~q
+therefore ~p is true by modus tollens
+
+step 2
+p V q
+~q
+therefore p is true by elimination
+
+step 3
+p A s
+p
+therefore p and s is true (by specialization)
+
+step 4
+~q -> u A s
+~q
+therefore u A s is true by modus ponens
+
+step 5
+p A s -> t
+p
+therefore t!
+
+43.
+a. ~p -> r A ~s
+b. t -> s
+c. u -> ~p
+d. ~w
+e. u V w
+f. therefore ~t
+
+step 1:
+u V w
+~w
+therefore u (by elimination)
+
+step 2:
+u -> ~p
+u
+therefore ~p (by modus ponens)
+
+step 3
+~p -> r A ~s
+~p
+therefore r A ~s (by modus pones)
+so r is true or ~s is also true
+
+step 4
+t -> s
+~s
+therefore ~t (by modus tollens)
+
+
+44. a. p -> q
+b. r V s
+c. ~s -> ~t
+d. ~q V s
+e. ~s
+f. ~p A r -> u
+g. w V t
+h. therefore u A w
+
+step 1
+r V s
+~s
+therefore r
+
+step 2
+~q V s
+~s
+therefore ~q
+
+step 3
+~s -> ~t
+~s
+therefore ~t
+
+step 4
+w V t
+~t
+therefore w
+
+step 5
+p -> q
+~q
+therefore ~p
+
+step 6
+~p A r
+r
+~p
+therefore ~p is true and r is true (both is true)
+
+step 7
+~p A r -> u
+~p A r
+therefore u
+
+u A w
+u
+w
+therefore u A w is true
