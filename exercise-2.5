@@ -12,5 +12,98 @@ and 11b2 - 1b2 = 10b2
 4. a half adder is a digital logic circuit that adds single binary digit number numbers a and b
 and a full adder is a digital logic circuit that adds three binary digit number a b c
 
-5. if a is an integer with -128 <= a <= 127, the 8 bit two's complement of a is ____
-if a >= 0 and is ____ if a < 0
+5. if a is an integer with -128 <= a <= 127, the 8 bit two's complement of a is a
+if a >= 0 and is 2^8 - |a| if a < 0
+
+6. to find the 8bit's two complement of a negative integer a that is at least -128, you
+write the binary representation for |n|, invert the digits, and add 1
+
+7. to add two integers in the range -128 through 127 whose sum is also in the range -128 through 127,
+you ___, ___, ___, and ___?? I have no idea
+
+8. to represent a nonnegative integer in hexadecimal notation means to write
+it as a sum of products of the form d x 16 to the power of n where n is nonnegative integer and d is 0 - 15
+
+9. to convert a nonnegative integer from ehxadecimal to binary, you write each hexadecimal digit in 4bit and combine the result
+
+
+exercise set 2.5
+
+binary table
+2^0 = 1
+2^1 = 2
+2^2 = 4
+2^3 = 8
+2^4 = 16
+2^5 = 32
+2^6 = 64
+2^7 = 128
+2^8 = 256
+2^9 = 512
+2^10 = 1024
+
+
+ Represent the decimal integers in 1–6 in binary notation
+ 1. 19 = 16 + 2 + 1 = 10011
+ 2. 55 = 32 + 16 + 4 + 2 + 1 = 110111
+ 3. 287 = 256 + 16 + 8 + 4 + 2 + 1 = 100011111
+ 4. 458 = 256 + 128 + 64 + 8 + 2 = 111001010
+ 5. 1609 = 1024 + 512 + 64 + 8 + 1 = 11001001001
+ 6. 1424 = 1024 + 256 + 128 + 16 = 10110010000
+
+  Represent the integers in 7–12 in decimal notation
+  7. 1110 = 4 b.digits -> 8 + 4 +2 = 14
+  8. 10111 = 5 b.digits -> 16 + 4+2+1 = 23 
+  9. 110110 = 6 b.digits -> 32+16+4+2 = 54
+  10. 1100101 = 7 b.digits -> 64+32+4+1 = 101
+  11. 1000111 = 7 b.digits -> 64+4+2+1 =71 
+  12. 1011011 = 7 b.digits -> 64+16+8+2+1 = 91
+
+Perform the arithmetic in 13–20 using binary notation.
+13.  1011+101 = 10000
+14. 1001 + 1011 = 10100
+15. 101101 + 11101 = 1001010
+16. 110111011+1001011010 = 10000010101
+17. 10100 - 1101 = 111
+18. 11010 - 1101 = 1101
+19. 101101 - 10011 = 11010
+20. 1010100 - 10111 = 111101
+
+
+Give the output signals S and T for the circuit 
+shown below if the input signals P, Q, and R are 
+as specified. Note that this is not the circuit for a 
+full-adder.
+
+
+21. a. P = 1, Q = 1, R = 1 -> S = 0, T = 1
+b. P = 0, Q = 1, R = 1 -> S = 0, T = 1
+b. P = 1, Q = 0, R = 1 -> S = 0, T = 0
+
+22. Add 11111111 base2 + 1 base2 and convert the result to deci
+mal notation, to verify that 11111111 base2 = (2^8 - 1) base 10
+
+
+11111111 + 1 = 100000000 = 256
+(2^8 -1) = 255 base10
+
+Find the 8-bit two’s complements for the integers in 23–26
+23.  -23 = 256 - (23) = 233 = 128 + 64 + 32 + 8 + 1 = 11101001
+24.  -67 = 256 - (67) = 189 = 128 + 32 + 16 + 8 + 4 + 1 = 10111101
+25.  -4 = 256 - 4 = 252 = 128 + 64 + 32 + 16 + 8 + 4 = 11111100
+26.  -115 = 256 - 115 = 141 = 128 + 8 + 4 + 1 = 10001101
+
+ Find the decimal representations for the integers with the 
+8-bit two’s complements given in 27–30.
+27. 11010011 -> 00101100 + 1 = 00101101
+28. 10011001 -> 01100110 + 1 = 01100111
+29. 11110010 -> 00001101 + 1 = 00001110
+30. 10111010 -> 01000101 + 1 = 01000110
+
+Use 8-bit two’s complements to compute the sums in 31–36.
+31. 57 + (-118) = 11000011
+32. 62 + (-18) = 00101100
+33. -6 + (-73) = 01001111
+34. 89 + (-55) = 00100010
+35. -15 + (-46) =  00111101
+36. 123 + (-94) = 00011101
