@@ -70,13 +70,13 @@ answer: this is not a correct negation
 
  b. No dogs are loyal.
 Ax, x is a dog, x is not loyal
-Ax, P(x) -> Q(x)
+Ax, P(x) -> ~Q(x)
 answer: this is not a correct negation (same as a)
 
  c. Some dogs are disloyal.
 Ex, x is a dog, x is not loyal
-Ex, P(x) -> ~Q(x)
-answer: this is not a correct negation
+Ex, P(x) A ~Q(x)
+answer: yes, this is not a correct negation
 
  d. Some dogs are loyal.
 Ex, x is a dog, x is loyal
@@ -94,7 +94,121 @@ Ex, P(x) AND ~Q(x)
 answer: yes, this is the correct negation
 
  g. No animals that are not dogs are loyal.
-Ax, x is a dog -> x is not loyal
+Ax, x is not a dog -> x is not loyal
+Ax, ~P(x) -> ~(Q)
+answer: no, this is not a correct negation
 
  h. Some animals that are not dogs are loyal.   
- Ex, 
+ Ex,  x is not a dog -> x is loyal
+ Ex, ~P(x) -> Q(x)
+ answer: no this is not a correct negation
+
+ 3.  Write a formal negation for each of the following 
+statements
+a. A (all) string s, s has at least one character
+E(some) string s, s has more than one character
+
+b. A computer c, c has a CPU
+E computer c, c does not have a CPU
+
+c. E a movie m such that m is over 6 hour slong
+A a movie m such that m is less than 6 hours long
+
+d. E a band B such that b has won at least 10 Grammy awards
+A a band b such that B has won more than 10 grammy awards
+
+4. Write an informal negation for each of the follow
+ing statements. Be careful to avoid negations that 
+are ambiguous.
+a. All dogs are friendly
+Ax, if x is a dog then x is firendly
+Ex, if x is a dog, then tx is not friendly
+Some dogs are not friendly
+
+b. all graphs are connected
+Ax, if x is a graph, x is connected
+Some graphs are disconnected
+
+c. some suspicions were substantiated
+Ex, x is suspision, then x is substantiated
+Ax, x is suspision then x is not substantiated
+negation = All suspicions were not substantiated
+
+d. some estimates are accurate
+Ex, x is an estimate A x is accurate
+Ax, x is an estimate A x is not accurate
+All estimates are innacurate
+
+5. Write a negation for each of the following statements.
+a. Every valid argument has a true conclusion.
+Ax, x is valid -> x has a true conslusion
+Ex, x is valid -> x does not have a true conclusion
+answer: Some valid argument does not have a true conclusion OR
+some valid arument has false conclusion
+
+b. All real numbers are positive, negative, or zero
+Ax, x is positive or x is negative or x is zero
+Ex, ~(x is positive or x is negative or x is zero)
+Ex, x is not positive AND x is not negative AND x is not zero
+negation: Some real numbers are not positive, negative, or zero
+
+Write a negation for each statement in 6 and 7.
+6.
+a. Sets A and B do not have any points in common.
+Ax, x is a point, x does not belong in A and B
+Ex, x is a point, x belongs in A and B
+negation: There exists a point that belongs in set A and B
+
+b. Towns P and Q are not connected by any road on the map.
+Ax, x is a road, x connects towns P and Q
+Ex, x is a road, x does not connect towns P and Q
+negation: there exists a road that does not connect towns P and Q
+
+
+7.a. This vertex is not connected to any other vertex 
+in the graph.
+Ax, x is a vertex, x is connected to other vertex in the graph
+Ex, x is a vertex, x is not connected to other vertex in the graph
+negation: There exists a vertex that is not connected to other vertex in the graph
+
+b. This number is not related to any even number.
+Ax, x is a number, x is not related to even number
+Ex, x is a number, x is related to even number
+negation: there exists a number that is related to even number
+
+8. Consider the statement
+“There are no simple solutions to life’s problems.”
+Write an informal negation for the statement, and then write the statement
+formally using quantifiers and variables.
+There are no simple solutions to life's problems
+P = x is a simple solution
+Q = x does not solve life's problem
+Ax, P(x) -> Q(x)
+negation: Ex, P(x) A ~Q(x)
+formal: There exists a simple solution x such that x solve life's problem
+informal: There is some simple solution to life's problem
+
+
+ Write a negation for each statement in 9 and 10.
+ 9. A (all) real number x, if x > 3 then X^2 > 9
+ answer: E real number x, x > 3 AND X^2 <= 9 
+
+ 10. A computer program P, if P compiles without error messages, then P is correct
+ answer: E computer program P,p compiles without error messages AND P is not correct
+
+ 11.  In each of 11–14 determine whether the proposed nega
+tion is correct. If it is not, write a correct negation.
+
+Statement:  The sum of any two irrational numbers is irrational.
+Proposed negation: The sum of any two irrational numbers is rational.
+Ax, P(x) -> Q(x)
+For all number x, if x is irrational then its x + x is irrational 
+negation: P(x) A ~Q(x)
+Ex, x is irrational and x+x is not irrational (rational)
+proposed negation is false.
+correct negation: There exists one irrational number x where its sum is rational
+
+ Proposed negation:  The product of any irrational number and any rational number is rational.
+b12.  Statement:   The product of any irrational number and any rational number is irrational.
+
+ statement: A irrational number x, A irrational number y if x is irrational, then x * any rational number is irrational
