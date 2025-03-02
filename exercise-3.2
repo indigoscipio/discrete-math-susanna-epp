@@ -199,6 +199,7 @@ informal: There is some simple solution to life's problem
  11.  In each of 11–14 determine whether the proposed nega
 tion is correct. If it is not, write a correct negation.
 
+11.
 Statement:  The sum of any two irrational numbers is irrational.
 Proposed negation: The sum of any two irrational numbers is rational.
 Ax, P(x) -> Q(x)
@@ -208,7 +209,127 @@ Ex, x is irrational and x+x is not irrational (rational)
 proposed negation is false.
 correct negation: There exists one irrational number x where its sum is rational
 
- Proposed negation:  The product of any irrational number and any rational number is rational.
-b12.  Statement:   The product of any irrational number and any rational number is irrational.
 
- statement: A irrational number x, A irrational number y if x is irrational, then x * any rational number is irrational
+12. 
+Statement:   The product of any irrational number and any rational number is irrational.
+Proposed negation: The product of any irrational number and any rational number is rational.
+
+statement: A Irr(x), A Rat(y), x * y = irrational
+For all irrational number x and rational number y, their product is irrational
+negation: E Irr(x), E Rat(y), x * y is rational
+proposed negation is true.
+There exists irrrational number x and there exists rational number y in which x * y (their product) is rational
+
+13.
+statement: For every integer n, if n^2 is even then n is even.
+proposed negation: For every integer n, if n^2 is even then n is not even.
+
+statement: All integer n, n^2 is even -> n is even
+Ax, P(x) -> Q(x)
+proposed negation is false.
+negation: Some integer n, n^2 is even AND n is odd
+there exists an integer n where n^2 is even and n is odd.
+
+14. 
+statment:  For all real numbers x1 and x2, if x1^2 = x2^2  then x1 = x2
+proposed negation: For all real numbers x1 and x2, if x1^2 = x2^2  then x1 does not equal to x2
+statement: All real number x1 and x2, x1^2 = x2^2 -> x1 = x2
+proposed negation is incorrect.
+negation: Some real number x1 and x2, x1^2 = x2^2 AND x1 does not equal to x2
+There exists some real number x1 and xt in which x1^2 = x2^2 and x1 does not equal to x2
+
+15.  Let D = {-48,-14,-8, 0, 1, 3, 16, 23, 26, 32, 36} 
+Determine which of the following statements are 
+true and which are false. Provide counterexamples 
+for the statements that are false.
+
+a. Ax E D, if x is odd then x > 0
+D = {1,3,23}
+this is true, since all odd numbers contained in set D are all positive integers
+
+b. Ax E D, if x is less than 0 then x is even
+D = {-48, -14, -8}
+This is true because all negative integers are even in the set
+
+c. Ax E D, if x is even then <= 0
+D = {-48, -14, -8, 0, 16, 26, 32, 36}
+These are the set of all even numbers in D,
+counterexample: this is false because we can see 16, 26, 32, and 36 is more than 0
+
+d.Ax E D, if the ones digit of x is 2, then the tens digit is 3 or 4
+D = {32}
+this is true since 32 satisfies the given and no other counterexample can be found
+
+e. Ax E D, if the ones digit of x is 6, then the tens digit is 1 or 2
+D = {16, 26, 36}
+counterexample: this is false since there is 36 is also has ones digit of x is 6.
+
+ In 16–23, write a negation for each statement.
+16. A(All) real number x, if x^2 >= 1 then x > 0
+negation: Some real number x, x ^ 2 AND x <= 0
+
+17. A integer d, if 6/d is an integer then D = 3
+negation: Some integer d, 6/d is an integer AND D does not equal to 3
+
+18. Ax E R, if x (x+1) > 0 then x > 0 or x < -1
+negation: Ex E R, x(x+1) > 0 AND (x<=0 AND x >= -1)
+
+19. Ax E Z, if n is prime then n is odd or n = 2
+negation: Ex E Z, n is prime AND (n is even AND n does not equal to 2)
+
+20. A integers a,b , and c, if a -b is even and b-3 is even, then a -c is even
+negation: E integers a,b,and c, (a - b is even and b - 3 is even) AND (a-c is odd)
+
+21. A integer n, if n is divisible by 6, then n is dibisible by 2 and n is dibisible by 3
+negation: E integer n, n is divisible by 6 AND (n is not divisible by 2 OR n is not divisible by 3 )
+
+22. if the square of an integer is odd, then the integer is odd
+Ax, x is an integer -> x^2 is odd
+negation: Ex, x is an integer AND x^2 is even
+negation: There exists a number x such that x is an integer AND x^2 is even
+
+23. if a function is differentiable then it is continuous
+Ax, x is differentiable -> x is continous
+Ex, x is differentiable AND x is not continuous
+There exists a function x that is differentiable and not continuouss
+
+24. Rewrite the statements in each pair in if-then form 
+and indicate the logical relationship between them.
+
+a. All the children in Tom’s family are female.
+ All the females in Tom’s family are children.
+
+Ax, P(x) -> Q(x)
+Ax, Q(x) -> P(x)
+for all children x, if x is tom's family then they are female
+for all children x, if x is a female in tom's family then they are a 
+logical relationship: they are converse
+
+
+ b.  All the integers that are greater than 5 and end in 1, 3, 7, or 9 are prime.
+ All the integers that are greater than 5 and are prime end in 1, 3, 7, or 9.
+P(x) = x is greater than 5 and ends in  1,3,7,9
+Q(x) = x is prime
+R(x) = x is greater than 5 and is prime
+
+ A integer x, x > 5 and end in 1,3,7 or 9 -> x is prime
+P(x) -> Q(x)
+A integer x, x > 5 and is prime -> x end in 1,3,7, or 9
+R(x) -> Q(x)
+
+for all integer x, if x is greater than 5 and end in 1,3,7 or 9, then x is prime
+for all integer x, if x is greater than 5 and is prime, then x ends in 1,3,7 or 9
+logaical relationship: ?converse
+
+25. Each of the following statements is true. In each 
+case write the converse of the statement, and give a 
+counterexample showing that the converse is false.
+a. If n is any prime number that is greater than 2, 
+then n+1 is even.
+A prime number n, if n > 2 -> n +1 is even
+converse: A prime number n, if n + 1 is even -> n > 2
+converse counterexample:
+1 : 1 + 1 is even -> n > 2 = 2 is even -> 2 > 2 which is false
+-3: -3 + 1 is even -> -3 > 2 = -2 is even -> -2 > 2 which is also false
+
+b. 
