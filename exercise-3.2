@@ -162,14 +162,14 @@ negation: There exists a point that belongs in set A and B
 b. Towns P and Q are not connected by any road on the map.
 Ax, x is a road, x connects towns P and Q
 Ex, x is a road, x does not connect towns P and Q
-negation: there exists a road that does not connect towns P and Q
+negation: there exists a road that connect towns P and Q
 
 
 7.a. This vertex is not connected to any other vertex 
 in the graph.
-Ax, x is a vertex, x is connected to other vertex in the graph
-Ex, x is a vertex, x is not connected to other vertex in the graph
-negation: There exists a vertex that is not connected to other vertex in the graph
+Ax, x is a vertex, x is not connected to other vertex in the graph
+Ex, x is a vertex, x is connected to other vertex in the graph
+negation: There exists a vertex that is connected to other vertex in the graph
 
 b. This number is not related to any even number.
 Ax, x is a number, x is not related to even number
@@ -646,5 +646,61 @@ statements 45–48 without using the word necessary or
 sufficient.
 
 45. Being divisible by 8 is not a necessary condition for being divisible by 4
+p = n is divisible by 8
+q = n is divisible by 4
+necessary: q -> p
+not necessary: ~(q -> p) = q A ~p
+answer: For some numbers n, n is divisible by 4 AND n is not divisible by 8
 
-46. 
+46. Having a large income is not a necessary condition for a person to be happy.
+p = having large income
+q = a person can be happy
+NOT neecssary: ~(q -> p) 
+If a person is happy, then that person has a large income.
+A income x, if income is large -> a person can not be happy
+answer: There is at least one person p that is happy AND does not have a large income
+
+47. Having a large income is not a sufficient condition for a person to be happy.
+p = having large income
+q = person can be happy
+sufficient = p -> q
+not sufficient = ~(p -> q) = p AND ~q
+answer: There is at least one person n who is having large income AND is not happy
+
+48. Being a polynomial is not a sufficient condition for a function to have a real root.
+p = is a polynomial function
+q = function has real root
+sufficient = p -> q
+For all function f, if f is polynomial, then f has a real root
+not sufficient = ~(p ->q) = p A ~q
+answer: There is at least one function f that is a polynomial AND does not have a real root
+
+49. The computer scientists Richard Conway and David Gries once wrote:
+The absence of error messages during translation of a computer program is
+only a necessary and not a sufficient condition for reasonable [program] correctness.
+p = the absenceo f error messages during translation of a computer program
+q = reasonable program correctness
+not sufficient = ~(p ->q) = p A ~q
+necessary = q -> p
+necessary and not sufficient = q -> p AND p A ~q
+answer: If a program is correct, then it has no error messages during translation. AND if a program has no error, it does not mean it is correct.
+
+A frequent-flyer club brochure states, “You may 
+select among carriers only if they offer the same 
+lowest fare.” Assuming that “only if” has its for
+mal, logical meaning, does this statement guaran
+tee that if two carriers offer the same lowest fare, 
+the customer will be free to choose between them? 
+Explain.
+
+
+
+p = you may select among carriers
+q = they offre the same lowest fare
+p only if q = ~q -> ~p = p -> q
+if you can select among carriers, then they are offering the same lowest fare.
+
+does it mean statement guarantee if two carriers offer the same lowest fare,
+then the ucstomer wil be free to choose between them?
+the question is in q -> p statement (converse)
+answer: no, it only guarantees that if you can select among carriers, then they are offering the lowest fare.
