@@ -13,7 +13,7 @@ answer: at least one element from y, together with the y, satisfy P(x,y)
 “Ex in D such that Ay in E, P(x, y),” you need 
 to find _____  so that no matter what ____ a person might subsequently give you, 
 ____ will be true.
-answer: All element from y, element x, P(x,y)
+answer: at least one element x in D, element y, P(x,y)
 
 3.  Consider the statement “Ax, Ey such that P(x, y), a 
 property involving x and y, is true.” A negation for 
@@ -23,9 +23,161 @@ answer: Ex, Ay, such that ~(P(x,y))
 4. Consider the statement “Ex such that Ay, P(x, y), a 
 property involving x and y, is true.” A negation for 
 this statement is _____
-answer: Ax, such that Ex, ~(P(x,y))
+answer: Ax, such that Ey, ~P(x,y)
 
 5. Suppose P(x, y) is some property involving x and y,
 and suppose the statement “Ax in D, E y in E such that P(x, y)” is true.
 
 Then the statement “E x in D such that Ay in E, P(x, y)”
+
+original statement: For all alements x in D, there is at least one y in E such that P(x,y) is true
+asked statement: There exists one element x in D such that for all elemenent y in E, P(x,y) is true
+
+a. is true
+b. is false
+c. may be true or may be false
+answer: is false
+
+Exercise set 3.3
+1. Let C be the set of cities in the world, let N be the 
+set of nations in the world, and let P(c, n) be
+“c is the capital city of n.”
+Determine the truth values of the following statements.
+a. P(Tokyo, Japan) = true
+b. P(Athens, Egypt) = false (should be cairo?)
+c. P(Paris, France) = true
+d. P(Miami, Brazil) = false (should be rio/brasilia)
+
+2. Let G(x, y) be x^2 > y
+Indicate which of the following statements are true and which are false.
+a. G(2,3)
+4 > 3 = true
+
+b. G(1,1)
+1 > 1 = false
+
+c. G(1/2,1/2)
+(1/2)^2 > 1/2
+1/4 > 1/2 = false
+
+d. G(-2,2)
+-2^2 > 2
+4 > 2 = true
+
+3.  The following statement is true:
+“A(All) nonzero number x, E a real number y such that xy = 1.”
+For each x given below, find a y to make the predicate “xy = 1” true.
+a. x=2
+answer: y = 1/2
+
+b. x=-1
+answer: -1
+
+c. x=3/4
+answer: 4/3
+
+4.  the following statement is true:
+A real number x, E an integer n such that n > x
+*for each x given below, find an n to make the predicate n > x true
+a. x = 15.83
+answer: n = 16
+
+b. x = 10^8
+answer: n = 10^9
+
+c. x = 10^10^10
+answer: n = 10^10^10^10
+
+
+The statements in exercises 5–8 refer to the tarski world 
+given in Figure 3.3.1. explain why each is true.
+Object a (blue circle): row 1, column 3
+Object b (gray circle): row 2, column 1
+Object c (blue circle): row 2, column 2
+Object d (black triangle): row 2, column 4
+Object e (black square): row 3, column 1
+Object f (gray triangle): row 3, column 3
+Object g (gray square): row 3, column 5
+Object h (gray square): row 4, column 2
+Object i (gray triangle): row 5, column 4
+Object j (blue square): row 5, column 5
+
+5.  For every circle x there is a square y such that 
+x and y have the same color.
+Ax Circle(x), Ex Square(y) such that SameColor(x,y)
+circles = b (gray) ,c or a (blue)
+squares = e (black),h (gray),g (gray), j (blue)
+b (gray) -> h or g (gray)
+c or a (blue) -> j (blue)
+this statement is true because for all circles you can find at least one square that has the same color as the circle
+
+
+6.  For every square x there is a circle y such that  
+x and y have different colors and y is above x.
+Ax Square(x), E Circle(y) such that DifferentColor(x,y) AND IsAbove(y,x)
+squares = e (black),h (gray),g (gray), j (blue)
+circles = b (gray) ,c or a (blue)
+e -> e has different color with gray (true) AND b is above e (true)
+e -> true
+
+h -> h has different color with c or a (true) AND c is above h (true
+h -> true
+
+g -> g has different color with c or a (true) AND b,c,or a is above g
+g -> true
+
+j -> j has different color with b (true) AND b,c,or a is  above j
+Therefore this statement is true
+
+
+7. There is a triangle x such that for every square  
+y, x is above y.
+Ex Triangle(x), Ax Square(y), IsAbove(x,y)
+triangles: d,f,i
+squares: e,g,h,j
+d -> is d above square e ? yes.
+d -> is d above square g ? yes
+d -> is d above square h ? yes.
+d -> is d above square j? yes.
+Therfore the statement is true 
+
+
+8. There is a triangle x such that for every circle y,  
+y is above x.
+Ax Triangle(x), E circle(y), IsAbove(y,x)
+triangles: d,f,i
+circles = b,c, a 
+d -> is circle b above d? false
+f -> is circle b above f? true
+f -> is circle c above f? true
+f -> is circle a above f? true
+therefore the statement is true 
+
+
+9. Let D = E = {-2, -1, 0, 1, 2}. Explain why the 
+following statements are true.
+a. A(All)x in D, E(some)y in E such that x+y = 0
+D = {-2, -1, 0, 1, 2}
+E = {-2, -1, 0, 1, 2}
+All elements x in d, there is some y in e such that x + y = 0
+which means for all given D, there is an opposite number that makes x + y = 0
+x = -2 -> y = 2
+x = -1 -> y = 1
+x = 0 -> y = 0
+x = 1 -> y = -1
+x = 2 -> y = -2
+therefore the statement is true
+
+b. Ex in D such that Ay in E, x+y = y
+There exists at least one x in D such that for all y in E, x + y = y 
+which means you can pick at least one element in d that satisfies x + y = y for all element y
+D = {-2, -1, 0, 1, 2}
+E = {-2, -1, 0, 1, 2}
+
+let x = 0, y = -2 -> x + y = -2
+let x = 0, y = -1 -> x + y = -1
+let x = 0, y = 0 -> x + y = 0
+let x = 0, y = 1 -> x + y = 1
+let x = 0, y = 2 -> x + y = 2
+therefore the statement is true
+
