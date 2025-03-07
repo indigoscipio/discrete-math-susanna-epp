@@ -91,6 +91,7 @@ answer: n = 10^10^10^10
 
 The statements in exercises 5–8 refer to the tarski world 
 given in Figure 3.3.1. explain why each is true.
+TARSKI FIGURE3.3.1
 Object a (blue circle): row 1, column 3
 Object b (gray circle): row 2, column 1
 Object c (blue circle): row 2, column 2
@@ -181,3 +182,208 @@ let x = 0, y = 1 -> x + y = 1
 let x = 0, y = 2 -> x + y = 2
 therefore the statement is true
 
+This exercise refers to Example 3.3.3. Determine 
+whether each of the following statements is true or 
+false.
+
+stations:
+salads: green salad, fruid salad
+main courses: spaghetti, fish
+desserts: pie, cake
+beverages: milk, soda, coffee
+
+students:
+uta -> green salad, spaghetti, pie, milk
+tim -> fruit salad, fish, pie, milk, coffee
+yuen -> spaghetti, fish, pie, soda
+
+
+a. A student S, E a dessert D such that s choose D
+For all student s, there is at least one desert D such that S chose D
+studesnts: uta, tim, yuen
+which means these 3 students needs to choose the same dessert D
+answr: true: tim, uta, and yuen choose all pie for dessert
+
+
+b. A student S, E a salad T such that S chose T
+For all stuedent S, there is at least a salad T such that S chose T
+which means we need to find a case where all students needs to choose the salad same salad T
+answer: false, there is no case where all 3 students choose the same salad
+(uta choose green salad and tim choose fruit alad, yuen didn't pick up any salads at all)
+
+c. E a dessert D such that A student S, S chose D.
+There is at least one dessert D such that for all student S, S chose D
+this is the same as question a - desert that was chosen by all students.
+desert: pie, cake
+student: uta, tim, yuen
+answer: true (pie satisfies this)
+
+
+d. E a beverage B such that A student D. D chose B.
+There is at least a beverage B such that for all student D, D chose B
+which means we need to find a case where there is a beverage that was chosen by all student
+answer: false (the closest is milk cwhich was chosen by uta and tim but yen chose soda)
+
+e. E an item I such that A student S, S did not choose I
+There is at an item I such that for all student S, S did ont choose I
+which means we need to find a case where there is an item I that was NOT chosen by all student
+Find an item that was not chosen by all of the students
+answer: false - all items were chosen by the student
+
+f. E a station Z such that A student S, E an item I such that S chose I from Z
+There is a station Z such that for all student S, there is an item I such that S chose I from Z
+Which means
+all student chose at least one item from at least one station
+answer: true; student picks up at least one food from at least one station
+
+11.
+Let S be the set of students at your school,
+let M be the set of movies that have ever been released, and
+let V(s, m) be “student s has seen movie m.” 
+
+Rewrite each of the following statements without using the symbol A, the symbol E, or variables.
+
+a. Es E S such that V(s, casablanca)
+There is at least one student S such that s has seen casablanca.
+answer: there is at least one student that has seen the movie casablanca
+
+b. As E S, V(s,Star Wars)
+For all student s, s has seen the movie star wars. 
+answer: All students have seen the movie star wars
+
+c. As E S, Em E M such that V(s,m)
+For all student S, there exists at least one movie M such that student s has seen movie m
+answer: There is at least one movie that has been seen by all students
+
+d. Em E M such that As E S, V(s,m)
+There is a movie M such that for all student S, student S has seen movie M
+answer: is a movie that was seen by all students
+
+e. Es E S, Et E S, and Em E M such that s does not equal t and (V(s,m) A(AND) V(t,m))
+There is a student S, a student T, and a movie M such that s does not equal to t
+and student s has seen movie m AND student t has seen movie m
+answer: There is two students that have seen the same movie
+
+f. Es E S and Et E S such that s does not equal t and A(All)m E M, V(s,m) -> V(t,m).
+There is at a student s and a student t such that s does not equal to t and
+for all movie m, if s has seen movie m, then t has seen movie m
+answer: There is two different students where if one has seen a movie, then the other one has seen that movie too.
+
+12. Let D = E{-2, -1, 0, 1, 2}. Write negations 
+for each of the following statements and determine 
+which is true, the given statement or its negation.
+
+a. Ax in D, Ey in E such that x+y = 1.
+for all x in d, there is at least one y such that x + y = 1
+we need to check if all x in d and at least one y satisfies x + y = 1
+remember result needs to be 1
+x = -2, y = None
+x = -1, y = 2 
+x = 0, y =  1
+x = 1, y =  -2  
+x = 2, y =   None 
+
+now the negation
+Ax in D, Ey in E such that x+y = 1
+Ex in D, Ay in E such that x+y does not equal to 1
+There exists at least one x in D such that for all y in E, x +y does not equal to 1
+we need to check if theres at least one element x in D 
+x=-2, y=-2 -> -4
+x=-2, y=-1 -> -3
+x=-2, y=0 -> -2
+x=-2, y=1 -> -1
+x=-2, y=2 -> 0
+
+which is true? the given statement or the negation?
+answer: the negation is true since -2 satisfies the given statment
+
+b. Ex in D such that Ay in E, x + y = -y
+There is an element x in D such that for all y in E, x + y = -y
+we need to find at least one x for all y that makes x + y = -y
+x=0,y=-2
+x=0,y=-1
+x=0,y=0
+x=0,y=1
+x=0,y=2
+
+now the negation
+Ex in D such that Ay in E, x + y = -y
+Ax in D such that Ey in E, x + y does not equal to -y
+x=-2,y=2 -> 0
+x=-1,y=2 -> 1
+x=0,y=2 -> 2
+x=1,y=2 -> 3
+x=2,y=2 -> 4
+
+which is true? the given statement or the negation?
+answer: the negation is true
+
+c. Ax in D, Ey in E such that xy >= y
+For all x in d, there is a y such that xy >= y
+x=-2,y=2 -> -4
+x=-1,y=2 -> -2
+x=0,y=2 -> 0
+x=1,y=2 -> 2
+x=2,y=2 -> 4
+the given statement is false
+
+now for the negation
+Ax in D, Ey in E such that xy >= y
+Ex in D, Ay in E such that xy < y
+There is an element x in D such that for all y, xy < y
+x=0,y=-1 -> 0
+x=0,y=-2 -> 0
+x=0,y=0 -> 0
+x=0,y=1 -> 0
+x=0,y=2 -> 0
+
+seems to be false
+which is true? the given statement or the negation?
+answer: the original statement and its negation is both false
+
+d. Ex in D such that Ay in E, x <= y
+There is an x in D such that for all y in E, x <= y
+x=-2,y=-2
+x=-2,y=-1
+x=-2,y=0 
+x=-2,y=1 
+x=-2,y=2 
+the given statement is true
+
+now the negation:
+Ex in D such that Ay in E, x <= y
+Ax in D such that Ey in E, x > y
+x=2,y=-2
+x=-2,y=-1
+x=2,y=0 
+x=2,y=1 
+x=2,y=2 FALSE
+the negation is false
+
+which is true? the given statement or the negation?
+answer: therefore the given statement is true
+
+
+In each of 13–19, (a) rewrite the statement in english 
+without using the symbol A or E or variables and express
+ing your answer as simply as possible, and (b) write a 
+negation for the statement.
+13. A color C, E an animal A such that A is colored C
+14. E a book B such that A person p, p has read b
+15. A odd integer n, E an integer k such that n = 2k + 1
+16. E a real number u such that A real number v, uv = v
+17. Ar E Q, E integers a and b such that e = a/b
+18. Ax E R, E a real number y such that x + y = 0
+19. Ex E R such that for every real number y, x + y = 0
+
+
+20. Recall that reversing the order of the quantifiers 
+in a statement with two different quantifiers may
+change the truth value of the statement—but it 
+does not necessarily do so. All the statements in 
+the pairs below refer to the Tarski world of Figure 
+3.3.1. In each pair, the order of the quantifiers is 
+reversed but everything else is the same. For each 
+pair, determine whether the statements have  
+the same or opposite truth values. Justify your 
+answers.
