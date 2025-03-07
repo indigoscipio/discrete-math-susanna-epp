@@ -369,12 +369,44 @@ without using the symbol A or E or variables and express
 ing your answer as simply as possible, and (b) write a 
 negation for the statement.
 13. A color C, E an animal A such that A is colored C
+answer: There is an animal that has all colors
+E color C, A an animal such that A is not colored C
+negation: there a particular color that no animals have
+
 14. E a book B such that A person p, p has read b
+answer: there is a book that has been read by all people
+negation: A a book B such that E person p, p has not read b
+negation: there is a person who has not read all the books.
+
+
 15. A odd integer n, E an integer k such that n = 2k + 1
+answer: All odd integer is equal to twice some integer number plus one
+negation: E odd integer n, A an integer k such that n does not equal 2k + 1
+negation: There is some integer such that it's not equal to twice any integer plus one
+
 16. E a real number u such that A real number v, uv = v
+answer: There exists a real number, when multiplied by any real number, is equal to any real number
+negation: A a real number u such that E real number v, uv does not equal to v
+negation: For every real number, there is some real number that, when multiplied by it, does not equal itself
+
 17. Ar E Q, E integers a and b such that e = a/b
+answer: For all rational numbers Q, there is an integer a and b such that r = a/b
+answer: All rational numbers is equal to some integer a divided by some integer b
+negation: Er E Q, A integers a and b such that e does not equal a/b
+negation: There exists a rational number where it does not euql to all integers a divided by all integers b
+
+
 18. Ax E R, E a real number y such that x + y = 0
+answer: For all rational number x, there is a real number y such that x + y = 0
+answer: All rational number plus some real number is zero
+negation: Ex E R, A a real number y such that x + y does not equal to 0
+netagion: There exists a real number, when added with any real number, the result is not equal to 0
+
 19. Ex E R such that for every real number y, x + y = 0
+answer: There exists a rational number such that for every real number y,  x + y = 0
+answer: Some rational number plus any real number is zero
+negation: Ax E R such that for every real number y, x + y does not equal to 0
+negation: any rational number plus some real number does not equal to 0
 
 
 20. Recall that reversing the order of the quantifiers 
@@ -387,3 +419,77 @@ reversed but everything else is the same. For each
 pair, determine whether the statements have  
 the same or opposite truth values. Justify your 
 answers.
+
+
+TARSKI FIGURE3.3.1
+Object a (blue circle): row 1, column 3
+Object b (gray circle): row 2, column 1
+Object c (blue circle): row 2, column 2
+Object d (black triangle): row 2, column 4
+Object e (black square): row 3, column 1
+Object f (gray triangle): row 3, column 3
+Object g (gray square): row 3, column 5
+Object h (gray square): row 4, column 2
+Object i (gray triangle): row 5, column 4
+Object j (blue square): row 5, column 5
+
+
+a.
+(1) For every square y there is a triangle x such 
+that x and y have different colors.
+Ax Square(y), Ex Triangle(x), DifferentColor(x,y)
+squares = e (black), h or g (gray),j (blue)
+triangle = d (black),f or i (gray)
+e (black) -> f or i (gray)
+h or g(gray) -> d (black)
+j -> d or f or i
+
+therefore 1 is true
+
+(2) There is a triangle x such that for every 
+square y, x and y have different colors.
+Ex Triangle(x), Ax Square(y), DifferentColor(x,y)
+triangle = d (black),f or i (gray)
+squares = e (black), h or g (gray),j (blue)
+f or i -> e (blakc)
+f or i -> h or g (gray)
+f or i -> j (blue)
+
+This is  false because no single triangle has a different color from all squares. 
+
+b. 
+(1) For every circle y there is a square x such 
+that x and y have the same color.
+Ax Circle(y), Ex Square(x) such that SameColor(x,y)
+circles: a or c (blue), b (gray)
+squares: squares = e (black), h or g (gray),j (blue)
+a or c -> j (true)
+b -> h or g (true)
+
+therefore this is true
+
+
+(2) There is a square x such that for every 
+circle y, x and y have the same color.
+Ex Square(x), Ax Circle(y) -> SameColor(x,y)
+squares = e (black), h or g (gray),j (blue)
+circles: a or c (blue), b (gray)
+none -> a or c (blue)
+none -> b (gray)
+
+There fore this is false
+
+21. For each of the following equations, determine 
+which of the following statements are true:
+(1)For every real number x, there exists a real 
+number y such that the equation is true.
+(2) There exists a real number x, such that for 
+every real number y, the equation is true.
+Note that it is possible for both statements to be 
+true or for both to be false.
+
+a. 2x+y=7
+b. 2x+y=7
+c. 2x+y=7
+d. 2x+y=7
+e. 2x+y=7
