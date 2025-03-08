@@ -532,15 +532,121 @@ a number + any number squared = -1
 2(false)
 
 In 22 and 23, rewrite each statement without using vari
-ables or the symbol ; or '. Indicate whether the state
+ables or the symbol A or E. Indicate whether the state
 ment is true or false.
 
 22
 a. A real number x, E a real number y such that x + y = 0
+For all real number x, there is a real number y such that x + y = 0
+answer: Any real numbers plus some real number is equal to 0
+this is true
+
 b. E a real number y such that A real number x, x + y = 0
+There is a real number y such that for all real nubmer x, x + y = 0
+answer: A real plus any real number is equal to 0
+answer: this is false
 
 23.
 a. A nonzero rela number r, E a real nubmer s such that rs = 1
-b. E a real number r such that A nonzero real real number r, rs = 1
+For all nonzero real nubmer r, there is a real number s such that rs = 1
+answer: Any nonzero number multiplied by some real number is equal to 1
+answer: : this is also true because the reciprocal exists
 
-24. 
+b. E a real number r such that A nonzero real number r, rs = 1
+There is a real number r such that for all nonzero real number r, rs =1 
+A real number multiplied by any nonzero real number is one
+answer: false, there is no real number r that satisfies this
+
+24. Use the laws for negating universal and existential 
+statements to derive the following rules:
+
+a. ~(Ax E D (Ay E E(P(x,y)))) = Ex E D(Ey E E(~P(x,y)))
+step 1: Ex E D ~(Ay E E(P(x,y)))
+step 2: Ex E D (Ey E E ~(P(x,y)))
+
+b. ~(Ex E D (Ey E E(P(x,y)))) = Ax E D(Ay E E(~P(x,y)))
+step 1: Ax E D ~(Ey E E(P(x,y)))
+step 2: Ax E D (Ay E E ~(P(x,y)))
+
+Each statement in 25–28 refers to the tarski world of 
+Figure 3.3.1. For each, (a) determine whether the state
+ment is true or false and justify your answer, and (b) write 
+a negation for the statement (referring, if you wish, to the 
+result in exercise 24).
+
+TARSKI FIGURE3.3.1
+Object a (blue circle): row 1, column 3
+Object b (gray circle): row 2, column 1
+Object c (blue circle): row 2, column 2
+Object d (black triangle): row 2, column 4
+Object e (black square): row 3, column 1
+Object f (gray triangle): row 3, column 3
+Object g (gray square): row 3, column 5
+Object h (gray square): row 4, column 2
+Object i (gray triangle): row 5, column 4
+Object j (blue square): row 5, column 5
+
+
+25. A circle x and A square y, x is above y
+Ax Circle(x) AND Ax Square(y), IsAbove(x,y)
+circles: a,b,c
+squares: e,h,g,j
+which means we need to find and check if all circles is above all of the squares mentioned in the set
+lets start with circle a
+a & e -> is a above e? true
+a & h -> is a above h? true
+a & g -> is a above h? true
+a & j -> is a above j? true
+
+now lets move on to b
+b & e -> is b above e? true
+b & h -> is b above h? true
+b & g -> is b above g? true
+b & j -> is b above j? true
+
+now lets move on to c
+c & e -> is c above e? true
+c & h -> is c above h? true
+c & g -> is c above g? true
+c & j -> is c above j? true
+
+answer: Therefore this statement is true
+negation of Ax Circle(x) AND Ax Square(y), IsAbove(x,y)
+negation: ~(Ax Circle(x) AND Ax Square(y), IsAbove(x,y))
+negation: Ex Circle(x) OR Ex Square(y), IsBelow(x,y))
+
+26. A circle x and A triangle y, x is above y
+Ax Circle(x) AND Ax Triangle(y), IsAbove(x,y)
+which means we need to check if all circles is located above all triangles
+
+circles: a,b,c
+triangles: d,f,i
+this is false becaues triangle d is not located above b or c (it's within the same row)
+negation: Ex Circle(x) OR Ex Triangle(y), IsBelow(x,y)
+
+27. E a circle x and E a square y such that x is above y and x and y have different colors
+Ex Circle(x) AND Ex Square(y) such that IsAbove(x,y) AND DifferentColor(x,y)
+this means we need to find at least one circle AND one square.
+such that a circle is above a square and that circle has different color with that square
+circles: a,b,c
+squares: e,h,g,j
+
+a (blue) + e (black) -> a is above e and a has different color than e, this satisfies the condition
+therefore this statmeent is true
+negation: Ax Circle(x) OR Ax Square(y) such that IsBelow(x,y) OR SameColor(x,y)
+
+28. E a triangle x and E a square y such that x is above y and x and y have the same color
+Ex Triangle(x) AND Ey Square(y) such that IsAbove(x,y) AND SameColor(x,y)
+this means we need to find at least one triangle AND one square such that
+the triangle is above the square AND the triangle has the same color as the square
+triangles: d,f,i
+squares: e,h,g,j
+
+f + h -> f is located above h and f has the same color as h
+therefore the statment is true
+negation: Ax Triangle(x) OR Ax Square(y) such that IsBelow(x,y) OR DifferentColor (x,y)
+
+For each of the statements in 29 and 30, (a) write a new 
+statement by interchanging the symbols ; and ', and 
+(b) state which is true: the given statement, the version 
+with interchanged quantifiers, neither, or both.
