@@ -965,9 +965,74 @@ Ax Circle(x) OR Ax Square(y) such that DifferentColor(x,y)
 
 54. There is a circle x and there is a triangle y such that x has the same color as y.
 a) is the statement true or false?
+we need to find at least one circle
+we need to find at least one triangle
+such that this one cirlce has the same color as that one triangle
+answer: false, since there is no circle that has the same color with any of thetriangle since the triangle is all blue and the circle is either black and gray
 
 b) statement using formal logical notation:
 Ex Circle(x) AND Ex Triangle(y) such that SameColor (x,y)
 
 c) negation using formal logital notation:
 Ax Circle(x) OR Ax Triangle(y) such that DifferentColor(x,y)
+
+Let P(x) and Q(x) be predicates and suppose D is the 
+domain of x. In 55–58, for the statement forms in each 
+pair, determine whether
+(a) they have the same truth value for every choice of P(x), Q(x), and D, or
+(b) there is a choice of P(x), Q(x), and D for which they have opposite truth values.
+
+55. Ax E D, (P(x) A Q(x)), and (Ax E D, P(x)) AND (Ax E D, Q(x))
+They have the same truth value (a)
+
+
+56. Ex E D, (P(x) A Q(x)), and (Ex E D, P(x) AND (Ex E D, Q (x)))
+They have different truth value since you need to pick two different element for the 2nd one,
+unless in the 2nd one you choose the same element
+So the answer is b
+
+57. Ax E D, (P(x) OR Q(x)), and (Ax E D, P(x) OR (Ax E D, Q(x))))
+the answer is b
+
+58. Ex E D, (P(x) OR Q(x)), and (Ex E D, P(x) OR (Ex E D, Q(x)))
+the answer is a
+
+In 59–61, find the answers prolog would give if the 
+following questions were added to the program given 
+in example 3.3.11.
+
+prolog stacking/blocks imagery
+col 1, row 1 = gray block (g)
+col 1, row 2 = blue block 1 (b1)
+col 1, row 3 = white block 1 (w1)
+col 2, row 1 = white block 2 (w2)
+col 2, row 2 = blue block 2 (b2)
+col 2, row 3 = blue block 3 (b3)
+
+
+59.
+a. ?isAbove(b1,w1)
+answer: true
+
+b. ?color(X, white)
+answer: X = w1, X = w2 
+
+c. ?isabove(X,b3)
+answer: X = w2, X = b2
+
+60.
+a. ?isabove(w1,g)
+answer: false
+
+b. ?color(w2,blue)
+answer: false
+c. ?isabove(X,b1)
+answer: X = w1
+
+61.
+a. ?isabove(w2, b3)
+answer: true
+B. ?color(X, gray)
+answer: X = g
+C. ?isabove(g, X)
+answer: X = b1, X = w1
