@@ -888,40 +888,86 @@ Ax Triangle(x) such that Ey Circle(y), IsBelow(x,y)
 
 48.  For every circle x, there is a square y such that y is to the right of x.
 a) is the statement true or false?
-this means we need to find at least one square y that is located to the right of all the circles
-
+this means for all circles, we need to find at least one square y located to the right of all the circles
+this is false since we cannot find any squares located to the right of any circles
 
 b) statement using formal logical notation:
 Ax Cirlce(x), Ex Square(y) such that ToTheRightOf(y,x)
 
 c) negation using formal logital notation:
+Ex Circle(x), Ax Square(y) such that ToTheLeftOf(y,x)
 
 49.  For every object x, if x is a circle then there is a square y such that y has the same color as x.
 a) is the statement true or false?
+we need to check for all circles
+and check if theres at least one square that matches the same color with all of the circles
+the answer is false - there is no gray square
+
 b) statement using formal logical notation:
+Ax Object(x), Circle(x) -> Ey Square(y) such that SameColor(y,x)
+
 c) negation using formal logital notation:
+Ex Object(x), Circle(x) AND Ay Square(y) such that DifferentColor(y,x)
 
 50.  For every object x, if x is a triangle then there is a square y such that y is below x.
 a) is the statement true or false?
+we need to check for all triangles
+and check for at least one square
+check if theres atl east one square y that is locatated above all triangles
+answer: yes, this is true. square j is located below from all of the triangles
+
 b) statement using formal logical notation:
+Ax Object(x), Triangle(x) -> Ey Square(y) such that IsBelow(y,x)
+
 c) negation using formal logital notation:
+Ex Object(x), Triangle(x) AND Ay Square(y) such that IsAbove(y,x)
 
 51. There is a square x such that for every triangle y, if y is above x then y has the same color as x.
 a) is the statement true or false?
+we need to check if theres at least one square
+and check if all triangles is above this one square
+and then check if all of those triangles has the same color as the one square
+answer: false, there is a square j (black) but the color is different compared to all of the triangles (which is blue)
+
 b) statement using formal logical notation:
+Ex Square(x), Ax Triangle(y), IsAbove(y,x) -> SameColor(y,x)
+
 c) negation using formal logital notation:
+Ax Square(x), Ex Triangle(y), IsAbove(y,x) AND DifferentColor(y,x)
 
 52. For every circle x and for every triangle y, x is to the right of y.
 a) is the statement true or false?
+we need to check all circles
+we need to check all tirnagles
+then we need to check if ALL circles is to the right of ALL triangles
+answer: false because circle b and f failes the condition.
+circle b is located to the right of a but it's not located to the right of triangle g and c
+circle f is located to the right of a and g but it's not located to the right of triangle c
+
 b) statement using formal logical notation:
+Ax Circle(x), Ax Triangle(y), ToTheRightOf(x,y)
+
 c) negation using formal logital notation:
+Ex Circle(x), Ex Triangle(y), ToTheLeftOf(x,y)
 
 53. There is a circle x and there is a square y such that x and y have the same color.
 a) is the statement true or false?
+we need to find at least one circle
+and we need to find at least one square
+such the one circle and the one square has the same color
+this is true since circle b (black) and squares h or j satisfies the condition
+
 b) statement using formal logical notation:
+Ex Circle(x) AND Ex Square(y) such that SameColor(x,y)
+
 c) negation using formal logital notation:
+Ax Circle(x) OR Ax Square(y) such that DifferentColor(x,y)
 
 54. There is a circle x and there is a triangle y such that x has the same color as y.
 a) is the statement true or false?
+
 b) statement using formal logical notation:
+Ex Circle(x) AND Ex Triangle(y) such that SameColor (x,y)
+
 c) negation using formal logital notation:
+Ax Circle(x) OR Ax Triangle(y) such that DifferentColor(x,y)
