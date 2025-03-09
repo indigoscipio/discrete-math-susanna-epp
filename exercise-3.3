@@ -810,6 +810,118 @@ In other words, write the negation of the definition.
 negation:There exists real number E <=0, for all real number d <= 0, thre exists a real number x,
 a - d >= x >= a + d and x is equal to a AND L - e >= f(x) >= L + 3
 
+44.  The notation E! stands for the words “there exists 
+a unique.” Thus, for instance, “E! x such that x 
+is prime and x is even” means that there is one 
+and only one even prime number. Which of the 
+following statements are true and which are false? 
+Explain.
+
+a. E! real number x such that A real number  y, xy = y.
+There exists only one real number x such that for all y, xy = y
+x = y/y
+y can be undefined but if x is 1 the statement is true
+
+b. E! integer x such that 1/x is an integer
+There exists only one integer x such that 1/x is an integer
+ if x is 1 -> 1/1 = 1
+ if x is -11 -> 1/1 = -1
+therefore this statement is false
+
+c. A real number x, E! real number y such that x + y = 0
+For all real nubmer x, there is a unique rela number y such that x + y = 0
+true since you can zero a number if you minus it by itself
+
+45. Suppose that P(x) is a predicate and D is the 
+domain of x. Rewrite the statement
+E! x E D such that P(x) without using the symbol E!.
+(See exercise 44 for the meaning of E!.)
+
+There is one and only x such that p(x) is true
+rewrite: There exists a number x such that P(x) is true and XXX
+yeah i don't know this one
+
+46.  In 46–54, refer to the tarski world given in Figure 3.1.1, 
+which is shown again here for reference. the domains of 
+all variables consist of all the objects in the tarski world. 
+For each statement, (a) indicate whether the statement is true or false and justify your answer, (b) write the given 
+statement using the formal logical notation illustrated in 
+example 3.3.10, and (c) write a negation for the given state
+ment using the formal logical notation of example 3.3.10.
+
+TARSKI FIGURE3.3.1.1 (NEW)
+Object a (blue triangle): row 1, column 1
+Object b (gray circle): row 1, column 2
+Object c (blue triangle): row 2, column 3
+Object d (gray circle): row 2, column 4
+Object e (blue square): row 3, column 2
+Object f (gray circle): row 3, column 3
+Object g (blue triangle): row 4, column 2
+Object h (black square): row 4, column 3
+Object i (gray circle): row 4, column 4
+Object j (black square): row 5, column 4
+Object k (gray circle): row 5, column 5
+
+46. There is a triangle x such that for every square y, x is above y
+a) is the statement true or false?
+we need to check if there is at least one triangle that is located above all of the squares
+triangles: a,c,g
+squares: e,h,j
+answer: yes, there is a triangle a that is located above all of the given squares (e,h,j)
+
+b) statement using formal logical notation:
+Ex Triangle(x) such that Ay Square(y), IsAbove(x,y)
+
+c) negation using formal logital notation:
+Ax Triangle(x) such that Ex Square(y), IsBelow(x,y)
+
+47. There is a triangle x such that for every circle y, x is above y.
+which means we need to find at least one triangle that is located above all circles
+a) is the statement true or false?
+answer: false. There is A triangle a is the topmost triangle, but theres a square b beside it.
+
+b) statement using formal logical notation:
+Ex Triangle(x) such that Ay Circle(y), IsAbove(x,y)
+
+c) negation using formal logital notation:
+Ax Triangle(x) such that Ey Circle(y), IsBelow(x,y)
+
+48.  For every circle x, there is a square y such that y is to the right of x.
+a) is the statement true or false?
+this means we need to find at least one square y that is located to the right of all the circles
 
 
+b) statement using formal logical notation:
+Ax Cirlce(x), Ex Square(y) such that ToTheRightOf(y,x)
 
+c) negation using formal logital notation:
+
+49.  For every object x, if x is a circle then there is a square y such that y has the same color as x.
+a) is the statement true or false?
+b) statement using formal logical notation:
+c) negation using formal logital notation:
+
+50.  For every object x, if x is a triangle then there is a square y such that y is below x.
+a) is the statement true or false?
+b) statement using formal logical notation:
+c) negation using formal logital notation:
+
+51. There is a square x such that for every triangle y, if y is above x then y has the same color as x.
+a) is the statement true or false?
+b) statement using formal logical notation:
+c) negation using formal logital notation:
+
+52. For every circle x and for every triangle y, x is to the right of y.
+a) is the statement true or false?
+b) statement using formal logical notation:
+c) negation using formal logital notation:
+
+53. There is a circle x and there is a square y such that x and y have the same color.
+a) is the statement true or false?
+b) statement using formal logical notation:
+c) negation using formal logital notation:
+
+54. There is a circle x and there is a triangle y such that x has the same color as y.
+a) is the statement true or false?
+b) statement using formal logical notation:
+c) negation using formal logital notation:
