@@ -227,7 +227,106 @@ answer: this is true/correct by contrapositive
 in the form “Ax, if P(x) then ,Q(x).”
 Indicate whether each of the following arguments is valid or invalid, and justify your answers.
 
-A car x, x is a good AND x is not cheap
+E car x, x is a good AND x  is not cheap
+A car x, x is a good -> x  is not cheap
+P(x) = x is good
+Q(x) = x is not cheap
+Ax, P(x) -> Q(x)
+
+a. 
+p1: no good car is cheap P(x) -> Q(x)
+p2: a rimbaud is a good car P(x)
+c: a rimbaud is not cheap Q(x)
+answer: this argument is valid because it follows modus tollens (P -> Q, P, then Q)
+
+b. p1: no good car is cheap P(x) -> Q(x)
+p2: a simbaru is not cheap Q(x)
+conclusion: a simbaru is a good car P(x)
+answer: this argument is false because it follows converse error
+
+c. p1: no good car is cheap P(x) -> Q(x)
+p2: a VX roadster is cheap ~Q(x)
+conclusion: a VX roadster is not good ~P(x)
+answer: this argument is valid because it's a contrapositive of the original statement and has the logical equivalence
+
+d. p1: no good car is cheap P(x) -> Q(x)
+p2: an omnex is not a good car ~P(x)
+conclusoin: an omnex is cheap ~Q(x)
+answer: this argument is invalid because of inverse error
 
 
+20. Use a diagram to show that the following 
+argument can have true premises and a false conclusion.
+ 
+ a. p1: all dogs are carnivorous
+ p2: aaron is not a dog
+ conclusion: aaron is not carnivorous
 
+I'll try draw here in the simplest way
+ O <- Carnivores
+ O <- All dogs (inside carnivores)
+ O <- Aaron (inside All Dogs), but still inside carnivores
+ therefore the conclusion is false (aaron is carnivorous)
+
+b. What can you conclude about the validity or 
+invalidity of the following argument form? 
+Explain how the result from part (a) leads to 
+this conclusion.
+
+p1: Ax, if P(x) then Q(x)
+p2: ~P(a) for a particular a
+conclusion: ~Q(a)
+answer: this argument is invalid because of inverse error of the argument form
+explanation: p1 has P(x) -> Q(x), but since p2 is ~P(a) and conclusion ~Q(a) it's error by inverse
+
+Indicate whether the arguments in 21–27 are valid or 
+invalid. Support your answers by drawing diagrams.
+21.
+p1: all people are mice
+p2: all mice are mortal
+c: all people are mortal
+O <- All Mice
+O <- All People (inside of All Mice)
+O <- All Mortal
+this is invalid since mortal does not have any children, theres no connection indicating people are mortal in the diargram
+
+22. 
+p1: all discrete math students can tell a valid argument from an invalid one
+p2: all thoughtful people can tell a valid argument from an invalid one
+c: all discrete math students are thgoughtful
+A person x, x is a discrete math student, x can tell valid argument from an invalid one Px -> Rx
+A person x, x is a thoughtful person, x can tell valid argument from an invalid one Qx -> Rx
+Ax, x is a discrete math student -> x is thoughtful Px -> Qx
+O <- All discrete math students P(x)
+O <- All thoughtful people Q(x) - this circle is inside of P(x)
+O <- CriticalThinking (Ability to tell valid argument from invalid one) R(x) - 2 items is inside this, px and qx
+this is invalid because theres no indication of relations between P(x) and Q(x) even though they are subset of R(x)
+
+
+23.
+p1: all teachers occasionaly make mistakes
+p2: no gods ever make mistakes
+c: no teachers are gods
+Ax, x is a teacher -> x make mistakes Px -> Qx
+Ax, x is a god -> x does not make mistakes Rx -> ~Qx
+Ax, x is a teacher -> x is not a god Px -> ~Rx
+O <- all teachers (inside making a mistake)
+O <- all gods (outside of making a mistake)
+O <- making a mistake
+conclusion is true since it's inside making mistake circle which is seperate from all gods circle
+
+24.
+p1: no vegetarians eat meat
+p2: all vegans are vegetarians
+p3: no vegans eat meat
+Ax, x is a vegetarian, x does not eat meat
+Ax, Vegetarian(x) -> DoesNotEatMeat(x)
+Ax, x is a vegan, x is a vegetarian
+Ax, Vegan(x) -> Vegetarian(x)
+Ax, x is a vegan -> x does not eat meat
+Ax, Vegan(x) -> DoesNotEatMeat(x)
+
+O <- All Vegetarian (inside Does not eat meat)
+O <- All Vegan (Inside vegetarian)
+O <- Does Not Eat Meat
+conclusion: statement is true because vegan is inside vegetarain which is inside doesnoteatmeat circle
