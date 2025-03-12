@@ -330,3 +330,31 @@ O <- All Vegetarian (inside Does not eat meat)
 O <- All Vegan (Inside vegetarian)
 O <- Does Not Eat Meat
 conclusion: statement is true because vegan is inside vegetarain which is inside doesnoteatmeat circle
+
+25. 
+p1: no college cafetaria food is good
+p2: no good food is wasted
+c: no college cafetaria food is wasted
+
+Ax, x is college cafetaria food -> x is not good
+Ax, CCF(x) -> NotGood(x)
+Ax, x is good food -> x is not wasted
+Ax, Good(x) -> NotWasted(x)
+Ax, x is college cafetaria food -> x is not wasted
+Ax, CCF(x) -> NotWasted(x)
+
+O <- CollegeCafetariaFood
+O <- GoodFood
+O <- NotWasted
+
+
+
+26.
+p1: all polynomial functions are differentiable 
+p2: all diferentiable functions are continuous
+c: all polynomial functions are continuous
+
+27.
+p1: nothing intelligeble ever puzzles me
+p2: logic puzzles me
+c: logic is iunintelligble
