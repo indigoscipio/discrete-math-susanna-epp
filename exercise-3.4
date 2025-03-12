@@ -343,18 +343,35 @@ Ax, Good(x) -> NotWasted(x)
 Ax, x is college cafetaria food -> x is not wasted
 Ax, CCF(x) -> NotWasted(x)
 
-O <- CollegeCafetariaFood
-O <- GoodFood
+O <- CollegeCafetariaFood (inside NotGoodFood)
+O <- NotGoodFood
+O <- GoodFood (inside NotWasted)
 O <- NotWasted
-
-
+conclusion is false because collegecafetariafood is not inside not wasted circle, and they are both seperate
 
 26.
 p1: all polynomial functions are differentiable 
 p2: all diferentiable functions are continuous
 c: all polynomial functions are continuous
+Ax, Poly(x) -> Diff(x)
+Ax, Diff(x) -> Cont(x)
+Ax, Poly -> Con(x)
+this is true because of transitivity form, no need to draw the diagram
 
 27.
 p1: nothing intelligeble ever puzzles me
 p2: logic puzzles me
 c: logic is iunintelligble
+Ax, x is not intelliglbe, x does not puzzles me
+Ax, ~Int(x) -> ~Puz(x)
+Ax, x is logic, x puzzles me
+Ax, Log(x) -> Puz(x)
+Ax, x is logic, x is unintelligeble
+Ax, Log(x) -> ~Int(x)
+
+O <- All unintelligeble (inside does not puzzle me)
+O <- Does not puzzle me
+O <- Puzzles me
+O <- All Logic (inside puzzles me)
+this is false because All logic is inside puzzles me which si seperate from does not puzzle me circle
+
