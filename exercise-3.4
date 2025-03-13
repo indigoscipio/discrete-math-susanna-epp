@@ -375,3 +375,148 @@ O <- Puzzles me
 O <- All Logic (inside puzzles me)
 this is false because All logic is inside puzzles me which si seperate from does not puzzle me circle
 
+In exercises 28–32, reorder the premises in each of the 
+arguments to show that the conclusion follows as a valid 
+consequence from the premises. It may be helpful to 
+rewrite the statements in if-then form and replace some 
+of them by their contrapositives. exercises 28–30 refer to 
+the kinds of tarski worlds discussed in examples 3.1.13
+and 3.3.1. exercises 31 and 32 are adapted from Symbolic 
+Logic by Lewis Carroll.*
+
+28. 
+1.  Every object that is to the right of all the blue 
+objects is above all the triangles.
+2. If an object is a circle, then it is to the right of 
+all the blue objects.
+3. If an object is not a circle, then it is not gray
+conclusion: All the gray objects are above all the triangles.
+
+
+Rewrite if-then
+1. A object x, A blue object y, A triangle z, RightOf(x,y) -> IsAbove(x,z)
+2. A obejct x, A blue object y, Circle(x) -> RightOf(x,y)
+3. A object x, ~Circle(x) -> ~Gray(x)
+conclusion: A gray object x, A triangle y, Above(x,y)
+
+correct reordering: 
+1. A object x, Gray(x) -> Circle(x)
+2. A obejct x, A blue object y, Circle(x) -> RightOf(x,y)
+3. A object x, A blue object y, A triangle z, RightOf(x,y) -> IsAbove(x,z)
+conclusion: A gray object x, A triangle y, Above(x,y)
+
+29. 
+1.  All the objects that are to the right of all the 
+triangles are above all the circles.
+2. If an object is not above all the black objects, 
+then it is not a square.
+3. All the objects that are above all the black 
+objects are to the right of all the triangles.
+conclusion: All the squares are above all the circles.
+
+Rewrite if-then
+1. A object x, A triangle y, A circle z, RightOf(x,y) -> Above(x,z)
+2. A object x, A black object y, Square(x) -> Above(x,y)
+3. A object x, A black object y, A triangle z, Above(x,y) ->  RightOf(x,z)
+conclusion: All the squares are above all the circles.
+
+correct reordering:
+1. A object x, A black object y, Square(x) -> Above(x,y)
+2. A object x, A black object y, A triangle z, Above(x,y) ->  RightOf(x,z)
+3. A object x, A triangle y, A circle z, RightOf(x,y) -> Above(x,z)
+conclusion: All the squares are above all the circles.
+
+30. 
+1.  If an object is above all the triangles, then it is 
+above all the blue objects
+2. If an object is not above all the gray objects, 
+then it is not a square.
+3. Every black object is a square.
+4.  Every object that is above all the gray objects 
+is above all the triangles.
+conclusion: If an object is black, then it is above all the 
+blue objects.
+
+O = All objects
+BO = All Blue objects
+GO = All Gray objects
+DO = Black objects
+T = All triangle
+
+1. Above(O,T) -> Above(O,BO)
+2. ~Above(O,GO) -> ~Square(O)
+3. DO -> Square(DO)
+4. Above(O,GO) -> Above(O,T)
+conslucion: DO -> Above(DO,BO)
+
+Correct reordering:
+1. DO -> Square(O)
+2. Square(O) -> Above(O,GO) (Contrapositive)
+3. Above(O,GO) -> Above(O,T)
+4. Above(O,T) -> Above(O,BO)
+conslucion: DO -> Above(DO,BO)
+
+31.
+1. I trust every animal that belongs to me.
+2. Dogs gnaw bones
+3. I admit no animals into my study unless they 
+will beg when told to do so.
+4.  All the animals in the yard are mine.
+5. I admit every animal that I trust into my study
+6. The only animals that are really willing to beg 
+when told to do so are dogs.
+Conclusion: All the animals in the yard gnaw bones
+
+Rewrite if-then
+D = All Dogs
+A = All Animals
+Yard(x) = In the yard
+Study(x) = Trust/admit into study
+Bones(x) = Gnaw Bones
+Beg(x) = Beg when they told to do so
+Mine(x) = Belongs to me
+Trust(x) = Trust
+
+1. Mine(A) -> Trust(A)
+2. D -> Bones(D)
+3. ~Beg(A) -> ~Study(A)
+4. Yard(A) -> Mine(A)
+5. Trust(A) -> Study(A)
+6. Beg(A) -> D
+Conclusion: Yard(x) -> Bones(x)
+
+Correct Reordering:
+4. Yard(A) -> Mine(A)
+1. Mine(A) -> Trust(A)
+5. Trust(A) -> Study(A)
+3. Study(A) -> Beg(A) (Contrapositive)
+6. Beg(A) -> D
+2. D -> Bones(D)
+Conclusion: Yard(x) -> Bones(x)
+
+
+32. 
+1.  When I work a logic example without grum
+bling, you may be sure it is one I understand.
+2. The arguments in these examples are not ar
+ranged in regular order like the ones I am used 
+to.
+3. No easy examples make my head ache.
+4.  I can’t understand examples if the arguments 
+are not arranged in regular order like the ones 
+I am used to.
+5. I never grumble at an example unless it gives 
+me a headache.
+6. These examples are not easy.
+
+if-then rewrite
+
+
+ In 33 and 34 a single conclusion follows when all the given 
+premises are taken into consideration, but it is difficult 
+to see because the premises are jumbled up. reorder the 
+premises to make it clear that a conclusion follows logi
+cally, and state the valid conclusion that can be drawn. 
+(It may be helpful to rewrite some of the statements in 
+if-then form and to replace some statements by their 
+contrapositives.)
