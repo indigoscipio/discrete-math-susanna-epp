@@ -507,9 +507,30 @@ are not arranged in regular order like the ones
 I am used to.
 5. I never grumble at an example unless it gives 
 me a headache.
-6. These examples are not easy.
+Conclusion: These examples are not easy.
 
 if-then rewrite
+Headache(x) = x gives me a headache
+Grumble(x) = x makes me grumble
+Easy(x) = x is easy example
+Arranged(x) = argument in x is arranged in regular order/like i used to
+Understand(x) = I understand x
+
+If-then rewrite
+1. ~Grumble(x) -> Understand(x)
+2. ~Arranged(x)
+3. Easy(x) -> ~Headache(x)
+4. ~Arranged(x) -> ~Understand(x)
+5. ~Headache(x) -> ~Grumble(x)
+conclusion: ~Easy(x)
+
+correct reordering: 
+1. ~Grumble(x) -> Understand(x)
+2. Grumble(x) -> Headache(x)
+3. ~Arranged(x) -> ~Understand(x)
+4. ~Arranged(x)
+5. Easy(x) -> ~Headache(x)
+conclusion: ~Easy(x)
 
 
  In 33 and 34 a single conclusion follows when all the given 
@@ -520,3 +541,73 @@ cally, and state the valid conclusion that can be drawn.
 (It may be helpful to rewrite some of the statements in 
 if-then form and to replace some statements by their 
 contrapositives.)
+
+33. 
+1. No birds except ostriches are at least 9 feet tall.
+2. There are no birds in this aviary that belong to 
+anyone but me.
+3. No ostrich lives on mince pies.
+4. I have no birds less than 9 feet high
+
+Rewrite if-then
+Bird(x) = x is a bird
+Ostrich(x) = x is a ostrich
+9Feet(x) = x is 9 feet tall
+Mine(x) = x is belongs to me
+MincePies(x) = x lives on mince pies
+Aviary(x) = x lives in this aviary
+
+correct orderign
+1. Bird(x) AND 9Feet(x) -> Ostrich(x)
+2. Ostrich(x) -> ~MincePies(x)
+3. Aviary(x) AND Bird(x) -> Mine(x)
+4. Mine(x) AND Bird(x) -> 9Feet(x)
+
+34.
+1. All writers who understand human nature are clever.
+2. No one is a true poet unless he can stir the human heart.
+3. Shakespeare wrote Hamlet.
+4. No writer who does not understand human nature can stir the human heart.
+5. None but a true poet could have written Hamlet.
+
+Rewwrite if-then
+Writer(x) = x is a writer
+S = Shakespeare
+Understand(x)= x understand human nature
+Clever(x) = x is clever
+TruePoet(x) = x is a ttrue poet
+Stir(x) = x can stir the human heart
+WroteHamlet(x) = x writes hamlet
+
+if-then rewrite
+1.  Writer(x) AND Understand(x) -> Clever(x)
+2. ~Stir(x) -> ~TruePoet(x)
+3. S -> WroteHamlet(x)
+4. Writer AND ~Understand(x) -> ~Stir(x)
+5. Hamlet(x) -> TruePoet(x)
+
+Correct reordering
+1. S -> WroteHamlet(x)
+2. WroteHamlet(x) -> TruePoet(x)
+3. TruePoet(x) -> Stir(x) - by contrapositive
+4. Writer(x) AND Understand(x) -> Clever(x)
+5. Writer AND ~Understand(x) -> ~Stir(x)
+
+35. Derive the validity of universal modus tollens 
+from the validity of universal instantiation and 
+modus tollens.
+Universal instantiation
+Ax, P(x) -> Q(x)
+~Q(a) for a specific a
+therefore ~P(a)
+
+36. Derive the validity of universal form of part (a) of 
+the elimination rule from the validity of universal 
+instantiation and the valid argument called elimi
+nation in Section 2.3.
+
+P(x) V Q(x)
+P(a) V Q(a) for a specific a
+~P(a)
+therefore Q(a)
+
