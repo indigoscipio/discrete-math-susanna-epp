@@ -121,5 +121,158 @@ it's composite only if n is greater or equal than 2
 
 prove the statements in 5 - 11
 5. there are integers m and n such that m > 1 and n > 1 and 1/m + 1/n is an integer
-6. there is a distinct integers m and n such that 1/m + 1/n is an integer
+
+1/m +1/n
+m+n/mn = k
+m+n = kmn
+
+
+let m = 2
+let n = 2
+2+2/4 = 1 (an integer)
+
+let m = 3
+let n = 3
+6/9 (not an integer)
+
+let m = 4
+let n = 4
+8/16 (not an integer)
+
+let m = 3
+let n = 2
+2+3/6 (not an integer)
+
+6. there are a distinct integers m and n such that 1/m + 1/n is an integer
+1/m + 1/n where m, n is an integer
+let m = 1, n = -1
+1/1 + 1/-1 = 1 (which is an integer)
+
+
 7. there are real numbers a and b such that sqrt(a+b) = sqrt(a) + sqrt(b)
+let a = 2, b = 2
+sqrt(4) = sqrt(2) + sqrt(2)
+2 = 1.41 + 1.41 (false)
+
+let a = 1, b = 1
+sqrt(1) = sqrt(1) + sqrt(1)
+1 = 1 + 1 (false)
+
+proof:
+square both sides 
+a+b= a + (sqrt(a)+sqrt(b))^2 + b
+0 = 2sqrt(ab)
+ab = 0
+
+8. there is an integer n > 5 such that 2^n-1 is prime
+let n = 6
+Is 2^6 - 1 prime? 63 is not prime (false)
+
+let n = 7
+Is 2^7 - 1  prime? 127 is prime (true)
+
+let n = 8
+Is 2^8 -1 prime? 255 is not prime
+
+since 127 is prime, the statement is true
+
+9. there is a real number x such that x > 1 and 2^x > x^10
+let x = 2
+2 > 1 (true)
+2^2 > 2^10 (false) 
+
+let x = 3
+3 > 1 (true)
+2^3 > 3^10 (false) 
+
+
+let x = 100
+100 works, therefore its true
+
+10. there is a perfect square that can be written as the sum of two other perfect squares
+Definition:  An integer n is called a perfect square if, and only if, n = k^2 for some integer k
+
+n^2 = a^2 + b^2, where n is a perfect square and a,b is any integer
+let a = 3, b = 4, n = 5
+5^2 = 3^2 + 4^2
+25 = 9 + 16
+therefore it is true
+
+11. there is an integer n such that 2n^2 - 5n + 2 is prime
+let n = 1
+2n^2 - 5n + 2
+2 - 5 + 2 = -5 (not prime)
+
+let n = 2
+8 - 10 + 2 = 0 (not prime)
+
+let n = 3
+27 - 15 + 2
+27 - 13 = 14 (not prime)
+
+let n = 4
+2.16 - 20 + 2
+34 - 20 = 14 (not prime)
+
+let n = 0
+0 - 0 + 2 = 2 (prime)
+therefore the statement is true
+
+In 12–13, (a) write a negation for the given statement,  
+and (b) use a counterexample to disprove the given state
+ment. explain how the counterexample actually shows 
+that the given statement is false.
+
+12. for all real numbers a and b, if a < b then a^2  < b^2
+a. negation of the given statement
+rewrite: Ax real number a, Ax real number b, a < b -> a^2 < b^2
+negation: Ex real number a, Ex real number b, a < b AND a^2 >= b^2
+
+b. counterexample to disprove the given statement & explanation
+a = b =  at least one real number
+a < b AND a^2 >= b^2
+let a = -1, b = 0
+a < b = -1 < 0 (true)
+1 >= 0 (true)
+therefore the counterexample is true
+
+13. for every integer n, if n is odd then (n-1)/2 is odd
+a. negation of the given statement
+rewrite: Ax integer n, n is odd -> (n-1)/2 is odd
+negation: Ex integer n, n is odd AND (n-1)/2 is even
+
+b. counterexample to disprove the given statement & explanation
+n = at least one integer
+let n = 1
+1 is odd (true)
+(n-1)/2 is even = 0/2 = 0 is even (true)
+therefore the counterexample is true
+
+Disprove each of the statements in 14–16 by giving a 
+counterexample. In each case explain how the counterex
+ample actually disproves the statement.
+
+14. For all integers m and n, if 2m+n is odd then m and n are both odd
+Ax integer m, Ax integer n, 2m+n is odd -> M is odd AND N is odd
+
+Ex integer m, Ex integer n, 2m+n is odd AND (M is even OR N is even)
+counterexample: we need to find a case where the conclusion is false (m or n is even)
+let m = 0, n = 1
+0 + 1 = odd (true)
+0 or 1 is even (true, 0 is even)
+therefore the counterexample disproves the statement
+
+
+15. For every integer p, if p is prime then p^2-1 is even
+
+
+counterexample:
+explanation how the counterexample disproves the statement: 
+
+16. For every integer n, if n is even then n^2 + 1 is prime
+counterexample:
+explanation how the counterexample disproves the statement: 
+
+In 17–20, determine whether the property is true for all 
+integers, true for no integers, or true for some integers 
+and false for other integers. Justify your answers
