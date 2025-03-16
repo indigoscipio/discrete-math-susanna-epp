@@ -264,15 +264,61 @@ therefore the counterexample disproves the statement
 
 
 15. For every integer p, if p is prime then p^2-1 is even
+Ax integer p, p is prime -> p^2-1 is even
+Ex integer p, p is prime AND p^2-1 is odd
 
+counterexample: we need to find at least an integer which is prime and p^2-1 is odd
+let p = 2
+is 2 prime? true
+is p^2-1 odd? 4-3 = 1 = true
+therefore the counterexample dissproves the statement
 
-counterexample:
-explanation how the counterexample disproves the statement: 
 
 16. For every integer n, if n is even then n^2 + 1 is prime
-counterexample:
-explanation how the counterexample disproves the statement: 
+Ax integer n, n is even -> n^2 + 1 is prime
+Ex integer n, n is even AND n^2 + 1 is not prime
+
+counterexample: we need to find at least one n where n is even and n^2 + 1 is not a prime
+let n = 0
+is n even? true
+is n^2 + 1 not a prime? 0+1 = 1 = true
+therefore the counterexample for n = 0 disproves the given statement
 
 In 17–20, determine whether the property is true for all 
 integers, true for no integers, or true for some integers 
 and false for other integers. Justify your answers
+
+17. (a+b)^2 = a^2 + b^2
+a^2 + 2ab + b^2 = a^2 + b^2
+2ab = 0
+when is 2ab = 0 true?
+when at least a or b is 0 or both is 0, but a and b cannot not be 0
+therefore it's true if a or b is 0, and it's false for other cases when a or b is not 0
+
+18. a/b + c/b = a+c/b+d
+a/b + c/d = a+c / b+d
+ad+cb/bd = a+c/b+d
+let a = 1, b = 1, c=1, d=1
+1+1/1 = 2/2
+2 = 1 (not equal)
+
+therefore its true for some integers and true for otheres
+
+
+19. -a^n = (-a)^n
+let a = 1, n = 1
+1^1 = (-1)^1
+1 = 1 (true)
+
+let a = -1, n = 2
+-(-1)^2 = (--1)^2
+-1 = 1 (not true)
+therefore the given statement is false for some integers and not always true
+
+prove the statement in 21 and 22 by the method of exhaustion.
+21. Every positive even integer less than 26 can be expressed as a sum of three of fewer perfect squares. 
+(For instance, 10 = 1^2 + 3^2 and 16 = 4^2.)
+
+
+22. for each integer n with 1 <= n <= 10, n^2 - n + 11 is a prime number
+
