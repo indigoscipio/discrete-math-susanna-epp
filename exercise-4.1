@@ -318,7 +318,189 @@ therefore the given statement is false for some integers and not always true
 prove the statement in 21 and 22 by the method of exhaustion.
 21. Every positive even integer less than 26 can be expressed as a sum of three of fewer perfect squares. 
 (For instance, 10 = 1^2 + 3^2 and 16 = 4^2.)
+1 = 1^2
+2 = 1^2 + 1^2
+4 = 2^2
+5 = 2^1 + 1^2
+6 = 2^2 + 1^2 + 1^2
+8 = 2^2 + 2^2
+10 = 3^2 + 1^2
+12 = 3^2 + 2^2
+14 = 3^2 + 2^2 + 1^2
+16 = 4^2
+18 = 3^2 + 3^2
+20 = 4^2 + 2^2
+22 = 4^2 + 2^2 + 1^2
+24 = 4^2 + 2^2 + 2^2
+since all is true, therefore the statement is true by method of exhaustion
 
 
 22. for each integer n with 1 <= n <= 10, n^2 - n + 11 is a prime number
+let n
+1 = 1 - 1 + 11 = 11 
+2 = 2 + 11 = 13
+3 = 6 + 11 = 17
+4 = 12 + 11 = 23
+5 = 20 + 11 = 31
+6 = 30 + 11 = 41
+7 = 42 + 11 = 53
+8 = 56 + 11 = 67
+9 = 72 + 11 = 83
+10 = 90 + 11 = 101
+since all is true, therefore the statment is true by methjod of exhaustion
 
+
+Each of the statements in 23–26 is true. For each, (a) 
+rewrite the statement with the quantification implicit as 
+If ___, then ___, and (b) write the first sentence of a proof
+(the “starting point”) and the last sentence of a proof (the “conclusion to be shown”). 
+Note that you do not need to understand the statements in order to be able to do these exercises.)
+
+23. For every integer m, if m > 1 then 0 < 1/m < 1
+a) rewrite if-then:
+Ax integer m, if m > 1 -> 0 < 1/m < 1
+If m is an integer greater than 1, then 0 < 1/m < 1
+
+b) rewrite first sentence and last sentence of a proof:
+let M be an integer such that m > 1
+thus, we have shown that 0 < 1/m < 1, ocmpleting the proof
+
+24. For every real number x, if x > 1 then x^2 > x
+a) rewrite if-then
+Ax real number x, if x > 1 -> x^2 > x
+If x is a real number greater than 1, then its square is greater than the number itself
+
+b) rewrite first & last sencence:
+Let x be any integer such that x > 1
+thus, we have shown that x^2 > x is true, completing the proof.
+
+25. for all integers m and n, if mn = 1 then m = n = 1 or m = n = -1
+a) rewrite if-then
+Ax integer m, Ax integer n, if mn = 1 -> m = n = 1 or m = n = -1
+If the product of two integer m and n is 1, then m = n = 1 or m = n = -1
+b) rewrite first & last sentence
+let m and n be an integer such that mn = 1
+thus we have shown that m = n = 1 or m = n = -1 is true, completing the proof
+
+26. For every real number x, if 0 < x < 1 then x^2 < x
+a) rewrite if-then
+Ax real number x, if 0 < x < 1 then x^2 < x
+If a real number x is greater than 0 and less 1, then x^2 < x
+b) rewrite first & last sentence
+let x is a real number such that 0 < x < 1
+thus we have shown that x^2 < x is true, comleting the proof
+
+
+27. Fill in the blanks in the following proof.
+theorem: for every odd integer n, n^2 is odd
+
+proof: suppose n is any (a). by definition of odd, n = 2k+1 for some integer k then
+n^2 = ((b))^2
+= 4k^2 + 4k + 1
+= 2(2k^2+2k) + 1
+
+Now 2k^2+2k is an integer because it is a sum of 
+products of integers. Therefore, n^2 equals 2?(an in
+teger)+1, and so (c) is odd by definition of odd.
+
+Because we have not assumed anything about n 
+except that it is an odd integer, it follows from the 
+principle of (d) that for every odd integer n, n^2 is odd.
+
+answer:
+a) odd integer
+b) 2k+1
+c) 2(2k^2+2k)+1
+d) odd number
+
+28.  In each of 28−31:
+
+a. rewrite the theorem in three different ways:
+as A____, if ____ then ____, 
+as A____, ____ (without using the words if or then)
+as if ____, then ___ (without using an explicit universal quantifier)
+
+b. fill in the blanks in the proof of the theorem
+
+theorem: the sum of any two odd integers is even
+Proof: Suppose m and n are any [particular but 
+arbitrarily chosen] odd integers. [We must show that m+n is even.]
+by (a), m = 2r+1 and n = 2s + 1 for some integers r and s
+
+then
+m+n= (2r + 1) + (2s + 1) - by (b)
+= 2r + 2s + 2
+= 2(r+s+1) - by algebra
+
+let u = r+s+1. then u is an integer because r, s and 1 are integers and because (c)
+hence m+n 2u, where u is an integer and so, by (d), m+n is even [as was to be shown]
+
+a) rewrite the theorem in 3 different ways
+theorem: the sum of any two odd integers is even
+1st form: A integer m and n, if m and n is odd, then m + n is even
+2nd form: A intege m and n, m + n is even
+3rd form: If any two integers are odd, its sum is even
+
+b) fill in the blanks
+blank a = the definition of odd
+blank b = by substitution
+blank c = the sum of all integers is an integer
+blank d = the definition of even
+
+29. theorem: the negative of any even integer is even
+proof: suppose n is any [particular but arbitrarily chosen] even integer
+[we must show that -n is even]
+
+by (a), n = 2k for some integer k
+then
+-n = -(2k) - by (b)
+= 2(-k) - by algebra
+
+let r = -k. then r is an integer because -1 and k are integers and (c)
+hence -n = 2r, where r is an integer, and so -n is even by (d) [as was to be shown]
+
+a) rewrite the theorem in 3 different ways:
+theorem: the negative of any even integer is even
+1st form: A even integer n, if n is negative, then n is even
+2nd form: A even integer n, its negative is even
+3rd form: If an integer is even, then its negative is also even
+
+b) fill in the blanks
+blank a = the definition of even
+blank b = by substitution
+blank c = the product of two integers is an integer
+blank d = thedefinition of even
+
+30. theorem 4.1.2: the sum of any even integer and any odd integer is odd
+proof: suppose m is any even integer and n is (a).
+By the definition of even, m = 2r for some (b),
+and by definition of odd, n = 2s + 1 for some integer s. by substitution and algebra,
+m+n = (c) = 2(r+s)+1
+since r and s are both integers, so is their sum r + s, hence m+n has the form twice some integer plus one,
+and so (d) by definition of odd
+
+
+a) rewrite the theorem in 3 different ways
+theorem: The sum of any even integer and any odd integer is odd.
+1st form: Ax integer m, Ax integer n, if m and n is an even, then its sum is odd
+2nd form: Ax even integer m and n, its sum is odd
+3rd form: 
+
+b) fill in the blanks
+blank a =  
+blank b =  
+blank c =  
+blank d =  
+
+31. theorem: whenever n is an odd integer, 5n^2+7 is even
+proof: suppose n is any [particular but arbitrarily chosen] odd integer
+[we must show that 5n^2+7 is even]
+by the definitino of odd, n = (a) for some integer k
+then
+5n^2 + 7 = (b) - by substitution
+= 5(4k^2 + 4k + 1) + 7
+= 20k^2 + 20k + 12
+= 2(10^2 + 10k + 6) - by algebra
+
+let t = (c). then t is an integer because products and sums of integers are integers
+hence 5n+7=2t, where t is an integer, and thus (d) by the defition of even [as was to be shown]
