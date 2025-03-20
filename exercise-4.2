@@ -135,14 +135,81 @@ let t = (2a^2 + 2s + 2b^2). Since this evaluates to integer, we can conclude t i
 Then by the definition of odd, (2a + 1)^2 + (2b)^2 is odd [as was to be shown]
 
 7. the diference between the squares of any two consecutive integers is odd
+Theorem: Ax number a, Ax number b, if a and b is an integer -> a^2 - b^2 is odd
+
+Proof: suppose a is an integer and b is an integer [we must show that a^2 - b^2 is odd]
+By the definition of integer, a = n + 1 is n and b = n for some integer n
+
+
+a^2 - b^2
+(n+1)^2 - n^2
+=n^2 + 2n + 1 - n^2
+= 2n + 1
+
+since 2n + 1 is the definition of odd number, a^2 - b^2 is odd. [as was to be shown]
 
 8. for any integers m and n, if m is even and n is odd then 5M+3n is odd
+Proof: Ax integer m, Ax integer n, m is even and n is odd -> 5m+3n is odd
+
+Suppose m is an even integer and n is an odd integer [we must show that 5M+3n is odd]
+By the definition of even, m = 2a for some integer a
+By the definition of odd, n = 2b + 1 for some integer b
+
+Then
+5(2a) + 3(2b + 1) - by substitution
+10a + 6b + 3 - by algebra
+2(5a + 3b + 1) + 1 - by factoring
+
+let t = (5a + 3b + 1). Since integer plus other integer is also integer, t is an integer
+By definitino of odd, 2t + 1 is odd [as was to be show]
+
 
 9. if an integer greater than 4 is a perfect square, then the immediately preceding integer is not prime
+Proof: Ax integer x, if x > 4 and perfect square -> imeediately preecing integer is not prime
+
+Suppose x is an integer greater than 4 and a perfect square [we must show that the immediately proeceding integer is not prime]
+x > 4 and x = n^2 for some integer n
+
+x - 1 = n^2 - 1.
+x - 1 = (n - 1) (n + 1)
+
+find smallest possible value of N
+n^2 > 4
+n > 2
+n >= 3
+
+if we substitute (n - 1) and (n + 1) with n >= 3
+ince x - 1 is always a product of two itnegers greater than 1, it cannot be prime.
+by the definition of prime number, it must have exactly 1 and itself.
+therefore, the imediately preceeding integer is not prime. [as was to be shown]
 
 10. if n is any even integer, then (-1)^n = 1
+Proof: Ax integer n, n is even -> (-1)^n = 1
+
+Suppose n is an even integer [we must show that (-1)^n = 1 is even]
+By the definition of even, n = 2a for some integer a
+
+-1^2a
+(-1(^2)^a)
+1^a = 1
+
+Therefore (-1)^n = 1 when n is even [as was to be shown]
+
 
 11. if n is any odd integer, then (-1)^n = -1
+Proof: Ax integer n, n is odd -> (-1)^n = -1
+
+Suppose n is an odd integer [we must show (-1)^n = -1 is true when n is odd integer]
+By the definition of odd, n = 2a + 1 for some integer a
+
+-1^2a+1 = -1
+= (-1)^2a (-1)^1
+= ((-1)^2)^a . -1
+= 1^a . -1
+= 1 . -1
+= -1
+
+Therefore (-1)^n = -1 is true [as was to be shown]
 
 Prove that the statements in 12 - 14 are flase.
 12.
