@@ -242,3 +242,90 @@ owever, 3 is a factor greater than 1 and (2n^2 + 9) is also greater than 1 which
 
 
 14. there exists an integer k >= 4 such that 2k^2 - 5k + 2 is prime
+proof: Ax integer k, if k >= 4 -> 2k^2 - 5k is a prime
+
+suppose k is an integer greater or equal to 4 [we must show  2k^2 - 5k is a prime is not true]
+
+k = >= 4
+2k^2 - 5k + 2
+
+ac = 4
+multiple to +4
+add to -5
+(-1, -4)
+
+(2k^2 - 4k - k + 2)
+(2k^2-4k) + (-k + 2)
+2k(k - 2) -1(k - 2)
+(2k - 1) (k - 2)
+
+let k - 4
+8 - 1 . 2
+
+The statement is false because the two factors does not follow the rule of prime number (prime number must have factor of 1 and itself)
+Since two factors can never be 1 or itself (with k >= 4), we can conclude that the statement is false [as was to be shown]
+
+Find the mistakes in the “proofs” shown in 15–19.
+15. Theorem: For every integer k, if k > 0 then k^2 + 2k + 1 is composite.
+
+Proof: for k = 2, k > 0 and k^2 + 2k + 1 = 2^2 + 2 . 2 + 1 = 9
+And since 9 = 3 . 3, then 9 is composite, hence the theorem is true
+
+Mistake:
+The proof is incorrect becasue it only picks for k/single value instead of every integer greater than 0
+It does not check wheter k^2 + 2k + 1 is always composite
+Then it concludes that 9 is composite without stating what makes a number composite.
+
+16. Theorem: the differnece between any odd integer and any even integers is odd
+Proof: Suppose n is any odd integer, and m is any even integer.
+By definition of odd, n = 2k+1 where k is an integer
+and by definition of even, m=2k where k is an integer.
+
+Then n - m = (2k+1) - 2k = 1,
+
+and 1 is odd. 
+Therefore, the difference between any odd integer and any even integer is odd.
+
+Mistake:
+The proof incorrectly reuses the same variable k for both n amd m when it should have sperate integer
+leading to incorrect conclusion.
+
+17. For every integer k, if k > 0 then k^2 + 2k + 1 is composite
+
+Proof: Suppose k is any integer such that k > 0. 
+If k^2 + 2k + 1 is composite, then k^2 + 2k + 1 = rs for some integers r and s such that
+
+
+1 < r < k^2 + 2k + 1
+and
+1 < s < k^2 + 2k + 1
+
+since k^2 + 2k + 1 = rs
+and both r and s are strictly between 1 and k^2 + 2k + 1, then k^2 + 2k + 1 is not prime
+
+This proof is incorrect because it tries prove the answer itself from the definition of composite
+and gives assumption that the result is not prime. It does not show that k^2 + 2k + 1 = rs is composite or not
+It does not find r and s and wheter there is factor or not
+
+18. Theorem: The product of any even integer and any odd integer is even
+
+Proof: Suppose m is any even integer and n is any odd integer.
+If m . n is even, then by definition of even there exists an integer r such that m . n = 2r.
+Also since m is even, there exists an in teger p such that m = 2p,
+and since n is odd there exists an integer q such that n = 2q + 1.
+
+Thus  mn = (2p)(2q+1) = 2r,
+
+Where r is an integer.
+By definition of even, then, m . n is even, as was to be shown.”
+
+Mistake: this proof establishes an incorrect definition/variable r and led to an incorrect conclusion
+It assumes m . n is even instead of proving it step by step
+
+19. Theorem: the sum of any two even integers equal 4k for some integer known
+Proof: Suppose m and n are any two even integers.
+By definition of even, m 5 2k for some integer k and n = 2k for some integer k.
+
+By substitution, m + n = 2k + 2k = 4k
+
+This is what was to be shown
