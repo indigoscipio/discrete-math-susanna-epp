@@ -83,3 +83,113 @@ or 73 divided by 13 is not an integer
 = 8k^2 + 8k
 = 8k (k + 1)
 Since 8k (k + 1) has 8 as a factor, we can conclude that 8 divides (4k^2+1)^2 -1
+
+13. if n = 4k + 3, does 8 divide n^2 - 1 ?
+(4k+3)^2 - 1
+= (4k+3) (4k+3) - 1
+= 16k^2 + 12k + 12k + 9 - 1
+= 16k^2 + 24k + 8
+= 8 (2k^2 + 3k + 1)
+since 8k (2k + 4) has 8 as a factor we can cunclude 8 divides (4k+3)^2 - 1
+
+14. Fill in the blanks in the following proof that for all 
+integers a and b, if a | b then a | (-b).
+
+proof:  Suppose a and b are any integers such that  (a).
+By definition of divisibility, there exists an integer r such that (b) . By substitution,
+
+-b = -(ar) = a(-r)
+let t = (c). Then t is an integer because = (-1)r, and both -1 and r are integers.
+Thus, by substitution, -b = at, where t is an integer, and 
+so by definition of divisibility, (d), as was to be shown.
+
+answer:
+a. a divides b
+b. b = a . r where r is an integer
+c. -r
+d. a divides -b
+
+prove statements 15 and 16 directly from the definition 
+of divisibility.
+15. for all integers a,b, and c, if a | b and a | c then a | (b + c)
+Suppose a b and c is any integer [we must show that if a | b and a | c then a | (b + c)]
+
+a | b -> By definition of divisibility, there exists an integer r such that b = a . r
+a | c -> By definition of divisibility, there exists an integer s such that c = a . s
+Then we can substitute
+
+a | (b + c)
+b + c = (a . r) + (a . s)
+b + c = a (r + s)
+
+let t = (r+s), since integer plus integer therefore t is an integer
+Since a is mulitplied by an integer, this means that a is a factor of b + c [as was to be shown]
+
+
+16. for all integers a,b,and c if a | b then a | c then a | (b-c)
+suppose a b and c are any particular integer [we must show that if a | b then a | c then a | (b-c)]
+
+a | b -> by the definition of divisibility, there exists an integer r such that b = a . r
+a | c -> by the definition of divisibility, there exists an integer s such that c = a . s
+
+
+a | (b - c)
+b - c = (a . r) - (a . s)
+b - c = a (r - s)
+
+let t = (r-s). since integer minus integer is an integer, t is an integer
+Since a is multiplied by an integer, this means that a is a factor of (b - c) [as was to be shown]
+
+17. for all integers a, b, and c and d if a | c and b | d then ab | cd
+suppose a b c d is any particular integer [we must show that if a | c and b | d then a b | c d]
+
+a | c -> by the definition of divisibility, there exists an integer r such that c = a . r
+b | d -> by the definition of divisibility, there exists an integer s such that d = b . s
+
+Then we can substitute
+a b | c d
+cd = (a . r) (b . s)
+cd = (ab) . (rs)
+
+let t = rs. since product of integers are integrs therefore t is an integer
+Since ab is multiplied by integer this means ab is a factor of cd. [as to be shown]
+
+18.Consider the following statement: The negative of any multiple of 3 is a multiple of 3.
+a. Write the statement formally using a quantifier and a variable.
+answer: Ax integer a, if a is a multiple of 3, then -a is also a multiple of 3
+
+b. Determine whether the statement is true or false and justify your answer.
+let n = 3k for some integer k
+then -n = -3k is still a multiple of 3 because it can be writen as 3(-k) where -k is still an integer
+therefore the statement is true
+
+19. Show that the following statement is false: For all integers a and b, if 3 | (a + b) then 3 | (a - b).
+Ax integer a and b, if 3 | (a + b) -> 3 | (a - b)
+
+Suppose a and b is any particular integer [we must show that if 3 | (a + b) then 3 | (a - b). ]
+
+let a = 1, b = 2
+3 | (a + b) -> 3 | 3 (true)
+3 | (a - b) -> 3 | -1 (false)
+Since we found a counterexample wehere the premise is true and the conclusion is false, the statement above is false.
+
+For each statement in 20–32, determine whether the 
+statement is true or false. prove the statement directly 
+from the definitions if it is true, and give a counterex
+ample if it is false.
+20. the sum of any three consecutive integers is divisible by 3
+s = a + a + 1 + a + 2
+s = 3a + 3
+= 3 (a + 1)
+This is clearly divisible by 3 since 3 is a factor of the sum of three consecutive integer [as was to be shown]
+
+21. the product of any two even integers is a multiple of 4
+by the definition of even itneger, an integer is even if it can be written as 2k where k is an integer
+
+p = (2k) . (2n)
+p = 4kn
+p = 4 (kn)
+let t = kn. since product of integer is an integer, therefore t is an integer
+since 4 is a factor of two product of even integer, thereforew the product of any two integer is a multiple of 4
+
+22. it A necessary condition for an integer to be divisible by 6 is that it be divisible by 2
