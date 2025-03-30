@@ -193,3 +193,49 @@ let t = kn. since product of integer is an integer, therefore t is an integer
 since 4 is a factor of two product of even integer, thereforew the product of any two integer is a multiple of 4
 
 22. it A necessary condition for an integer to be divisible by 6 is that it be divisible by 2
+P is necessary for Q = ~P -> ~Q or Q -> P
+Ax integer n, if n is divisible by 6, then n is divisible by 2
+
+if an integer is divibile by 6 that means n = 6k for some integer k
+if an integer is divisible by 2, that means n = 2k for some integer m
+
+6k can be written as 2(3k) with 2 as the factor and therefore is divisible by 2
+therefore if an itneger is divisible by 6, it is also dvisible by 2 [as was to be shown]. So the statmeent is true
+
+23. A sufficient condition for an integer to be divisible by 8 is that it be divisible by 16.
+p is sufficient of q = p -> q
+Ax integer n, if n is divisible by 16, it's divisible by 8
+
+If an integer is divisible by 16, that means n = 16k for some integer k
+if an integer is divisible by 8, that means n = 8k for some integer m
+
+Then we can substitute
+16k = 8(2k) where 2k is some integer
+Therefore 8 is the factor of 16k, and 16k is divisible by 8 [as was to be shown]
+
+24. for all integers a,b,and c if a | b and a | c then a | (2b-3c)
+Suppose a b and c is any ingeger [we must show that  if a | b and a | c then a | (2b-3c)]
+
+By the definition of divisibility, a | b can be written as b = a . r where r is some integer
+By the definition of divisibility, a | c can be written as c = a . s where s is some integer
+Then we can substitute
+
+2b - 3c = 2 (ar) - 3 (as)
+= 2ar - 3as
+= a (2r - 3s)
+
+Let t = (2r - 3s). Since any integer minus any integer is an integer, threfore t is an intger
+Since a is a factor of (2r - 3s), therefore a | (2b-3c) is true since a is also a factor of (2b - 3c)
+
+25. for all integers a,b, andc, if a is a factor of c and b is a factor of c, then ab is a factor of c
+suppose a b and c is any prticular integer [we must show that if a is a factor of c and b is a factor of c, then ab is a factor of c]
+
+Coutnerexample
+let a = 4, b = 6 and c = 12
+a | c because 12 = 4 x 3
+b | c = 12 = 6 x 2
+but ab = 4 x 6 = 24, whch does not divide 12
+
+Therefore the statement is false since we found a counterexmaple
+
+26. for all integers a,b,and c, if ab | c then a|c and b|c
