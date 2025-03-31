@@ -270,6 +270,101 @@ Threfore false since the counterexmample is found
 28. For all integers a,b,and c if a | bc then a | b or a | c
 By the definition of divisibility, a | bc can be written as bc = a . r where r is some integer
 
+let a = 1, b=2, c=3
+a | bc?
+does 1 divide 6? yes
+
+a | b
+1 | 2 ? yes
+
+a | c
+a | 3? yes
+
+let a = 6, b=2, c=3
+6 | 6? true
+6 | 2? false
+6 | 3? false
+Therefore the counterexample is found . The statement is false
+
+
+29. For all integers a and b, if a | b then a^2  | b^2
+By the definition of divisibility, a | b can be written as b = a . r where r is some integer
+
 Then we can substitute
-b = a . s
-= ??
+b^2
+= (a . r)^2
+= a^2 . r^2
+
+let t = r^2. Since integer power is integer therefore t is an integer
+then by a^2 is the factor of (a . r)^2. Therefore the statement is true
+
+30. For all integers a and n, if a | n^2 and a <=n then a | n
+let a = 4 and n = 6
+4 | 36
+4 <= 6
+
+
+31.. for all integers a and b, if a | 10b then a | 10 or a | b
+let a = 6, b = 3
+6 | 30 -> true
+6 | 10 (false)
+6 | 3 (false)
+therefore the satement is false by counterexample
+
+32. A fast-food chain has a contest in which a card with 
+numbers on it is given to each customer who makes 
+a purchase. If some of the numbers on the card add 
+up to 100, then the customer wins $100. A certain 
+customer receives a card containing the numbers
+ 72, 21, 15, 36, 69, 81, 9, 27, 42, and 63.
+ Will the customer win $100? Why or why not?
+
+ No because all of the numbers above are divisible by 3 (3 is a factor of those numbers)
+ since 100 is not divisible by 3, then the customer cannot win.
+
+ 33. Is it possible to have a combination of nickels, dimes and quarters that add up to $4.72?
+explain. Let the following
+ nickel = 0.05
+ dime = 0.10
+ quarter = 0.25
+
+ No, because we only can use the following
+8 quarters -> $4
+7 dimes -> $0.70
+and if we add even 1 nickel -> $0.05
+All of these variables are divisible by 5.
+Since all coins involved (nickels, dimes, and quarters) are multiples of 5 cents, any total amount must be a multiple of 0.05.
+But 4.72 is not a multiple of 0.05 (since 472 ÷ 5 is not an integer).
+Total = $4.75 so it exceeds the given number. But its psosible with penny
+
+34. Consider a string consisting of a’s, b’s, and c’s 
+where the number of b’s is three times the num
+ber of a’s and the number of c’s is five times the 
+number of a’s. Prove that the length of the string is 
+divisible by 3.
+
+b = 3a
+c = 5a
+
+Total length of string = a + b + c
+does 3 divide a + b + c ?
+
+Then we can substitute -> a + 3a + 5a
+= 9a
+= 3 (3a)
+
+let t = 3a, since integer times integer is an integer therefore t is an itneger
+Then by the definition of divisibility, 3 is a factor of some integer t. Theefore it is divisible by 3 [as to be shown]
+
+35. Two athletes run a circular track at a steady 
+pace so that the first completes one round in 8 
+minutes and the second in 10 minutes. If they 
+both start from the same spot at 4 p.m., when 
+will be the first time they return to the start 
+together?
+
+athlete 1 = 8m
+athlete 2 = 10m
+
+Find the least common multipel = 40 minutes
+so they will meet at the start at 4pm + 40 minutes = 4:40 PM
