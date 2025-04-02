@@ -525,3 +525,66 @@ least 100 mathematics students at the university,
 what are the least possible number of mathematics 
 students and the least possible number of com
 puter science students at the university?
+
+2/3m
+3/5c
+M >= 100
+
+math student = cs student
+2/3m = 3/5c
+15 . 2/3m = 15 . 3/5c
+10m = 9c
+m = 9/10c >= 100
+9c >= 1000
+c >= ~111
+
+Least M
+m = 9/10c
+= 9/10 . 111
+= ~100
+
+
+Definition: Given any nonnegative integer n, the decimal 
+representation of n is an expression of the form
+
+dk . dk-1 ... d2 d1 d0
+
+where k is a nonnegative integer, d0, d1, d2, ...., dk (called decimal digits of n)
+are integers from 0 to 9 inclusive, dk does not equal 0 unless n = 0 and k = 0, and 
+
+n = dk . 10^k + dk-1 . 10^k-1 + ... + d2 . 10^2 + d1 . 10^1 + d0
+
+for example, 2503 = 2 . 10^3 + 5 . 10^2 + 0 . 10 + 3
+
+44. prove that if n is any nonnegatiev integer whose decimal representation ends in 0, then 5 | n
+hint: if the decimal representation of nonnegative integer n ends in d0, then n = 10m + d0 for some integer n
+
+n = 10m + d0
+n = 10m
+
+we need to show that 5 | 10m
+= 10 . m (some integer)
+= 5 . 2m
+since we know 10 has a factor of 2 and 5 therefore its divisibile by 5
+
+45. prove that if n is any nonnegative integer whose decimal representation ends in 5, then 5 | n
+n = 10m + 5
+
+we need to show that 5 | 10m + 5
+S = 10m + 5
+S = 5 (2m + 1)
+
+s can be written as 5 . k for some integer k
+since 2m+1 is an integer, this shows that s is a multiple of 5, therefore ocmpleteing the proof
+
+46. Prove that if the decimal representation of a nonnegative integer n ends in d1 d0 and if
+4 | (10d1 + d0), then 4 | n
+hint: if the decimal representation ofa nonnegative integer n ends in d1d0, then there is an integer s such that
+n = 100s + 10d1 + d0
+
+we need to show that 4 | 100s + 10d1 + d0
+n = 100s + 10d1 + 0
+= 4(25s) + 10d1 + d0
+since we know from the statement that 4 divides 10d1 + d0, therefore we can conclude
+4 divides both 100s and 10d1 + d0
+therefore both are divisible by 4, as was to be shown
