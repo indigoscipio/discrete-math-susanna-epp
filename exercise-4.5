@@ -2,7 +2,7 @@ Test yourslef
 1. The quotient-remainder theorem says that for all 
 integers n and d with d >= 0, there exist ___  q 
 and r such that ____  and ____.
-answer:an integer q and r such that n = d . q + r  and 0 < r <= d
+answer:an integer q and r such that n = d . q + r  and 0 <= r < d
 
 
 2. if n and d are integers with d > 0, n div d is ___ and n mod d is ____
@@ -14,10 +14,100 @@ answer: even or odd
 4. according to the quotient-reminder theorem, if an integer n is 
 divided by a positive integer d, the possible reminders are ____.
 this implies that n can be written in one of the forms ____ for some integer q
-answer: positive, n = dq + r
+answer: 0, 1, 2, ... d-1, dq, dq + 1, dq + 2, dq + ..., dq + d-1
 
 5. to prove a statement of the form "if A1 or A2 or A3, then c", prove ___ and ___ and ___
 answer: A1 then C, A2 then C, A3 then C
 
 6. The triangle inqueality says that for all real numbers x and y, ____
 |x + y| <= |x| + |y|
+
+
+Exercise set 4.5
+For each of the values of n and d given in 1–6,
+find integers q and r such that n = dq + r and 0 <= r < d.
+
+1. n = 70, d = 9
+n = dq + r
+70 = 9 . 7 + 7
+q = 7
+r = 7
+
+2. n = 62, d = 7
+62 = 7 . 8 + 6
+q = 8, r = 6
+
+3. n = 36, d = 40
+36 = 40 . q + r
+36 = 40 . 0 + 36
+q = 0, r = 36
+
+4. n = 3, d = 11
+3 = 11 . q + r
+q = 0
+r = 3
+
+5. n = -45, d = 11
+-45 = 11 . q + r
+q = -5
+r = 10
+
+6. n = -27, d = 8
+-27 = 8 . q + r
+q = -4
+r = 5
+
+
+evaluate the expressions in 7 - 10
+div = quotient, mod = reminder
+7. a. 43 div 9 = 4
+b. 43 mod 9 = 7
+
+8. a. 50 div 7 = 7
+b. 50 mod 7 = 1
+
+9.a. 28 div 5 = 5
+b. 28 mod 5 = 3
+
+10.a. 30 div 2 = 15
+b. 30 mod 2 = 0
+
+11. check the correctness of formula 4.5.1 given in example 4.5.3
+for the following values of DayT and N
+
+365 div 7 = 52
+365 mod 7 = 1
+dayN = (DayT + N) mod7
+
+a. DayT = 6 (saturday) and N = 15
+= 6 + 15 mod 7
+= 21 mod 7 = 0
+
+b. DayT = 0 (sunday) and N = 7
+= 7 + 0 mod 7
+= 7 mod 7 = 0
+
+a. DayT = 4 (thursday) and N = 12
+= 12 + 4 mod 7
+= 16 mod 7 = 2
+
+12. Justify formula (4.5.1) for general values of DayT and N.
+The formulate wokrs because day of the week repeats from Mon - Sunday 
+We can map the day of the week in numbers from 0 - 6
+The starting point is day T, plus how many N days after that
+Module 7 ensures we stay within the 7 day cycle and correctly pick any day after n days
+
+
+13. on a monday a friend says he will meet you again in 30 days.
+What day of the week will that be?
+Monday (DayT) = 0
+DayN = 30
+30 + 0 mod 7 = 2
+Therefore the day of the week is Wednesday
+
+14. If today is tuesday, how what day of the week will it be 1000 days from today?
+DayT = 1 (Tuesday)
+DayN = 1000
+1000 + 1 mod 7
+= 1001 mod7 = 0 (Monday)
+
