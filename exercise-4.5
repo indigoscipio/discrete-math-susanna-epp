@@ -150,7 +150,7 @@ n^2 - n + 3
 let r = (2k^2 + k + 1). Since integer squard plus product of integer plus integer is an integer, r is an intger
 therefore by the definition of odd, n^2 - n + 3 is odd
 
-18. prove that the product of any two consecutive integers is even
+18. a. prove that the product of any two consecutive integers is even
 By the definition of consecutive number, a number is consecutive to another if it can be written as n + 1
 Product of two consecutive number can be written as n * (n +1)
 
@@ -164,5 +164,34 @@ let t = k^2+k, since integer squard plus some integer is integer, t is an intger
 therfore following definition of even, 2k * (2k + 1) is even
 
 
-19. the result of part (a) suggests that the second approach is in the discussion of example 4.5.7 might be possible after al.
+b. the result of part (a) suggests that the second approach is in the discussion of example 4.5.7 might be possible after al.
 write a new prooof of theorem 4.5.3 based on this observation.
+let n = 2k + 1
+n = (2k + 1)^2 = 4k^2 + 4k + 1 = 4k (k + 1) + 1
+since k(k+1) is a product of two consecutive integer this proves that this is always even
+
+19.  Prove directly from the definitions that for all integers m and n, if m and n have the same  parity,
+then 5m + 7n is even. Divide into two cases: m and n are both even and m and n are both odd
+
+case 1 -> m and n are both even
+let m = 2r, n = 2s (by the definition of even)
+5 (2r) + 7 (2s)
+= 10r + 14s
+= 2 (5r + 7s)
+let t = (5r + 7s) which is an integer -> therefore 5m + 7n is even by the definition of even
+
+case 2 -> m and n are both odd
+let m = 2r + 1 and n = 2s + 1 by the definitino of odd
+5 (2r+1) + 7 (2s+1)
+10r + 14s + 12
+= 2 (5r + 7s + 6)
+let t = (5r + 7s + 6) which is an integer -> therefore 5m + 7n is even by the definition of even
+
+20. Suppose a is any integer. If a mod 7 = 4, what is 5a mod 7?
+In other words, if division of a by 7 gives a remainder of 4, what is the remainder when 5a is divided by 7?
+Your solution should show that you obtain the same answer no matter what integer you start with.
+
+By the definition of quotient remainder, n = d q + r where 0 <= r < d
+let a = 11
+11 mod 7 = 4
+55 mod 7 = 6
