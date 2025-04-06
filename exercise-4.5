@@ -191,7 +191,62 @@ let t = (5r + 7s + 6) which is an integer -> therefore 5m + 7n is even by the de
 In other words, if division of a by 7 gives a remainder of 4, what is the remainder when 5a is divided by 7?
 Your solution should show that you obtain the same answer no matter what integer you start with.
 
-By the definition of quotient remainder, n = d q + r where 0 <= r < d
-let a = 11
-11 mod 7 = 4
-55 mod 7 = 6
+By the definition of quotient remainder, a = d q + r where 0 <= r < day
+
+a mod 7 = 4
+5a mod = ??
+By the definition of quotient remainder, a = d q + r where 0 <= r < d,
+this means there is some integer q so that
+
+a = 7q + 4
+5a = 5 (7q + 4)
+= 35q + 20
+= 7(5q + 2) + 6
+
+Since (5q + 2) is an integer (because the products of sums of integersa re integers)
+and since 0 <= 6 < 7, the reminder obtained when 5a divided by 7 is 6, therefore
+5a mod 7 = 6
+
+
+21. Suppose b is any integer. If b mod 12 = 5, what is 8b mod 12?
+In other words, if division of b by 12 gives a remainder of 5, what is the remainder when 8b is divided by 12?
+Your solution should show that you obtain the same answer no matter what integer you start with.
+
+b mod 12 = 5
+8b mod 12 = ??
+
+By the definition of quotient remainder, a = d q + r where 0 <= r < d,
+this means there is some integer q so that
+b = 12q + 5, then we can substitute
+
+8b = 8(12q + 5)
+= 96q + 40
+= 12 (8q + 3) + 4
+
+Since (8q + 3) is an integer (because the products of sums of integersa re integers)
+and since 0 <= 4 < 12, the reminder obtained when 8b divided by 12 is 4, therefore
+8b mod 12 = 4
+
+22. Suppose c is any integer. If c mod 15 = 3, what is 10c mod 15? In other words, if division of c by 
+15 gives a remainder of 3, what is the remainder when 10c is divided by 15? Your solution should
+show that you obtain the same answer no matter what integer you start with
+
+c mod 15 = 3
+10c mod 15 = ???
+
+c = 15q + 3
+10c = 10 (15q + 3)
+= 150q + 30
+= 15 (10q + 2) + 0
+
+since (10q + 2) is an integer (because the product of sums of integers is integer)
+and since 0 <= 0 < 15, the reminder obtained when 10c is divided by 15 is 0,
+therefore 10c mod 15 = 0
+
+23. prove that for every integer n, if n mod 5 = 3, then n^2 mod 5 = 4
+
+24. prove that for all integers m and n, if m mod 5 = 2
+and n mod 5 = 1, then mn mod 5 = 2
+
+25. prove that for all integers a and b, if a mod 7 = 5,
+and b mod 7 = 6, then ab mod 7 = 2
