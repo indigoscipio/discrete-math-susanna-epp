@@ -244,9 +244,44 @@ and since 0 <= 0 < 15, the reminder obtained when 10c is divided by 15 is 0,
 therefore 10c mod 15 = 0
 
 23. prove that for every integer n, if n mod 5 = 3, then n^2 mod 5 = 4
+suppose n is any particular but arbitrarily chosen integer [we must shhow that if n mod 5 = 3, then n^2 mod 5 = 4]
+by the definition of quotient-remainder, n = dq + r where 0 <= r < d
+
+n mod 5 = 3
+n = 5q + 3
+n^2 = (5q + 3)^2
+n^2 = (5q + 3) (5q + 3)
+n^2 = (25q^2 + 15q + 15q + 9)
+n^2 = 25q^2 + 30q + 9
+n^2 = 5(5q^2 + 6q + 1) + 4
+
+let q = (5q^2 + 6q + 1). Since this is an integer therefore the reminder is +4
+therefore we can show that n^2 mod 5 = 4 is true
 
 24. prove that for all integers m and n, if m mod 5 = 2
 and n mod 5 = 1, then mn mod 5 = 2
 
+by the definition of quotient-remainder, n = dq + r where 0 <= r < d
+m mod 5 = 2
+m = 5q + 2
+
+n mod 5 = 1
+n = 5r + 1
+
+mn mod 5 = 2
+(5q + 2) (5r + 1)
+(25qr + 5q + 10r + 2)
+= 5 (5qr + q + 2r) + 2
+let q = (5qr + q + 2r). Since product of integers plus other integers is an integer q is an integer
+then by the definition of quiotient reminder 5q + 2 we get the reminder which is 2 [as was to be hshow]
+
 25. prove that for all integers a and b, if a mod 7 = 5,
 and b mod 7 = 6, then ab mod 7 = 2
+
+26. Prove that a necessary and sufficient condition
+for an integer to be divisible by a positive integer d is that n mod d = 0
+
+27. Use the quotient-remainder theorem with divisor 
+equal to 2 to prove that the square of any integer 
+can be written in one of the two forms 4k or 4k+1 
+for some integer k.
