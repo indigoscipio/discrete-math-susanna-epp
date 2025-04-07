@@ -275,13 +275,84 @@ mn mod 5 = 2
 let q = (5qr + q + 2r). Since product of integers plus other integers is an integer q is an integer
 then by the definition of quiotient reminder 5q + 2 we get the reminder which is 2 [as was to be hshow]
 
-25. prove that for all integers a and b, if a mod 7 = 5,
-and b mod 7 = 6, then ab mod 7 = 2
+25. prove that for all integers a and b, if a mod 7 = 5, and b mod 7 = 6, then ab mod 7 = 2
+
+a mod 7 = 5
+a = 7q + 5
+
+b mod 7 = 6
+b = 7r + 6
+
+ab mod 7 = 2
+first we must evaluate ab and divide by 7 to get the reminder
+= (7q + 5) (7r + 6)
+= 49qr + 42q + 35r + 30
+= 7 (7qr + 6q + 5r + 4) + 2
+
+let q = (7qr + 6q + 5r + 4). Since the sum of product of integer is integer, q is an integer
+therefore following the quotient rmeinder form, ab = 7q + 2 , we get 2 as the reminder [as to be shown]
+
 
 26. Prove that a necessary and sufficient condition
 for an integer to be divisible by a positive integer d is that n mod d = 0
+
+if d divides n, then n mod d = 0
+does d | n?
+There exists some integer q such that n = d . q
+And d is not 0
+
+Now apply quotient reminder theorem
+n mod d = 0
+n = dq + 0 where 0 <= r < d
+since the rminder is 0, the number n is perfectly divisble by d, therefore d | n
+
 
 27. Use the quotient-remainder theorem with divisor 
 equal to 2 to prove that the square of any integer 
 can be written in one of the two forms 4k or 4k+1 
 for some integer k.
+
+by the definition of quotient-remainder, n = dq + r where 0 <= r < d
+let d = 2
+let n be any integer, then n is either of these forms
+n = 2k (even)
+n = 2k + 1 (odd)
+
+first case: 2k
+= 2k^2
+= 4.k^2
+
+n^2 mod 4 = 0
+Since the reminder is 0 2k is even
+
+second case: 2k + 1
+= (2k+1)^2
+= (2k + 1)(2k + 1)
+= 4k^2 + 4k + 1
+= 4 (k^2 + k) + 1
+
+n^2 mod 4 = 1
+since the reminder is 1 2k+1 is odd
+
+28.a. prove: given any set of three consecutive integers, one of the integers is a multiple of 3
+
+Three consecutive integer can be written as n (n + 1) (n + 2)
+One of the integers is a multiple of 3
+
+n mod 3 -> disivible by 3 (e.g reminder is 0)
+
+n + 1 mod 3 -> 1 more than a multiple of 3 (reminder is 1)
+n = 3k + 1 for some integer k
+n + 2 = 3k+ 1 + 2 = 3k + 3 = 3(k + 1), therefore divisible by 3
+
+n + 2 mod 3 -> 2 more than multiple of 3 (reminder is 2)
+n + 1 = 3k + 2 + 1 = 3k + 3 = 3(k + 1) which is divisible by 3
+
+
+
+
+b. use the result of part (a) to prove that any product of three consecutive integers is a multiple of 3
+
+
+
+29. 
