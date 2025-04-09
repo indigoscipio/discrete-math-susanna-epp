@@ -442,3 +442,165 @@ m = 9, n = 13
 m = 15, n = 13
 
 c. find all solutions to the equations m^2 - n^2 = 88 for which both m and n are positive integers.
+m^2 - n^2 = 88
+m = 23, n = 21,
+n = 13, 9
+
+32. given any integers a,b,and c, if a - b is even and b-c is even,
+what can you say about the parity of 2a - (b+c)? prove your answer
+
+a - b = even
+ 1. The sum, product, and difference of any two even integers are even.
+ 2. The sum and difference of any two odd integers are even.
+ a and b as the same parity (either both odd or evven)
+
+b - c = even
+b - c has the same parity as a - b
+
+therefore a - c has the same parity
+
+2a - (b + c)
+= all a b c has the same parity
+case 1: all are even -> even - (even + even) = even
+
+case 2: all are odd -> odd - (odd + odd) = even - even = even
+
+therefore 2a - (b + c) is always even
+
+
+
+33. given any integers a,b,and c if a-b is odd and b-c is even what can you say about the parity of a-c?
+prove your answer
+
+a - b = odd
+by the propery of
+
+ 6. The difference of any odd integer minus any even integer is odd.
+ 7. The difference of any even integer minus any odd integer is odd.
+
+a and b has opposite parity
+either one a is odd or b is even
+or a is even or b is odd
+
+b - c = even
+b and c has the same parity
+
+
+by the property of 
+ 1. The sum, product, and difference of any two even integers are even.
+ 2. The sum and difference of any two odd integers are even.
+b and c has the same parity
+therefore a and c are opposite parity
+
+a - c is odd
+
+
+34. given any integer n if n > 3 could n, n+2 and n+4 all be prime? prove or give counterexample
+
+n
+n + 2
+n + 4
+one of them must be divisble by 3, because n > 3, and since n > 3 it's impossible.
+
+since primes cant be divisbile by 3 unless they are three, the only the only triple that works is when n = 3
+
+
+prove each statements in 35 - 43
+35. the fourth power of any intger has the form 8m or 8m + 1 for some itneger m
+fourth power of any integer
+
+n = 0
+0^4 mod 8 = 1
+0 mod 8 = 0
+
+n = 1 -> 1 mod 8 = 1
+
+n = 2 -> 16 mod 8 = 0
+
+n = 3 -> 81 mod 8 = 1
+
+n = 4 -> same pattern continued
+
+following the pattern, if n is even, then remainder is 0 (perfectly divisible)
+if n is odd, then n^4 mod 8 has a reminder of 1 
+
+36. the product of any four consecutive integers is divisible by 8
+We can express the product of four consecutive integer as
+
+n . (n + 1) . (n + 2) . (n + 3)
+
+divisible by 8 means some integer n mod 8 that leaves some reminder r
+then we can try
+
+let n = 0 -> 0 . 1 . 2 . 3 = 0 mod 8 = 0
+n = 1 -> 1 . 2 . 3 . 4 = 24 mod 8 = 0
+n = 2 -> 2 . 3 . 4 . 5 = 120 mod 8 = 0
+n = 3 -> 3 . 4 . 5 . 6 = 360 mod 8 = 0
+
+among those 4 consecutive numbers, two of those will eventually be even
+at least one of them will be divisbile by 4
+then 4 x 2 = 8, so the toal must be divisble b t 8
+
+
+37. for any integer n, n^2 + 5 is not divisible by 4
+
+a | b can be written as b = a k for some integer k
+or n mod 4 = some reminder r
+
+since 4 does not divide n^2 + 5 
+4 |\ n^2 + 5
+
+n = 0 -> 5 mod 4 = 1
+n = 1 -> 6 mod 4 = 2
+n = 2 -> 9 mod 4 = 1
+n = 3 -> 14 mod 4 = 2
+...
+
+Following the pattern, we see that n^2 + 5 mod 4 never has a reminder of 0 which means its not perfectly divisble by 4
+
+
+38. for every integer m, m^2 = 5k or m^2 = 5k + 1 or m^2=5k + 4 for some integer k
+
+m^2 = 5k
+m^2 = 5k + 1
+m^2 = 5k + 4
+
+since m^2 has 5 as a factor, we can write it as m^2 mod 5 = r for some integer r and 0 <= r < d (0 through 4)
+let n = 0 -> 0^2 mod 5 = 0 mod 5 = 0
+let n = 1 -> 1^2 mod 5 = 1 mod 5 = 1
+let n = 2 -> 2^2 mod 5 = 4 mod 5 = 4
+let n = 3 -> 3^2 mod 5 = 9 mod 5 = 4
+let n = 4 -> 4^2 mod 5 = 16 mod 5 = 1
+
+Following the pattern we see that it leaves the following reminder: 0, 1, and 4
+Therefore for every integer m, m^2 = 5k or m^2 = 5k + 1 or m^2 = 5k + 4
+
+
+39. every prime number except 2 and 3 has the form 6q + 1 or 6q + 5 for some integer q
+
+
+6q + 1
+6q + 5
+
+since both 6q + 1 and 6q + 1 has a factor of 6 it can be written as
+p mod 6 = r for some integer r and 0 <= r < d (0 through 5)
+
+6q + 1 or 6q + 5
+p = r mod 6 p = 6k + r
+let p = 0 -> 0 mod 6 = 6 (not prime)
+let p = 1 -> 1 mod 6 = 1 (leaves a reminder of 1) - might be prime
+let p = 2 -> 2 mod 6 = 2 (leaves a reminder of 2) - divisble by 2
+let p = 3 -> 3 mod 6 = 3 (leaves a reminder of 3) - divisibel by 3
+let p = 4 -> 4 mod 6 = 4 (leves a reminder of 4) - divisibel by 2
+let p = 5 -> 5 mod 6 = 5 (reminder of 5) - might be prime
+
+therefore  any number p > 3 must have the form 6q + 1 or 6q + 5
+
+40. if n is any odd integer, then n^4 mod 16 = 1
+
+
+41. for all real numbers x and y, |x| . |y| = |xy|
+42. for all real numbers r anc c with c >= 0, -c <= r <= c if and only if 
+|r| <=c (hint, proving a if and only if b requires proving both if a then b and if b then a)
+
+43. for all real numbers a and b, | |a| - |b| | <= |a - b|
