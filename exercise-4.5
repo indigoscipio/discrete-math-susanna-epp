@@ -598,8 +598,25 @@ therefore  any number p > 3 must have the form 6q + 1 or 6q + 5
 
 40. if n is any odd integer, then n^4 mod 16 = 1
 
+n^4 mod 16 = 1
+n mod 16 = some reminder r where 0 <= r < d (0 through 15)
+
+Since n is odd, we can try out the value
+let n = 1 -> 1^4 mod 16 = 1
+let n = 3 -> 81 mod 16 = 1
+let n = 5 -> 625 mod 16 = 1
+let n = 7 -> 2401 mod 16 = 1
+let n = 9 -> 6561 mod 16 = 1
+let n = 11 -> 14641  mod 16 = 1
+let n = 13 -> 28561 mod 16 = 1
+let n = 15 -> 50625 mod 16 = 1
+
+since all of these has 1 as reminder, therefore n^4 mod 16  =1 
+
 
 41. for all real numbers x and y, |x| . |y| = |xy|
+
+
 42. for all real numbers r anc c with c >= 0, -c <= r <= c if and only if 
 |r| <=c (hint, proving a if and only if b requires proving both if a then b and if b then a)
 
