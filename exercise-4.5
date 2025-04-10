@@ -615,9 +615,60 @@ since all of these has 1 as reminder, therefore n^4 mod 16  =1
 
 
 41. for all real numbers x and y, |x| . |y| = |xy|
+By the definition of absolute value, an absolute value of x is defined as
+
+| x | = x if x >= 0 and -x if x < 0
+
+case 1: x >= 0, y>=0
+let x = 1 and y = 1
+|1| . |1| = |1.1|
+1 = 1
+
+case 2: x >= 0, y <0
+let x = 1 and y = -1
+|1| . |-1| = |1 . -1|
+1 = 1
+
+case 3: x < 0, y >= 0
+let x = -1 and y = 1
+|-1| . |1| = |-1 . 1|
+1 = 1
+
+case 4: x < 0, y < 0
+then |x| = -x, |y| = -y = xy
+
+case 5: either x = 0 or y = 0
+then both are euqla
+therfore in every case, |x| . |y| = |xy|
+
 
 
 42. for all real numbers r anc c with c >= 0, -c <= r <= c if and only if 
 |r| <=c (hint, proving a if and only if b requires proving both if a then b and if b then a)
 
+c >= 0
+-c <= r <= c if and only if |r| <= c
+
+r > 0
+if -c <= r <= c then |r| <= c
+By the definition of absolute value,
+if r >= 0, then |r| = r
+if r < 0, then |r| = -r
+since r <= c, r <=c holds true
+since r >= c, -r <= c holds true
+
+r < 0
+if |r| <= c then -c <= r <= c
+|r| = -r
+so -r <= c
+r >= -c
+
+
 43. for all real numbers a and b, | |a| - |b| | <= |a - b|
+suppose x and y are any real number
+
+let x = a - b
+let y = b
+
+
+    44. 
