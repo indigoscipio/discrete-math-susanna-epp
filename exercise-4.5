@@ -671,4 +671,45 @@ let x = a - b
 let y = b
 
 
-    44. 
+44. A matrix M has 3 rows and 4 cols
+
+a11 a12 a13 a14
+a21 a22 a23 a24
+a31 a32 a33 a34
+
+The 12 entries in the matrix are to be stored in 
+row major form in locations 7,609 to 7,620 in a 
+computer’s memory. This means that the entries in 
+the first row (reading left to right) are stored first, 
+then the entries in the second row, and finally the 
+entries in the third row.
+
+a. which location will a22 be stored in?
+start = 7609
+end = 7620
+a22 = 6 + (7609 - 1) = 7614
+
+b. Write a formula (in i and j) that gives the 
+integer n so that aij is stored in location 7,609+n.
+let i = row number (1-based)
+let j = col number (1-based)
+total col = 4, total row = 3
+
+location = 7609 + (i - 1) . (4 + (j - 1))
+
+c. find formulas (in n) for r and s so that ars is stored in location 7609 + n
+r = row
+s = col
+start = 7609
+total col = 4
+total row = 3
+
+row = (n / 4) + 1
+col = (n mod 4) + 1
+
+45.  Let M be a matrix with m rows and n col
+umns, and suppose that the entries of M are 
+stored in a computer’s memory in row ma
+jor form (see exercise 44) in locations N, 
+N11, N12, Á, N1mn21. Find formulas in k 
+for r and s so that ars is stored in location N1k.
