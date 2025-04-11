@@ -745,3 +745,36 @@ and m - n is divisible by d (d | (m - n)) because same reminder = same factor/mu
 47. if m, n, and d are integers, d>0 and d | (m-n), what is the relation between m mod d and n mod d?
 prove your answer.
 
+m = n = d are integers
+d > 0
+d | (m - n)
+
+m mod d = what is the reminder when m is divided by d?
+n mod d = what is the reminder when n is divided by d?
+let m = 5, n = 3, d = 3
+
+3 | (5 - 3)
+m mod d = 5 mod 3 = 2
+n mod d = 3 mod 3 = 0
+
+let m = 12, n = 7, d = 5
+m nod d = 12 mod 5 = 2
+n mod d = 7 mod 5 = 2
+
+the mod result is different unless x mod y where xy has the same value = 0
+otherwise it looks like it returns 2 as the reminder
+
+d | (m - n) = (m - n) = d . k where k is some integer
+m = n + (d . k)
+m mod d = n + (d . k) mod d
+= n mod d
+
+50. prove that if m, d, and k are integers and d > 0, then (m + dk) mod d = m mod d
+m = d = k = integer
+d > 0
+
+(m + dk) mod d = m mod d
+m + dk  = m + 0 = m mod d
+therefore (m + dk) mod d = m mod d
+since dk is a multiple of d, it has d as a factor and therefore divisible by d
+therefore m mod d
