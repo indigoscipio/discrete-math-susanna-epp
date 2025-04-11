@@ -709,7 +709,39 @@ col = (n mod 4) + 1
 
 45.  Let M be a matrix with m rows and n col
 umns, and suppose that the entries of M are 
-stored in a computer’s memory in row ma
-jor form (see exercise 44) in locations N, 
-N11, N12, Á, N1mn21. Find formulas in k 
-for r and s so that ars is stored in location N1k.
+stored in a computer’s memory in row major form (see exercise 44)
+in locations N, N+1, N+2, ..., N + mn -1.
+Find formulas in k for r and s so that ars is stored in location N+k.
+
+starting memory = N
+offset = k
+m rows, n cols
+
+every full rows contain n elements
+how many full rows fit in k?
+
+first row = k = 0 to n - 1
+second row = k = n to 2n - 1
+third row = k = 2n to 3n - 1
+
+col = (k mod n) + 1
+row = (n / k) + 1
+
+46. if m, n, and  d are integers, d > 0, and m mod d = n mod d,
+does it necessarily follow that m = n? that m - n is divisible by d? prove your answers/
+
+m = n = d = integers
+d > 0
+m mod d = n mod d
+this means they both leave the same remainder when divided by d
+
+let m = 17, n = 10, d = 5
+m mod d = 11 mod 5 = 1
+n mod d = 6 mod 5 = 1   
+this means m and n has to be congruent or leaves the same reminder when its divided by d
+but here m does not have to be equal n
+and m - n is divisible by d (d | (m - n)) because same reminder = same factor/multiple of d
+
+47. if m, n, and d are integers, d>0 and d | (m-n), what is the relation between m mod d and n mod d?
+prove your answer.
+
