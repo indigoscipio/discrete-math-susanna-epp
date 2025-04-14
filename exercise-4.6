@@ -65,4 +65,44 @@ would be required to ship n units of the product
 using either the floor or the ceiling notation. 
 Which notation is more appropriate?
 
-36n
+say we have 100 unit
+100 / 36 = 2.77778 which holds only 2 boxes max, with .7778 leftover
+floor(2.7778) = 2
+ceil(2.7778) = 3
+which one is more appropriate?
+since we have the leftover we need the ceiling to the leftover can be included even thorugh it doesn't package the full capacity
+
+10. if 0 = sunday
+1 = monday
+2= tuesday, ..., 6 = saturday
+then jan 1 of  year n occurs on the day of the week given by the following formula:
+
+(n + (n - 1 / 4) - (n - 1 / 100) + (n - 1 / 400)) mod 7
+
+a. use this formula to find january 1 of
+i) 2050
+= (2050 + (2049 / 4) - (2049 / 100) + (2049 / 400)) mod 7
+= (2050 + 512.25 - 20.49 + 5.1125) mod 7
+= 2546.8725 mod 7
+= 2547 mod 7 = 6 (saturday)
+
+ii) 2100
+= (2100 + (2100 / 4) - (2100 / 100) + (2100 / 400)) mod 7
+= (2100 + 525 - 21 + 5.25) mod 7
+= 2609.25 mod 7
+= 2609 mod 7 = 5 (Friday)
+
+iii) 1997
+= (1997 + (1997 / 4) - (1997 / 100) + (1997 / 400)) mod 7
+= (1997 + 499.25 - 19.97 + 4.9925) mod 7
+= 2481.2725 mod 7
+= 2481 mod 7 = 3 (Wednesday)
+
+b. intrepret the different components of this formula
+(n - 1 / 4) -> im guessing this is the month?
+(n - 1 / 100) -> i have no idea what this is, maybe like the week?
+(n - 1 / 400) -> maybe the day?
+
+11. state a necessary and sufficient condition for the floor of a real number to equal that number
+
+12. 
