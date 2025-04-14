@@ -7,7 +7,62 @@ answer: n <= x < n + 1
 2. given any real number x, the ceiling of x is the unique integer n such that ___
 answer: n - 1 < x <= n
 
-compute floor(x) and ceil(x) for each 
+compute floor(x) and ceil(x) for each values of x in 1 -4
 floor(x) = ⌊ ⌋
 ceil(x) = ⌈ ⌉
 
+1. 37.9999
+floor = 37
+ceil = 38
+
+2. 17/4 = 4.25
+floor = 4, ceil = 5
+
+3. -14.000001
+floor = -15, ceil = -14
+
+4. -32/5 = -6.4
+floor = -7
+ceil = -6
+
+5. use the floor notation to express 259 div 11 and 259 mod 11
+
+n div d = floor(n/d)
+= floor(259/11) = floor(23.54545) = 23
+
+n mod d = n - d . floor(n/d)
+= 259 - 11 . floor(259/11)
+= 259 - 11 . 23
+= 259 - 253 = 6
+
+6. if k is an integer, what is ceil(k)? why?
+by the definition of ceiling, given any real number x, a ceiling of x can be written as
+ceil(x) = n - 1 < x <= n where n is an integer
+
+since k is already an integer, ceil(k) = k itself.
+
+7. if k is an integer, what is ceil(k + 1/2)? why?
+by the definition of ceiling, given any real number x, a ceiling of x can be written as
+ceil(x) = n - 1 < x <= n where n is an integer
+
+Since k + 1/2 is halfway between two integer, the smallest integer that's greater or equal to it is
+k + 1/2 = k + 1
+
+8. Seven pounds of raw material are needed to 
+manufacture each unit of a certain product. 
+Express the number of units that can be produced 
+from n pounds of raw material using either the 
+floor or the ceiling notation. Which notation is 
+more appropriate?
+
+lbs of raw material = n
+answer: floor(n/7) because we need to count the number of complete product
+
+9. Boxes, each capable of holding 36 units, are 
+used to ship a product from the manufacturer to 
+a wholesaler. Express the number of boxes that 
+would be required to ship n units of the product 
+using either the floor or the ceiling notation. 
+Which notation is more appropriate?
+
+36n
