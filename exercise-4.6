@@ -99,10 +99,78 @@ iii) 1997
 = 2481 mod 7 = 3 (Wednesday)
 
 b. intrepret the different components of this formula
-(n - 1 / 4) -> im guessing this is the month?
+n = the year were trying to compute
+(n - 1 / 4) -> im guessing this is because leap year occurs every 4 years?
 (n - 1 / 100) -> i have no idea what this is, maybe like the week?
 (n - 1 / 400) -> maybe the day?
 
+
 11. state a necessary and sufficient condition for the floor of a real number to equal that number
 
-12. 
+12. let S be the statement: For any odd integer n, floor(n/2) = (n-1)/2
+then s is true, but the following proof is incorrect. find the mistake
+
+proof: suppose n is any odd integer, then n = 2k+k for some integer k
+consequently,
+
+floor(2k+1/2) = (2k+1) - 1 / 2 = 2k/2 = k
+
+but n = 2k + 1. solving for k gives k = (n-1)/2.
+hence by substitution, floor(n/2) = (n-1/2)
+
+answer:
+
+floor (2k + 1 / 2) should have evaluated to floor(k+1/2) instead of substituting the definition of odd integer
+then evaluate last
+
+
+13. prove that if n is any even integer, then floor(n/2) = n/2
+by the definition of even, a number is even if it can be written as 2k where k is an integer
+by the definition of floor, the floor of a number n can be written as n <= x < n + 1
+
+n/2 = 2k/2 = k
+applying the floor function floor(n/2) we get n/2 since n/2 is already an integer
+
+[as was to be shown]
+
+14.  show that the following statement is false
+for all real numbers x and y, floor(x - y) = floor(x) - floor(y)
+
+counterexample
+x = 1.5, y = 0.6
+
+floor(1.5 - 0.6) = floor(1.5) - floor(0.6)
+floor(0) = floor(1) - floor(0)
+0 = 1
+
+Some of the statements in 15–22 are true and some are 
+false. prove each true statement and find a counterexam
+ple for each false statement, but do not use theorem 4.6.1 
+in your proofs.
+Theorem 4.6.1
+ For every real number x and every integer m, floor(x+m) = floor(x) + m
+
+ 15. for every real number x, floor(x-1) = floor(x) - 1
+by the definition of floor, given any real number x, floor(x) can be written as
+unique integer n such that n <= x < n + 1
+floor(x) = n if and only if n <= x < n + 1
+
+substitute 1 from the inqeuality
+n - 1 <= x - 1 < n
+
+floor(x-1) = n - 1
+but we know from the first definition that  floor(x) = n
+then we can substitute floor(x-1) = floor(x) - 1
+[as was to be shown]
+
+16. for every real number x, floor(x^2) = floor(x)^2
+let x = 1.5
+
+the statement is false
+counterexample: x = 1.5
+floor(1.5^2) = floor(2.25) = 2
+floor(1.5)^2 = floor(1)^2 = 1^2 = 1
+[as was to be shown]
+
+17. for every integer n,
+
