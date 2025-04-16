@@ -174,3 +174,105 @@ floor(1.5)^2 = floor(1)^2 = 1^2 = 1
 
 17. for every integer n,
 
+floor(n/3) = 
+a. n/3 if n mod 3 = 0
+b. (n-1) /3 is n mod 3 = 1
+c. (n - 2 )/3 if n mod 3 = 2
+
+using generalization
+
+case 1: n mod 3 = 0
+By the quotient reminder theorem, n mod 3 = 3 . q + r where q is an integer and 0 <= r < 3
+since n mod 3 = 0, the reminder r = 0, thus n = 3q + 0 = 3q
+
+Now compute n/3
+n/3 = 3q/3 = q, since q is an integer, the floor function does nothing.
+floor(n/3) = floor(q) = q, but n/3 = q so we have floor(n/3) = n/3
+
+
+case 2: n mod 3 = 1
+same as previous, n mod 3 = 1 , the reminder r =1 thus n = 3q + 1
+
+n/3 = 3q+1/3 = q + 1/3. Since the floor function removes 1/3 this leaves: q
+now compute n-1/3 = (3q + 1)-1/3 = 3q/3 = q
+
+therefore floor(n/3) = n-1/3
+
+case 3: n mod 3 = 2
+n mod 3 = 2, the reminder r = 2 thus 3q + 2 by the quotient reminder theorem
+
+first compute n/3
+n/3 = 3q+2/3 = q + 2/3.
+Now apply the floor function to n/3. Since the floor function removes 2/3 this leaves only q
+
+Second compute right hand side, n-2/3
+n-2/3 = 3q+2-2/3 = 3q/3 = q
+
+Compare both sides
+floor(n/3) = (n-2)/3
+
+For all three cases, the statement holds
+[as was to be shown]
+
+
+since all of the values are true, therefore the statemnt is true [was was to be shown]
+
+18. for all real numbers x and y, ceil(x + y) = ceil(x) + ceil(y)
+let x = 1.2, y = 1.2
+
+ceil(1.2+1.2) = ceil(1.2) + ceil(1.2)
+3 = 2 + 2
+
+since we found a counterexample, the statmeent is false
+
+19. for every real number x, ceil(x-1) = ceil(x) - 1
+let x = 1.2
+
+ceil(0.2) = ceil(1.2) - 1
+1 = 2-1
+
+let x = 1.5
+1 = 1
+
+seems to be true, but we need to make a generalized proof
+by the definition of ceiling, the ceiling of a real number n can be written as
+n-1 < x <= n for some integer n
+
+then we can subtract by 1
+n - 2 < x - 1 <= n - 1
+
+then by the definition of ceiling, ceil(x-1) = n - 1
+Since we assumed earlier that ceil(x) = n, then we can substitute
+
+ceil(x-1) = ceil(x) - 1 [as was to be shown]
+
+20. for all real numbers x and y, ceil(xy) = ceil(x) . ceil(y)
+let x = 1.5, y = 1.6
+
+ceil(2.4) = ceil(1.5) . ceil(1.6)
+3 = 2 . 2
+3 = 4
+
+since we found a counterexample, therefore the statement is false [QED]
+
+21. for every odd integer n, ceil(n/2) = (n+1)/2
+
+let n = 3
+ceil(1.5) = 4/2
+2 = 2
+
+let n = -3
+ceil(-1.5) = -2/2
+-1 = -1
+
+seems to be correct, so lets write a general proof
+by the definition of odd, a number is odd if it can be written as 2k+1 for some integer k
+by the definition of ceiling, the ceiling of a real number n can be written as
+ceil(x) = n if only if n-1 < x <= n for some integer n
+
+ceil(n/2) = ceil(2k+1/2) = ceil(k + 1/2)
+
+now evaluate the other side
+n+1/2 = 2k+1/2 = k + 1/2
+
+= ???
