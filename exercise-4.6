@@ -271,8 +271,39 @@ by the definition of ceiling, the ceiling of a real number n can be written as
 ceil(x) = n if only if n-1 < x <= n for some integer n
 
 ceil(n/2) = ceil(2k+1/2) = ceil(k + 1/2)
+we know from the definition that the ceiling of k + 1/2 is simply k + 1
 
-now evaluate the other side
-n+1/2 = 2k+1/2 = k + 1/2
+now move to n+1/2
+2k+1+1/2 = 2k+2 / 2 = k + 1
 
-= ???
+we have shown that floor(n/2) = k + 1 = n+1/2 [as was to be shown]
+
+22. for all real numbers x and y, ceil(xy) = ceil(x) . floor(y)
+
+let x = 1.5
+let y = 1.5
+ceil(2.25) = 2 . 1
+2 = 2
+
+let x = 1.5
+let y = -1.5
+ceil(-2.25) = 2 . -2
+2 = -4
+
+since we foudn a counterexample therefore the statement is false
+
+
+prove each statements in 23-33
+23. for any real number x, if x is not an integer, then floor(x) + floor(-x) = -1
+
+24. for any integer m and any real number x, if x is not an integer, then floor(x) + floor(m-x) = m-1
+
+25. for any real number x, floor(floor(x/2)/2) = floor(2/4)
+
+26. for every real number x, if x - floor(x) < 1/2 then floor(2x) = 2.floor(x)
+
+27.for every real number x, if x - floor(x) >= 1/2 then floor(2x) = 2.floor(x)+1
+
+28. for any odd integer n, floor(n^2/4) = (n-1/2) . (n+1/2)
+
+29. for any odd integer n, 
