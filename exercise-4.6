@@ -292,15 +292,68 @@ ceil(-2.25) = 2 . -2
 
 since we foudn a counterexample therefore the statement is false
 
-
 prove each statements in 23-33
 23. for any real number x, if x is not an integer, then floor(x) + floor(-x) = -1
+by the definitoin of floor, the floor of a real number x can be written as
+floor(x) = n if and only if n <= x <= n + 1 where x is real number and n is an intege
+
+floor(x) + floor(-x) = -1
+x = n + r where n is an integer and 0 < r < 1
+
+floor(x) = n
+-x = -n-r
+eg -2.3 = -2 -0.3
+here x lies between -n <= -x < -n-1
+n + (=n-1) = -1
+
 
 24. for any integer m and any real number x, if x is not an integer, then floor(x) + floor(m-x) = m-1
+integer m and real number x
 
-25. for any real number x, floor(floor(x/2)/2) = floor(2/4)
+floor(x) + floor(m-x) = m - 1
+
+by the definitoin of floor, the floor of a real number x can be written as
+floor(x) = n if and only if n <= x <= n + 1 where x is real number and n is an intege
+
+floor(x) = n
+x = n + r where n is an integer and 0 < r < 1(since x is not an integer)
+
+floor(m - x)
+(m-x) = m - (n + r) = (m-n) + r
+(m-n)-1 <= m - x < m-n
+
+25. for any real number x, floor(floor(x/2)/2) = floor(x/4)
+by the definitoin of floor, the floor of a real number x can be written as
+floor(x) = n if and only if n <= x <= n + 1 where x is real number and n is an intege
+
+n <= x/2 < n + 1
+n/2 <= (x/2)/2 < (n + 1)/2
+n/2 = x/4 < n+1/2
+
+floor(n/2)
+k <= n/2 <= k + 1
+
+threfore k <= x/4
+
+second compute floor(floor(x/2)/2)
+since we know floor(x/2) = n we can substitute
+floor(n/2)
 
 26. for every real number x, if x - floor(x) < 1/2 then floor(2x) = 2.floor(x)
+by the definitoin of floor, the floor of a real number x can be written as
+floor(x) = n if and only if n <= x <= n + 1 where x is real number and n is an intege
+
+x - floor(x)
+floor(x) = n
+
+= x - n < 1/2
+= n <= x < n + 1/2
+= 2n <= 2x <= 2n + 1
+
+floor(2x) = 2n
+but 2n = 2. floor(x) since n = floor(x)
+[QEDs]
+
 
 27.for every real number x, if x - floor(x) >= 1/2 then floor(2x) = 2.floor(x)+1
 
@@ -319,4 +372,5 @@ n to be divisible by a nonzero integer d is that
 n = floor(n/d) . d. In other words, for every integer n 
 and nonzero integer d,
  a. if d | n, then n = floor(n / d) . d.
- b. if n = floor(n / d) . d, then d | n
+ b. if n = floor(n / d) . d, then d | necessary
+ 
