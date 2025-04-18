@@ -424,10 +424,73 @@ since the left and right hand side is eeuql, we have proven that the statement i
 
 
 30. for every integer n, floor(n/2) + ceil(n/2) = n
+floor(x) = n if and only if n <= x < n + 1 where x is real number and n is an intege
+
+case 1: n is even (n = 2k)
+first lets evaluate floor(n/2)
+floor(2k/2) = k
+ceil(2k/2) = k
+
+floor(2k/2) + ceil (2k/2) = k + k = 2k = n
+
+case 2: n is odd (n = 2k + 1)
+floor(2k+1/2) = k + 1/2
+floor(2k+1/2) = k
+ceil(2k+1/2) = k+1
+
+floor(2k+1/2) + ceil(2k+1/2) = k + k+ 1 = 2k + 1 = n
+
+since the two cases equals n, thus we have proven the statement
+[as was to be shown]
 
 31. for every integer n, floor(floor(n/2)/3) = floor(n/6)
+floor(x) = n if and only if n <= x < n + 1 where x is real number and n is an intege
+
+case 1: n is even (n = 2k)
+first lets evaluate floor(n/2)
+floor(n/2) = floor(2k/2) = k
+
+second evaluate floor(floor(n/2)/3)
+floor(k/3) = floor(n/6)
+
+floor(k/3) = floor(2k/6)
+floor(k/3) = floor(k/3)
+
+case 2: n is odd
+floor(n/2) = floor(2k+1/2) = floor(k+1/2) = k
+second evaluate floor(floor(n/2)/3)
+floor(k/3) = floor(n/6)
+floor(k/3) = floor(2k+1/6)
+floor(k/3) = floor(k/3 + 1/6)
+
+subcase a: k = 3q where r = 0
+floor(k/3) = floor(k/3 + 1/6)
+floor(3q/3) = floor(3q/3 + 1/6)
+floor(q) = floor(q + 1/6)
+q = floor(q + 1/6)
+since 1/6 is the fractional part  therefore floor(q + 1/6) is q which is the smallest integer
+q = q
+
+subcase b: k = 3q + 1 where r = 1
+floor(k/3) = floor(k/3 + 1/6)
+floor(3q+1/3) = floor(3q+1/3 + 1/6)
+floor(q+1/3) = floor(q+1/3 + 1/6)
+floor(q+1/3) = floor(q+1/2)
+q + floor(1/3) = q + floor(1/2)
+q + 0 = q + 0
+
+
+subcase c: k = 3q + 2 where r = 2
+floor(k/3) = floor(k/3 + 1/6)
+floor(3q+2/3) = floor(3q+2/3 + 1/6)
+floor(q+2/3) = floor(q+5/6)
+q + floor(2/3) = q + floor(5/6)
+q + 0 = q + 0
+
 
 32. for every integer n, ceil(ceil(n/2)/3) = ceil(n/6)
+
+
 
 33. A necessary and sufficient condition for an integer 
 n to be divisible by a nonzero integer d is that 
