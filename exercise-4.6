@@ -362,14 +362,66 @@ floor(x) = n if and only if n <= x <= n + 1 where x is real number and n is an i
 
 floor(x) = n
 = x - n >= 1/2
-= ???
+= x >= n + 1/2
 
-floor(2x)
+n + 1/2 <= x < n + 1
+
+floor(2x) = 2n + 1
+2n + 1 < 2x < 2n + 2
 
 
 28. for any odd integer n, floor(n^2/4) = (n-1/2) . (n+1/2)
+by the definition of odd, an number is odd if it can be written as n = 2k + 1 for some integer k
+floor(x) = n if and only if n <= x <= n + 1 where x is real number and n is an intege
 
-29. for any odd integer n, ceil(n^2/4) = n^2+3/4
+floor(n^2/4) = (n-1/2) . (n+1/2)
+floor((2k+1)^2/4)
+=floor((2k+1).(2k+1)/4)
+=floor(4k^2 + 2k + 2k + 1 / 4)
+=floor(4k^2 + 4k + 1 / 4)
+=floor(k^2+k+1/4)
+
+now apply the floor function to k^2+k+1/4
+floor eliminates all fractional part less than 1
+= k^2 + k
+
+now evaluate the right hand side
+(n-1/2) . (n-1/2)
+=(2k+1-1/2) . (2k+1+1/2)
+=2k/2 . 2k+2/2
+= k . k + 1
+= k^2 + k
+
+since the left hand side and right hand side is equal, we have shown that it's proven
+[QED]
+
+29. for any odd integer n, ceil(n^2/4) = (n^2+3) /4
+by the definition of odd, an number is odd if it can be written as n = 2k + 1 for some integer k
+By the definition of ceiling, the ceiling of real number x can be written as n
+ceil(x) = n if only if n-1 < x <= n where n is an integer
+
+ceil(n^2/4) = (n^2 + 3) / 4
+first lets evaluate the left hand side
+(2k+1)^2/4
+= (2k + 1) (2k + 1) / 4
+= 4k^2 + 2k + 2k + 1 / 4
+= 4k^2 + 4k + 1 / 4
+= k^2 + k + 1/4
+
+now apply the ceiling function
+since 1/4 is a fractional part it will be 1 since ceiling will push it to the next biggest integer
+= k^2 + k + 1
+
+now evaluate the right hand side
+(n^2 + 3)/4
+= (2k+1)^2 + 3 / 4
+= 2k+1 . 2k+1 + 3 / 4
+= 4k^2 + 4k + 1 + 3 / 4
+= 4k^2 + 4k + 4 / 4
+= k^2 + k + 1
+
+since the left and right hand side is eeuql, we have proven that the statement is true [QED]
+
 
 30. for every integer n, floor(n/2) + ceil(n/2) = n
 
