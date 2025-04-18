@@ -490,7 +490,14 @@ q + 0 = q + 0
 
 32. for every integer n, ceil(ceil(n/2)/3) = ceil(n/6)
 
+case 1: n is even (n = 2k)
+ceil(n/2) = ceil(2k/2) = k
+ceil(k/3) = ceil(n/6)
+ceil(k/3) = ceil(2k/6)
+ceil(k/3) = ceil(k/3)
 
+case 2: n is odd (n = 2k + 1)
+ceil(n)
 
 33. A necessary and sufficient condition for an integer 
 n to be divisible by a nonzero integer d is that 
@@ -498,4 +505,3 @@ n = floor(n/d) . d. In other words, for every integer n
 and nonzero integer d,
  a. if d | n, then n = floor(n / d) . d.
  b. if n = floor(n / d) . d, then d | necessary
- 
