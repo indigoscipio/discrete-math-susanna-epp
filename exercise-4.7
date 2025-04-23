@@ -286,18 +286,72 @@ This fits the definition of a rational number. However this is a contradiction b
 a. write negation for t
 Ax integer a, if a mod 6 = 3, then a mod 3 does not equal 2
 Ex integer a, a mod 6 = 3 and a mod 3 does not equal 2
-negation: There exists an integer a where a mod 6 = 3 and a mod 3 does not equal 2
+negation: There exists an integer a where a mod 6 = 3 and a mod 3 = 2
 
 b. prove T by contradiction
-By the quotient reminder theorem, 
+Suppose not. That is, suppose that There exists an integer a where a mod 6 = 3 and a mod 3 = 2
+[we must deduce  a contradiction]
+
+By the quotient reminder theorem, a mod 6 = 6 . q + r where q is an integer and 0 <= r < 6
+since a mod 6 = 3, the reminder r = 3, thus a = 6q + 3
 
 a mod 6 = 3
-= 6d + 3
+a mod 3 = 2
 
+a mod 3 = 6q + 3 mod 3
+
+6q is divisible by 3 -> r = 0
+3 is divisiblle by 3 also, so 6q + 3 leaves 0 reminder -> 3 | 6q + 3
+6q mod 3 + 3 mod 3 = 0 + 0
+0 mod 3 = 0
+
+But our initial supposittion was a mod 3 = 2 but we found out that 0 mod 3 = 0 which is a contradiciton.
+[Thus the supposition is false and the statement to be proved is true.] 
 
 
 15. do there exist integeres a, b, and c such that a, b, and c are all odd and a^2 + b^2 = c^2?
 Prove your answer
 
+let a = 1
+let b = 1
+let c = 1
+
+1 + 1 = 1 -> false
+
+generalized proof
+a = 2x + 1
+b = 2y + 1
+c = 2z + 1
+
+a^2 + b^2 = c^2
+
+(2x + 1)^2 + (2y + 1)^2 = (2z + 1)^2
+(2x+1) . (2x+1) + (2y+1) . (2y+1) = (2z+1) . (2z+1)
+(4x^2 + 2x + 2x + 1) + (4y^2 + 2y + 2y + 1) = (4z^2 + 2z + 2z + 1)
+(4x^2 + 4x + 1) + (4y^2 + 4y + 1) = (4z^2 + 4z + 1)
+4x^2 + 4x + 4y^2 + 4y + 2 = 4z^2 + 4z + 1
+4(x^2 + x + y^2 + y) + 2 = 4 (z^2 + z) + 1
+
+let k = (x^2 + x + y^2 + y), m = (z^2 + z) + 1
+left side (4k + 2) : reminder is 2
+right side (4k + 1): reminder is 1
+
+therefore we found a contradiction. A integer cannot have 2 different reminder when divided by 4. [and so the statement is false]
+
+
 prove each statement in 16 - 19 by contradiction
-16. for all
+16. for all integers a and b, b^2 - a^2 does not equal 4
+(hint: b^2 - a^2 = (b + a) (b - a)) and the only way to factor 4 is eiter 4 = 2.2 or 4 = 4 . 1
+
+17. for all prime number a, b, and c, a^2 + b^2 does not equal c^2
+
+18. if a and b are rational numbers, b does not equal 0, and r is an irrational number, then a + br is irrational
+
+19. for any integer n, n^2 - 2 is not divisible by 4
+
+20. fill in the blanks in the following proof by contraposition that for every integer n,
+if 5 does not divide n^2 then 5 does not divide n
+
+Proof (by contraposition)
+
+21. 
