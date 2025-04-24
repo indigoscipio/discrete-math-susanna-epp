@@ -619,13 +619,35 @@ a number cant be both rational and irrational [thus the contradiction is proven]
 
 
 Use any method to prove the statements in 26–29.
-26. For all integers a, b, and c, if a does not divide c then a does not divide b. 
+26. For all integers a, b, and c, if a does not divide bc then a does not divide b. 
+prove by contradiction
+negation: For some integers a, b, and c, a does not divide bc and a divides b
+Suppose not. That is, For some integers a, b, and c, a does not divide bc and a divides b
+[we must deduce  a contradiction]
+
+a | b can be written as b = a . q where q is an integer
+a does not divide bc = leaves a reminder
+
+bc = (aq) . c
+bc = a . (qc)
+bc is an integer since integer times integer is an intteger
+therefore by the definitino of divisilibty it is divisible
+therefore a | bc [thus the supposition is false and statement proved is true]
+
+27. for all positive real nubmers r and s, sqrt(r+s) does not equal sqrt(r) + sqrt(S)
+proof by contraposition
+contrapositive: For all positive real number r and s, sqrt(r) + sqrt(s) = sqrt(r+s)
+
+(sqrt(r) + sqrt(s))^2 = sqrt(r+s)^2
+r + 2.sqrt(rs) + s = rs
+2. sqrt(rs) = 0
 
 
-
-27. for all positive real nubmers r and s, sqrt(r+2) does not equal sqrt(r) + sqrt(S)
+but we assumed that 2sqrt(rs) > 0 earler so it cannot be both 0 and > 0, therfore the contraposition is false
+and the original statment is false
 
 28. for all integers a, b, and c, if a | b and a does not divide c, then a does not divide (b + c)
+
 
 29. for all integers m and n, if m + n is even then m and n are both even or m and n are both odd
 
