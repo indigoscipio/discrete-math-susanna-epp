@@ -348,20 +348,186 @@ negation: There exists some integer a and b where b^2 - a^2 = 4
 Suppose not. That is, suppose that There exists some integer a and b where b^2 - a^2 = 4
 [we must deduce  a contradiction]
 
-4 = (b + a) (b - a)
+4 = (b + a) - (b - a)
 let x = b + a, y = b - a
 
+b + a
+if one is odd and the other is even: parity is odd
+if both is odd, parity is even
+if both is even, parity is even
 
+b - a
+if one is odd and the other is even: parity is odd
+if both is odd, parity is even
+if both is even, parity is even
+
+therefore must have the same parity and are either both even or odd
+this means the pair of integers b + a, b - a must be one of the pairs of integers factors whose product is 4
+
+this leaves only  2, 2 and -2, -2 since they have the same parity
+
+case 1: Suppose b+a=2 AND b−a=2.
+(b+a) - (b−a)=2 - 2
+2a = 0
+a = 0/2 = 0
+
+case 2: Suppose b+a=−2 AND b−a=−2.
+(b+a)+(b−a)= −2+(−2)
+2b = -4
+b = -2
+
+b^2 - a^2 = 4
+-2^2 - 0^2 = 4
+
+[this contradicts the supposition]
 
 17. for all prime number a, b, and c, a^2 + b^2 does not equal c^2
+negation: for some prime number a,b,and c, a^2 + b^2 = c^2
+
+proof: Suppose not. That is, suppose that for some prime number a,b,and c, a^2 + b^2 = c^2
+[we must deduce  a contradiction]
+
+case 1: a,b,anc c are all odd primes
+a^2 + b^2 = c^2
+odd + odd = odd
+even = odd
+this is a contradiction since integer cannot be both even or odd
+
+case 2: one of the 3 is number 2, and the other 2 is odd
+2^2 + b^2 = c^2
+4 + b^2 = c^2
+4 = c^2 - b^2
+4 = (c - b) (c + b)
+4 = even . even
+4 = even
+
+probability 2a: c - b = 2 and c + b =2
+4 = (c - b)  + (c + b)
+4 = 2c
+2 = c
+
+4 = (c - b)  - (c + b)
+b = 0
+
+probability 2b: c - b = -2 and c + b = 2
+4 = (c - b) + (c + b)
+4 = 2c
+2 = c
+
+4 = (c - b) - (c + b)
+b = 0
+
+c and b both are not odd primes therefore its acontradiction
+
+
+case 3: both a and b are prime 2
+2^2 + 2^2 = c
+8 = c^2
+there is no prime number c such that c^2 = 8
+
 
 18. if a and b are rational numbers, b does not equal 0, and r is an irrational number, then a + br is irrational
+Ax rational number a and b, if b does not equal 0 and r is an irrational number, then a + br is irrational
+negation: Ex rational number a and b, b does not equal 0 and r is an irrational number and a + br is rational
+negation: there exists numbers a and b whre b does not equal 0 and r is an irrational number and a + br is rational
+
+proof: Suppose not. That is, suppose that there exists numbers a and b whre b does not equal 0 and r is an irrational number and a + br is rational
+[we must deduce  a contradiction]
+by the definition of rational number, a number is rational if it can be written as r = a/b where a and b is integer and b does not equal 0
+
+r = irrational number
+a and b = rational number
+
+a + br = q where q is rational number
+q - a = b
+q-a/b = r
+
+q-a/b is rational because q-a is rational - rational is rational
+and b is rational because b does not equal 0
+
+therefore we found a contradiction where q-a/b is rational whereas in our initial supposition we suppost it to be irrational
+but itcannot be both.
 
 19. for any integer n, n^2 - 2 is not divisible by 4
+negation: For some integer n, n^2-2 is divisible by 4
+
+
+proof: Suppose not. That is, suppose that For some integer n, n^2-2 is divisible by 4
+[we must deduce  a contradiction]
+
+n^2 - 2 is divisible by 4
+this means 4 | n^2 - 2
+
+n^2 - 2 = 4 . q where q is an integer
+n^2 = 4q + 2
+
+4q + 2 mod 4 = 2
+since n is any integer we need to divide into 2 cases
+
+case 1: n is even (n = 2k)
+2k^2 = 2k . 2k = 4k^2
+n^2 mod 4 = 0
+
+
+case 2: n is odd
+2k+1^2 = 4q + 2
+n^2 =  4k^2 + 4k + 1
+n^2 mod 4 = 4k^2 + 4k + 1 mod 4
+1 mod 4 = 1
+
+thus we found the contradiction becasue n^2 mod 4 cannot both be 0 and 1
 
 20. fill in the blanks in the following proof by contraposition that for every integer n,
 if 5 does not divide n^2 then 5 does not divide n
 
 Proof (by contraposition)
+[the contrapositive is: for every integer n, if 5 | n then 5 | n^2]
+suppose n is any integer such that (a). [we must show that (b)]
 
-21. 
+by the definition of divisibility, n = (c) for some iteger k
+by substitution, n^2 = (d) = 5 (5k^2)
+
+But 5k^2 is an integer because it is a product of integers
+hence n^2 = 5 . (an integer), and so (e) [as was to be shown]
+
+a) 5 | n
+b) 5 | n^2
+c) 5k
+d) 5k^2
+e) 5 | n^2
+
+21. consider the statement "for every integer n, if n^2 is odd then n is odd"
+a. Write what you would suppose and what you would need to show to prove this statement by contradiction.
+negation: for some integer n, n^2 is odd and n is even
+
+proof: Suppose not. That is, suppose that for some integer n, n^2 is odd and n is even
+[we must deduce  a contradiction]
+
+n^2 = 4k^2
+2. (2 . k^2)
+therefore it has even parity and we found the contradiction
+
+b. Write what you would suppose and what you would need to show to prove this statement by contraposition.
+proof by contraposition
+Contrapositiev: for every integer n, if n is even then n^2 is even
+
+suppose n is any integer [we must show that if n is even then n^2 is even]
+
+n^2 = 2k^2 = 2k . 2k
+n^2 = 4k^2
+
+we must show that n^2 is even
+4k^2 = 2 . (2 . k^2)
+
+by the definition of even number, n^2 follows the form 2 (some integer)
+therefore the contrapositive is proven [QED]
+
+22. consider the statement "for every real number r, if r^2 is irrational then r is irrational"
+a. Write what you would suppose and what you would need to show to prove this statement by contradiction.
+negation: For some real numbe r, r^2 is irrational and r is rational
+
+proof by contradiction:
+proof: Suppose not. That is, suppose that for some real numbe r, r^2 is irrational and r is rational
+[we must deduce  a contradiction]
+
+b. Write what you would suppose and what you would need to show to prove this statement by contraposition.
