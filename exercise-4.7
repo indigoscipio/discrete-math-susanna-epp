@@ -700,10 +700,20 @@ prime numbers <= 53 = (2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53).
 
 when n = 53, n is not divisible by any prime number less than or equal to sqrt(n)
 
+let k = prime number <= sqrt(n) = {2,3,5,7}
+k does not divide n (53)
+
+2 | 53 - does not divide
+3 | 53 - does not divide
+5 | 53 -  does not divide
+7 | 53 -  does not divide
+
+therefore the statement is true
 
 
-b. suppose n is a fixed integer. let S be the statement "n is not divisible by any prime number less than
-or equal to sqrt(n)" the following statement is equivalent to S
+b. suppose n is a fixed integer. let S be the statement
+"n is not divisible by any prime number less than or equal to sqrt(n)"
+the following statement is equivalent to S
 
 A (for all) prime number p, if p is less than or equal to sqrt(n), then n is not divisible by p
 
@@ -714,4 +724,40 @@ iii) E (there exists) a prime number p such that p is a multiple of n and p is l
 iv) n is divisible by some prime number that is less than or equal to sqrt(n)
 v) A (for all) prime number p, if p is less than or equal to sqrt(n), then n is divisible by p
 
-31.
+answer:
+let's find the negation of the original statement
+negation: Ex (There exists) some prime number p such that p <= sqrt (n) and n is divisibile by p
+
+lets analyze each i - v
+i) This is a correct negation
+ii) This is incorrect negation (not every but some prime number )
+iii) This is an incorrect (n is divisible by p = p | n = n = pq for some integer q)
+iv) This is a correct negation
+v) This is an incorrect negation
+
+31. a. Prove by contraposition:
+for all positive integers n, r, and s, if rs <= n then r <= sqrt(n) or s <= sqrt(n)
+
+Contrapositive:
+For all positive integer n,r,and s, if r > sqrt(n) and s > sqrt(n), then rs > n
+
+[we must show if r > sqrt(n) and s > sqrt(n), then rs > n]
+
+r,n,s > 0
+
+r > sqrt(n)
+s > sqrt(n)
+rs > n
+
+rs > sqrt(n) . sqrt(n)
+rs > (sqrt(n))^2 = n
+
+therefore the contrapositive is proven
+
+b. Prove: for each integer n > 1,
+if n is not prime then there exists a prime number p such that p <= sqrt(n) and n is divisible by p
+(hint: use the results of part (a), theorems 4.4.1, 4.4.3, and 4.4.4 and the transitive property of order)
+
+
+c. state the contrapositive of the result of part b. the results of exercise 31 provide a way to 
+test wheter an integer is prime
