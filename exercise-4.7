@@ -647,14 +647,60 @@ but we assumed that 2sqrt(rs) > 0 earler so it cannot be both 0 and > 0, therfor
 and the original statment is false
 
 28. for all integers a, b, and c, if a | b and a does not divide c, then a does not divide (b + c)
+proof by contrapositive
 
+contrapositive: For all integers a, b, and c, if a | (b + c) then a does not divide b or a | c
 
-29. for all integers m and n, if m + n is even then m and n are both even or m and n are both odd
+we must show that a does not divide b or a | c
+we must show that at least one of the conditions must be true
+
+a | b + c = b + c = aq for some integer q
+a | b = b = ar for some integer r
+
+b + c = aq
+c = aq - b
+c = aq - ar
+c = a (q - r)
+
+a | c = a . some integer
+therefore a | c is true, since or operation needs at least one true, the whole statement is true [therefore the contrapositive is proven]
+
+29. for all integers m and n, if m + n is even then (m and n are both even OR m and n are both odd)
+proof by contracdiction
+Suppose not. That is, suppose there exist integers m and n such that m+n is even and m and n have different parities.
+[We must deduce a contradiction.]
+
+m + n
+m and n has different parities
+
+case 1: m is even and n is odd
+m + n = 2k + 2m + 1
+= 2 (k + m) + 1
+we have the 2 . some integer + 1 = odd form
+
+case 2: m is odd and n is even
+m + n = 2k + 1 + 2m
+= 2k + 2m + 1
+= 2(k + m) + 1
+again we have odd form
+
+therefore m + n is odd even though m and n is different parity
+but m + n is still odd that does not satiffy the and condition
+therefore the supposition is false and the original statmeent of correct.
+
 
 30. a. let n = 53. Find an approximate value for sqrt(n)
 and write a list of all the prime numbers less than or equal to sqrt(n)
 is the following statement true or false?
 wheb n = 53, n is not divisible by and prime number less than or equal to sqrt(n)
+
+n = 53
+sqrt(53) = ~7.28
+prime numbers <= 53 = (2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53).
+
+when n = 53, n is not divisible by any prime number less than or equal to sqrt(n)
+
+
 
 b. suppose n is a fixed integer. let S be the statement "n is not divisible by any prime number less than
 or equal to sqrt(n)" the following statement is equivalent to S
