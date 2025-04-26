@@ -765,5 +765,55 @@ if n is not prime then there exists a prime number p such that p <= sqrt(n) and 
  Theorem 4.4.4 Divisibility by a Prime
  Any integer n.1 is divisible by a prime number.
 
+n > 1, n is not prime so its a composite number
+there exists an integer divisor d of n such that 1<d<n.
+
+we must show 2 things should be true
+there exists a prime number p where p <= sqrt(n)
+n is divisible by p 
+
+p | d
+d | n
+therefore p | n by transitivity property
+
+now 2nd part, p <= sqrt(n)
+by theorem  4.4.1 p and d are positive and p | d therefore p <= d
+p <= d  
+
 c. state the contrapositive of the result of part b. the results of exercise 31 provide a way to 
 test wheter an integer is prime
+
+contrapositiev of for each integer n > 1,
+if n is not prime then there exists a prime number p such that p <= sqrt(n) and n is divisible by p
+Ax integer n > 1, if n is not prime, Ex prime number p such that p <= sqrt(n) and n is divisible by p
+
+answer: Ex integer n > 1, if n is not prime, Ax prime number p such that p > sqrt(n) or n is not divisible by p
+
+ Test for Primality
+ Given an integer n>1, to test whether n is prime check 
+to see if it is divisible by a prime number less than or 
+equal to its square root. If it is not divisible by any of 
+these numbers, then it is prime.
+
+32. use the test for primality to determine wheter the following numbers are prime or not
+a. 667
+sqrt(667) = ~25.8 = 26
+prime numbers up to or equal 26: 2,3,5,7,11,13,17,19,23
+it is divisible by 23 therefore its not prime
+
+b. 557
+sqrt(557) = ~23.6 = 24
+prime numbers up to or equal 24 = 2,3,5,7,11,13,17,19,23
+it's not divisible by numbers to 24 therefore it is prime
+
+c. 527 
+sqrt(527) = ~22.9 = 23
+prime numbers up to or equal 23 = 2,3,5,7,11,13,17,19,23
+it is divisible by 17 therefore itis not prime
+
+d. 613
+sqrt(613) = ~24.7 = 25
+prime numbers up to or equal 25 = 2,3,5,7,11,13,17,19,23
+it is not divisible by any numers up to 25 therefore it is prime
+
+33. 
