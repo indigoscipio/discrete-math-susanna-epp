@@ -272,3 +272,109 @@ suppoe not. that is, suppoe that  For some integer n, n^2 is divisible by 3 and 
 
 n^2 is divisibile by 3
 we can write this as 3 | n^2 -> n^2 = 3 . q for some integer q
+
+by quotient reminder theorem, n = d q + r where 0 <= r < d
+since n is not divisible by 3, which means 0 is exluded from the reminder
+
+so its 3k + 1 and 3k + 2 since 0 <= r < d where d is 3
+case 1: 3k + 1
+n^2 = (3k+1)^2
+= (3k + 1) (3k + 1)
+= 9k^2 + 6k + 1
+= 3 (3k^2 + 2k) + 1
+this means its divisible by 3 where reminder is less than 3 which contradicts the supposition
+
+case 2: 3k + 2
+n^2 = (3k+2)^2
+= (3k+2) (3k+2)
+= 9k^2 + 12k + 4
+= 3 (3k^2 + 4k + 1) + 1
+case 2 is also divisible by 3
+threfore we found the contradiction since our original supposition we assumed n is not divisibel by 3 but herei t's divisible
+since both statement cannot be true this is a contradiction. [therefore the original statment is proven]
+
+c. prove that sqrt(3) is irrational
+suppose not. that is , suppose sqrt(3) is rational
+
+sqrt(3) = a/b where a and b is integer and b is nonzero by the definition of reational number
+and a/b has 1 as the common factor (simplest form)
+
+square all side
+3 = a^2 / b^2
+3b^2 = a^2
+a^2 = 3b^2
+
+therefore a is a multiple of 3 (has 3 as a common factor) therefore a is divisible by 3
+
+a = 3k
+a^2 = 3b^2
+3k^2 = 3b^2
+9k = 3b^2
+3k = b^2
+
+which means b^2 is a multiple of 3 (has 3 as a common factor) therefore  b is divisibile by 3 or 3 | b
+
+since we assumed at the begining that a and b has 1 as a common factor we arrive at a contradiction
+because we have proven that a and b has 3 as a factor [therefore the supposition is false and the original statement is true]
+
+20. give an example to show that if d is not prime and n^2 is divisible by d,
+then n need not be divisible by d
+
+d is not prime
+
+n^2 is divisible by d = d | n^2 -> n^2 = d . q for some integer q
+
+n does not divide d but n divides n^2
+
+example: 
+let d = 4 -> not prime
+n^2 = 4 -> n = 2
+
+
+d | n^2? -> 4 | 4 = true
+d does not divide n? 4 does not divide 2 true
+
+if part = true
+then part = false
+thefore the original statmeent is invalid
+
+21. The quotient-remainder theorem says not only that there exist quotients and remainders but also 
+that the quotient and remainder of a division are unique.
+
+Prove the uniqueness.
+That is, prove that if a and d are integers with d > 0 and if q1, r1, q2, and r2 are integers such that
+
+a = dq1 + r1 where 0 <= r1 < d
+
+and 
+
+a = dq2 + r2 where 0 <= r2 < d
+
+then
+
+q1 = q2 and r1 = r2
+
+
+
+dq1 + r1 = dq2 + r2
+r1 - r2 = dq2 - dq1
+r1 - r2 = d (q2 - q1)
+therefore r1 - r2 is a multiple of d
+
+largest possible value: d-1
+smallest value: 0
+
+-d < r1 - r2 < d
+-d < 0 < d
+therfore r1 - r2 = 0
+therefore q2 and q1 must be equal value
+
+22. Prove that sqrt5 is irrational
+proof be contradiction
+suppose not, that is suppose sqrt5 is rational [we must deduce a contradiction]
+
+sqrt5 = a/b for some integer a and b where b is nonzero and a/b has 1 has the common factor
+square both sides
+5 = a^2/b^2
+a^2 = 5b^2
+
