@@ -376,5 +376,95 @@ suppose not, that is suppose sqrt5 is rational [we must deduce a contradiction]
 sqrt5 = a/b for some integer a and b where b is nonzero and a/b has 1 has the common factor
 square both sides
 5 = a^2/b^2
-a^2 = 5b^2
+a^2 = 5 b^2
 
+therefore a is a multiple of 5, we can write a = 5k
+
+5k^2 = 5b^2
+25k = 5b^2
+25k/5 = b^2
+5k = b^2
+
+therefore b is also a multiple of 5
+since in the begning we assumed that a and bas has 1 as common factor, this contradicts our supposition
+therefore the original statement is true [qed]
+
+23. prove that for any integer a, 9 does not divide (a^2 - 3)
+proof by contradiction
+negation: for some ineger a, 9 | a^2 - 3
+suppose not. that is, suppose there exists an integer a such that 9 | a^2 - 3
+[we must deduce a contradiction]
+
+by the definition of divisilibty, d | n can be written as n = d q for some integer q
+
+9 | a^2 - 3
+we can rewrite this as
+
+a^2-3 = 9q for some integer q
+a^2 = 9q + 3
+sqrt both sides
+a^2 = 3 (3q + 1)
+this means a is divisible by 3 (or 3 | a)
+
+a = 3k
+3k^2 = 9q + 3
+9k^2 = 3 (3q + 1)
+3k^2 = 3q + 1
+left side: k is divisible by 3 and leaves no reminder (0)
+right side: leaves 1 as a reminder therefore a^2 - 3 is not perfectly divisible
+since integer cannot have 2 different reminder we have arrived at a contradiction. threfore the original statement is true
+
+24.An alternative proof of the irrationality of sqrt(2)
+counts the number of 2’s on the two sides of the 
+equation 2n^2 = m^2 and uses the unique factoriza
+tion of integers theorem to deduce a contradiction. 
+Write a proof that uses this approach.
+
+Proof sqrt(2) is irrational using 2n^2 = m^2
+
+2n^2 = m^2
+= ??
+
+26.  Prove that sqrt(2) + sqrt(3) is irrational.
+Proof by contradiction.
+
+Suppose not, that is suppose sqrt(2) + sqrt(3) is rational
+[we must deduce a contradiction]
+
+sqrt(2) + sqrt(3) = q where q is rational
+square both side
+2 = (q - sqrt 3)^2
+2 = q^2 - 2sqrt(3) + 3
+2 - q^2+3 = -2q sqrt(3)
+
+since q is rational we have found a contradiction
+
+28. Let N = 2.3.5.7 + 1. What remainder is obtained 
+when N is divided by 2? 3? 5? 7? Justify your answer.
+
+n = 211
+211 mod 2 = 1
+211 mod 3 = 1
+211 mod 5 = 1
+211 mod 7 = 1
+
+because n has 2,3,5,7 as a factor were essentially dividing those perfectly without a reminder
+but the +1 at the end ensures it will always have 1 as the reminder
+
+
+29.  Suppose a is an integer and p is a prime number 
+such that p | a and p | (a+3). What can you deduce 
+about p? Why?
+
+a = integer
+p = prime
+
+p | a
+p | a + 3
+
+a = p q for some intger q
+a + 3 = p k
+
+pq + 3 = pk
+3 = pk/pq
+3 = k/q
