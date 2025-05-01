@@ -466,5 +466,49 @@ a = p q for some intger q
 a + 3 = p k
 
 pq + 3 = pk
-3 = pk/pq
-3 = k/q
+pq+3−pq=pk−pq
+3 = pk - pq
+3 = p (k - q)
+which means 3 is a multiple of p (p | 3)
+therefore p = 3
+
+30. let p1, p2, p3, ... be a list of all prime numbers in ascending order
+here is a table of the first six
+
+p1 = 2
+p2 = 3
+p3 = 5
+p4 = 7
+p5 = 11
+p6 = 13
+
+a.
+let n = p1,
+let n2 = p1 . p2
+let n3 = p1 . p2 . p3
+...
+n6 = p1 . p2 . p3 . p4 . p5 . p6
+
+calculate n1, n2, n3, n4, n5, n6
+n1 = 2
+n2 = 2 . 3 = 6
+n3 = 2 . 3 . 5 = 30
+n4 = 2 . 3 . 5 . 7 = 210
+n5 = 2 . 3 . 5 . 7 . 11 = 2310
+n6 = 2 . 3 . 5 . 7 . 11 . 13 = 30030
+
+b. for each i = 1,2,3,4,5,6
+find wheter ni is itself prime or just has a prime factor less than itself
+(hint use the test primality from exercise 31 in section 4.7 to determine your answer)
+
+exercise 31 section 4.7
+if n is not prime then there exists a prime number p such that p <= sqrt(n) and n is divisible by p
+
+n1 = 2 = prime
+n2 = 2 . 3 = 6 = not prime but has a prime factor less than itself
+n3 = 2 . 3 . 5 = 30 = not prime but has a prime factor less than itself
+n4 = 2 . 3 . 5 . 7 = 210 = not prime but has a prime factor less than itself
+n5 = 2 . 3 . 5 . 7 . 11 = 2310 = not prime but has a prime factor less than itself
+n6 = 2 . 3 . 5 . 7 . 11 . 13 = 30030 = not prime but has a prime factor less than itself
+
+therfore for i > 1, n  is not prime but has a prime factor less than itself.
