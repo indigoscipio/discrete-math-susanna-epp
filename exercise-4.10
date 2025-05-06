@@ -1,7 +1,7 @@
 Test yourself
 
 1. when an algorithm statement of the form x:=e is executed, ___
-answer: variable x is assigned with the value of executed
+answer: variable x is assigned with the value of e, the value is stored in the emory location
 
 2. consider an algorithm statement of the following form:
 
@@ -22,7 +22,7 @@ end while
 
 when such a statement is executed, the truth or falsity of the condition is evaluated.
 If the condition is true -__, if the condition is false, ___
-answer: loop body is executed, loop ends
+answer: loop body is executed in order, go to next cond statement
 
 4. Consider an algorithm statement of the following form.
 
@@ -35,15 +35,16 @@ equal to the value of the initial expression, and a
 check is made to determine whether the value of 
 variable is less than or equal to the value of final 
 expression. If so, ___ . If not, ___ .
-answer: loop body is run, loop ends
+answer: loop body is run and variable is increased by 1 until it reaches final expression, loop ends
 
 5. given a nonnegatiev integer a and positive integer d the division algorithm computes
+q and r with n = dq + r and 0 <= r < d
 answer: the quotient q 
 keep dividing a by d until the remainder is less than or equal to d
 returns the final quotient and the remainder
 
 6. given integers a and b, not both zero, gcd(a,b) is the integer d that satisfies the following two conditions;
-0 <= r <= d and b = dq + r
+d divides a, d divides b, there is a common divisor c where c <= d and c | a and c | b
 
 7. if r is a positive intger, then gcd(r,0) is r
 
@@ -52,4 +53,57 @@ gcd (a,b) = gcd(b,r)
 
 9. given the positive integers a and b with a > b, the euclidian algorithm computes
 the GCD of A,B 
+
+find the value of z when each of the algorithm segments in 1 and 2 is executed
+
+1.
+i:=2
+if (i > 3 or i <= 0)
+then z:= 1
+else z:= 0
+
+answer:
+first assignment, i = 2
+check if (2 > 3 (f) or 2 <= 0 (f)) - evaluates to false
+z = 0 is executed, therefore z = 0
+
+2.
+i:=3
+if(i<=3 or i>6)
+then z:= 2
+else z=0
+answer:
+initial variable assignment, i = 3
+next check if (3<=3 (t) or 3>6 (f)) -> evaluates to true
+z:=2 is executed - therefore z = 2
+
+3. consider the following algorithm segment
+
+if x . y > 0
+then do
+y := 3 . x
+x := x + 1
+end do
+z = x . y
+
+find the value of z if prior to execution x and y have the values given below
+a. x = 2, y = 3
+b. x = 1, y = 1
+
+find the values of a and e after execution of the loops in 4 and 5 by first making trace tables for them
+
+4.
+a:=2
+for i := 1 to 3
+a:= 3a + 1
+next i
+
+5.
+e:=2, f:=0
+for k:=1 to 3
+e:=e.k
+f:= e+f
+next k
+
+make a trace table to trace the action of algorithm 4.10.1 for the input variables given in 6 and 7
 
