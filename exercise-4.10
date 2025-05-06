@@ -87,8 +87,23 @@ end do
 z = x . y
 
 find the value of z if prior to execution x and y have the values given below
-a. x = 2, y = 3
+a. x = 2, y = 3, z = ??
+
+answer:
+check if 2 . 3 > 0 - true
+y = 3.3 = 9
+x = 2 + 1 = 3
+z = 3 . 9 = 27
+therefore z = 27
+
 b. x = 1, y = 1
+answer:
+check if 1.1 > 0 - true
+y = 3 .1 = 3
+x = 1 + 1 = 2
+z = 2 . 3 = 6
+therefore z = 6
+
 
 find the values of a and e after execution of the loops in 4 and 5 by first making trace tables for them
 
@@ -97,6 +112,14 @@ a:=2
 for i := 1 to 3
 a:= 3a + 1
 next i
+
+
+Trace table
+Iteration 0 (initial, before the loop runs)
+
+Iteration 1
+
+Iteration 2
 
 5.
 e:=2, f:=0
