@@ -1,0 +1,55 @@
+Test yourself
+
+1. when an algorithm statement of the form x:=e is executed, ___
+answer: variable x is assigned with the value of executed
+
+2. consider an algorithm statement of the following form:
+
+if (cond)
+then s1
+else s2
+
+when such a statement is executed, the truth or falsity of the condition is evaluatd.
+if condition is true ___
+if the condition is false, ___
+
+answer: s1 is evaluated, s2 is evaluated
+
+3. consider an algorithm  statement of the following
+while (condition)
+[loop body]
+end while
+
+when such a statement is executed, the truth or falsity of the condition is evaluated.
+If the condition is true -__, if the condition is false, ___
+answer: loop body is executed, loop ends
+
+4. Consider an algorithm statement of the following form.
+
+for variable :=initial expression to final expression.
+  [statements that make up the body of the loop]
+  next (same) variable 
+
+When such a statement is executed, variable is set 
+equal to the value of the initial expression, and a 
+check is made to determine whether the value of 
+variable is less than or equal to the value of final 
+expression. If so, ___ . If not, ___ .
+answer: loop body is run, loop ends
+
+5. given a nonnegatiev integer a and positive integer d the division algorithm computes
+answer: the quotient q 
+keep dividing a by d until the remainder is less than or equal to d
+returns the final quotient and the remainder
+
+6. given integers a and b, not both zero, gcd(a,b) is the integer d that satisfies the following two conditions;
+0 <= r <= d and b = dq + r
+
+7. if r is a positive intger, then gcd(r,0) is r
+
+8. if a and b are integers not both zero and if q and r are nonnegative integeres such that a = bq + r, then
+gcd (a,b) = gcd(b,r)
+
+9. given the positive integers a and b with a > b, the euclidian algorithm computes
+the GCD of A,B 
+
