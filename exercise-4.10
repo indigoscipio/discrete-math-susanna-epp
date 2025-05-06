@@ -113,13 +113,26 @@ for i := 1 to 3
 a:= 3a + 1
 next i
 
-
 Trace table
 Iteration 0 (initial, before the loop runs)
+i = unassigned
+a = 2
 
 Iteration 1
+i = 1
+a = 3.2 + 1 = 7
 
 Iteration 2
+i = 2
+a = 3.7 + 1 = 22
+
+iteration 3
+i = 3
+a = 3 . 22 + 1 = 67
+
+i reaches or equal to 3, loop stops, evaluate final a
+therefore final a = 67
+
 
 5.
 e:=2, f:=0
@@ -128,5 +141,129 @@ e:=e.k
 f:= e+f
 next k
 
-make a trace table to trace the action of algorithm 4.10.1 for the input variables given in 6 and 7
+Trace table
+Iter 0 (initial, before loop is executed)
+k = unassigned
+e = 2
+f = 0
 
+Iter 1
+k = 1
+e = 2 . 1 = 2
+f = 2 + 0 = 2
+
+iter 2
+k = 2
+e = 2 . 2 = 4
+f = 4 + 2 = 6
+
+iter 3
+k = 3
+e = 4 . 3 = 12
+f = 12 + 6 = 18
+
+k reaches 3, loop stops
+therefore e = 12 and f = 18
+
+
+make a trace table to trace the action of algorithm 4.10.1 for the input variables given in 6 and 7
+Algorithm 4.10.1  Diviison Algorithm
+
+r = a, q = 0
+while (r >= d)
+r:= r - d
+q:= q + 1
+end while
+
+6. a = 26, d = 7
+Trace table
+Iter 0 (initial before the loop runs)
+a = 26
+d = 7
+r = 26
+q = 0
+
+Iter 1
+check if r (26) >= d (7) - true, runs loop body
+a = 26
+d = 7
+r = 26 - 7 = 19
+q = 0 + 1 = 1
+
+Iter 2
+Check if r (19) >= d (7) - true, runs loop body
+a = 26
+d = 7
+r = 19 - 7 = 12
+q = 1 + 1 = 2
+
+iter 3
+check if r (12) >= d (7) - true, runs loop body
+a = 26
+d = 7
+r = 12 - 7 = 5
+q = 2 + 1 = 3
+
+iter 4
+check if r (5) >= d (7) - false, loop body stops
+evaluates final result = quotient = 3, reminder = 5
+
+
+7. a = 59, d = 13
+Trace table
+Iter 0 (initial before the loop runs)
+a = 59
+d = 13
+r = 59
+q = 0
+
+Iter 1
+check if r (59) >= d (13) - false, run loop body
+a = 59
+d = 13
+r = 59 - 13 = 46
+q = 0 + 1 = 1
+
+Iter 2
+check if r (46) >= d (13) - false, run loop body
+a = 59
+d = 13
+r = 46 - 13 = 33
+q = 1 + 1 = 2
+
+Iter 3
+check if r (33) >= d (13) - false, run loop body
+a = 59
+d = 13
+r = 33 - 13 = 20
+q = 2 + 1 = 3
+
+Iter 4
+check if r (20) >= d (13) - false, run loop body
+a = 59
+d = 13
+r = 20 - 13 = 7
+q = 3 + 1 = 4
+
+Iter 5
+check if r (7) >= d (13) - true, loop body stops, return final result
+a = 59
+d = 13
+r = 7
+q = 4
+
+The folowing algorithm segment makes a change;
+given an amount of money a between 1c and 99c
+it determines a breakdown of A into quarters (q)
+dimes (d), nicels (n), and pennies (p)
+
+q:= A div 25
+A:= A mod 25
+d:= A div 10
+
+
+a. Trace this algorithm segment for A = 69
+input = 69c
+
+b. trace this algorithm segment for A = 87
+input = 87
