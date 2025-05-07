@@ -260,10 +260,288 @@ dimes (d), nicels (n), and pennies (p)
 q:= A div 25
 A:= A mod 25
 d:= A div 10
+A:= A mod 10
+n:= A div 5
+p:= A mod 5
 
 
 a. Trace this algorithm segment for A = 69
 input = 69c
 
+A = 69
+q:= 69 div 25 = 2
+A:= 69 mod 25 = 19
+d:= 69 div 10 = 6
+A:= 69 mod 10 = 9
+n:= 69 div 5 = 13
+p:= 69 mod 5 = 4
+
+final result:
+q=2, d=6, n=13, p=4
+
+
 b. trace this algorithm segment for A = 87
 input = 87
+
+q:= 87 div 25 = 3
+A:= 87 mod 25 = 12
+d:= 87 div 10 = 8
+A:= 87 mod 10 = 7
+n:= 87 div 5 = 17
+p:= 87 mod 5 = 2
+
+final result:
+q=3, d=8, n=17, p=2
+
+find the greatest common divisor of each of the pairs of integer 9 - 12
+(use any methods you wish)
+9. 27 and 72
+answer: gcd=9
+27 / 9 = 3
+72 / 9 = 8
+
+10. 7 and 21
+answer: gcd = 7
+
+11. 5 and 9
+answer: gcd = 1
+
+12. 48 and 54
+answer: gcd = 6
+48/2 = 12 /3 = 4
+54/2 = 27 /3 = 9
+
+make trace table of euclidian algorithm to calcualte the greatest common divisor
+of each pairs of integers in 13 - 16
+13. 1,188 and 385
+A = 1188
+B = 385
+
+a = A = 1188
+b = B = 385
+r = 385
+
+while b does not equal to 0
+r:= a mod b
+a:= b
+b:= r
+end while
+gcd:= a
+
+iter 0
+a = 1188
+b = 385
+r = 385
+
+b does not equal to 0? - true, runs loop body
+r = 1188 mod 385 = 33
+a = 385
+b = 33
+
+iter 1
+b does not equal to 0? - true, runs loop body
+r = 385 mod 33 = 22
+a = 33
+b = 22
+
+iter 2
+b does not equal to 0? - true, runs loop body
+r = 33 mod 22 = 11
+a = 22
+b = 11
+
+iter 3
+b does not equal to 0? - true, runs loop body
+r = 11 mod 22 = 11
+a = 11
+b = 11
+
+iter 4
+b does not equal to 0? - true, runs loop body
+r = 0
+a = 11
+b = 0
+
+iter 5
+b does not equal to 0? - false, function body stops
+returns gcd = a = 11
+
+
+14. 509 and 1177
+A = 509
+B = 1177
+
+Iter 0
+a = A = 509
+b = B = 1177
+r = 1177
+
+Iter 1
+b does not equal to 0? - true, runs loop body
+r = 509 mod 1177 = 509
+a = 1177
+b = 509
+
+Iter 2
+b does not equal to 0? - true, runs loop body
+r = 1177 mod 509 = 159
+a = 509
+b = 159
+
+Iter 3
+b does not equal to 0? - true, runs loop body
+r = 509 mod 159 = 32
+a = 159
+b = 32
+
+Iter 4
+b does not equal to 0? - true, runs loop body
+r = 159 mod 32 = 31
+a = 32
+b = 31
+
+Iter 4
+b does not equal to 0? - true, runs loop body
+r = 32 mod 31 = 1
+a = 31
+b = 1
+
+Iter 5
+b does not equal to 0? - true, runs loop body
+r = 31 mod 1 = 0
+a = 1
+b = 0
+
+Iter 6
+b does not equal to 0? - false, function body stops
+return gcd = a = 1
+
+15. 832 and 10933
+A = 832
+B = 10933
+
+Iter 0
+a = A = 832
+b = B = 10933
+r = 10933
+
+Iter 1
+b does not equal to 0? - true, runs loop body
+r = 832 mod 10933 = 832
+a = 10933
+b = 832
+
+Iter 2
+b does not equal to 0? - true, runs loop body
+r = 10933 mod 832 = 117
+a = 832
+b = 117
+
+Iter 3
+b does not equal to 0? - true, runs loop body
+r = 832 mod 117 = 13
+a = 117
+b = 13
+
+Iter 4
+b does not equal to 0? - true, runs loop body
+r = 117 mod 13 = 0
+a = 13
+b = 0
+
+Iter 5
+b does not equal to 0? false
+return final result -> gcd = a = 13
+
+16. 4131 and 2431
+A = 4131
+B = 2431
+
+Iter 0
+a = A = 4131
+b = B = 2431
+r = 2431
+
+Iter 1
+b does not equal to 0? - true, runs loop body
+r = 4131 mod 2431 = 1700
+a = 2431
+b = 1700
+
+Iter 2
+b does not equal to 0? - true, runs loop body
+r = 2431 mod 1700 = 731
+a = 1700
+b = 731
+
+Iter 3
+b does not equal to 0? - true, runs loop body
+r = 1700 mod 731 = 238
+a = 731
+b = 238
+
+Iter 3
+b does not equal to 0? - true, runs loop body
+r = 731 mod 238 = 17
+a = 238
+b = 17
+
+Iter 4
+b does not equal to 0? - true, runs loop body
+r = 238 mod 17 = 0
+a = 17
+b = 0
+
+Iter 5
+b = 0, returns gcd = a = 17
+
+
+use euclidian algorithm to hand calculate gcd of each for the input
+variables given in 17 - 19
+
+17. 1001 and 871
+gcd(1001, 871)
+step 1 - divide 1001 by 871
+divisor = 871
+quotient = 1
+remainder = 130
+Thus 1001 = 871 . 1 + 130, hence gcd(1001,871) = gcd(871,130) by lemma 4.10.2
+
+step 2 - divide 871 by 130
+divisor = 130
+quotient = 6
+remainder = 91
+Thus 871 = 130 . 6 + 91, hence gcd(871,130) = gcd(130,91) by lemma 4.10.2
+
+step 3 - divide 130 by 91
+divisor = 91
+quotient = 1
+remainder = 39
+Thus 130 = 91 . 1 + 39, hence gcd(130,91) = gcd(91,39) by lemma 4.10.2
+
+step 4 - divide 130 by 91
+divisor = 91
+quotient = 1
+remainder = 39
+Thus 130 = 91 . 1 + 39, hence gcd(130,91) = gcd(91,39) by lemma 4.10.2
+
+step 5 - divide 91 by 39
+divisor = 39
+quotient = 2
+remainder = 13
+Thus 91 = 39 . 2 + 13, hence gcd(91,39) = gcd(39,13) by lemma 4.10.2
+
+
+step 6 - divide 39 by 13
+divisor = 13
+quotient = 3
+remainder = 0
+Thus 39 = 13 . 3 + 0, hence gcd(39,13) = gcd(13,0) by lemma 4.10.2
+
+Therefore gcd(1001, 871) = 13
+
+
+18. 5859 and 1232
+
+19. 1570 and 488s
+
