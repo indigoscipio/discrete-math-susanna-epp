@@ -696,18 +696,108 @@ b does not equal to 1? - true, stops loop body
 returns gcd = a = 1
 therefore 417 and 2563 are relatively prime since their gcd is 1
 
-
-
-
-
-
-
-
 21. 34391 and 6728
+A = 34391
+B = 6728
+
+Iter 0
+a = A = 34391
+b = B = 6728
+r = 6728
+
+Iter 1
+b does not equal to 0? - true, runs loop body
+r = 34391 mod 6728 = 751
+a = 6728
+b = 751
+
+Iter 2
+b does not equal to 0? - true, runs loop body
+r = 6728 mod 751 = 720
+a = 751
+b = 720
+
+Iter 3
+b does not equal to 0? - true, runs loop body
+r = 751 mod 720 = 31
+a = 720
+b = 31
+
+Iter 4
+b does not equal to 0? - true, runs loop body
+r = 720 mod 31 = 7
+a = 31
+b = 7
+
+Iter 5
+b does not equal to 0? - true, runs loop body
+r = 31 mod 7 = 3
+a = 7
+b = 3
+
+Iter 6
+b does not equal to 0? - true, runs loop body
+r = 7 mod 3 = 1
+a = 3
+b = 1
+
+Iter 7
+b does not equal to 0? - true, runs loop body
+r = 3 mod 1 = 0
+a = 1
+b = 0
+
+Iter 8
+b does not equal to 0? - false, stops body
+evaluates final result = gcd = a = 1
+therefore 34391 and 6728 are relatively prime since it has gcd of 1
 
 22. Prove that for all positive integers a and b,
 a|b if, and only if, gcd(a, b) = a.
 
 (Note that to prove “A if, and only if, B,” you need to prove “if A then B” and “if B then A.”)
 
-23. 
+answer:
+first prove if a | b then gcd(a,b) = a
+by the definition of divisibility, a | b can be writte nas b = aq for some integer q
+gcd (a,b) = a
+a | a
+a is a cmmon divisor of a and b
+
+let c be any common divisor of a and b
+c | a and c | b
+c must be <= a in for a to be divisible by c
+therefore gcd(a,b) = a
+
+
+then prove if gcd(a,b) = a then a | b
+d | a and d | b
+c <= d
+gcd(a,b) | a -> a | a
+gcd(a,b) | b = a | b
+
+therefore the statement is true
+
+
+23.
+
+a. Prove that if a and b are integers, not both zero, 
+and d = gcd(a, b), then a/d and b/d are integers 
+with no common divisor that is greater than 1.
+
+
+answer:
+a = b = nonzero integer
+d = gcd(a,b)
+
+a/d = b/d = integers with no common divisor that is greater than 1
+
+= ??
+
+
+b. Write an algorithm that accepts the numerator 
+and denominator of a fraction as input 
+and produces as output the numerator and 
+denominator of that fraction written in lowest 
+terms. (The algorithm may call upon the 
+Euclidean algorithm as needed.)
