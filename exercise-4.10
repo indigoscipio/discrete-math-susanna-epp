@@ -542,6 +542,172 @@ Therefore gcd(1001, 871) = 13
 
 
 18. 5859 and 1232
+gcd(5859, 1232)
+step 1 - divide 5859 by 1232
+divisor = 1232
+quotient = 4
+remainder = 931
+Thus 5859 = 1232 . 4 + 931, hence gcd(5859,1232) = gcd(1232,931) by lemma 4.10.2
 
-19. 1570 and 488s
+step 2 - divide 1232 by 931
+divisor = 931
+quotient = 1
+remainder = 301
+Thus 1232 = 931 . 1 + 301, hence gcd(1232,931) = gcd(931,301) by lemma 4.10.2
 
+step 3 - divide 931 by 301
+divisor = 301
+quotient = 3
+remainder = 28
+Thus 931 = 301 . 3 + 28, hence gcd(931,301) = gcd(301,28) by lemma 4.10.2
+
+step 4 - divide 301 by 28
+divisor = 28
+quotient = 10
+remainder = 21
+Thus 301 = 28 . 10 + 21, hence gcd(301,28) = gcd(28,21) by lemma 4.10.2
+
+step 4 - divide 28 by 21
+divisor = 21
+quotient = 1
+remainder = 7
+Thus 28 = 21 . 1 + 7, hence gcd(28,21) = gcd(21,7) by lemma 4.10.2
+
+step 5 - divide 21 by 7
+divisor = 7
+quotient = 3
+remainder = 0
+Thus 21 = 7 . 3 + 0, hence gcd(21,7) = gcd(7,0) by lemma 4.10.2
+therefore gcd = 7
+
+
+19. 1570 and 488
+gcd(1570, 488)
+step 1 - divide 1570 by 488
+divisor = 488
+quotient = 3
+remainder = 106
+Thus 1570 = 488 . 3 + 106, hence gcd(1570,488) = gcd(488,106) by lemma 4.10.2
+
+step 2 - divide 488 by 106
+divisor = 106
+quotient = 4
+remainder = 64
+Thus 488 = 106 . 4 + 64, hence gcd(488,106) = gcd(106,64) by lemma 4.10.2
+
+step 3 - divide 106 by 64
+divisor = 64
+quotient = 1
+remainder = 42
+Thus 106 = 64 . 1 + 42, hence gcd(106,64) = gcd(64,42) by lemma 4.10.2
+
+step 4 - divide 64 by 42
+divisor = 42
+quotient = 1
+remainder = 22
+Thus 64 = 42 . 1 + 22, hence gcd(64,42) = gcd(42,22) by lemma 4.10.2
+
+step 5 - divide 42 by 22
+divisor = 22
+quotient = 1
+remainder = 20
+Thus 42 = 22 . 1 + 20, hence gcd(42,22) = gcd(22,20)  lemma 4.10.2
+
+step 6 - divide 22 by 20
+divisor = 20
+quotient = 1
+remainder = 2
+Thus 22 = 20 . 1 + 2, hence gcd(22,20) = gcd(20,2) by lemma 4.10.2
+
+step 7 - divide 20 by 2
+divisor = 2
+quotient = 10
+remainder = 0
+Thus 20 = 2 . 10 + 0, hence gcd(20,2) = gcd(2,0) by lemma 4.10.2
+
+
+
+In 20 and 21 trace the action of algorithm 4.10.2 to deter
+mine whether the integers are relatively prime.
+
+Definition: Integers a and b are said to be relatively prime
+if, and only if, their greatest common divisor is 1
+
+20. 4617 and 2563
+A = 4617
+B = 2563
+
+Iter 0
+a = A = 4617
+b = B = 2563
+r = 2563
+
+Iter 1
+b does not equal to 0? - true, runs loop body
+r = 4617 mod 2563 = 2054
+a = 2563
+b = 2054
+
+Iter 2
+b does not equal to 0? - true, runs loop body
+r = 2563 mod 2054 = 509
+a = 2054
+b = 509
+
+Iter 3
+b does not equal to 0? - true, runs loop body
+r = 2054 mod 509 = 18
+a = 509
+b = 18
+
+Iter 4
+b does not equal to 0? - true, runs loop body
+r = 509 mod 18 = 5
+a = 18
+b = 5
+
+
+Iter 5
+b does not equal to 0? - true, runs loop body
+r = 18 mod 5 = 3
+a = 5
+b = 3
+
+Iter 6
+b does not equal to 0? - true, runs loop body
+r = 5 mod 3 = 2
+a = 3
+b = 2
+
+Iter 7
+b does not equal to 0? - true, runs loop body
+r = 3 mod 2 = 1
+a = 2
+b = 1
+
+Iter 8
+b does not equal to 0? - true, runs loop body
+r = 2 mod 1 = 0
+a = 1
+b = 0
+
+Iter 8
+b does not equal to 1? - true, stops loop body
+returns gcd = a = 1
+therefore 417 and 2563 are relatively prime since their gcd is 1
+
+
+
+
+
+
+
+
+21. 34391 and 6728
+
+22. Prove that for all positive integers a and b,
+a|b if, and only if, gcd(a, b) = a.
+
+(Note that to prove “A if, and only if, B,” you need to prove “if A then B” and “if B then A.”)
+
+23. 
