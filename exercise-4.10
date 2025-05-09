@@ -785,14 +785,43 @@ a. Prove that if a and b are integers, not both zero,
 and d = gcd(a, b), then a/d and b/d are integers 
 with no common divisor that is greater than 1.
 
-
 answer:
 a = b = nonzero integer
 d = gcd(a,b)
 
 a/d = b/d = integers with no common divisor that is greater than 1
+d | a and d | b
+a = d . k for some integer k
+b = d . m for some integer m
 
-= ??
+a/d = d | a
+b/d = d | b
+
+d divides a and band therefore d is a common divisor
+
+gcd(a/d, b/d) = 1
+let x = a/d
+let y = b/d
+let c = common divisor of x and y
+by definition, c | x and c | y
+
+c | a/d -> a/d = c . q for some integer q
+multiply both sides by d
+(a/d) . d = (c . q) . d
+a = (cd) . q
+
+c | b/d -> b/d = c . r for some integer r
+multiply both sides by d
+b = c . r .d
+b = (cd) . r
+
+since d = gcd(a,b) this means  d is the greatest common divisor
+and that any other common divisor must be less than or equal to d
+therefore,  cd <= d
+
+now since a and b is nonzero positive integer, it follows that d is a positive integer
+so c <= 1 therefore gcd of a/d and b/d = 1
+
 
 
 b. Write an algorithm that accepts the numerator 
@@ -801,3 +830,39 @@ and produces as output the numerator and
 denominator of that fraction written in lowest 
 terms. (The algorithm may call upon the 
 Euclidean algorithm as needed.)
+
+
+algorithm body
+
+input: [n, d] where n = numerator and d = denuminator, n and d are both integers and d does not equal 0
+; find the gcd of both numerator and denominator
+a:=n
+b:=d
+
+while (b does not equal 0)
+r:= a mod b
+a:= b
+b:= r
+
+end while
+gcd:= a
+
+; divide the numerator and denominator by the gcd
+; the result is nn and nd, return it
+nn:= n / a
+nd:= d / a
+
+output: [nn, nd] where nn = new numerator (in lowest term), nd = new denuminator (lowest term)
+
+
+24. Complte the proof of lemma 4.10.2 by proving the following:
+if a and b are any integers with b does not equal 0, q a nd r a re any integers such that
+
+a = bq + r
+
+then gcd(b,r) ,= gcd(a,b)
+
+proof [dividede into 2 sections: 1 proof that gcd (a,b <= gcd(b,r))
+2 proof that gcd(b,r) <= gcd(a,b). Since each gcd is less than or equal to the other, the two must be equal.]
+
+1. gcd (a,b) <= gcd (b,r)
