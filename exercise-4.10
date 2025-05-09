@@ -866,3 +866,47 @@ proof [dividede into 2 sections: 1 proof that gcd (a,b <= gcd(b,r))
 2 proof that gcd(b,r) <= gcd(a,b). Since each gcd is less than or equal to the other, the two must be equal.]
 
 1. gcd (a,b) <= gcd (b,r)
+let a and b be nonzero positive integer
+let c common divisor of a and b
+
+c | a and c | b
+a = nc for some integer n
+b = mc for some integer m
+
+a = bq + r
+nc = (mc)q+r
+
+r = nc - (mc)q
+r = (n-mq)c
+n-mq is an integer, therefore c | r by divisibility c | r
+since c | b therefore c is common divisor of b and r
+
+2 gcd(b,r) <= gcd(a,b)
+let d be common divisor of b and r
+d | b and d | r
+
+b = d . k for some integer k
+r = d . l for some integer l
+
+a = bq + r
+a = (dk)q + (dl)
+a = d(kq+l)
+
+since d is a divisor of a amd b, therefore d | a and d | b
+since every common divisor br is also common divisor ab, 
+gcd br must be less or equal to gcd ab
+
+drawing conslutoin from part 1 and 2
+therefore gcd(a,b) = gcd(b,r)
+
+25
+a. prove that if a and d are positive integers and q and r are integers such that
+a = dr + r and 0 < r < d then
+
+-a = d(-(q+q)) + (d-r)
+and
+0 < d-r < d
+
+b. indicate how to  modify algorithm 4.10.1 to allow for the input a to be negative
+
+26. a. prove that if 
