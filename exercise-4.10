@@ -1046,6 +1046,15 @@ gcd(a,b)≤gcd(b,a−b).
 
 2. prove that gcd(b,a-b) <= gcd(a,b) 
 
+let c be abritrary common divisor gcd(b,a-b)
+c | b and c | a-b
+c | b -> b = ck for some itneger k
+c | a-b -> a-b = cl for some integer l
+
+we need to show that c | a
+ =??
+
+
 
 b. trace the execution of algorihm 4.10.3 for a = 630 and b = 336
 
