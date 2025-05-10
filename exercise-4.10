@@ -962,3 +962,91 @@ in ocmputer language with built in floor function, div and mod can  be calculate
 
 a div d = floor(a/d) and a mod d = a - floor(a/d) . d
 
+rewrite the steps of algorithm 4.10.2 for a computer language with built in floor function but without
+div and mod.
+
+* algorithm 4.10.2 euclidian algorithm
+
+input: A,B [integers with a and b nonzero positive integer]
+
+algorihhm body
+
+a:= A
+b:= B
+r:= B
+
+while (b does not equal 0)
+r:= a - floor(a/b) . b
+a:= b
+b:= r
+end while
+
+gcd:= a
+
+output: gcd[a positive integer]
+
+27. an alternative to the euclidian alrogithm uses subtraction rather than division
+to compute the gcd (after all, division is repeated subtraction).
+It is based on the following lemma
+
+lemma 4.10.3
+if a >= b > 0 , then gcd(a,b) = gcd(b,a-b)
+
+Algorithm 4.10.3 Computing gcd’s by Subtraction
+ [Given two positive integers A and B, variables a and b are 
+set equal to A and B. Then a repetitive process begins. If 
+a does not equal 0, and b does not euqal 0, then the larger of a and b is set equal to 
+a - b (if a >= b) or to b - a (if a <,> b), and the smaller of a 
+and b is left unchanged. This process is repeated over and 
+over until eventually a or b becomes 0. By Lemma 4.10.3, 
+after each repetition of the process,
+
+gcd (A,B) =gcd(a,b)
+after the last repetition,
+gcd(A,B) = gcd(a,0) gcd(A,B) = gcd(0,b)
+
+depending on wheter a or b is nonzero, but by lemma 4.10.1
+
+gcd(a,0) = a and gcd (0,b) = b
+hence after the last repeitions
+gcd (A,B) = a if a does not equal 0 or gcd(A,B) = b if b does not equal 0
+
+input: A,B [positive integer]
+
+body:
+a:= A, b:= B
+while (a does not equal = and b does not equal 0)
+if a >= b then
+a: = a - b
+else b:= b - a
+end while
+if a = 0 then gcd:= b
+else gcd := a
+
+output: gcd (a positive integer)
+
+a. prove lemma 4.10.3
+
+if a >= b > 0, then gcd(a,b) = gcd(b, a-b)
+
+1. prove that gcd(a,b) <= gcd(b,a-b)
+let c be aribtrary common divisor of gcd(a,b)
+c | a and c | b
+
+we need to show that c | (a-b)
+c | a -> a = cq for some integer q
+c | b -> b = ck for some integer k
+
+a-b = cq - ck
+a - b = c(q - k)
+therefore c is a common factor/divisor of a-b
+gcd(a,b)≤gcd(b,a−b).
+
+
+
+2. prove that gcd(b,a-b) <= gcd(a,b) 
+
+
+b. trace the execution of algorihm 4.10.3 for a = 630 and b = 336
+
+c. trace the execution of algorithm 4.10.3 for a = 769 and b = 348
