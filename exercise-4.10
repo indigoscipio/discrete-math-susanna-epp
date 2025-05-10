@@ -907,6 +907,58 @@ a = dr + r and 0 < r < d then
 and
 0 < d-r < d
 
-b. indicate how to  modify algorithm 4.10.1 to allow for the input a to be negative
+r < d
+r - d < d - d
+r - d < 0
 
-26. a. prove that if 
+
+0 < d - r
+r < d
+r - r < d - r
+0 < d - r
+
+0 < r
+0 > -r
+0 > d - r 
+
+ a = dq + r
+-a = -(dq + r)
+-a = -dq - r
+
+−a=d(−(q+1))+(d−r)
+−a=−dq+((d−r)−d)
+−a=−dq−d+(d−r)
+
+
+26. a. prove that if a,d,q and r are integers such taht a = dq + r
+and 0 <= r < d then
+
+q = floor(a/d) and r = a - floor(a/d) . d
+
+proving q = floor(a/d)
+a/d -> d = = aq + r for some integer k
+0 <= r < d - divide by d
+0 <= r/d < 1
+
+a = dq + r
+a/d = q + r/d
+r/d = a/d -q
+substitute into 0 <= r/d < 1
+
+0 <= a/d - q < 1
+q <= a/d < q + 1
+by the definition of floor
+some integer <= x < some integer + 1
+
+now for the 2nd part
+prove r = a - floor(a/d) . d
+since q = floor(a/d)
+
+a = dq + r
+r = a - q . d
+
+26.
+in ocmputer language with built in floor function, div and mod can  be calculated as follows
+
+a div d = floor(a/d) and a mod d = a - floor(a/d) . d
+
