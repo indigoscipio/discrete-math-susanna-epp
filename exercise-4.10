@@ -1331,6 +1331,3 @@ a | l and b | l
 by the transitivity rule, if  g | a and a | l, therefore g | l
 therefore gcd(a,b) | lcm(a,b)
 
-
-32. Prove that for all positive integers a and b, gcd(a,b) . lcm(a.b) = a b
-
