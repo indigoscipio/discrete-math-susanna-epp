@@ -1052,10 +1052,222 @@ c | b -> b = ck for some itneger k
 c | a-b -> a-b = cl for some integer l
 
 we need to show that c | a
- =??
+ 
+ b = ck
+ a-b = cl
+
+ b + (a - b) = a
+ ck + cl = a
+ a = c(k + l)
+ therefore c is a divisor of a, c is a common divisor or a
+
+ since c is a common divisor of a and b and c is a common divisor of a,
+by definition of gcd(b,ab) <= gcd(a,b) therfore gcd(b,ab) = gcd(a,b)
 
 
+b. trace the execution of algorihm 4.10.3 for A = 630 and B = 336
+A = 630
+B = 336
 
-b. trace the execution of algorihm 4.10.3 for a = 630 and b = 336
+Iteration 0 (Initial values):
+a = 630, b = 336
+
+Iteration 1:
+Is a ≠ 0 and b ≠ 0? Yes.
+Is a >= b? Yes, 630 >= 336
+  New a = 630 - 336 = 294
+a = 294, b = 336
+
+Iteration 2:
+Is a ≠ 0 and b ≠ 0? Yes.
+Is a >= b? No, 294 < 336
+  New b = 336 - 294 = 42
+a = 294, b = 42
+
+Iteration 3:
+Is a ≠ 0 and b ≠ 0? Yes.
+Is a >= b? Yes, 294 >= 42
+  New a = 294 - 42 = 252
+a = 252, b = 42
+
+Iteration 4:
+Is a ≠ 0 and b ≠ 0? Yes.
+Is a >= b? Yes, 252 >= 42
+  New a = 252 - 42 = 210
+a = 210, b = 42
+
+Iteration 5:
+Is a ≠ 0 and b ≠ 0? Yes.
+Is a >= b? Yes, 210 >= 42
+  New a = 210 - 42 = 168
+a = 168, b = 42
+
+Iteration 6:
+Is a ≠ 0 and b ≠ 0? Yes.
+Is a >= b? Yes, 168 >= 42
+  New a = 168 - 42 = 126
+a = 126, b = 42
+
+Iteration 7:
+Is a ≠ 0 and b ≠ 0? Yes.
+Is a >= b? Yes, 126 >= 42
+  New a = 126 - 42 = 84
+a = 84, b = 42
+
+Iteration 8:
+Is a ≠ 0 and b ≠ 0? Yes.
+Is a >= b? Yes, 84 >= 42
+  New a = 84 - 42 = 42
+a = 42, b = 42
+
+Iteration 9:
+Is a ≠ 0 and b ≠ 0? Yes.
+Is a >= b? Yes, 42 >= 42
+  New a = 42 - 42 = 0
+a = 0, b = 42
+
+Iteration 10:
+Is a ≠ 0 and b ≠ 0? No, since a = 0.
+Loop terminates.
+
+Final result:
+gcd(630, 336) = 42
+
 
 c. trace the execution of algorithm 4.10.3 for a = 769 and b = 348
+Iteration 0 (Initial values):
+a = 769, b = 348
+
+Iteration 1:
+Is a ≠ 0 and b ≠ 0? Yes.
+Is a >= b? Yes, 769 >= 348
+  New a = 769 - 348 = 421
+a = 421, b = 348
+
+Iteration 2:
+Is a ≠ 0 and b ≠ 0? Yes.
+Is a >= b? Yes, 421 >= 348
+  New a = 421 - 348 = 73
+a = 73, b = 348
+
+Iteration 3:
+Is a ≠ 0 and b ≠ 0? Yes.
+Is a >= b? No, 73 < 348
+  New b = 348 - 73 = 275
+a = 73, b = 275
+
+Iteration 4:
+Is a ≠ 0 and b ≠ 0? Yes.
+Is a >= b? No, 73 < 275
+  New b = 275 - 73 = 202
+a = 73, b = 202
+
+Iteration 5:
+Is a ≠ 0 and b ≠ 0? Yes.
+Is a >= b? No, 73 < 202
+  New b = 202 - 73 = 129
+a = 73, b = 129
+
+Iteration 6:
+Is a ≠ 0 and b ≠ 0? Yes.
+Is a >= b? No, 73 < 129
+  New b = 129 - 73 = 56
+a = 73, b = 56
+
+Iteration 7:
+Is a ≠ 0 and b ≠ 0? Yes.
+Is a >= b? Yes, 73 >= 56
+  New a = 73 - 56 = 17
+a = 17, b = 56
+
+Iteration 8:
+Is a ≠ 0 and b ≠ 0? Yes.
+Is a >= b? No, 17 < 56
+  New b = 56 - 17 = 39
+a = 17, b = 39
+
+Iteration 9:
+Is a ≠ 0 and b ≠ 0? Yes.
+Is a >= b? No, 17 < 39
+  New b = 39 - 17 = 22
+a = 17, b = 22
+
+Iteration 10:
+Is a ≠ 0 and b ≠ 0? Yes.
+Is a >= b? No, 17 < 22
+  New b = 22 - 17 = 5
+a = 17, b = 5
+
+Iteration 11:
+Is a ≠ 0 and b ≠ 0? Yes.
+Is a >= b? Yes, 17 >= 5
+  New a = 17 - 5 = 12
+a = 12, b = 5
+
+Iteration 12:
+Is a ≠ 0 and b ≠ 0? Yes.
+Is a >= b? Yes, 12 >= 5
+  New a = 12 - 5 = 7
+a = 7, b = 5
+
+Iteration 13:
+Is a ≠ 0 and b ≠ 0? Yes.
+Is a >= b? Yes, 7 >= 5
+  New a = 7 - 5 = 2
+a = 2, b = 5
+
+Iteration 14:
+Is a ≠ 0 and b ≠ 0? Yes.
+Is a >= b? No, 2 < 5
+  New b = 5 - 2 = 3
+a = 2, b = 3
+
+Iteration 15:
+Is a ≠ 0 and b ≠ 0? Yes.
+Is a >= b? No, 2 < 3
+  New b = 3 - 2 = 1
+a = 2, b = 1
+
+Iteration 16:
+Is a ≠ 0 and b ≠ 0? Yes.
+Is a >= b? Yes, 2 >= 1
+  New a = 2 - 1 = 1
+a = 1, b = 1
+
+Iteration 17:
+Is a ≠ 0 and b ≠ 0? Yes.
+Is a >= b? Yes, 1 >= 1
+  New a = 1 - 1 = 0
+a = 0, b = 1
+
+Iteration 18:
+Is a ≠ 0 and b ≠ 0? No, since a = 0.
+Loop terminates.
+
+Final result:
+gcd(769, 348) = 1
+
+Exercises 28 - 32 refer to the following definition
+definition: the least common multiple of two nonzero integers a and b, denoted lcm(a,b)
+is the positive integer c such that
+
+a. a | c and b | c
+b. for all positive integers m, if a | m then b | m c <= m
+
+
+28. find
+a) lcm(12,18)
+
+b) lcm(2^2 . 3 . 5, 2^3 . 3^2)
+c) lcm(2800,6125)
+
+29. prove that for all positive integers a and b,
+gcd(a,b) = lcm(a,b) if and only if a = b
+
+30. prove that for all positive integers a and b, a | b
+if and only if, lcm(a,b) = b
+
+31. Prove that for all integers a and b, gcd(a,b) | lcm(a,b)
+
+32. Prove that for all positive integers a and b, gcd(a,b) . lcm(a.b) = a b
+
