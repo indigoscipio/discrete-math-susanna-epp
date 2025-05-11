@@ -1307,15 +1307,30 @@ a | b if and only if, lcm(a,b) = b
 first we need to prove
 if a | b then lcm(a,b) = b
 
-lcm(a,b) = b -> this means a | b and b | b
-= ???
+we need to prove lcm(a,b) = b
+we need to show b satisfies both condition from the defintion of lcm
+does a | b ? since a = b therefore a positive integer divides itself is always trye
+does b | b ? this is always true since b is positive integer
 
 
-second we need to prove
 if lcm(a,b) = b then a | b
-= ???
+let m be the positive integer such that a | m and b | m
+we need to show that b <= m by the definition of lcm
+
+if positive integer x divides another positive integer y 
+eg 5 | 10 this means x is a divisor of y, therefore x <= y
+
 
 31. Prove that for all integers a and b, gcd(a,b) | lcm(a,b)
+let g = gcd(a,b)
+let l = lcm(a,b)
+
+g | a and g | b 
+a | l and b | l
+
+by the transitivity rule, if  g | a and a | l, therefore g | l
+therefore gcd(a,b) | lcm(a,b)
+
 
 32. Prove that for all positive integers a and b, gcd(a,b) . lcm(a.b) = a b
 
