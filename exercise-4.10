@@ -1257,15 +1257,63 @@ b. for all positive integers m, if a | m then b | m c <= m
 
 28. find
 a) lcm(12,18)
+12 | 36
+18 | 36
+therefore lcm(12,18) = 36
 
 b) lcm(2^2 . 3 . 5, 2^3 . 3^2)
+= lcm(4.3.5,8.9)
+= lcm(60,72)
+multiple of 60 = 60 120 180 240 300 360
+multiple of 72 = 72 144 216 288 360
+
+therefore lcm(60,72) = 360
+
 c) lcm(2800,6125)
+answer: 98000
+
+Exercises 28 - 32 refer to the following definition
+definition: the least common multiple of two nonzero integers a and b, denoted lcm(a,b)
+is the positive integer c such that
+
+a. a | c and b | c
+b. for all positive integers m, if a | m then b | m c <= m
 
 29. prove that for all positive integers a and b,
 gcd(a,b) = lcm(a,b) if and only if a = b
 
-30. prove that for all positive integers a and b, a | b
-if and only if, lcm(a,b) = b
+first we need to prove
+if gcd(a,b) = lcm(a,b) then a = b
+
+gcd(a,b) = x -> x | a and x | b
+lcm(a,b) = x -> a | x and b | x
+
+therefore x = a and x = b
+
+second we need to prove
+if a = b then gcd(a,b) = lcm(a,b)
+
+gcd(a,b) -> gcd(b,b)
+this means the gcd is the number b itself
+
+lcm(a,b) -> lcm(b,b)
+this means the lcm is the number b itself
+
+therefore, for all integer a and b, gcd(a,b) = lcm(a,b) if and only if a = b
+
+30. prove that for all positive integers a and b,
+a | b if and only if, lcm(a,b) = b
+
+first we need to prove
+if a | b then lcm(a,b) = b
+
+lcm(a,b) = b -> this means a | b and b | b
+= ???
+
+
+second we need to prove
+if lcm(a,b) = b then a | b
+= ???
 
 31. Prove that for all integers a and b, gcd(a,b) | lcm(a,b)
 
