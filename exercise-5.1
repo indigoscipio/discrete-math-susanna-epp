@@ -126,40 +126,108 @@ then the next 8 term is 3 (+ 1)
 so whenever 2 reaches a new exponent it increases the number
 
 9. h-sub-n = n . floor(log2 n) for every integer n >= 1
-h1 = 1 . floor(log2 1) = 1 . 0 = 1
-h2 = 1 . floor(log2 1) = 1 . 0 = 1
-h3 = 1 . floor(log2 1) = 1 . 0 = 1
-h4 = 1 . floor(log2 1) = 1 . 0 = 1
-h5 = 1 . floor(log2 1) = 1 . 0 = 1
-h6 = 1 . floor(log2 1) = 1 . 0 = 1
-h7 = 1 . floor(log2 1) = 1 . 0 = 1
-h8 = 1 . floor(log2 1) = 1 . 0 = 1
-h9 = 1 . floor(log2 1) = 1 . 0 = 1
-h10 = 1 . floor(log2 1) = 1 . 0 = 1
-h11 = 1 . floor(log2 1) = 1 . 0 = 1
-h12 = 1 . floor(log2 1) = 1 . 0 = 1
-h13 = 1 . floor(log2 1) = 1 . 0 = 1
-h14 = 1 . floor(log2 1) = 1 . 0 = 1
-h15 = 1 . floor(log2 1) = 1 . 0 = 1
+h1 = 1 . floor(log2 1) = 1 . 0 = 0
+h2 = 2 . floor(log2 2) = 2 . 1 = 2
+h3 = 3 . floor(log2 3) = 3 . 1 = 3
+h4 = 4 . floor(log2 4) = 4 . 2 = 8
+h5 = 5 . floor(log2 5) = 5 . 2 = 10
+h6 = 6 . floor(log2 6) = 6 . 2 = 12
+h7 = 7 . floor(log2 7) = 7 . 2 = 14
+h8 = 8 . floor(log2 8) = 8 . 3 = 24
+h9 = 9 . floor(log2 9) = 9 . 3 = 27
+h10 = 10 . floor(log2 10) = 10 . 3 = 30
+h11 = 11 . floor(log2 11) = 11 . 3 = 33
+h12 = 12 . floor(log2 12) = 12 . 3 = 36
+h13 = 13 . floor(log2 13) = 13 . 3 = 39
+h14 = 14 . floor(log2 14) = 14 . 3 = 42
+h15 = 15 . floor(log2 15) = 15 . 3 = 45
 
+answer: this is very similar to exercise 8, every addition to the exponent grows slowly
+but this time you multiply it with the base
 
 find explicit formulas for sequences of the form a1, a2, a3, ... with the initial terms given in  10 - 16
 
 10. -1, 1, -1, 1, -1
 
+a1 = (-1)^1
+a2 = (-1)^2
+a3 = (-1)^3
+hence, the formula is the following
+ak = (-1)^k for every integer k>=1
+
+
 11. 0, 1, -2, 3, -4, 5
+
+a1 = (-1)^1 . 0 = 0
+a2 = (-1)^2 . 1 = 1
+a3 = (-1)^3 . 2 = -2
+a4 = (-1)^4 . 3 = 3
+
+hence, the formula is the following
+ak = (-1)^k . (k - 1)
+
 
 12. 1/4, 2/9, 3/16, 4/25, 5/36, 6/49
 
+a1 = 1/(1+1)^2 = 1/2^2 = 1/4
+a2 = 2/(2+1)^2 = 2/3^2 = 2/9
+a3 = 3/(3+1)^2 = 3/4^2 = 3/16
+a4 = 4/(4+1)^2 = 4/5^2 = 4/25
+
+hence, the formula is the following
+ak = a/(a+1)^2
+
+
 13. 1 - 1/2, 1/2-1/3, 1/3-1/4, 1/4-1/5, 1/5-1/6. 1/6 - 1/7
+
+a1 = 1 - 1/2
+a2 = 1/2 - 1/3
+a3 = 1/3 - 1/4
+a4 = 1/4 - 1/5
+
+hence, the formula is the following
+ak = 1/k - 1/k+1 
+
 
 14. 1/3, 4/9, 9/27, 16/81, 25/243, 36/729
 
+a1 = 1/3
+a2 = 4/9
+a3 = 9/27
+a4 = 16/81
+
+hence, the formula is the following
+ak =  k^2 / 3^k
+
 15. 0, -1/2, 2/3, -3/4, 4/5, -5/6, 6/7
 
+a1 = 
+a1 = 
+a1 = 
+a1 = 
+
+hence, the formula is the following:
+ak = 
+
 16. 3,6,12,24,48,96
+a1 = 
+a1 = 
+a1 = 
+a1 = 
+
+hence, the formula is the following:
+ak = 
+
 
 17. consider the sequence defined by a-sub-n = 2n + (-1)^n - 1
 for every integer n>= 0. Find an alternative explicit formula for a that uses the floor notation.
 
-18. 
+18. let a0 = 2
+a1 = 3
+a2 = -2
+a3 = 1
+a4 = 0
+a5 = -1
+a6 = -2
+
+compute each of the summations and products below
