@@ -495,14 +495,35 @@ answer: sigma(from i=0 to n-1 of (n-i))
 52. n + (n-1)/2! + (n-2)/3! + (n-3)/4! + ... + 1/n!
 answer: sigma(from i=0 to n - 1 of n-i/(i+1)!)
 
-
 tranfsform each of 53 and 54 by making the change of variable i = k + 1
-
 53. sigma(from k = 0 to 5 of k(k - 1))
 answer:
+first calculate lower and upper limits with the new summation
+when k=0 -> i = k + 1 -> i = 1 
+when k=5 -> i = k + 1 -> i = 6
+thus the new sum goes from i=1 to i=6
+next calculate the general term by replacing each occurence of k by an expression in i
+
+since i = k + 1, then
+k = i - 1
+hence k(k-1) = i-1( (i-1) - 1)
+therefore sigma(from k = 0 to 5 of k(k - 1)) transforms to sigma(from i=1 to 6 of i-1( (i-1) - 1))
 
 54. pi(from k = 1 to n of k/k^2+4)
 answer:
+first calculate lower and upper limits with the new product
+when k = 1 -> i = k+1 -> i = 2
+when k = n -> i = k+1 -> i= n+1
+
+thus the new product goes from i=2 to n+1
+next calculate general term
+
+since i = k+1, then
+k = i - 1
+hence k/k^2+4 = (i-1) / (i-1)^2 + 4
+therefore pi(from k = 1 to n of k/k^2+4) transforms to pi(from i=2 to n+1 of (i-1) / (i-1)^2 + 4)
+
+
 
 Transform each of 55 - 58 by making the change of variable j = i -1
 55. sigma(from i = 1 to n+1 of (i-1)^2/i.n)
