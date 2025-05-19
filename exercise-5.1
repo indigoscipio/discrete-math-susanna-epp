@@ -577,29 +577,91 @@ hence n-i+1/n+1 = n -(j+1)+1 / (j+1)+1
 therefore sigma(from i = n to 2n of n-i+1/n+1) transforms to sigma(from i = n-1 to 2n-1 of n -(j+1)+1 / (j+1)+1 )
 
 
-write each of 59 - 61 as a single summation of product
+write each of 59 - 61 as a single summation or product
 59) 3 . sigma(from k = 1 to n of 2k-3 ) + sigma(from k = 1 to n of 4 - 5k)
-answer:
+answer: sigma(from k = 1 to n of 3(2k-3) + 4-5k )
 
-60) 2 . sigma(from k = 1 to n of (3k^2 + 4) + 5 ) . sigma(from k = 1 to n of (2k^2-1) )
-answer:
 
-61)
-answer:
+60) 2 . sigma(from k = 1 to n of 3k^2 + 4) + 5 . sigma(from k = 1 to n of (2k^2-1) )
+answer: sigma(from k = 1 to n of 2(3k^2 + 4) + 5(2k^2-1) )
+
+61) pi(from k=1 to n of k/k+1) . pi(from k = 1 to n of k+1/k+2)
+answer: pi(from k = 1 to n of (k/k+1) . (k+1/k+2))
 
 compute each of 62 - 76. Assume the values of the variables are restricted so that the 
 expressions are defined
 
 62. 4! / 3!
+answer:  4 . 3! / 3! = 4
 
 63. 6! / 8!
+answer: 6! / 8 . 7 . 6! = 1/56
 
 64. 4! / 0!
+answer: 4 . 3 . 2 . 1 / 1 = 24
 
 65. n! / (n-1)!
+answer: n . (n-1)! / (n-1)! = n
 
 66. (n-1)! / (n+1)!
+answer: (n-1)! / (n+1) . n . (n - 1)! = 1/(n+1) . n
 
 67. n! / (n-2)!
+answer: n . (n-1) . (n-2)! / (n-2)! = n(n-1) = n^2 - n
 
-68.
+68. ((n+1)!)^2 / (n!)^2
+answer: ((n+1) . n! / n!)^2
+= (n+1)^2
+
+69. n! / (n-k)!
+answer: n . (n-1) . (n-2) ... (n-k+1) . (n-k)! / (n-k)!
+= n . (n-1) . (n-2) ... (n - k+1)
+
+70. n! / (n-k+1)!
+= n . (n - 1) . (n - 2) ... (n - k + 2) . (n - k + 1)! / (n-k+1)!
+= n . (n-1) . (n-2) ... (n - k + 2)
+
+71. (5 choose 3)
+= 5! / 3! (5 - 3)!
+= 5! / 3! . 2!
+= 5 . 4 . 3! / 3! . 2!
+= 5 . 4 / 2!
+= 20/2 = 10
+
+72. (7 choose 4)
+= 7! / 4! (7 - 4)!
+= 7! / 4! . 3!
+= 7 . 6 . 5 . 4! / 4! . 3!
+= 7.6.5/3!
+= 210/6 = 35
+
+73. (3 choose 0)
+= 3! / 0! (3-0)!
+= 3! / 1 . 3!
+= 3! / 3! = 1
+
+74. (5 choose 5)
+= 5! / 5! (5-5)!
+= 5! / 5! . 0!
+= 5! / 5! . 1
+= 5! / 5! = 1
+
+75. (n choose n-1)
+= n! / (n-1)! . (n - (n-1))!
+= n . (n-1)! / (n-1)! . (n - (n-1))!
+= n / (n - (n-1))!
+
+76. (n+1 choose n-1)
+= (n+1)! / (n-1)! . ((n+1) - (n-1))!
+= (n+1) . n . (n-1)! / (n-1)! . ((n+1) - (n-1))!
+= (n+1) . n / ((n+1) - (n-1))!
+
+
+77.
+a) prove that n! + 2 is divisible by 2 for every integer n >=  2
+
+b) prove that n! + k is divisibile by k for every integer n>=2 and k = 2,3,...,n
+c) given any integer m>=2, is it possible to find a sequence of m-1 consecutive positive integers none of which
+is prime? explain your answer
+
+78.
