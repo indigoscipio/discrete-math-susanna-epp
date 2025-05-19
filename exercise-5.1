@@ -560,18 +560,32 @@ i = n-1 -> j = n - 1 - 1 = n - 2
 
 next calculate the general term
 general term i = j + 1 since j = i - 1
+hence i/(n-i)^2 = j+1 / (n-j+1)^2
 
-hence i/(n-i)^2 = 
+therefore sigma(from i=1 to to n-1 of i/(n-i)^2) transforms to sigma(from j = 0 to n-2 of j+1 / (n-j+1)^2 )
 
 58. sigma(from i = n to 2n of n-i+1/n+1)
-answer: 
+answer: first calculate the lower and upper limits of the new sum
+
+i = n -> j = i - 1 = n - 1
+i = 2n -> j = i - 1 = 2n - 1
+
+next calculate the general term
+i = j + 1 since j = i - 1
+hence n-i+1/n+1 = n -(j+1)+1 / (j+1)+1
+
+therefore sigma(from i = n to 2n of n-i+1/n+1) transforms to sigma(from i = n-1 to 2n-1 of n -(j+1)+1 / (j+1)+1 )
+
 
 write each of 59 - 61 as a single summation of product
-59. 
+59) 3 . sigma(from k = 1 to n of 2k-3 ) + sigma(from k = 1 to n of 4 - 5k)
+answer:
 
-60. 
+60) 2 . sigma(from k = 1 to n of (3k^2 + 4) + 5 ) . sigma(from k = 1 to n of (2k^2-1) )
+answer:
 
-61. 
+61)
+answer:
 
 compute each of 62 - 76. Assume the values of the variables are restricted so that the 
 expressions are defined
@@ -582,4 +596,10 @@ expressions are defined
 
 64. 4! / 0!
 
-65. 
+65. n! / (n-1)!
+
+66. (n-1)! / (n+1)!
+
+67. n! / (n-2)!
+
+68.
