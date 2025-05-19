@@ -524,10 +524,62 @@ hence k/k^2+4 = (i-1) / (i-1)^2 + 4
 therefore pi(from k = 1 to n of k/k^2+4) transforms to pi(from i=2 to n+1 of (i-1) / (i-1)^2 + 4)
 
 
-
 Transform each of 55 - 58 by making the change of variable j = i -1
 55. sigma(from i = 1 to n+1 of (i-1)^2/i.n)
 answer:
+first calculate the lower and upper limits with the new sum
+when i = 1 -> j = 1 - 1 = 0
+when i = n+1 -> j = n + 1 - 1 = n
+
+thus the new sum goes from  j = 0 to n
+next calculate the general term
+
+j = i - 1
+i = j + 1
+hence (i-1)^2 / i.n = (j+1-1)^2 / (j+1) . n
+therefore sigma(from i = 1 to n+1 of (i-1)^2/i.n) transforms to sigma(from j = 0 to n of (j+1-1)^2 / (j+1) . n)
 
 56. sigma(from i=3 to n of i/i+n-1)
-answer:
+answer: first calculate the lower and upper limites of the new sum
+
+i = 3 -> j = 3 - 1 = 2
+i = n -> j = n - 1
+
+next calculate general term
+j = i - 1
+i = j + 1
+
+hence i/i+n-1 = j+1/j+1 + n-1
+therefore sigma(from i=3 to n of i/i+n-1) transforms to sigma(from j = 2 to n-1 of j+1/j+1 + n-1 )
+
+57. sigma(from i=1 to to n-1 of i/(n-i)^2)
+answer: first calculate the lower and upper limits of the new sum
+
+i = 1 -> j = 1 - 1 = 0 
+i = n-1 -> j = n - 1 - 1 = n - 2
+
+next calculate the general term
+general term i = j + 1 since j = i - 1
+
+hence i/(n-i)^2 = 
+
+58. sigma(from i = n to 2n of n-i+1/n+1)
+answer: 
+
+write each of 59 - 61 as a single summation of product
+59. 
+
+60. 
+
+61. 
+
+compute each of 62 - 76. Assume the values of the variables are restricted so that the 
+expressions are defined
+
+62. 4! / 3!
+
+63. 6! / 8!
+
+64. 4! / 0!
+
+65. 
