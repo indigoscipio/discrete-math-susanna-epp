@@ -682,8 +682,26 @@ since it has the form of 2. some integer, therefore n! + 2 is even
 
 b) prove that n! + k is divisibile by k for every integer n>=2 and k = 2,3,...,n
 
+by the definition of factorial
+n! = n . (n-1) . (n-2) ... 1
+k is always a factor in n! since 2 <= k <= n
+this means k | n!
+or we can write it as n! = kd
+
+(kd) + k
+which has the form of k (some integer)
+k is a factor of n! + k and therefore k | n! + k
+
 
 c) given any integer m>=2, is it possible to find a sequence of m-1 consecutive positive integers none of which
 is prime? explain your answer
+I'm not sure about this,
 
-78.
+78. Prove that for all nonnegative integers n and r with r + 1 <= n, (n choose r+1) = n-r/r+1 . (n choose r)
+
+by the definition of binomial coefficient,
+= (n choose r) = n! / r! (n-r)!
+
+then we can apply these to both sides of the equation
+= n! / (r+1)! . (n-r+1)!
+
