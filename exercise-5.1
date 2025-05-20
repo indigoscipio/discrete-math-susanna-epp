@@ -687,7 +687,6 @@ n! = n . (n-1) . (n-2) ... 1
 k is always a factor in n! since 2 <= k <= n
 this means k | n!
 or we can write it as n! = kd
-
 (kd) + k
 which has the form of k (some integer)
 k is a factor of n! + k and therefore k | n! + k
@@ -703,5 +702,48 @@ by the definition of binomial coefficient,
 = (n choose r) = n! / r! (n-r)!
 
 then we can apply these to both sides of the equation
-= n! / (r+1)! . (n-r+1)!
+n! / (r+1)! . (n-r+1)! = n - r / r + 1 . (n! / r! . (n-r)!)
+lets focus on the right hand side
+= (n - r / r + 1) . (n! / r! . (n-r)!)
+= (n - r / r + 1) . (n! / r! . (n-r) . (n-r-1)!)
+= n! / r + 1 . r! (n - r - 1)!
+= n! / (r+1)! . (n-r-1)!
 
+therefore the two sides are equal; it is proven
+
+79. prove that  if p is a prime nmber and r is an integer with 0 < r < p, then (p choose r)
+is divisible by p
+
+answer:by the definition of binomial coefficient
+n choose r = n! / r! (n-r)!
+
+p choose r = p! / r! (p - r)!
+therefore r!(p-r)! always divides p!
+r! (p-r)! | p
+rearrange p choose r
+p! = (p choose r) . r! (p-r)!
+p . (p-1)! = (p choose r) . r (p-r)!
+
+
+80. suppose a[1], a[2], a[3], ... , a[m] is a one dimensional array and consider
+the following algorithm segment
+
+sum:= 0             ; initial sum = 0
+for k:= 1 to m      ; start loop from index 1 to m
+sum:= sum+a[k]      ; On each kth index, update sum to sum+a[k]
+next k              ; go to the next k index
+
+fill in the blanks below so each algorithm segment performs the same job
+as the one shown in the exercise statement
+
+a.
+sum:= 0
+for i:= 0 to k - 1
+sum:= sum+a[i]
+next i
+
+
+b. sum:= 0
+for j:= 2 to ___
+sum:= ___
+next j
