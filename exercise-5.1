@@ -804,18 +804,203 @@ hence 98 = 1100010
 1 / 2
 = 0 -> reminder = 1 = r[7]
 
+hence 205 = 11001101
 
 make a trace table to trace the action of algorithm 5.1.1
 on the input in 84 - 86
 
 84. 23
+algorithm body
+q:=a
+i:=0
+
+while (i = 0 or q does not equal 0)
+r[i]:= q mod 2
+q = q div 2
+[r[i] and q can be obtained by calling the division algorithm.]
+i:= i + 1
+end while
+
+
+iter 0
+q:=23
+i:=0
+
+iter 1
+i = 0 or q does not equal 0? true
+r[0] = 23 mod 2 = 1
+q = 23 div 2 = 11
+i = 1
+
+iter 2
+i = 0 or q does not equal 0? true
+r[1] = 11 mod 2 = 1
+q = 11 div 2 = 5
+i = 2
+
+iter 3
+i = 0 or q does not equal 0? true
+r[2] = 5 mod 2 = 1
+q = 5 div 2 = 2
+i = 3
+
+iter 4
+i = 0 or q does not equal 0? true
+r[3] = 2 mod 2 = 0
+q = 2 div 2 = 1
+i = 4
+
+iter 5
+i = 0 or q does not equal 0? true
+r[3] = 1 mod 2 = 1
+q = 1 div 2 = 0
+i = 5
+
+iter 6
+i = 0 or q does not equal 0? false
+end while
+final output = r[0],r[1],r[2] ... r[i-1]
+= 10111
+
+
 85. 28
+
+iter 0
+q:=28
+i:=0
+
+iter 1
+i = 0 or q does not equal 0? true
+r[0] = 28 mod 2 = 0
+q = 28 div 2 = 14
+i = 1
+
+iter 2
+i = 0 or q does not equal 0? true
+r[1] = 14 mod 2 = 0
+q = 14 div 2 = 7
+i = 2
+
+iter 3
+i = 0 or q does not equal 0? true
+r[2] = 7 mod 2 = 1
+q = 7 div 2 = 3
+i = 3
+
+iter 4
+i = 0 or q does not equal 0? true
+r[3] = 3 mod 2 = 1
+q = 3 div 2 = 1
+i = 3
+
+iter 5
+i = 0 or q does not equal 0? true
+r[4] = 1 mod 2 = 1
+q = 1 div 2 = 0
+i = 4
+
+iter 6
+i = 0 or q does not equal 0? false
+return final value
+= 11100
+
+
 86. 44
+iter 0
+q:=44
+i:=0
+
+iter 1
+i = 0 or q does not equal 0? true
+r[0] = 44 mod 2 = 0
+q = 44 div 2 = 22
+i = 1
+
+iter 2
+i = 0 or q does not equal 0? true
+r[1] = 22 mod 2 = 0
+q = 22 div 2 = 11
+i = 2
+
+iter 3
+i = 0 or q does not equal 0? true
+r[2] = 11 mod 2 = 1
+q = 11 div 2 = 5
+i = 3
+
+iter 4
+i = 0 or q does not equal 0? true
+r[3] = 5 mod 2 = 1
+q = 5 div 2 = 2
+i = 4
+
+iter 5
+i = 0 or q does not equal 0? true
+r[4] = 2 mod 2 = 0
+q = 2 div 2 = 1
+i = 5
+
+iter 6
+i = 0 or q does not equal 0? true
+r[5] = 1 mod 2 = 1
+q = 1 div 2 = 0
+i = 6
+
+
+iter 6
+i = 0 or q does not equal 0? false
+return final result
+= 101100
 
 87. write an informal description of algorithm
 using repeated division by 16 to convert a nonnegative integer from decimal notation to hexadecmil notation (base 16
 
+Input: a nonnegative integer a
+Initialize: q := a, i := 0
+While (i = 0 or q ≠ 0):
+    r[i] := q mod 16        // remainder after division by 16
+    q := q div 16          // integer division by 16
+    i := i + 1
+
+// Convert remainders 10 to 15 to hex digits A to F
+For each r[j] in r:
+    if r[j] = 10 then r[j] := 'A'
+    else if r[j] = 11 then r[j] := 'B'
+    else if r[j] = 12 then r[j] := 'C'
+    else if r[j] = 13 then r[j] := 'D'
+    else if r[j] = 14 then r[j] := 'E'
+    else if r[j] = 15 then r[j] := 'F'
+
+// The final hexadecimal representation is the sequence of r's read from r[i-1] down to r[0]
+
+
 use the algoritm you developed for exercyse 87 to convert the integers in 88 - 90 to hexadecimal notation
 
 88. 287
-89. 693
+
+iter 0
+q:=287
+i:=0
+
+iter 1
+i = 0 or q does not equal 0? true
+r[0] = 287 mod 16 = 15
+q = 287 div 16 = 17
+i = 1
+
+iter 2
+i = 0 or q does not equal 0? true
+r[1] = 17 mod 16 = 1
+q = 17 div 16 = 1
+i = 2
+
+iter 3
+i = 0 or q does not equal 0? true
+r[2] = 1 mod 16 = 1
+q = 1 div 16 = 0
+i = 3
+
+iter 4
+i = 0 or q does not equal 0? false, return final result
+15 1 1
+F 1 1 = 11F
