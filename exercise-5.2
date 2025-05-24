@@ -87,10 +87,28 @@ b. write p(k)
 c. write p(k+1).
 1^2 + 2^2 + ... + (k+1)^2 = (k+1) ((k+1)+1) (2(k+1)+1) / 6
 
-
 d. in a proof by mathemtical induction that the ofrumla holds
 for every integer n>= 1, what must be shown in the inductive step?
 answer: we must use inductive hypothesis to show that the right hand size is equal to the left hand side
 
-left side -> 1^2 + 2^2 + ... + (k+1^2)
-= 
+left side -> 1^2 + 2^2 + ... + ( (k+1) ^2)
+= 1^2 + 2^2 + ... + (k^2) + ( (k+1) ^2)
+= k(k + 1)(2k + 1) / 6 + ((k+1)^2)
+= k(k+1)(2k+1)/6 + 6((k+1)^2)/ 6
+= k(k+1)(2k+1)/6 + 6k^2+12k+6)/6
+= 2k^3 + 9k^2 + 13k + 6 / 6
+
+right side -> (k+1) ((k+1)+1) (2(k+1)+1) / 6
+= (k+1) ((k+1)+1) (2(k+1)+1) / 6
+= (k+1) (k+2) (2k+3) / 6
+= (k^2 + 2k + k + 2) (2k + 3) / 6
+= (k^2 + 3k + 2) (2k + 3) / 6
+= 2k^3 + 3k^2 + 6k^2 + 9k + 4k + 6 / 6
+= 2k^3 + 9k^2 + 13k + + / 6
+
+therfore the left side and right side is equal
+
+4. for each integer n with n>=2, let p(n) be the formula
+sigma(from i = 1 to n - 1 of i(i+1)) = n(n-1)(n+1) / 3
+
+a. 
