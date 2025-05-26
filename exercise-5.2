@@ -248,7 +248,6 @@ RHS
 = (5k^2+2k+5k+2)/2
 = 5k^2+7k+2/2
 
-
 8. for every integer n>= 0
 1+2+2^2+...+2^n = 2^n+1 - 1
 
@@ -258,11 +257,28 @@ right hand side -> 2^0+1 - 1 = 1
 therefore the basis p(0) is true
 
 next we must show that for every integer k>=0, if p(k) is true, then p(k+1) is true
-p(k) -> 1+2+2^2+...+2^n = 2^n+1 - 1
-p(k+1) -> 1+2+2^2+...+2^n = 2^n+1 - 1
+p(k) -> 1+2+2^2+...+2^k = 2^k+1 - 1
+p(k+1) -> 1+2+2^2+...+2^k+1 = 2^(k+1+1) - 1
+
+LHS of p(k+1)
+1+2+2^2+...+2^k+1
+= [1+2+2^2+...+ 2^k] + 2^k+1
+= 2^k+1 - 1 + 2^k+1
+= 2^k+2 - 1
+
+RHS of p(k+1)
+2^(k+1+1) - 1
+= 2^k+2 - 1
+
+[therefore lhs and rhs is equal, statement is true]
 
 9. for every integer n>=3
 4^3+4^4+4^5+...+4^n = 4(4^n - 16) / 3
+
+First, we need to show that for ever integer n>=0, p(0) is true
+left hand side -> 2^0 = 1
+right hand side -> 2^0+1 - 1 = 1
+therefore the basis p(0) is true
 
 Prove each of the statement s in 10-18 by mathematical induction
 10
