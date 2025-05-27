@@ -275,12 +275,75 @@ RHS of p(k+1)
 9. for every integer n>=3
 4^3+4^4+4^5+...+4^n = 4(4^n - 16) / 3
 
-First, we need to show that for ever integer n>=0, p(0) is true
-left hand side -> 2^0 = 1
-right hand side -> 2^0+1 - 1 = 1
-therefore the basis p(0) is true
+First, we need to show that for ever integer n>=3, p(3) is true
+left hand side -> 4^3 = 64
+right hand side -> 4(4^3 - 16) / 3 = 4(64-16)/3 = 4(48)/3 = 64
+therfore the basis p(3) is true
 
 
+next we must show that for every integer k>=3, if p(k) is true, then p(k+1) is true
+p(k) -> 4^3+4^4+4^5+...+4^k = 4(4^k - 16) / 3
+p(k+1) -> 4^3+4^4+4^5+...+4^(k+1) = 4(4^k+1 - 16) / 3
+
+LHS of p(k+1)
+4^3+4^4+4^5+...+4^(k+1)
+= [4^3+4^4+4^5+...+ 4^k] + 4^(k+1)
+= 4(4^k - 16) / 3 + 4^(k+1)
+= k^k+2 - 64 / 3
+
+RHS of p(k+1)
+4(4^k+1 - 16) / 3
+= 4^(k+2)-64 / 3
+
+therefore right hand side and left hand side is equal
 
 Prove each of the statement s in 10-18 by mathematical induction
-10
+10. 1^2+2^2+...+n^2 = n(n+1)(2n+1)/6, for every integer n>=1
+
+First, we need to show that for ever integer n>=1, p(1) is true
+left hand side -> 1^2 = 1
+right hand side -> 1(1+1)(2+1)/6 = 1
+therfore the basis p(1) is true
+
+next we must show that for every integer k>=1, if p(k) is true, then p(k+1) is true
+p(k) -> 1^2+2^2+...+k^2 = k(k+1)(2k+1)/6
+p(k+1) -> 1^2+2^2+...+(k+1)^2 = (k+1)((k+1)+1)(2(k+1)+1)/6
+
+LHS of p(k+1)
+1^2+2^2+...+(k+1)^2
+= [1^2+2^2+...+ k^2 ] + (k+1)^2
+= k(k+1)(2k+1)/6 + (k+1)^2
+= 2k^3 + 9k + 13k + 6 / 6
+
+RHS of p(k+1)
+(k+1)((k+1)+1)(2(k+1)+1)/6
+= (k+1)(k+2)(2k+3)/6
+= (k^2+3k+2)(2k+3)/6
+= (2k^3+6k^2+6+6k^2+9k+4k+6)/6
+= 2k^3 + 9k^2 + 13k + 6 / 6
+
+therefore LHS and RHS are equal
+
+11. 1^3 + 2^3 + ... + n^3 = [n(n+1)/2]^2 for every integer n>=1
+
+First, we need to show that for ever integer n>=1, p(1) is true
+left hand side -> 1^3 = 1
+right hand side -> [1(1+1)/2]^2 = [2/2]^2 = 1
+therfore the basis p(1) is true
+
+next we must show that for every integer k>=1, if p(k) is true, then p(k+1) is true
+p(k) -> 1^3 + 2^3 + ... + k^3 = [k(k+1)/2]^2 
+p(k+1) -> 1^3 + 2^3 + ... + (k+1)^3 = [(k+1) ((k+1)+1)/2]^2 
+
+LHS of p(k+1)
+1^3 + 2^3 + ... + (k+1)^3 
+= [1^3 + 2^3 + ... + k^3] + (k+1)^3
+= [k(k+1)/2]^2 + (k+1)^3
+ = (k+1)^2 (k+2)^2 / 4
+
+RHS of p(k+1)
+= [(k+1) (k+1)+1/2]^2 
+= [(k+1) (k+2)/2]^2
+= (k+1)^2 (k+2)^2 / 4
+
+thefore the LHS and RHS is equal
