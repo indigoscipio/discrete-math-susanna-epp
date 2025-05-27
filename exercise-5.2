@@ -347,3 +347,55 @@ RHS of p(k+1)
 = (k+1)^2 (k+2)^2 / 4
 
 thefore the LHS and RHS is equal
+
+12. 1/1.2 + 1/2.3 + ... + 1/n(n+1) = n/n+1 for every integer n>=1
+
+First, we need to show that for ever integer n>=1, p(1) is true
+left hand side -> 1/2
+right hand side -> 1/2
+therfore the basis p(1) is true
+
+next we must show that for every integer k>=1, if p(k) is true, then p(k+1) is true
+p(k) ->  1/1.2 + 1/2.3 + ... + 1/k(k+1) = k/k+1
+p(k+1) ->  1/1.2 + 1/2.3 + ... + 1/k+1(k+1+1) = k+1/k+1+1
+
+
+LHS of p(k+1)
+1/1.2 + 1/2.3 + ... + 1/k+1(k+1+1)
+= [1/1.2 + 1/2.3 + ... + 1/k(k+1)] + 1/k+1(k+2)
+= k/k+1 + 1/k+1(k+2)
+= k/k+1 + 1/k+1(k+2)
+= (k+2)k/k+1(k+2) + 1 / k+1 (k+2)
+= k+1 / k+2
+
+RHS of p(k+1)
+=  k+1/k+1+1
+= k+1/k+2
+
+therefore LHS and RHS is equal
+
+13. sigma(from i = 1 to n-1 of i(i+1)) = n(n-1)(n+1)/3
+for every integer n>=2
+
+First, we need to show that for ever integer n>=2, p(2) is true
+left hand side -> sigma(from i = 1 to 2-1 of 1(1+1)) = sigma(from i = 1 to 1 of 2) = 2
+right hand side -> n(n-1)(n+1)/3 =2(1)(3)/3 = 6/3 = 2
+therfore the basis p(2) is true
+
+next we must show that for every integer k>=2, if p(k) is true, then p(k+1) is true
+p(k) -> sigma(from i = 1 to k-1 of i(i+1)) = k(k-1)(k+1)/3
+p(k+1) ->  sigma(from i = 1 to k+1-1 of i(i+1)) = k+1(k+1-1)(k+1+1)/3
+
+LHS of p(k+1)
+sigma(from i = 1 to k+1-1 of i(i+1))
+= sigma(from i = 1 to k of i(i+1))
+=  sigma(from i = 1 to k-1 of i(i+1)) + k(k+1)
+= k(k+1)(k+2)/3
+
+RHS of p(k+1)
+= k+1(k+1-1)(k+1+1)/3
+= k+1(k)(k+2)/3
+
+therefore LHS and RHS is equivalent
+
+14. 
