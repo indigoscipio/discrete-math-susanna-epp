@@ -428,5 +428,49 @@ right hand side ->  (n+1)! - 1 = 2! - 1 = 2.1 - 1 = 1
 therfore the basis p(1) is true
 
 next we must show that for every integer k>=1, if p(k) is true, then p(k+1) is true
-p(k) -> sigma(from i=1 to n of i(i!)) = (n+1)! - 1
-p(k+1) ->  sigma(from i=1 to n of i(i!)) = (n+1)! - 1
+p(k) -> sigma(from i=1 to k of i(i!)) = (k+1)! - 1
+p(k+1) ->  sigma(from i=1 to k+1 of i(i!)) = (k+1+1)! - 1
+
+LHS of p(k+1)
+sigma(from i=1 to k+1 of i(i!))
+= sigma(from i=1 to k of i(i!)) + k+1(k+1)!
+= (k+1)! - 1 +  k+1(k+1)!
+= (k+1)! (k+2) - 1
+= (k+2)! - 1
+
+RHS of p(k+1)
+(k+1+1)! - 1
+= (k+2)! -1
+
+therefoer RHS and LHS is equal
+
+16. (1-1/2^2) (1-1/3^2) ... (1-1/n^2) = n+1/2n
+for every integer n>= 2
+
+First, we need to show that for ever integer n>=2, p(2) is true
+left hand side ->  (1-1/n^2) = 1-1/2^2 = 1-1/4 = 4/4-1/4 = 3/4
+right hand side ->  n+1/2n = 2+1/2.2 = 3/4
+therfore the basis p(2) is true
+
+next we must show that for every integer k>=1, if p(k) is true, then p(k+1) is true
+p(k) -> (1-1/2^2) (1-1/3^2) ... (1-1/k^2) = k+1/2k
+p(k+1) -> (1-1/2^2) (1-1/3^2) ... (1-1/(k+1)^2) = k+1+1/2(k+1)
+
+
+LHS of p(k+1)
+(1-1/2^2) (1-1/3^2) ... (1-1/(k+1)^2)
+= [(1-1/2^2) (1-1/3^2) ... (1-1/k^2)] . (1-1/(k+1)^2)
+=  k+1/2k . (1-1/(k+1)^2)
+= k+2/2(k+1)
+
+RHS of p(k+1)
+k+1+1/2(k+1)
+= k+2/2(k+1)
+= k+2 / 2(k+1)
+
+17. pi(from i=0 to n of (i/2i+1).(i/2i+2)) = 1/(2n+2)! for every integer n>= 0
+
+First, we need to show that for ever integer n>=2, p(2) is true
+left hand side ->  (1-1/n^2) = 1-1/2^2 = 1-1/4 = 4/4-1/4 = 3/4
+right hand side ->  n+1/2n = 2+1/2.2 = 3/4
+therfore the basis p(2) is true
