@@ -398,4 +398,35 @@ RHS of p(k+1)
 
 therefore LHS and RHS is equivalent
 
-14. 
+14. sigma(from i = 1 to n+1 of i.2^i) = n.2^n+2 + 2 for every integer n>= 0
+
+First, we need to show that for ever integer n>=0, p(0) is true
+left hand side -> sigma(from i = 1 to n+1 of i.2^i) = sigma(from i = 1 to 1 of i.2^i) = 1.2^1 = 2
+right hand side ->  n.2^n+2 + 2 = 2
+therfore the basis p(0) is true
+
+next we must show that for every integer k>=2, if p(k) is true, then p(k+1) is true
+p(k) -> sigma(from i = 1 to k+1 of i.2^i) = k.2^k+2 + 2
+p(k+1) ->  sigma(from i = 1 to k+1+1 of i.2^i) = (k+1).2^(k+1)+2 + 2
+
+LHS of p(k+1)
+sigma(from i = 1 to k+1+1 of i.2^i)
+= sigma(from i = 1 to k+1 of i.2^i) + (k+2).2^k+2
+= k.2^k+2 + 2 + (k+2).2^k+2
+= (k+1).2^k+3 + 2
+
+RHS of p(k+1)
+(k+1).2^(k+1)+2 + 2
+= (k+1).2^k+3 + 2
+
+therefoer LHS and RHS is equal
+
+15. sigma(from i=1 to n of i(i!)) = (n+1)! - 1 for every integer n>=1
+First, we need to show that for ever integer n>=1, p(1) is true
+left hand side ->  sigma(from i=1 to 1 of i(i!)) = 1(1!) = 1 
+right hand side ->  (n+1)! - 1 = 2! - 1 = 2.1 - 1 = 1 
+therfore the basis p(1) is true
+
+next we must show that for every integer k>=1, if p(k) is true, then p(k+1) is true
+p(k) -> sigma(from i=1 to n of i(i!)) = (n+1)! - 1
+p(k+1) ->  sigma(from i=1 to n of i(i!)) = (n+1)! - 1
