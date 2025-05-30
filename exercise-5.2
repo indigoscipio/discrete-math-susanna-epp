@@ -600,5 +600,45 @@ sum of geometric sequence = 2^(n-1+1)-1/2-1
 = 3^n+1-3/2
 
 27. 5^3 + 5^4 + 5^5 + ... + 5^k where k is any integer with k>=3
+= 5^3 . (1 + 5^1 + 5^2 + ... + 5^(k-3))
+= 5^3 . sigma(from n=0 to k-3 of 5^n)
+= 5^3 . 5^(k-3+1)-1/5-1
+= 5^3 . 5^k-2 - 1 / 4
+= 5^k+1 - 125 / 4
 
-28.
+28. 1+1/2+1/2^2+...+1/2^n where n is any positive integer
+= sigma(from i = 0 to n of 1/2^i)
+= 2 - 1/2^n
+
+
+29. 1-2+2^2-2^3+...+(-1)^n.2^n where n is any positive integer
+= sigma (from i=0 to n of -1^n . 2^n)
+ratio = -2
+first term = 1
+max term = n
+
+applying the formula
+= -2^n+1 - 1 / -2 - 1
+= 1-(-2)^n+1/3
+
+
+30. observe that
+
+1/1.3 = 1/3
+1/1.3 + 1/3.5 = 2/5
+1/1.3 + 1/3.5 + 1/5.7 = 3/7
+1/1.3 + 1/3.5 + 1/5.7 + 1/7.9 = 4/9
+
+guess a general formula and prove it by mathematical induction
+my guess: it seems that on each term it works like 1/n (n+2) where the index i jumps by 2
+
+1st -> 1/1.3
+2nd -> 1/3.5
+3rd -> 1/5.7
+
+so 1 -> 3 -> 5 thats a n+2 addition
+and the other one 3 -> 5 -> 7 thats also the same jump which is +2
+
+sigma(from i=1 to n of 1/(2i-1)(2i+1))
+
+prove by mathematical induction
