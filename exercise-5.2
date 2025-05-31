@@ -639,6 +639,63 @@ my guess: it seems that on each term it works like 1/n (n+2) where the index i j
 so 1 -> 3 -> 5 thats a n+2 addition
 and the other one 3 -> 5 -> 7 thats also the same jump which is +2
 
-sigma(from i=1 to n of 1/(2i-1)(2i+1))
+sigma(from i=1 to n of 1/(2i-1)(2i+1)) = n/2n+1
 
 prove by mathematical induction
+
+First, we need to show that for ever integer n>=1, p(1) is true
+left hand side -> sigma(from i=1 to 1 of 1/(2.1-1)(2.1+1)) = 1/3
+right hand side -> n/2n+1 = 1/2+1 = 1/3
+
+
+next we must show that for every integer k>=1, if p(k) is true, then p(k+1) is true
+p(k) -> sigma(from i=1 to k of 1/(2i-1)(2i+1)) = k/2k+1
+p(k+1) -> sigma(from i=1 to k+1 of 1/(2i-1)(2i+1)) = k+1/2(k+1)+1
+
+LHS of p(k+1)
+sigma(from i=1 to k+1 of 1/(2i-1)(2i+1))
+= sigma(from i=1 to k of 1/(2i-1)(2i+1)) + 1/(2k+1)(2k+3)
+= k/2k+1 + 1/(2k+1)(2k+3)
+= k+1/2k+3
+
+RHS of p(k+1)
+= k+1/2(k+1)+1
+= k+1/2k+3
+
+therefore left and right side is euqla
+
+31. compute the values of the product 
+
+(1+1/1)(1+1/2)(1+1/3)...(1+1/n)
+
+for small values n in order to conjecture a general formula for the product
+prove your conjecture by mathematical induction
+n = 1 -> p(1) = 1+1/1 = 2
+n = 2 -> p(2) = 1+1/1 . 1+1/2 = 2 . 3/2 = 3
+n = 3 -> p(3) = 1+1/1 . 1+1/2 . 1+1/3 =  3 . 4/3 = 4
+
+let n = 5
+generalized guess formula:
+pi(from i = 1 to n of 1+1/i) = n + 1
+prove by mathematical induction
+
+First, we need to show that for ever integer n>=1, p(1) is true
+left hand side -> sigma(from i=1 to 1 of 1/(2.1-1)(2.1+1)) = 1/3
+right hand side -> n/2n+1 = 1/2+1 = 1/3
+
+
+next we must show that for every integer k>=1, if p(k) is true, then p(k+1) is true
+p(k) -> sigma(from i=1 to k of 1/(2i-1)(2i+1)) = k/2k+1
+p(k+1) -> sigma(from i=1 to k+1 of 1/(2i-1)(2i+1)) = k+1/2(k+1)+1
+
+LHS of p(k+1)
+sigma(from i=1 to k+1 of 1/(2i-1)(2i+1))
+= sigma(from i=1 to k of 1/(2i-1)(2i+1)) + 1/(2k+1)(2k+3)
+= k/2k+1 + 1/(2k+1)(2k+3)
+= k+1/2k+3
+
+RHS of p(k+1)
+= k+1/2(k+1)+1
+= k+1/2k+3
+
+therefore left and right side is euqla
