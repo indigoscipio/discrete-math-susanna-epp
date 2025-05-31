@@ -680,22 +680,61 @@ pi(from i = 1 to n of 1+1/i) = n + 1
 prove by mathematical induction
 
 First, we need to show that for ever integer n>=1, p(1) is true
-left hand side -> sigma(from i=1 to 1 of 1/(2.1-1)(2.1+1)) = 1/3
-right hand side -> n/2n+1 = 1/2+1 = 1/3
-
+left hand side -> pi(from i = 1 to n of 1+1/i) = pi(from i = 1 to 1 of 1+1/1) = 1+1/1 = 2
+right hand side -> n + 1 = 1+1 = 2
 
 next we must show that for every integer k>=1, if p(k) is true, then p(k+1) is true
-p(k) -> sigma(from i=1 to k of 1/(2i-1)(2i+1)) = k/2k+1
-p(k+1) -> sigma(from i=1 to k+1 of 1/(2i-1)(2i+1)) = k+1/2(k+1)+1
+p(k) -> pi(from i = 1 to k of 1+1/i) = k + 1
+p(k+1) -> pi(from i = 1 to k+1 of 1+1/i) = (k+1) + 1
 
 LHS of p(k+1)
 sigma(from i=1 to k+1 of 1/(2i-1)(2i+1))
-= sigma(from i=1 to k of 1/(2i-1)(2i+1)) + 1/(2k+1)(2k+3)
-= k/2k+1 + 1/(2k+1)(2k+3)
-= k+1/2k+3
+= pi(from i = 1 to k of 1+1/i) . 1+1/k+1
+= k+1 . 1+1/k+1
+= k + 2
 
 RHS of p(k+1)
-= k+1/2(k+1)+1
-= k+1/2k+3
+= (k+1) + 1
+= k + 2
 
-therefore left and right side is euqla
+32. observe that
+1 = 1
+1 - 4 = -(1+2)
+1-4+9 = 1+2+3
+1-4+9-16 = -(1+2+3+4)
+1-4+9-16+25 = 1+2+3+4+5
+
+guess a general formual and prove it by mathematical induction
+my guess:
+
+it seems that on each term increase
+the left hand side either adds or subtracts so it alternates
+the left hand side's number seems to be a square exponent (1^2, 2^2, 3^3, 4^2...)
+for n= 2,4,6 the number becomes negative
+for n = 1,3,5 the number becomes positive
+
+the right hand side does not have an exponent but it does have a similar alternating sign (positive or negative)
+for n = 1,3,5, the whole thing is bracketed by a positive number
+for n = 2,4,6, the whole thing is bracketed by a negative number
+
+generalized formula
+sigma(from n = 1 to k of (-1)^n-1 . n^2 ) =  -1^n-1 . n(n+1)/2
+
+
+First, we need to show that for ever integer n>=1, p(1) is true
+left hand side -> pi(from i = 1 to n of 1+1/i) = pi(from i = 1 to 1 of 1+1/1) = 1+1/1 = 2
+right hand side -> n + 1 = 1+1 = 2
+
+next we must show that for every integer k>=1, if p(k) is true, then p(k+1) is true
+p(k) -> pi(from i = 1 to k of 1+1/i) = k + 1
+p(k+1) -> pi(from i = 1 to k+1 of 1+1/i) = (k+1) + 1
+
+LHS of p(k+1)
+sigma(from i=1 to k+1 of 1/(2i-1)(2i+1))
+= pi(from i = 1 to k of 1+1/i) . 1+1/k+1
+= k+1 . 1+1/k+1
+= k + 2
+
+RHS of p(k+1)
+= (k+1) + 1
+= k + 2
