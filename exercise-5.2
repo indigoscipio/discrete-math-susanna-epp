@@ -720,21 +720,125 @@ for n = 2,4,6, the whole thing is bracketed by a negative number
 generalized formula
 sigma(from n = 1 to k of (-1)^n-1 . n^2 ) =  -1^n-1 . n(n+1)/2
 
-
 First, we need to show that for ever integer n>=1, p(1) is true
-left hand side -> pi(from i = 1 to n of 1+1/i) = pi(from i = 1 to 1 of 1+1/1) = 1+1/1 = 2
-right hand side -> n + 1 = 1+1 = 2
+left hand side -> sigma(from n = 1 to k of (-1)^n-1 . n^2 ) = -1^0 . 1^2 = 1
+right hand side -> -1^n-1 . n(n+1)/2 = 1(1+1)/2 = 2/2 = 1
 
 next we must show that for every integer k>=1, if p(k) is true, then p(k+1) is true
-p(k) -> pi(from i = 1 to k of 1+1/i) = k + 1
-p(k+1) -> pi(from i = 1 to k+1 of 1+1/i) = (k+1) + 1
+p(k) -> sigma(from n = 1 to k of (-1)^n-1 . n^2 ) =  -1^k-1 . k(k+1)/2
+p(k+1) -> sigma(from n = 1 to k+1 of (-1)^n-1 . n^2 ) =  -1^(k+1)-1 . k+1((k+1)+1)/2
 
 LHS of p(k+1)
-sigma(from i=1 to k+1 of 1/(2i-1)(2i+1))
-= pi(from i = 1 to k of 1+1/i) . 1+1/k+1
-= k+1 . 1+1/k+1
-= k + 2
+sigma(from n = 1 to k+1 of (-1)^n-1 . n^2 )
+=  sigma(from n = 1 to k of (-1)^n-1 . n^2) + (-1)^(k+1)-1 . (k+1)^2
+= -1^k-1 . k(k+1)/2 + (-1)^(k+1)-1 . (k+1)^2
+= -1^k . (k+1)(k+2)/2
 
 RHS of p(k+1)
-= (k+1) + 1
-= k + 2
+-1^(k+1)-1 . k+1((k+1)+1)/2
+= -1^k . (k+1)(k+2)/2
+
+33. find a formula in n,a,m, and d for the sum
+(a + md) + (a + (m+1) d) + (a + (m+2) d) + ... + (a + (m+n) d)
+where m and n are integers n>=0, and a and d are real numbers.
+justify your answer
+
+
+my generalized guesss formula
+sigma( from i = 0 to k of (a + (m+i) d)) = n/2(a1+an)
+
+34. find a formula in a,r,m and n for the sum
+
+ar^m + ar^m+1 + ar^m+2 + ... + ar^m+n
+
+where m and n are integers, n >= 0 and a and r are real numbers. justify your answer
+
+my generalized guess formual
+sigma(from i = 0 to n of ar^m+i) = ...
+lets try to figure out the sum
+
+i = 0 -> ar^m+0 = ar^m
+i = 1 -> ar^m+1 = ar^m+1
+i = 2 -> ar^m+1 = ar^m+2
+
+ratio = ar^m+1 / ar^m = r
+first term = ar^m
+number of terms = n
+
+on each term the exponent adds 1
+
+applying the formula
+s = a(n+1) if r = 1
+s = ar^m . r(n+1)-1/r-1 if r does not equal 1
+
+35. you have two parents, four grandparents, eight great grandparents, and so forth
+a. If all your ancestors were distinct, what would 
+be the total number of your ancestors for the 
+past 40 generations (counting your parents’ gen
+eration as number one)? (Hint: Use the formula 
+for the sum of a geometric sequence.)
+
+parents = 2
+grandparents = 4
+great grandparents = 8
+
+total num of ancestors = 2+4+8+16+...+2^n
+= 2 (1+2 +2^2+...+2^39)
+ratio = 2
+total generations (n) = 40
+
+total sum of ancestors = r^n+1 - 1 / r - 1
+= 2 (2^40-1) = 2^41-2
+
+
+b. Assuming that each generation represents 
+25 years, how long is 40 generations?
+
+c. The total number of people who have ever lived 
+is approximately 10 billion, which equals 1010 
+people. Compare this fact with the answer to 
+part (a). What can you deduce?
+
+ Find the mistakes in the proof fragments in 36–38.
+
+36. Theorem: For any integer n>=1 
+
+1^2+2^2+...+n^2 = n(n+1)(2n+1)/6
+
+ “Proof (by mathematical induction): Certainly 
+the theorem is true for n = 1 because 1^2 = 1 and
+1(1+1)(2.1+1)/6 = 1
+
+So the basis step is true. For the inductive step, suppose that k is any integer with 
+k>=1, k^2 = k(k+1)(2k+1)/6.
+
+we must show that (k+1)^2 = (k+1)((k+1)+1)(2(k+1)+1)/6
+
+answer: it seems the proof correclty proves the basis for p(1) for n>=1
+the mistake here is during the inductive step. it equates only the last term of the sequence (LHS) to the RHS
+when it should include the whole sequence, so it should be 
+p(k) -> 1^2 + 2^2 + ... + n^2 = k(k+1)(2k+1)/6
+
+and for the k+1
+p(k+1) -> 1^2 + 2^2 + ... + k^2 + (k+1)^2 = (k+1)((k+1)+1)(2(k+1)+1)/6
+it forgots to add the sequence before last term
+
+37. Theorem: for any integer n>=0 ,
+1+2+2^2+...+2^n = 2^n+1 - 1
+
+proof by mathematical induction
+let the property p(n) be
+
+1+2+2^2 + ... + 2^n = 2^n+1 - 1
+
+show that p(0) is true
+the left hand side of p(0) is 1 + 2 + 2^2 + ... + 2^0 = 1
+and the right hand side is 2^0+1 - 1 = 2 - 1 = 1 also
+so p(0) is true
+
+answer: the mistake occurs when it tries to prove p(0) in the left hand side
+it just equates the whole sequence from the given statement to 1 instead of proving it
+so it should just prove p(0) -> 2^0 = 1 instead of 1 + 2 + ... + 2^0 = 1 
+and compare if the right and left side is both equal before moving to the inductive step
+
+38. theorem: for 
