@@ -841,4 +841,23 @@ it just equates the whole sequence from the given statement to 1 instead of prov
 so it should just prove p(0) -> 2^0 = 1 instead of 1 + 2 + ... + 2^0 = 1 
 and compare if the right and left side is both equal before moving to the inductive step
 
-38. theorem: for 
+38. theorem: for any integer n>=1
+sigma(from i = 1 to n of i(i!)) = (n+1)! - 1
+proof by mathematical induction: let the property
+
+p(n) be sigma(from i = 1 to n of i(i!)) = (n+1)! - 1
+
+show that when p(1) is true: when n = 1
+
+sigma(from i = 1 to i of i(i!)) = (1+1)! - 1
+
+so 1(1!) = 2! - 1
+and 1 = 1
+ths p(1) is true
+
+answer: the mistake occurs when proving p(1) is true when n = 1
+it mistakenly writes sigma(from i = 1 to i of ...) instead of sigma(from i = 1 to 1 of ...)
+
+39. Use Theorem 5.2.1 to prove that if m and n are any 
+positive integers and m is odd, then sigma(from k = 0 to m-1 of n + k) is divisible by m
+Does the conclusion hold if m is even? justify you ansewr
