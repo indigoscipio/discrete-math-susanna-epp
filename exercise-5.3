@@ -128,15 +128,79 @@ that describes the ollowing divisibility property
 
 a. write p(0), is p(0) true?
 
-p(0) -> 5^0 - 1 = 1 - 1 = 0
+p(0) -> 5^0 - 1 is divisible by 4
+0 is divisibile by 4
 therefore p(0) is true
 
 b. write p(k)
-p(k) -> 5^k - 1
+p(k) -> 5^k - 1 is divisible by 4
+5^k-1 = 4r
+5^k = 4r+1
 
 c. write p(k+1)
-p(k+1) = 5^k+1 - 1
+p(k+1) = 5^k+1 - 1 is divisible by 4
 
 d. in a proof by mathematical induction that this divisibility property holds for every integer n>=0
 what must be shown in the inductive step?
 
+we must show that p(k+1) is divisibile by 4
+
+an integer m is divisile by 4 if and only if m = 4r for some integer r
+
+p(k+1) -> 5^k+1 - 1
+= 5^k . 5 - 1
+= (4r+1) . 5 - 1
+= 20r+5 - 1
+= 20r + 4
+= 4 (5r + 1)
+
+since p(k+1) has the form of 4 . some integer therefore it's divisible by 4
+
+
+5. for each positive integer n, let p(n) be the inequality
+
+2^n < (n+1)!
+
+a. write p2. is p(2) true?
+
+b. write p(k)
+
+c. write p(k+1)
+
+d. in a proof by mathematical induction that this divisibility property holds for every integer n>=2
+what must be shown in the inductive step?
+
+6. For each positive integer n, let P(n) be the sentence
+ Any checkerboard with dimensions 2 x 3n can be completely covered with L-shaped trominoes.
+
+a. Write P(1). Is P(1) true?
+b. Write P(k).
+c. Write P(k+1).
+d. In a proof by mathematical induction that P(n) 
+
+is true for each integer n $ 1, what must be 
+shown in the inductive step? 
+
+
+7. For each positive integer n, let P(n) be the sentence
+
+In any round-robin tournament involving n 
+teams, the teams can be labeled T1, T2, T3, ... , Tn, 
+so that Ti beats Ti+1 for every i = 1,2,...,n
+
+a. Write P(2). Is P(2) true?
+b. Write P(k).
+c. Write P(k+1).
+d. In a proof by mathematical induction that P(n) 
+is true for each integer n >= 2, what must be 
+shown in the inductive step? 
+
+prove each statement in 8 - 23 by mathematical induction
+
+8. 5^n-1 is divisible by 4, for every integer n>= 0
+
+9. 7^n-1 is divisible by 6, for each integer n>= 0
+
+10. n^3 - 7n + 3 is divisible by 3, for each integer n>= 0
+
+11. 
