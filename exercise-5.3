@@ -62,9 +62,9 @@ k postage cents can be obtained using 3cent and 7cent stamps
 [we must show that p(k+1) is true] we must show that
 
 k+1 cent can be obtained using 3c and 7c coints
-case 1:
-there is a 7c coin among those used to make up the kc
-??? how do i get to 7c+1?
+case 1
+if the k cent of postage includes at least 2 3cent stamp
+we can replace it with one 7c stamp to get k+1
 
 case 2:
 there is a not a 7c coin among those used to make up the kc
@@ -95,6 +95,11 @@ by buying a collection of 5 stamp packages and 8 stamp packages
 
 for every integer  n>=28, n stamps can be obtained by buying a collection of 5stamp and 8stamp packages
 
+base case
+we must show that p(28) is true for integer n >=28
+28 = 4x 5stamps + 1x 8stamps
+therefore p(28) is true
+
 [suppose that p(k) is true for a particular but arbitrarily chosen integer k>=28. that is]
 Suppose that k is any integer with k>= 28 such that
 
@@ -105,15 +110,15 @@ k stamps can be obtained by buying a collection of 5stamp and 8stamp packages
 k+1 stamps can be obtained by buying a collection of 5stamp and 8stamp packages
 
 case 1:
-there is a 8stamp package among those who make up the k stamp
-???
+k stamps include at least 3x 5 stamp package
+take out 3x 5stamp package and replace it with 2x 8stamp package to achieve k+1
 
 case 2:
-there is not 8stamps package among those who make up k stamp
-since k >=28 there must be at least 6x 5stamp
-to achieve k+1 we can replace 3x 5stamp with 2x 8stamp
-
-
+if case1 doesn't apply (we only have 0x,1x, or 2x 5stamps) we must have enough n x 8stamp package
+the maximum amount of 5x stamp in this case is 2x 5stamp
+since k>=28, the remaining stamp must come from 28-10 = 18 stamps
+since 18 > 2x8 = 18 > 16 this means mwe must have at least 3 8stamp package  because 3x8 = 24
+take out 3x8stmap package and repalce them with 5x5stamp = 25 stamps to achieve k+1
 
 
 4. for each positive integer n, let p(n) be the sentence
@@ -122,7 +127,16 @@ that describes the ollowing divisibility property
 5^n - 1 is divisible by 4
 
 a. write p(0), is p(0) true?
+
+p(0) -> 5^0 - 1 = 1 - 1 = 0
+therefore p(0) is true
+
 b. write p(k)
+p(k) -> 5^k - 1
+
 c. write p(k+1)
+p(k+1) = 5^k+1 - 1
+
 d. in a proof by mathematical induction that this divisibility property holds for every integer n>=0
 what must be shown in the inductive step?
+
