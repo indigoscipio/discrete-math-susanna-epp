@@ -163,23 +163,66 @@ since p(k+1) has the form of 4 . some integer therefore it's divisible by 4
 
 a. write p2. is p(2) true?
 
+p(2) -> 2^2 < (2+1)!
+= 4 < 3!
+= 4 < 3.2.1
+= 4 < 6
+therefore p(2) is true
+
 b. write p(k)
+p(k) -> 2^k < (k+1)!
 
 c. write p(k+1)
+p(k+1) -> 2^k+1 < (k+2)!
 
 d. in a proof by mathematical induction that this divisibility property holds for every integer n>=2
 what must be shown in the inductive step?
 
+we must show that for every integer k>=2, if p(k) is true then p(k+1) is also true
+
+inductive hypothesis: 2^k < (k+1)!
+
+we must show p(k+1) is true
+we must show 2^k+1 < (k+2)!
+
+2^k+1 < (k+2)!
+= 2^k . 2
+= (k+1)! . 2 < (k+2)(k+1)!
+= 2 < k + 2
+
+since k >= 2 therefore the inequality is true
+
+
 6. For each positive integer n, let P(n) be the sentence
- Any checkerboard with dimensions 2 x 3n can be completely covered with L-shaped trominoes.
+Any checkerboard with dimensions 2 x 3n can be completely covered with L-shaped trominoes.
 
 a. Write P(1). Is P(1) true?
-b. Write P(k).
-c. Write P(k+1).
-d. In a proof by mathematical induction that P(n) 
+p(1) -> Any checkerboard with dimensions 2 x 3 can be completely covered with L-shaped trominoes.
+this is true because a trominoe can cover at least 2x2 checkerboard
 
-is true for each integer n $ 1, what must be 
+b. Write P(k).
+p(k) ->  Any checkerboard with dimensions 2 x 3k can be completely covered with L-shaped trominoes.
+
+c. Write P(k+1).
+p(k+1) ->  Any checkerboard with dimensions 2 x 3k+1 can be completely covered with L-shaped trominoes.
+
+d. In a proof by mathematical induction that P(n) is true for each integer n >= 1, what must be 
 shown in the inductive step? 
+
+we must show that for every integer k>=2, if p(k) is true then p(k+1) is also true
+
+inductive hypothesis: Any checkerboard with dimensions 2 x 3k can be completely covered with L-shaped trominoes.
+
+we must show p(k+1) is true
+we must show Any checkerboard with dimensions 2 x 3k+1 can be completely covered with L-shaped trominoes.
+
+consider a 2x 3k+1 checkerboard. since one trominoe 3 covers square grid then the checkerboard is needs to be
+divisible by 3
+
+at a minimum 2 x 3 = 6 total cell, which means the whole checkerboard can be filled with trominoes isnce 6 is divisible by 3
+2 x 4 = 8 ?????
+
+
 
 
 7. For each positive integer n, let P(n) be the sentence
