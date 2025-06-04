@@ -204,7 +204,8 @@ b. Write P(k).
 p(k) ->  Any checkerboard with dimensions 2 x 3k can be completely covered with L-shaped trominoes.
 
 c. Write P(k+1).
-p(k+1) ->  Any checkerboard with dimensions 2 x 3k+1 can be completely covered with L-shaped trominoes.
+p(k+1) ->  Any checkerboard with dimensions 2 x 3(k+1) can be completely covered with L-shaped trominoes.
+= 2 x 3k + 3
 
 d. In a proof by mathematical induction that P(n) is true for each integer n >= 1, what must be 
 shown in the inductive step? 
@@ -214,15 +215,16 @@ we must show that for every integer k>=2, if p(k) is true then p(k+1) is also tr
 inductive hypothesis: Any checkerboard with dimensions 2 x 3k can be completely covered with L-shaped trominoes.
 
 we must show p(k+1) is true
-we must show Any checkerboard with dimensions 2 x 3k+1 can be completely covered with L-shaped trominoes.
+We must show that any checkerboard with dimensions 2 × 3(k+1) = 2 × (3k + 3) can be covered.
 
-consider a 2x 3k+1 checkerboard. since one trominoe 3 covers square grid then the checkerboard is needs to be
-divisible by 3
+A 2×3 rectangle has 6 squares, and each L-shaped tromino covers 3 squares
+so you need 2 trominoes to fill that section—and it can be done.
 
-at a minimum 2 x 3 = 6 total cell, which means the whole checkerboard can be filled with trominoes isnce 6 is divisible by 3
-2 x 4 = 8 ?????
+First take the already covered 2x3k board
+attach one more 2x3 section to the right
+this gives extra 2x3 which can be covered by 2 l shaped trominoes
 
-
+thus 2x3(k+1) can be filed
 
 
 7. For each positive integer n, let P(n) be the sentence
@@ -232,18 +234,124 @@ teams, the teams can be labeled T1, T2, T3, ... , Tn,
 so that Ti beats Ti+1 for every i = 1,2,...,n
 
 a. Write P(2). Is P(2) true?
+
+In any round-robin tournament involving n 
+teams, the teams can be labeled T1, T2, 
+so that Ti beats Ti+1 for every i = 1,2
+
 b. Write P(k).
+In any round-robin tournament involving n 
+teams, the teams can be labeled T1, T2, T3, ... , Tk, 
+so that Ti beats Ti+1 for every i = 1,2,...,k
+
 c. Write P(k+1).
+In any round-robin tournament involving n 
+teams, the teams can be labeled T1, T2, T3, ... , Tk+1, 
+so that Ti beats Ti+1 for every i = 1,2,...,k+1
+
 d. In a proof by mathematical induction that P(n) 
 is true for each integer n >= 2, what must be 
 shown in the inductive step? 
+
+
+we must show that for every integer k>=2, if p(k) is true then p(k+1) is also true
+
+In any round-robin tournament involving n 
+teams, the teams can be labeled T1, T2, T3, ... , Tk+1, 
+so that Ti beats Ti+1 for every i = 1,2,...,k+1
+
+lets say we have k+1 teams, pick one team and call it x
+insert x at the begininng
+
+case 1: x beats T1
+x,t1,t2, ..., tk
+
+case 2: x loses to Tk
+insert it at the end
+t1,t2,..., tk, x
+
+case 3: otherwise insert at the middle
+ti x -> 1i+1
+
 
 prove each statement in 8 - 23 by mathematical induction
 
 8. 5^n-1 is divisible by 4, for every integer n>= 0
 
+base case
+p(0) -> 5^n-1 is divisible by 4
+= 5^n - 1
+= 5^0 - 1
+= 1 - 1 = 0
+is 0 divisible by 4? yes, therefore p(0) is true
+
+inductive step
+p(k) -> 5^k - 1 is divisible by 4
+5^k - 1 = 4r
+5^k = 4r + 1
+
+p(k+1) -> 5^k+1 - 1
+
+we must show p(k+1) is true
+= 5^k+1 - 1
+= 5^k . 5 - 1 
+= (4r + 1) . 5 - 1 
+= 20r + 5 - 1
+= 20r + 4
+= 4(5r + 1)
+
+since it has the form of 4  . some integer therefore p(k+1) is divisible by 4
+
+
 9. 7^n-1 is divisible by 6, for each integer n>= 0
+
+base case
+p(0) -> 7^n - 1
+= 6^0 - 1
+= 1 - 1 = 0
+is 0 divisible by 6 ? yes, therefore p(0) is true
+
+inductive step
+p(k) -> 7^k - 1 is divisible by 6
+7^k - 1 = 6r
+7^k = 6r + 1
+
+p(k+1) -> 7^k+1 - 1 is divisibile by 6
+
+we must show that p(k+1) is true
+7^k+1 - 1
+= 7^k . 7 - 1
+= (6r + 1) . 7 - 1
+= (42r + 7) - 1
+= 42r + 6
+= 6 (7r + 1)
+
+since it has the form 6 . some integer therefore p(k+1) is divisisble by 6
 
 10. n^3 - 7n + 3 is divisible by 3, for each integer n>= 0
 
-11. 
+base case
+p(0) ->  n^3 - 7n + 3
+0^3 - 7.0 + 3
+0 - 0 + 3
+= 3
+
+is 3 divisible by 3 ? yes, therefore p(0) is true
+
+inductive step
+p(k) ->  k^3 - 7k + 3
+k^3 - 7k + 3 = 3r
+
+we must show that p(k+1) is true
+p(k+1) -> (k+1)^3 - 7(k+1) + 3 is divisible by 3
+= k^3 + k^2 + 3k + 1 - 7 (k+1) + 3
+= k^3 + 3k^2 + 3k + 1 - 7k - 7 + 3
+= (k^3 - 7k + 3) + 3k^2 + 3k - 6
+= 3r + 3k^2 + 3k - 6
+= 3(r+k^2+k-2)
+
+thefore p(k+1) is divisble by 3 since it has the form 3 . some integer
+
+11. 3^2n - 1 is divisble for each integer n>= 0
+
+base case: 
