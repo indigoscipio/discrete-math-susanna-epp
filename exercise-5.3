@@ -525,15 +525,79 @@ true, therefore p(0) is true
 inductive step
 p(k) -> 1 + 3n <= 4^n
 1 + 3k <= 4^k
-3k <= 4^k -1
+3k <= 4^k - 1
 
 p(k+1) -> 1 + 3(k+1) <= 4^(k+1)
+1 + 3(k+1) + 3 <= 4^k . 4^1
+3k + 4 <= (4^k - 1) + 4
+3k + 4 <= 4^k + 3
 
+since we showed
+1 + 3(k+1) + 3 <= 4^k + 3 (by using inductive hypothesis p(k))
+and 4^k + 3 <= 4k+1
 
+therefore by transitivity we can conclude 1+3(k+1) <= 4^k+1
 
 18. 5^n + 9 < 6^n for each integer n>= 2
 
+base case p(2)
+5^2 + 9 < 6^2
+25 + 9 < 36
+34 < 36
+therefore p(2) is true
+
+inductive step
+p(k) -> 5^k + 9 < 6^k for each integer n>= 2
+5^k < 6^k - 9
+
+p(k+1) -> 5^(k+1) + 9 < 6^(k+1)
+we must show that p(k+1) is true
+
+5^(k+1) + 9 < 6^(k+1)
+5^(k+1) + 9 < 6^(k+1)
+= 5^(k+1) + 9 < (6^k - 9) . 5 + 9 
+
+ intermediate inequality:
+= 5^(k+1) + 9 < 5.6^k - 36
+
+we need to show 5.6^k - 36 is less than  6^(k+1)
+5.6^k - 36 <  6^(k+1)
+5.6^k - 36 < 6.6^k
+subtract 5.6^k from both sides
+-36 < 6^k
+
+since k >= 2 we know that at a minimum -36 is less than 6^2=36
+therefore this is true
+
+
 19. n<2^n for every integer n>= 5
+base case: p(5)
+5<2^5
+5<2.2.2.2.2
+5< 32
+therefore p(5) is true
+
+inductive step
+p(k) -> k<2^k
+
+p(k+1) -> k+1 < 2^(k+1)
+
+we need to show that p(k+1) is true
+
+k+1 < 2^(k+1)
+k+1 < 2^k . 2
+
+we know from the inductive step that k<2^k
+multiply both sides by 2
+2k < 2^k . 2
+2k < 2^(k+1)
+
+now we need to show that k+1 < 2^(k+1)
+
+ k+1 < 2^(k+1)
+ we know that k<2^k
+1 <= k
+
 
 20. 2^n < (n+2)! for each integer n>= 0
 
