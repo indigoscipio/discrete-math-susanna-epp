@@ -494,9 +494,42 @@ since it has the form of 6 . some integer therefore p(k+1) is divisible by 6
 
 16. 2^n < (n+1)!, for every integer n>= 2
 
+base case: p(2)
+2^2 < (2+1)!
+4 < 3!
+4 < 6
+true, therefoer p(2) is true
+
+inductive step
+
+p(k) -> 2^k < (k+1)!
+
+p(k+1) -> 2^k+1 < (k+2)!
+2^k . 2^1 < (k+2)!
+= (k+1)! . 2^1 < (k+2)!
+= (k+1)! . 2^1 < (k+2) (k+1)!
+= 2 < (k+2)
+
+since we know k is >= 2, therefore 2 is less than k+2
+therefore the statement is true
 
 
 17. 1 + 3n <= 4^n, for every integer n>= 0
+
+base case = p(0)
+
+1 + 3.0 <= 4^0
+1 <= 1
+true, therefore p(0) is true
+
+inductive step
+p(k) -> 1 + 3n <= 4^n
+1 + 3k <= 4^k
+3k <= 4^k -1
+
+p(k+1) -> 1 + 3(k+1) <= 4^(k+1)
+
+
 
 18. 5^n + 9 < 6^n for each integer n>= 2
 
