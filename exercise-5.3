@@ -596,12 +596,46 @@ now we need to show that k+1 < 2^(k+1)
 
  k+1 < 2^(k+1)
  we know that k<2^k
-1 <= k
 
 
 20. 2^n < (n+2)! for each integer n>= 0
 
+base case: p(0)
+
+2^0 < 2!
+1 < 2
+true, therefore p(0) is true
+
+inductive step
+p(k) -> 2^k < (k+2)!
+
+p(k+1) -> 2^(k+1) < (k+3)!
+we must show that p(k+1) is true
+
+2^k . 2 < (k+3)!
+
+since we know 2^k < (k+2)! lets multiple both sides of inequality by 2
+2^k . 2 < (k+2)! . 2
+2^(k+1) < (k+2)! . 2
+
+the goal is to show that 2^(k+1) < (k+3)! - this is from our inductive hyphothesis p(k+1)
+how do we do that??
+
+we need to show that (k+2)! . 2 < (k+3)!
+= (k+2)! . 2 < (k+3) . (k+2)!
+= 2 < (k+3)
+
+since we know that at a minimum k >= 0, the right hand side is always 0+3 = 3 (or it will always be 3 or greater)
+therefore 2 < 3
+
+thus 2 <  k + 3 is always true for k >= 0
+conclusio: since 2^(k+1) < (k+2)! AND (k+2)! < (k+3)! by transitivity we conclude that 2^(k+1) < (k+3)!
+
+
+
 21. sqrt(n) < 1/ sqrt(1) + 1/sqrt(2) + ... + 1/sqrt(n) for every integer n>= 2
+
+
 
 22. 1 + nx <= (1+x)^n for every real number x > -1 and every integer n>= 2
 
