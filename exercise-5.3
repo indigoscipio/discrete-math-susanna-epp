@@ -657,8 +657,32 @@ substitute inductive hypothesis into RHS of p(k+1)
 
 
 22. 1 + nx <= (1+x)^n for every real number x > -1 and every integer n>= 2
-base case: p(2)
+base case: p(2) and x -1
+1 + 2x <= (1+x)^2
+1 + 2x <= 1+2x+x^2
+subtract 1 + 2x from both side
+0 <= x^2
+is 0 <= x^2 true for every real number x > -1?
+yes the square of real number is always greater or equal to 0, therefore p(0) is true
 
+inductive hyphothesis p(k)
+assume for some integer k >= 2 the inequality:
+1 +  kx <= (1+x)^k
+for every real number k> -1
+
+inductive step p(k+1)
+we must show that 1 + (k+1)x <= (1+x)^(k+1)
+
+= 1 + (k+1)x <= (1+x)^k . (1+x)
+
+we know from p(k) that 1 + kx <= (1+x)^k
+then we can substitute the RHS of p(k+1) from p(k)
+since we know x > 1 = 1 + x > 0
+
+(1 + kx ) . (1+x) <= (1+x)^k . (1+x) 
+= 1 + (k+1)x + kx^2 <= (1+x)^(k+1)
+
+we need to show 1 + (k+1)x <=
 
 
 23. a. n^3 > 2n+1 for each integer n>=2 
