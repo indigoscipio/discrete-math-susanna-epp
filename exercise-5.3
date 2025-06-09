@@ -728,11 +728,76 @@ base case: p(4)
 24 > 16
 therefore p(4) is true
 
+inductive hyphothesis
+
+p(k) -> k! > k^2
+
+p(k+1) -> k+1! > (k+1)^2
+we must show that p(k+1) is true
+
+(k+1) . k! > (k+1)^2
+since we know k! > k^2 from p(k) we can substitute this the the equation
+add (k+1) to both sides of the equation
+(k+1) . k! > (k+1) . (k^2)
+= k+1! > (k+1) . (k^2)
+
+now we need to show that (k+1) . (k^2) > (k+1)^2
+= (k+1) . (k^2) > (k+1) . (k+1)
+
+divide both sides by (k+1)
+= (k^2) > (k+1)
+
+since we know k is greater than or equal to 4, at a minimum the value is
+4^2 > 4+1
+= 16 > 5
+
+and since k+1! > (k+1) . (k^2) and (k+1) . (k^2) > (k+1)^2
+therefore the equality is true
 
 
-
-
-
-24. a sequence a1,a2,a3... is defined by letting a sub 1 = 3, and a sub k = 7a sub k-1
+24. a sequence a1,a2,a3... is defined by letting a1 = 3, and ak = 7a(k-1)
 for each integer k>=2.
-show that a sub n = 3 . 7^n-1 for every integer k>= 1
+show that an = 3 . 7^n-1 for every integer k>= 1
+
+a1 = 3
+a2 = 7a(2-1) = 7a1 = 7.3 = 21
+a3 = 7a(3-1) = 7a2 = 7.21 = 147
+a4 = 7a(4-1) = 7a3 = 7.147 = 1029
+
+proof (by mathematical induction)
+let a1, a2, a3, ... be the sequence defined by specifying that a1 = 2, and ak = 7a(k-1)
+for every integer k>=2 , and let the property p(n) be the equation
+
+p(n) -> an = 3 . 7^(n-1)
+
+we will use mathematical induction to prove that for every intger n>=1, p(n) is true
+
+step 1: show that p(1) is true
+
+LHS of p(1) -> a1 = 3
+RHS of p(1)
+= 3 . 7^(1-1)
+= 3 . 7^0
+= 3
+
+therefore the two sides are equal hence p(1) is true
+
+step 2: show that for each integer k>=1, if p(k) is true, then p(k+1) is also true
+
+p(k) -> ak = 3 . 7^(k-1)
+
+we must show that p(k+1) is true
+
+p(k+1) -> a(k+1) = 3.7^k
+
+a(k+1) = 7a(k+1-1)
+a(k+1) = 7ak
+a(k+1) = 7 . (3 . 7^(k-1))
+a(k+1) = 3 . (7.7^(k-1))
+a(k+1) = 3 . 7^(k-1+1)
+a(k+1) = 3 . 7^k
+
+by the principle of mathematical induction, since the base case is true and inductive p(k) and p(k+1) is true,
+therefore the expression is true
+
+
