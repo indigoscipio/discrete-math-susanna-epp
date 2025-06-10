@@ -820,10 +820,106 @@ therefore p(0) is true
 
 step 2: show that for each integer k>=1, if p(k) is true, then p(k+1) is also true
 
-p(k) -> bk > 4k
+p(k) -> bk = 4 + b(k-1)
 
 we must show that p(k+1) is true
 
-p(k+1) -> b(k+1) > 4(k+1)
+p(k+1) -> b(k+1) = 4 + b(k+1-1) = 4 + bk
 
 
+p(k+1) > 4(k+1)
+4 + bk > 4k+4
+p(k+1) > 4(k-1) - 4 times some integer
+
+therefore it the expression is true
+
+26. a sequence c0,c1,c2... is defined by letting c0 = 3, and ck = (ck-1)^2
+for each integer k>=1. show that cn = 3^2n for every integer n>= 0
+
+c0 = 3
+c1 = (c1-1)^2 = c0^2 = 9 
+c2 = (c2-1)^2 = c1^2 = 81
+c3 = (c3-1)^2 = c2^2 = 6561
+
+proof (by mathematical induction)
+let c1, c2, c3, ... be the sequence defined by specifying that c0 = 3, and ck = (ck-1)^2
+for each integer k>=1. show that cn = 3^2n for every integer n>= 0
+
+and let the property p(n) be the equation
+
+p(n) -> cn = 3^2n
+
+we will use mathematical induction to prove that for every intger n>=0, p(n) is true
+
+step 1: show that p(0) is true
+
+LHS of p(0) -> c0 = 3 
+RHS of p(0)
+= 3^2.0
+therefore p(0) is true
+
+step 2: show that for each integer k>=1, if p(k) is true, then p(k+1) is also true
+
+p(k) -> ck = 3^2k
+
+we must show that p(k+1) is true
+p(k+1) -> c(k+1) = 3^2(k+1)
+
+c(k+1) = (ck+1-1)^2
+c(k+1) = ck^2
+
+since wek now from inductive hyphothesis p(k) = 3^2k, we can substitute
+c(k+1) = (3^2k)^2
+c(k+1) = 3^2k.2
+c(k+1) = 3^(2k+1)
+
+by the principle of mathematical induction, since the base case is true and inductive p(k) and p(k+1) is true,
+therefore the expression is true
+
+
+27. a sequence d1,d2,d3... is defined by letting d1 = 2, and dk = d(k-1)/k
+for each integer k>=2. show that dn = 2/n! for every integer n>= 1
+
+d1 = 2
+d2 = d(2-1)/2 = d1/2 = 2/2 = 1
+d3 = d(3-1)/3 = d2/3 = 1/3 = 0.333
+d4 = d(4-1)/4 = d3/4 = 0.333/4 = 0.0825...
+
+proof (by mathematical induction)
+let d1, d2, d3, ... be the sequence defined by specifying that d1 = 2, and dk = dk-1/k
+for each integer k>=2. 
+
+p(n) -> dn = 2/n!
+
+we will use mathematical induction to prove that for every intger n>=1, p(n) is true
+
+step 1: show that p(1) is true
+
+LHS of p(1) -> d1 = 2
+RHS of p(1)
+d1 = 2/1!
+d1 = 2/1 = 2
+therefore the base case p(1) is true
+
+step 2: show that for each integer k>=1, if p(k) is true, then p(k+1) is also true
+
+p(k) -> dk = 2/k!
+
+we must show that p(k+1) is true
+
+p(k+1) -> d(k+1) = 2/(k+1)!
+
+since we know from the defitiion of d1,d2,d3,... -> dk = d(k-1)/k
+left hand side of p(k+1) is
+d(k+1) = d(k+1-1)/k+1
+d(k+1) = dk/k+1
+
+but we know from the infudctive hypothesis that  dk = 2/k!
+so 2/k! (k+1)
+by the definition of factorial we can simplify
+2/k+1!
+
+therefore the expression is true [as was to be shown]
+
+by the principle of mathematical induction, since the base case is true and inductive p(k) and p(k+1) is true,
+therefore the expression is true
