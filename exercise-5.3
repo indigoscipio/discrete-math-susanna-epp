@@ -935,6 +935,82 @@ denumerator = (2(1) + (2.1-1)) = 2+1 = 3
 therefore 1/3 = 1/3, the base case p(1) is true
 
 p(k) -> 1+3+5+..+(2k-1) / (2k+1)(2k+3)+...+(2k+(2k-1))
+
+
 p(k+1) -> 1+3+5+..+(2(k+1)-1) / (2(k+1)+1)(2(k+1)+3)+...+(2(k+1)+(2(k+1)-1))
 
+
 we must show that p(k+1) is true
+
+the numerator for p(k+1 )adds one more odd number: (2(k+1)-1) = 2k+2-1 = 2k+1
+the denumerator for p(k+1) adds more terms -> 2k+2+2k+1 = 4k+3
+
+numerator is sum of first n odd number = n^2
+denumerator contains n terms each spaced by 2
+
+1/3 = 2k+1 / (2k+1)(2k+3) ... (4k-1)
+
+exercises 29 and 30 use the definition of string and string 
+length from page 13 in Section 1.4. recursive definitions 
+for these terms are given in Section 5.9.
+
+
+29. A set L consists of strings obtained by juxtaposing 
+one or more of abb, bab, and bba. Use mathemati
+cal induction to prove that for every integer n >= 1, 
+if a string s in L has length 3n, then s contains an 
+even number of b’s.
+
+proof by mathematical induction
+
+base case p(1)
+if a string s in L has length 3, then s contains an even number of b’s.
+abb, bab, and bba - number of bs: 2, 2, 2
+therfore p(1) is true
+
+inductive step p(k)
+if a string s in L has length 3k, then s contains an even number of b’s.
+
+inductive step p(k+1)
+if a string s in L has length 3k+1, then s contains an even number of b’s.
+
+we must show p(k+1) is true
+let x be the set of the given list abb, bab, bba
+every string in L is made by adding one or more fixed length of x
+each of the item in x has length of 3 and each contain 2 letter bs
+
+we can write
+S = t . x where t is a string of length 3k -> by hyphotesi it has even number of b
+
+therefore even (from hyphothesis) + even (from x) = even
+
+30. A set S consists of strings obtained by juxtapos
+ing one or more copies of 1110 and 0111.  
+
+Use mathematical induction to prove that for ev
+ery integer n >= 1, if a string s in S has length 4n, 
+then the number of 1’s in s is a multiple of 3.
+
+base case: p(1)
+If a string s in S has length 4, then the number of 1’s in s is a multiple of 3.
+
+inductive step: p(k)
+If a string s in S has length 4k, then the number of 1’s in s is a multiple of 3.
+
+inductive step: p(k+1)
+If a string s in S has length 4(k+1), then the number of 1’s in s is a multiple of 3.
+
+we must show that p(k+1 is true)
+let x be the set of the given "fixed" strings 1110 and 0111
+every string in S is made by adding one or more copires of x (k + 1)
+each item in x has a length of 4 and contains three number ones
+
+then we can write
+S = t + x
+where t is a string of length 4k (from the hypothesis)
+and x is the two fixed strings (k+1)
+
+S = 3m + 3
+S = 3(m+1)
+
+therefore s has the form 3 . some integer therefore it's a multiple of 3
