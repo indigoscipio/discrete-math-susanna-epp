@@ -1061,4 +1061,37 @@ from 1 through 30 are painted in random order.
 Show that no matter what this order is, there must be 
 three successive integers whose sum is at least 45
 
-45. 
+In order for a proof by mathematical induction to be valid, 
+the basis statement must be true for n = a and the argu
+ment of the inductive step must be correct for every inte
+ger k >= a. In 45 and 46 find the mistakes in the “proofs” 
+by mathematical induction.
+
+45. theorem: for any integer n>= 1, all the numbers in a set of n numbers are equal to each other
+
+ “Proof (by mathematical induction): It is obvi
+ously true that all the numbers in a set consisting 
+of just one number are equal to each other, so 
+the basis step is true. For the inductive step, let 
+A = {a1, a2, a3 , ... , ak+1} be any set of k+1 num
+bers. Form two subsets each of size k:
+
+B = {a1,a2,a3,...,ak} and
+C = {a1,a3,a4,...,ak+1}
+
+answer:
+mistake 1: assuming the basis is true without proving it - It is obvi
+ously true that all the numbers in a set consisting 
+of just one number are equal to each other, so 
+the basis step is true.
+the proof didn't specify how and why p(1) istrue - the basis step
+
+B consists of all the numbers in A except ak+1, 
+and C consists of all the numbers in A except a2.) 
+By inductive hypothesis, all the numbers in B 
+equal a1 and all the numbers in C equal a1 (since 
+both sets have only k numbers). But every number 
+in A is in B or C, so all the numbers in A equal a1; 
+hence all are equal to each other.
+
+
