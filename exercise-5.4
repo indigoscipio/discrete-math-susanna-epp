@@ -84,4 +84,40 @@ since we know from IH that i thorugh k is divisibel by 4, then we can substitute
 = 4q + 4r
 = 4(q+r) where (q+r) is some integer, which fits the form 4 . some integer
 
+3. suppose c1, c2, c3, ... is a sequence defined as follows
+c0 = 2, c1 = 2, c2 = 6
+ck = 3ck-3 for every integer k>=3
+prove that cn is even for each integer n >= 0
 
+answer:
+We will use strong mathematical induction to prove that for every integer n >= 0, 
+P(n) is true.
+
+step 1: show that the base case are true  p(0) and p(1) and p(2)
+p(n) -> cn is even
+c0 -> 2 is even? true
+c1 -> 2 is even? true
+c2 -> 6 is even? true
+therefore the base case is true
+
+step 2: let k be any integer with k>=2 (starting value since k+1 >= 3)
+
+IH: assume that p(i) is true for each integer i such that 1 <= i <= k
+in other words, assume c1,c2,...,ck are all even
+we must show ck+1 is even
+
+ck = 3ck-3 
+c(k+1) = 3c(k+1-3)
+= 3c(k-2)
+since we know from the inductive step that ci through ck are all evne, we can substitute
+= odd . even
+= even
+
+therefore it is true
+
+3. suppose c1, c2, c3, ... is a sequence defined as follows
+c0 = 2, c1 = 2, c2 = 6
+
+ck = 3ck-3 for every integer k>=3
+
+prove that cn is even for each integer n >= 0
