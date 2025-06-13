@@ -53,6 +53,35 @@ odd + even
 
 therefore a+1 is odd
 
-2. 
+2. suppose b1, b2, b3, ... is a sequence defined as follows
+b1 = 4, b2 = 12,
+bk = bk-2 + bk-1 for each integer k>=3
+
+prove that bn is divisible by 4 for every integer n>= 1
+
+answer:
+We will use strong mathematical induction to prove that for every integer n >= 4, 
+P(n) is true.
+
+step 1: show that the base case are true  p(0) and p(1)
+p(n) -> bn is divisible by 4
+p0 -> 4 is divisible by 4 = true
+p1 ->  12 is divisibel by 4 = true
+therefore the base case is true
+
+step 2: let k be any integer with k>=2 (starting value since k+1 >= 3)
+
+IH: assume that p(i) is true for each integer i such that 1 <= i <= k
+in other words, assume a1,a2,...,ak are all divisible by 4
+we must show ak+1 is divisible by 4
+
+bk = bk-2 + bk-1
+b(k+1) = b(k+1-2) + b(k+1-1)
+b(k+1) = b(k-1) + bk
+
+by the definition of divisibility, a number is divisible it can be written as b = dq for some integer q
+since we know from IH that i thorugh k is divisibel by 4, then we can substitute
+= 4q + 4r
+= 4(q+r) where (q+r) is some integer, which fits the form 4 . some integer
 
 
