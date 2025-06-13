@@ -22,9 +22,37 @@ Exercise set 5.4
 1. suppose a1, a2, a3, ... is a sequence defined as follows
 a = 1, a2 = 3
 ak = ak-2 + 2ak-1 for each integer k>=3
-prove that an is odd for every integer n>=1
+prove that an is odd for every integer n>=1 
 
 answer:
-base case: show that p(3) and p(4) are true 
+We will use strong mathematical induction to prove that for every integer n >= 1, 
+P(n) is true.
 
-a3 = a(k-2) + 2a(k-1) = a1 + 2 . a2
+step 1: show that p(1) and p(2) are true 
+
+p(n) -> an is odd
+p(1) -> is 1 odd? true
+p(2)-> is 3 odd? true
+therefore the base case is true
+
+step 2: let k be any integer with k>=2
+
+IH: assume that p(i) is true for each integer i such that 1 <= i <= k
+in other words, assume a1,a2,...,ak are all odd
+we must show ak+1 is odd
+
+
+ak = ak-2 + 2ak-1
+a(k+1) = a(k+1)-2 + 2a(k+1)-1
+a(k+1) = a(k-1) + 2ak
+
+since we know that ai through ak is odd, we can substitute
+odd + even . odd
+odd + even
+= odd
+
+therefore a+1 is odd
+
+2. 
+
+
