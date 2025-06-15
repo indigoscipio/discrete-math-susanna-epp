@@ -115,9 +115,20 @@ since we know from the inductive step that ci through ck are all evne, we can su
 
 therefore it is true
 
-3. suppose c1, c2, c3, ... is a sequence defined as follows
-c0 = 2, c1 = 2, c2 = 6
+4. suppose d1, d2, d3, ... is a sequence defined as follows
+d1 = 9/10, d2 = 10/11
 
-ck = 3ck-3 for every integer k>=3
+dk = dk-1 . dk-2 for every integer k>=3
 
-prove that cn is even for each integer n >= 0
+prove that 0 < dn <= 1 for each integer n>=1
+
+answer: 
+We will use strong mathematical induction to prove that for every integer n >= 1, 
+P(n) is true.
+
+step 1: show that the base case are true 
+p(n) -> 0 < dn <= 1
+d1 -> 0 < 9/10 <= 1 = true
+d2 => 0 < 10/10 <=1 = true
+therefore the base case is true
+
