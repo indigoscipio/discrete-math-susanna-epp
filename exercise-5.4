@@ -132,3 +132,54 @@ d1 -> 0 < 9/10 <= 1 = true
 d2 => 0 < 10/10 <=1 = true
 therefore the base case is true
 
+step 2: let k be any integer with k>=2 (starting value since k+1 >= 3)
+
+IH: assume that p(i) is true for each integer i such that 1 <= i <= k
+in other words, assume d1,d2,...,dk is 0 < dn <= 1
+we must show dk+1 is 0 < d(k+1) <= 1
+
+dk = dk-1 . dk-2 
+d(k+1) = d(k+1-1) . d(k+1-2)
+d(k+1) = dk . d(k-1)
+since we know from IH that all values od 1 through k is is 0 < di <= 1
+
+0 < dk <= 1 - this is true from IH
+0 < dk-1 <= 1 - true
+therefore the two are between 0 and 1
+since we know that multiplying two number between 0 (excluded) and 1 (included)
+will still be less than or equal to 1 but greater than 0, therefore it is true
+
+
+5. suppose e1, e2, e3, ... is a sequence defined as follows
+e0 = 12, e1 = 29
+ek = 5e(k-1) - 6e(k-2) for each integer k>=2
+
+prove that en = 5 . 3^n + 7.2^n for each integer n>=0
+
+step 1: show that the base case are true  p(0) and p(1)
+p(n) -> en = 5 . 3^n + 7.2^n
+p0 -> e(0) = 5 . 3^0 + 7.2^0 = 5 . 1 + 7.1 = 12
+p1 -> e(1) = 5 . 3^1 + 7.2^1 = 5 . 3 + 7.2 = 15 + 14 = 29
+therefore the base case is true
+
+
+step 2:
+IH: assume that p(i) is true for each integer i such that 1 <= i <= k
+in other words, assume e1,e2,...,ek is true
+we must show e(k+1) is true
+
+ek = 5e(k-1) - 6e(k-2) 
+e(k+1) = 5e(k+1-1) - 6e(k+1-2)
+e(k+1) = 5ek - 6e(k-1)
+
+since we know from IH that the formula holds we can substitute
+= 5(5 . 3^k + 7.2^k) - 6( 5 . 3^k-1 + 7.2^k-1 )
+= (25.3^k - 30.k^k-1) = 5.3^k+1
+
+(35.2^k - 42.2^k-1)
+= 7.2^k+1
+= (5.3^k+1) + (7.2^k+1)
+
+therefore the equation holds
+
+6. 
