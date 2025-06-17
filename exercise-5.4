@@ -255,4 +255,80 @@ g(k-2) -> 2^(k-2) + 1
 
 therefore the equation holds
 
-8. xxx
+8. suppose h1, h2, h3, ... is a sequence defined as follows
+h0 = 1, h1 = 2, h2 = 3
+hk = h(k-1) + h(k-2) + h(k-3) for each integer k>=3 
+
+prove that hn <= 3^n for every integer n>= 0
+
+answer:
+We will use strong mathematical induction to prove that for every integer n >= 0, 
+P(n) is true.
+
+step 1: show that the base case are true  p(0) and p(1) and p(2)
+p(n) -> hn <= 3^n
+p0 -> h0 <= 3^0 = 1 <= 1 = true
+p1 ->  h1 <= 3^1 = 2 <= 3 = true
+p2 -> h2 <= 3^2 = 3 <= 6 = true
+therefore the base cases are true
+
+step 2: let k be any integer with k>=2 (starting value since k+1 >= 3)
+
+IH: assume that p(i) is true for each integer i such that 0 <= i <= k
+in other words, assume h1,h2,...,hk the formula hk <= 3^k holds
+we must show hk+1 is true
+
+h(k+1) = h(k+1-1) + h(k+1-2) + h(k+1-3)
+h(k+1) = hk + h(k-1) + h(k-2)
+
+since we know from IH that the value from 0 to k, the formula holds we can substitute
+
+hk <= 3^k
+h(k-1) <= 3^(k-1)
+h(k-2) <= 3^(k-2)
+
+h(k+1) <= 3^k +3^k-1 + 3^k-2
+h(k+1) <= (3^2 . 3^k-2) + (3^1 . 3^(k-2)) + 3^k-2
+h(k+1) <= 3^k-2 (3^2 + 3^1 + 1)
+h(k+1) <= 3^k-2 . 13
+
+13 . 3^k-2 <= 3^k+1
+13 <= 27
+threfore the statment is true
+
+11.
+a step is when you take two seperate blocks and connect them together to form one larger blocks
+
+p(n) = for every integer n>=1, the number of steps required to put together all n pieces of jigsaw puzzle is n-1
+we must show that this is true by mathematical induction
+
+base case -> n = 1
+p(1) = 1 - 1 = 0 steps
+p(2) = 2 - 1 = 1 steps
+p(3) = 3 - 1 = 2 steps
+p(4) = 4 - 1 = 3 steps
+
+each step reduces the number of seperate blocks by one
+IH = assume that for some integer k>=1, p(i) is true for all integers i such that 1 <= i <= k
+Assume that for any number of pieces i from 1 up to k, it takes i - 1 steps to assemble those i pieces into a single block
+
+We must show that p(k+1) is true
+consider a k+1 puzzle piece
+the last step in assembling these k+1 pieces must involve fitting together two blocks
+
+two blocks = x and y where x and y are >= 1
+when these two blocks form together, they must form k + 1 pieces
+
+so x + y = k + 1
+x = k + 1 - y -> x = k + 1 - 1 -> x <= k
+y = k + 1 - x -> y = k + 1 - 1 -> y <= k
+
+apply IH
+to assemble the block of x pieces, it took x - 1 steps because 1 <= x <= k
+to assemble the block of x pieces, it took y - 1 steps because 1 <= y <= k
+
+the total steps = num of steps for x blocks + num of steps for y blocks + final step wher you combine all
+= (x-1) + (y-1) + 1
+= x + y - 1
+= (k+1) - 1 = k
+therefore the statement is true
