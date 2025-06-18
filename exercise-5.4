@@ -400,6 +400,20 @@ If i is even (for 2≤i≤k), then any sum of i odd integers is even.
 If i is odd (for 2≤i≤k), then any sum of i odd integers is odd.
 
 case1: k+1 is even, then any sum of k+1 odd integers is even
+take a sum of k+1 odd integers o1, o2, o3, ... ok+1
+= (o1, o2, o3, ..., ok) + ok+1
+since we know from IH that if i is odd then any sum of i odd even is odd, therefore
+= odd + odd
+= even
 
-    
-case1: k+1 is even, then any sum of k+1 odd integers is odd
+case2: k+1 is odd, then any sum of k+1 odd integers is odd
+= (e1, e2, e3, ..., ek) + e(k+1)
+= even + odd
+= odd
+
+therefore the statement is proven
+
+17. Compute 4^1, 4^2, 4^3, 4^4, 4^5, 4^6, 4^7, and 4^8. Make a 
+conjecture about the units digit of 4^n where n is a 
+positive integer. Use strong mathematical induc
+tion to prove your conjecture.
