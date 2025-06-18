@@ -332,3 +332,74 @@ the total steps = num of steps for x blocks + num of steps for y blocks + final 
 = x + y - 1
 = (k+1) - 1 = k
 therefore the statement is true
+
+
+12. p(n) -> For a circular track with n cans of gasoline, where the total amount of
+gasoline is sufficient to enable a certain car to make one complete circuit of the track,
+it is possible to find an initial location for placing the car so that it will be able to traverse
+the entire track by using the various amounts of gasoline in the cans that it encounters along the way
+n>=1
+
+base case p(1) -> consider a circular track with n = 1 gasoline
+; the problem stats the total amoun required to complte a full circuit is 1 gasoline
+threfore the car can fill out the gasoline anr run 1 complte circuit without running out of fuel
+p(1 is true)
+
+IH: Assume that p(k) is true
+
+15. 
+p(n) = "Any sum of n even integers is an even integer."
+we want to prove pn is true for all integers n>= 1
+
+base case: n = 1
+Any sum of 1 even integers is an even integer.
+true because any even integer itself is that even integer itself
+
+IH: assume that for some arbitrary integer k>= 1 , p(i) is true for all integers i such that
+1 <= i <= k. in other words, assume that sum of i even integersis even from i up to k
+
+we must show that p(k+1) is true
+any sum of (k+1) even integers is an even integers
+
+a integer is even if it  can be written as 2q for some integer q
+consider an arbitrary sum of k+1 even itnegers like
+s(k+1) = e1, e2, e3, e4 ... e(k+1) where each ej is an even integer
+since k>=1 we know that 1 <= k <= k
+therefore from IH we know that the sum up to k is even integers
+
+now the full sum
+s(k+1) =   ek + e(k+1)
+we know that ek is even, and ek+1 is an even integer by definition
+s(k+1) = 2q + 2r
+= 2(q+r)
+thus the sum of the two is always even since even + even = even by parity rules
+
+16. Use strong mathematical induction to prove that 
+for every integer n >= 2, if n is even, then any sum
+ of n odd integers is even, and if n is odd, then any 
+sum of n odd integers is odd.
+
+p(n) = If n is even, then any sum  of n odd integers is even, and if n is odd,
+then any sum of n odd integers is odd.
+we want to prove pn is true for all integers n>= 2
+
+base case: n = 2
+p(2) -> If 2 is even, then any sum  of 2 odd integers is even, and if 2 is odd,
+then any sum of 2 odd integers is odd.
+
+is 2 even? true
+then any sum  of 2 odd integers is even -> true because odd + odd is even by parity rule
+
+is 2 odd? false
+then any sum of 2 odd integers is odd. -> false
+therefore the base case is true
+
+IH -> assume that for some arbitrary integer k>=2, p(i) is true for all integer 2 <= i <= k
+that is, assume that:
+If i is even (for 2≤i≤k), then any sum of i odd integers is even.
+If i is odd (for 2≤i≤k), then any sum of i odd integers is odd.
+
+case1: k+1 is even, then any sum of k+1 odd integers is even
+
+    
+case1: k+1 is even, then any sum of k+1 odd integers is odd
