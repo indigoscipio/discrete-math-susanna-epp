@@ -2,18 +2,21 @@ Test yourself
 
 1. a pre-condition for an algorithm is ___
 and a post-condition for an algorithm is ___
-answer: a condition that must be true before evaluating the loop/body of the algorithm
-a final answer after evaluating the body of the algorithm
+answer:
+a predicate that describes the initial state of the input variables for the algorithm
+a predicate that describes the final state of the output variables for the algorithm
+
 
 2.  A loop is defined as correct with respect to its 
 pre- and post-conditions if, and only if, whenever 
 the algorithm variables satisfy the pre-condition 
 for the loop and the loop terminates after a finite 
 number of steps, then ___
-answer: 
+answer: the algorithm variables satify the post-condition for the loop
 
 3. for each iteration of the loop, if a loop invariant is true before iteration of the loop,
-then the iteration will be executed until the guard is false
+then ___
+answer: the iteration body will be executed until the guard is false
 
 4. given a while loop with guard G and a predicate i(n) if the folowing properties are true, then the loop is correct
 with respect to its pre-and post conditions
@@ -25,8 +28,8 @@ c) after a finite number of iterations of the loop, ___
 d) if N is the least number of iteration after which G is false and i(N) is true, then
 the values of the algorithm variables will be as as specified ___
 answer:
-a)
-b)
-c)
-d)
+a) i(n) is true
+b) l(k+1) is true
+c) the guard will eventually become false
+d) post condition
 
