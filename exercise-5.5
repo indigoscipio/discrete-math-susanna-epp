@@ -80,6 +80,33 @@ n:=n-2
 end while
 predicate: m+n is odd
 
+step 1: initialization
+assume m+n is odd before the loop begins
+p(m,n) = m+n is odd
+
+step 2: maintenance
+let m_old and n_old be the values of m and n at the start of an iteration
+so assume m_old + n_old is odd
+m_old >= 0 and m_old <= 100
+
+inside the loop
+m_new = m_old + 4
+n_new = n_old - 2
+
+m_new + n_new is odd
+= (m_old + 4) + (n_old - 2) is odd
+= m_old + n_old + 2 is odd
+
+since we assume m_old + n_old is old we can then substitute tha parity
+= odd + 2 is odd
+= odd + even is odd
+since even + odd is alawys odd therefoer step 2 is true
+
+step 3: termination
+when the loop terminates, p(m,n) is still true because
+the loop terminates
+
+
 3. loop:
 while (m>=0 and m<= 100)
 m:= 3m
@@ -88,4 +115,13 @@ end while
 predicate: m^3 > n^2
 
 4. loop:
-while ()
+while (n >= 0 and n<= 100)
+n:= n+1
+end while
+predicate: 2^n < (m+2)!
+
+5. loop:
+while (n>=3 and n<= 100)
+n:= n+1
+end while
+predicate: 2n+1 <= 2^n
