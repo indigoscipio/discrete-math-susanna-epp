@@ -16,7 +16,7 @@ answer: the algorithm variables satify the post-condition for the loop
 
 3. for each iteration of the loop, if a loop invariant is true before iteration of the loop,
 then ___
-answer: the iteration body will be executed until the guard is false
+answer: it is true after the iteration of the loop
 
 4. given a while loop with guard G and a predicate i(n) if the folowing properties are true, then the loop is correct
 with respect to its pre-and post conditions
@@ -28,8 +28,64 @@ c) after a finite number of iterations of the loop, ___
 d) if N is the least number of iteration after which G is false and i(N) is true, then
 the values of the algorithm variables will be as as specified ___
 answer:
-a) i(n) is true
-b) l(k+1) is true
+a) i(0) is true
+b) l(k+1) is true after the iteration of the loop
 c) the guard will eventually become false
-d) post condition
+d) in the post condition of the loop
 
+
+exercise set 5.5
+Exercises 1–5 contain a while loop and a predicate. In 
+each case show that if the predicate is true before entry 
+to the loop, then it is also true after exit from the loop.
+
+1. loop:
+while (m>=0 and m <= 100)
+m:= m+1
+n:= n-1
+end while
+predicate: m+n = 100
+
+step 1: initialization
+assume m+n = 100 before the loop begins
+p(m,n) =  m+n = 100
+
+step 2: maintenance
+let m_old and n_old be the values of m and n at the start of an iteration
+m_old + n_old = 100
+m_old >= 0 and m_old <= 100
+
+inside the loop
+m_new = m_old + 1
+n_new = n_old - 1
+
+m_new + n_new = 100
+= (m_old + 1) + (n_old - 1) = 100
+= m_old + n_old = 100
+
+therefore if the predicate is true before iteration, it remains true after iteration
+
+step 3: termination
+when the loop terminates, p(m,n) is still true because
+the loop termintates when the while condition is false
+that means either m < 0 or m > 100
+The loop repeats while m is between 0 and 100 inclusive.
+Because m keeps increasing, eventually m must exceed 100.
+m will eventually exceed 100
+
+2. loop:
+while(m>= 0 and m<= 100)
+m:=m+4
+n:=n-2
+end while
+predicate: m+n is odd
+
+3. loop:
+while (m>=0 and m<= 100)
+m:= 3m
+n:= 5n
+end while
+predicate: m^3 > n^2
+
+4. loop:
+while ()
