@@ -124,20 +124,57 @@ let m_old and n_old be the values of m and n at the start of an iteration
 assume m_old and n_old = m_old^3 > n_old^2
 where m_old >=0 and m_old <= 100
 
-
 then inside the loop
 = m_new = 3 . m_old
 = n_new = 5 . n_old
 
+then we can substitute
+m_new^3 > n_new^2
+= (3 . m_old)^3 > (5 . n_old^2)
+= 3^3 . m_old^3 > 5^2 . n_old^2
+= 27 . m_old^3 > 25 . n_old^2
 
+since we know that m_old^3 > n_old^2
+multiplying both sides by 27 will hold
+27 . m_old^3 > 27 . n_old^2
 
+and since 27 >25 we know that
+27. n_old^2 > 25 . n_old^2
 
+therefore we know
+27 . m_old^3 > 27 . n_old^2 > 25. n_old^2
+therefore  if A > B and B > C then A > C by transivitiy so its true
+
+step 3: termiation
+when the loop terminates p(m,n) is still true because
+since m^3 > n^2 was true before the loop starts and it never changed throughout the iteration
+we can conclude that its still holds true even after the loop terminates
 
 4. loop:
 while (n >= 0 and n<= 100)
 n:= n+1
 end while
-predicate: 2^n < (m+2)!
+predicate: 2^n < (n+2)!
+
+step 1: initialization
+assume the predicate p(n) is true before the loop begins
+p(n) = 2^n < (n+2)!
+
+step 2: maintenance
+let n_old be the values of n at the start of an iteration
+2^n_old < (n_old+2)!
+where n_old >= 100 and n_old <= 100
+
+then inside of the loop
+n_new = n_old + 1
+
+then we can substitute
+2^n_new < (n_new + 2)!
+= 2^n_old+1 < ((n_old+1)+2)!
+= 2 . 2^n_old+1 < ((n_old+1)+2) . ((n_old+1)+1)!
+= ???
+
+step 3: termination
 
 5. loop:
 while (n>=3 and n<= 100)
