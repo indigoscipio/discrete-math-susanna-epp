@@ -104,7 +104,8 @@ since even + odd is alawys odd therefoer step 2 is true
 
 step 3: termination
 when the loop terminates, p(m,n) is still true because
-the loop terminates
+since m+n was odd before the loop starts, and it never changed throughout the iteration,
+we can conclude that ist still odd when the loop terminates
 
 
 3. loop:
@@ -113,6 +114,24 @@ m:= 3m
 n:= 5n
 end while
 predicate: m^3 > n^2
+
+step 1: initialization
+assume m^3 > n^2 is true before the loop begins
+p(m,n) -> m^3 > n^2
+
+step 2: maintenance
+let m_old and n_old be the values of m and n at the start of an iteration
+assume m_old and n_old = m_old^3 > n_old^2
+where m_old >=0 and m_old <= 100
+
+
+then inside the loop
+= m_new = 3 . m_old
+= n_new = 5 . n_old
+
+
+
+
 
 4. loop:
 while (n >= 0 and n<= 100)
