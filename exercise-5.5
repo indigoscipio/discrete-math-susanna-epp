@@ -171,13 +171,88 @@ n_new = n_old + 1
 then we can substitute
 2^n_new < (n_new + 2)!
 = 2^n_old+1 < ((n_old+1)+2)!
-= 2 . 2^n_old+1 < ((n_old+1)+2) . ((n_old+1)+1)!
-= ???
+= 2 . 2^n_old < (n_old+3) . (n_old+2)!
+
+focusing on 2 < (n_old+3)
+since we know that n>= 0 and n<= 100
+and the smallest value RHS can hold when n=0 is 3
+so 2 < 3 therefore the inequality is true
+therefore the inequality 2 . 2^n_old < (n_old+3) . (n_old+2)! holds
+
 
 step 3: termination
+when the loop terminates, p(n) is still tre because
+since the predicate 2^n < (n+2)! was true before the loop starts and it never changed throughout the iteration
+we can conclude that its still holds true even after the loop terminates
 
 5. loop:
 while (n>=3 and n<= 100)
 n:= n+1
 end while
 predicate: 2n+1 <= 2^n
+
+step 1: initialization
+assume the predicate 2n+1 <= 2^n is true before the loop begins
+p(n) -> 2n+1 <= 2^n
+
+step 2: maintenance
+let n_old be the values of n at the start of an iteration
+so 2 . n_old + 1 <= 2^n_old
+where 3 <= n_old <= 100
+
+inside the loop
+n_new = n_old + 1 (increment the index)
+
+then run this predicate
+2 . n_new + 1 < 2^n_new
+= 2 . (n_old + 1) + 1 <  2^n_old+1
+= 2 . n_old + 2 + 1 < 2 . 2^n_old
+= 2 . n_old + 3  < 2 . 2^n_old
+
+since we assumed 2 . n_old + 1 <= 2^n_old from IH,
+we can multiply both sides by 2
+4 . n_old + 2 <= 2 . 2^n_old
+
+then we can compare
+2 . n_old + 3 <= 4 . n_old + 2 
+subtract 2 . n_old from both sides
+3 <= 2 . n_old+2
+subtract 2 from both sides
+1 <= 2 . n_old
+since we know n at a minimum is 3 we can substitute
+1 <= 2 . 3
+1 <= 6
+
+since we know 2 . n_old + 3 <= 4 . n_old + 2 <= 2 . 2^n_old
+therefore 2 . n_old + 3 <= 2 . 2^n_old equality holds
+
+step 3: termination
+when the loop terminates, p(n) is still tre because
+since the predicate 2n+1 <= 2^n was true before the loop starts and it never changed throughout the iteration
+we can conclude that its still holds true even after the loop terminates
+
+exercises 6–9 each contain a while loop annotated with a 
+pre- and a post-condition and also a loop invariant. In each 
+case, use the loop invariant theorem to prove the correct
+ness of the loop with respect to the pre- and post-conditions.
+
+6.
+[pre-condition: m is a nonnegative integer, x is a real number, i = 0 and exp = 1]
+while (i does not equal m)
+1. exp:=exp.x
+2. i:=i+1
+end while
+[post condition: exp=x^m]
+loop invariant: I(n) is "exp = x^n and i = n"
+
+7.
+[pre-condition: largest = A[1] and i = 1]
+while (i does not equal m)
+1. i:=i+1
+2. if A[i] > largest then largest:= A[i]
+end while
+[post condition: largest = maximum value of A[1], A[2], A[3], A[4], ... A[m]]
+loop invariant: I(n) is "largest = maximum value of A[1], A[2], ... A[n+1] and i = n + 1"
+
+8. 
+
