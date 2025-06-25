@@ -286,10 +286,12 @@ so after m iterations of the loop i will eventually become m. thus G becomes fal
 IV. CORRECTNESS OF THE POST-CONDITION
 [if N is the least number of iterations after which G is false and I(N) is true, then the value of the algorithm
 variables will be as specified in the post-condition of the loop]
-according to the post condition the value of exp after execution of loop should be x^m
-but if G becomes false after N iterations, i = m
-and if I(N) is true, i = N and exp = x^k. since both conditions (G false and I(N) is true) are satisfied
-m = i = N and exp = x^k
+
+when the loop terminates
+the guard G becomes false, so i = m
+the loop invariant I(N) holds: x^N and i = N
+since i = m and i = n we conclude N = m
+thus exp = x^N = x^m satisfying the post condition
 
 thus proven
 
@@ -301,6 +303,56 @@ while (i does not equal m)
 end while
 [post condition: largest = maximum value of A[1], A[2], A[3], A[4], ... A[m]]
 loop invariant: I(n) is "largest = maximum value of A[1], A[2], ... A[n+1] and i = n + 1"
+
+answer:
+let the loop invariant be  I(n) is "exp = x^n and i = n"
+let the guard G be (i does not equal m)  
+
+I. BASIS PROPERTY:
+[I(0) is true before the first iteration of the loop]
+I(0) is "exp = x^0 and i = n" -> exp = 1 and i = 0, therefore it is true before the first iteration of the loop
+
+II. INDUCTIVE PROPERTY:
+[if G AND I(k) is true before a loop iteration where k>=0,
+then I(k+1) is true after the loop iteration]
+
+suppse k is a nonnegative int such that G AND I(k) is true before iteration of the loop
+then as execution reaches the top of the loop, i does not equal m and exp = x^k
+since i does not equal m the guard is passed and statement 1 is executed
+before execution of statement 1,
+
+exp_old = x^k
+
+then execution of statement 1 has the following effect
+exp_new = exp_old . x
+= x^k . x
+= x^k+1
+
+before statement 2 is executed
+i_old = k
+afer execution of statement 1 it becomes
+i_new = i_old + 1
+
+hence after the loop iteration, the statement i(k+1) (i = k+1 and exp=x^k+1) is therefore true
+
+III. EVENTUAL FALSITY OF THE GUARD
+[after a finite number of iterations of the loop, G becomes false]
+the guard G is the condition i does not equal m, and m is a nonnegative integer
+by 1 and 2 we know that
+for every integer n>= 0, if the loop is iterated n times, then i = n and exp = x^n
+so after m iterations of the loop i will eventually become m. thus G becomes false after m iterations of the loop
+
+IV. CORRECTNESS OF THE POST-CONDITION
+[if N is the least number of iterations after which G is false and I(N) is true, then the value of the algorithm
+variables will be as specified in the post-condition of the loop]
+
+when the loop terminates
+the guard G becomes false, so i = m
+the loop invariant I(N) holds: x^N and i = N
+since i = m and i = n we conclude N = m
+thus exp = x^N = x^m satisfying the post condition
+
+thus proven
 
 8. 
 
