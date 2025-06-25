@@ -238,12 +238,43 @@ ness of the loop with respect to the pre- and post-conditions.
 
 6.
 [pre-condition: m is a nonnegative integer, x is a real number, i = 0 and exp = 1]
-while (i does not equal m)
+while (i does not equal m) -> guard condition
 1. exp:=exp.x
 2. i:=i+1
 end while
 [post condition: exp=x^m]
 loop invariant: I(n) is "exp = x^n and i = n"
+
+answer:
+I. BASIS PROPERTY:
+[I(0) is true before the first iteration of the loop]
+I(0) is "exp = x^0 and i = n" -> exp = 1 and i = 0, therefore it is true before the first iteration of the loop
+
+II. INDUCTIVE PROPERTY:
+[if G AND I(k) is true before a loop iteration where k>=0,
+then I(k+1) is true after the loop iteration]
+
+suppse k is a nonnegative int such that G AND I(k) is true before iteration of the loop
+then as execution reaches the top of the loop, i does not equal m and exp = x^k
+since i does not equal m the guard is passed and statement 1 is executed
+before execution of statement 1,
+
+exp_old = x^k
+
+then execution of statement 1 has the following effect
+exp_new = exp_old . x
+= x^k . x
+= x^k+1
+
+before statement 2 is executed
+i_old = k
+afer execution of statement 1 it becomes
+i_new = i_old + 1
+
+hence after the loop iteration, the statement i(k+1) (i = k+1 and exp=x^k+1) is therefore true
+
+III. EVENTUAL FALSITY OF THE GUARD
+
 
 7.
 [pre-condition: largest = A[1] and i = 1]
