@@ -305,28 +305,38 @@ end while
 loop invariant: I(n) is "largest = maximum value of A[1], A[2], ... A[n+1] and i = n + 1"
 
 answer:
-let the loop invariant be  I(n) is "exp = x^n and i = n"
+let the loop invariant be I(n) is "largest = maximum value of A[1], A[2], ... A[n+1] and i = n + 1"
 let the guard G be (i does not equal m)  
 
 I. BASIS PROPERTY:
 [I(0) is true before the first iteration of the loop]
-I(0) is "exp = x^0 and i = n" -> exp = 1 and i = 0, therefore it is true before the first iteration of the loop
+I(0) is largest = maximum value of A[0+1] and i = 0 + 1
+= A[1] and i = 1
+therefore it is true befoer the first iteration of the loop, satisfying the precondition.
 
 II. INDUCTIVE PROPERTY:
 [if G AND I(k) is true before a loop iteration where k>=0,
 then I(k+1) is true after the loop iteration]
 
 suppse k is a nonnegative int such that G AND I(k) is true before iteration of the loop
-then as execution reaches the top of the loop, i does not equal m and exp = x^k
+then as execution reaches the top of the loop, i does not equal m
+and I(k) is "largest = maximum value of A[1], A[2], ... A[k+1]
 since i does not equal m the guard is passed and statement 1 is executed
 before execution of statement 1,
 
-exp_old = x^k
+largest_old = maximum value of A[1]_old, A[2]_old, ..., A[n+1]_old
 
 then execution of statement 1 has the following effect
-exp_new = exp_old . x
-= x^k . x
-= x^k+1
+i_old = k + 1
+
+after execution of statement 1 it becomes
+i_new = i_old + 1
+= k + 1 + 1
+= k + 2
+
+before statement 2 is executed
+if A[i] > largest_old 
+
 
 before statement 2 is executed
 i_old = k
