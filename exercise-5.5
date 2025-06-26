@@ -428,3 +428,37 @@ thus m = N + 1
 then the provided post-condition sum =  A[1] + A[2] + ... + A[m] = sum =  A[1] + A[2] + ... + A[N+1] holds
 
 thus proven
+
+9.
+[pre-condition: a = A and A is a positive integer]
+while (a > 0)
+a:=a-2
+end while
+[post condition: a=0 if A is even and a = -1 if A is odd]
+loop invariant: I(n) is "Both a and A are even integers or both are odd integers and, in either case, a>= 1"
+
+answer:
+let the loop invariant I(n) be "Both a and A are even integers or both are odd integers and, in either case, a>= 1"
+let the guard G be (a > 0)
+
+I. BASIS PROPERTY:
+[I(0) is true before the first iteration of the loop]
+I(0) is "Both a and A are even integers or both are odd integers and, in either case, a>= 1"
+since a = A and A is a positive integer, and same number have equal parity,
+therefore it is true before the first iteration of the loop
+
+II. INDUCTIVE PROPERTY
+[if G AND I(k) is true before a loop iteration where k>=0, then I(k+1) is true after the loop iteration]
+
+suppose k is a nonnegative integer such that G and I(k) is true before iteration of the loop
+then as execution reaches the top of the loop, the guard is passed
+a > 0 and is true and the invariant I(k) "Both a and A are even integers or both are odd integers and, in either case, a>= 1" is true
+
+before the execution of statement 1
+a_old and A both have the same parity (both even or odd)
+a_old >= 1
+
+after the execution of statement 1
+case 1: a_new is odd
+
+case 2
