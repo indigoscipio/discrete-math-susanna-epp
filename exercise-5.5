@@ -530,4 +530,95 @@ y = 0? false
 set r:= 4 mod 2 = 0
 is r 0? true
 set x:= 2 . 52 = 104
-set y:= 8 div 2 = 4
+set y:= 4 div 2 = 2
+
+5th iteration
+y = 0? false
+set r:= 2 mod 2 = 0
+is r 0? true
+set x:= 2 . 104 = 208
+set y:= 2 div 2 = 1
+
+6th iteration
+y = 0? false
+set r:= 1 mod 2 = 1
+is r 0? false
+set product:= 26 + 208
+set y:=1-1=0
+
+7th iteration
+y = 0? true
+end while
+product = A . B = 234
+
+b. prove the correctness of this lop with respect to its pre-adn-post conditions by using the loop invariant
+I(n) = "xy + product = A . B"
+
+I. BASIS PROPERTY:
+[I(0) is true before the first iteration of the loop]
+I(0) is "xy + product = A . B"
+since we know from precondition that A and B are positive integers and product = 0
+xy + 0 = A . B
+x . y = A . B
+and since we know that x = A and y = B we can substitute
+A . B = A . B -> therefore the basis property I(0) is true
+
+
+II. INDUCTIVE PROPERTY
+[if G AND I(k) is true before a loop iteration where k>=0, then I(k+1) is true after the loop iteration]
+
+suppose k is a nonnegative integer such that G and I(k) is true before iteration of the loop
+then as execution reaches the top of the loop, the guard is passed
+y does not equal 0 is true and the invariant
+I(k) "xy + product = A . B" is true
+
+case 1: y_old is even (r_old = 0)
+x_new = 2 . x_old
+y_new = y_old div 2
+product_new = product_old (product isn't updated on this branch)
+then we can substittue
+x_new * y_new + product_new = A . B
+(2 . x_old) * (y_old div 2) + product_old = A . B
+
+since we assumed that y_old is even then
+y_old = 2 . (y_old div 2)
+therefore x_old * y_old = A . B
+
+
+case 2: y_old is odd (r_old = 1)
+product_new = product_old + x_old
+y_new = y_old - 1
+x_new = x_old (doesn't update x on this branch)
+
+x_new * y_new + product_new = A . B
+x_old * (y_old - 1) + (product_old) + x_old = A . B
+= (x_old * y_old - x_old) + (product_old + x_old)
+= x_old * y_old + 0 = A . B
+= x_old * y_old = A . B
+
+therefore both cases are true
+
+III. EVENTUAL FALSITY OF THE GUARD
+[after a finite number of iterations of the loop, G becomes false]
+the guard G is the condition y does not equal 0 will become false
+which means y will eventually reach 0
+
+since on each iteration it depends on r (either odd or even)
+if r = 0 we reduce the y by div 2
+if r = 1 we reduce the y by decrementing it by 1
+in both cases they are reduced 
+this y will eventually reach 0
+
+IV. CORRECTNESS OF THE POST-CONDITION
+[if N is the least number of iterations after which G is false and I(N) is true, then the value of the algorithm
+variables will be as specified in the post-condition of the loop]
+
+when the loop therminates the guard y does not equal 0 will become false
+so y = 0 eventually will be true and I(N) is true
+
+I(n) = x_final * y_final + product_final = A . B
+we can substitute y = 0
+x_final * 0 + product_final = A . B
+product_final = A . B
+
+thus proven
