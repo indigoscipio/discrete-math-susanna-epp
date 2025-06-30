@@ -459,7 +459,75 @@ a_old and A both have the same parity (both even or odd)
 a_old >= 1
 
 after the execution of statement 1
-case 1: a_new is odd
+a_new= a_old - 2
+if a_old is even, it stays even because even - even is even
+if a_old is odd, it stays odd because odd - even is odd
+therefore a_new will have the same parity as A
 
-case 2
-;;
+III. EVENTUAL FALSITY OF THE GUARD
+[after a finite number of iterations of the loop, G becomes false]
+the guard G is the condition a is greater than 0 where it starts at a>=1
+since on each iteration we decrement a by 2, it will eventually reach zero or below
+and eventually the guard a > 0 will become false
+
+IV. CORRECTNESS OF THE POST-CONDITION
+[if N is the least number of iterations after which G is false and I(N) is true, then the value of the algorithm
+variables will be as specified in the post-condition of the loop]
+
+when the loop therminates the guard a > 0 will eventually become false
+so a <= 0 eventually and a and A have the same parity
+
+so if A is even -> a is even and <=0 since 0 is the closest number subtracting to 2 is 0
+if A is odd -> a is odd and <=0 since -1 is the closest number reachable by subtracting 2 is -1
+
+thus proven
+
+11. the following while loop implements a way to multiply two numbers that was developed by the ancient egyptians
+[pre-condition: A and B are positive integers, x = A, y = B, and product = 0]
+    while y does not equal 0
+    r:= y mod 2
+    if r = 0
+        then do x:= 2 . x
+                y:= y div 2
+        end do
+    if r = 1
+        then do product:= product + x
+                y:=y-1
+        end do
+    end while
+[post-condition: product = A.B]
+
+a. make trace table to show that the algorithm gives the correct answer for multiplying A = 13 times B =18
+
+initialization
+x = 13
+y = 18
+product = 0
+
+1st iteration
+y = 0? false
+set r:= 18 mod 2 = 0
+is r 0? true
+set x:= 2 . 13 = 26
+set y:= 18 div 2 = 9
+
+2nd iteration
+y = 0? false
+set r:= 9 mod 2 = 1
+is r 0? false
+set product:= 0 + 26
+set y:=9-1=8
+
+3rd iteration
+y = 0? false
+set r:= 8 mod 2 = 0
+is r 0? true
+set x:= 2 . 26 = 52
+set y:= 8 div 2 = 4
+
+4th iteration
+y = 0? false
+set r:= 4 mod 2 = 0
+is r 0? true
+set x:= 2 . 52 = 104
+set y:= 8 div 2 = 4
