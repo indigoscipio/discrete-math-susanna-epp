@@ -105,6 +105,41 @@ b(k-1) = 4 . 4^(k-1)
 since the RHS of the recurrence relation simplifies to 4^k (equal to the explicit formula)
 therefore it satisfies the sequence
 
+11. let c0, c1, c2,... be defined by the formula
+cn = 2^n - 1 for every integer n>=0
+show that this sequence satisfies the recurrence relation
+ck = 2 c(k-1) + 1  for every integer k>=1
 
+from the explicit formual we know that cn = 2^n-1 for every integer n>=0
+we can use substitution for k-1 for both
 
+explicit formula
+c(k-1) = 2^(k-1) - 1
 
+recurrence relation
+c(k-1) = 2 c(k-1) + 1
+= 2 (2^(k-1) - 1) + 1
+= 2.2^(k-1) -2 + 1
+= 2.2^(k-1) - 1
+= 2^(k-1+1) - 1
+= 2^k - 1
+
+therefore it follows the same structure as cn
+
+12. let s0, s1, s2,... be defined by the formula
+sn = (-1)^n / n! for every integer n>=0
+show that this sequence satisfies the recurrence relation
+sk = -s(k-1)/k  for every integer k>=1
+
+s(k-1) = (-1)^k-1 / (k-1)!
+
+substitute into recurrence relation
+sk = -((-1)^k-1 / (k-1)!) / k
+= -1^k / k!
+
+therefore it satisfiesthe sequence 
+
+13. let s0, s1, s2,... be defined by the formula
+sn = (-1)^n / n! for every integer n>=0
+show that this sequence satisfies the recurrence relation
+sk = -s(k-1)/k  for every integer k>=1
