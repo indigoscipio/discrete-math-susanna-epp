@@ -139,7 +139,49 @@ sk = -((-1)^k-1 / (k-1)!) / k
 
 therefore it satisfiesthe sequence 
 
-13. let s0, s1, s2,... be defined by the formula
-sn = (-1)^n / n! for every integer n>=0
+13. let t0, t1, t2,... be defined by the formula
+tn = 2 + n for every integer n>=0
 show that this sequence satisfies the recurrence relation
-sk = -s(k-1)/k  for every integer k>=1
+tk = 2t(k-1) - t(k-2)  for every integer k>=2
+
+substitute explicit formula with k-1 and k - 2
+t(k-1) = 2 + k-1 = k + 1
+t(k-2) = 2 + k-2 = k
+
+substitute into recurrence relation
+tk = 2.k + 1 - k
+= 2k+2 - k
+= k + 2 = 2 + k
+
+therefore seqence satisfies.
+
+14.let d0, d1, d2,... be defined by the formula
+dn = 3^n - 2^n for every integer n>=0
+show that this sequence satisfies the recurrence relation
+dk = 5d(k-1) - 6d(k-2) for every integer k>=2
+
+substitute explicit formula with k-1 and k-2
+d(k-1) = 3^(k-1) - 2^(k-1)
+d(k-2) = 3^(k-2) - 2^(k-2)
+
+substitute the recurrence relation
+dk = 5d(k-1) - 6d(k-2)
+= 5 . (3^(k-1) - 2^(k-1)) - 6 . (3^(k-2) - 2^(k-2))
+= 3^k - 2^k
+
+therefore sequence satisfites
+
+15. for the sequence of catalan numbers defined in example 5.6.4, prove that for each integer n>=1
+cn = 1/4n+2 (2n+2 choose n + 1)
+
+from 5.6.4
+explicit formula -> cn = 1/n+1 (2n choose n)
+recurrence relation -> ck = 4k-2 / k+1 C(k-1)
+
+prove the base case
+substitute n = 0
+c0 = 1 / 0 + 1 (0 choose 0)
+= 1
+
+prove the recurrnece relation
+= >>
