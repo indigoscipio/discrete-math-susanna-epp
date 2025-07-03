@@ -73,4 +73,38 @@ v2 = 3
 v3 = v (2) + v(1) + 1 = 3 + 1 + 1 = 5
 v4 = v (3) + v(2) + 1 = 5 + 3 + 1 = 9
 
-9. 
+9. let a0, a1, a2,... be defined by the formula
+an = 3n + 1 for every integer n>=0
+show that this sequence satisfies the recurrence relation
+ak = a(k-1) + 3 for every integer k>=1
+
+we know that an = 3n + 1
+a(k-1) = 3(k-1) + 1 = 3k-3 + 1
+= 3k - 2
+
+substitute into the recurrence relation
+3k-2 + 3
+= 3k + 1
+
+this follows the structure an = 3n + 1 therefore it satisfies the sequence
+
+10. let b0, b1, b2,... be defined by the formula
+bn = 4^n for every integer n>=0
+show that this sequence satisfies the recurrence relation
+bk = 4 b(k-1)  for every integer k>=1
+
+from the explicit formula we know that bn = 4^n for every integer n>= 0
+we can use substitution
+
+b(k-1) = 4^(k-1)
+
+substitute into the recurrence relation
+b(k-1) = 4 . 4^(k-1)
+= 4^(k-1+1) by the rule of exponents
+= 4^k
+since the RHS of the recurrence relation simplifies to 4^k (equal to the explicit formula)
+therefore it satisfies the sequence
+
+
+
+
