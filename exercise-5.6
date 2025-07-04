@@ -263,4 +263,25 @@ fifth: move k-1 disk from A -> C again, compelting the tower
 ak = a(k-1) + 1 + a(k-1) + 1 + a(k-1)
 ak = 3.a(k-1) + 2 with the initial condition a1 = 2 and for every integer k>= 2
 
-18. 
+18. tower of hanoi with adjacency requirement
+suppose the same situtation as in exercise 17. let
+bn = [the minimum number of moves needed to transfer a tower of n disks from pole A to pole B]
+
+a. find b1, b2, and b3
+b. find b4
+c. show that bk = ak + 1 + bk-1 for each integer k>=2 where a1, a2, a3, ... is the sequence defined in exercise 17
+d. show that bk <= bk-1 + 1 for each integer k>=2
+
+answer:
+a. b1 = [the minimum number of moves needed to transfer a tower of 1 disks from pole A to pole B]
+it's 1 move because A -> B = 1 move
+b2 = [the minimum number of moves needed to transfer a tower of 2 disks from pole A to pole B]
+move 1: move the top smaller disk from A -> B
+move 2: move the top smaller disk from B -> C
+move 3: move the larger disk from A -> B
+move 4: move the smaller disk back from C -> B, completing the tower
+total moves = 4
+b3 = [the minimum number of moves needed to transfer a tower of 3 disks from pole A to pole B]
+now for a generalized step
+suppose b1 = 1 and b2 = 4
+step 1:
