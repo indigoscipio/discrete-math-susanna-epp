@@ -183,5 +183,84 @@ substitute n = 0
 c0 = 1 / 0 + 1 (0 choose 0)
 = 1
 
-prove the recurrnece relation
-= >>
+prove the recurrnece relation, substitute k-1 using explicit formul
+RHS = 4k-2 / k+1 C(k-1)
+
+c(k-1) =  1/k-1+1 (2k-2 choose k-1)
+= 1/k (2k-2 choose k-1)
+
+2k-2 choose k-1 = (2k-2)! / k-1! k-1!
+
+RHS = 4k-2 . (2k-2)! / k-1! k-1!
+= 1/k+1 (2k choose k) therefore its satisfied
+
+16. use the recurrence relation and values for the tower of hanoi sequence
+m1, m2, m3, ... discussed in example 5.6.5 to compute m7 and m8
+
+for each integer n>=1 let
+mn = [the min number of moves needed to transfer a tower of n disks from one pole to another]
+
+from the book
+recurrence relation -> mk = 2m(k-1) + 1
+initial condition -> m1 = 1
+
+m7 = 2.m(6) + 1 = 2 . 63 + 1 = 127
+m8 = 2.m(7) + 1 = 2 . 127 + 1 = 255
+
+17. tower of hanoi with adjacency requirement:
+Suppose that in addition to the requirement that 
+they never move a larger disk on top of a smaller 
+one, the priests who move the disks of the Tower 
+of Hanoi are also allowed only to move disks one 
+by one from one pole to an adjacent pole. Assume 
+poles A and C are at the two ends of the row and 
+pole B is in the middle. Let
+
+an = [the minimum number of moves needed to transfer a tower of n disks from pole a to pole c]
+
+a. find a1, a2, and a3
+b. find a4
+c. find recurence relation for a1, a2, a3, ... and justify your answer
+
+answer:
+a. a1 = [the minimum number of moves needed to transfer a tower of 1 disks from pole a to pole c]
+because of the adjacency reqirement, we will need at least 2 moves to trasfer 1 disk A from disk C
+A -> B -> C = 2 moves.
+a2 = [the minimum number of moves needed to transfer a tower of 2 disks from pole a to pole c]
+let dlarge = large disk, and dsmall = small disk
+move 1: move the dsmall one from A to disk B
+move 2: move it again to disk C
+move 3: now move dlarge to B
+move 4: move dsmall on top of B, so now they are both stacked
+move 5: move dsmall back to A
+move 6: move dlarge to C
+move 7: move dsmall to B
+move 8: move dsmall to C, completing the tower
+a3 =  [the minimum number of moves needed to transfer a tower of 3 disks from pole a to pole c]
+move to a more general steps
+assume that that a1 = 2 and a2 = 8
+step 1: move the top (n-1) disks from A to C (this needs an-1 moves)
+now the largest disk n is on A, and the (n-1) top disks are on c
+step 2: move the n (largest) disk from A to B (1 total move)
+step 3: move the (n-1) disks to A so we can move the n disk to C (needs an-1 moves)
+step 4: now move the n disk from B to C (1 total move)
+step 5: now move the n-1 disk from A to C (requires another an-1 moves)
+
+total move = 3 . ak-1 + 2
+a3 = 3(8) + 2 = 24 + 2 = 26
+
+b. a4 = 3 . a(3) + 2 = 3 . 26 + 2 = 80
+
+c. find the recurrence relation for a1, a2, and a3
+the recurrence relation is ak = 3 . ak-1 + 2
+first: move the top k-1 smallest disk from  A -> C
+at this point, the largest disk K is on A
+second: move K from A - > B
+third: move k-1 disk from C - > A
+fourth: move K from B -> C
+fifth: move k-1 disk from A -> C again, compelting the tower
+
+ak = a(k-1) + 1 + a(k-1) + 1 + a(k-1)
+ak = 3.a(k-1) + 2 with the initial condition a1 = 2 and for every integer k>= 2
+
+18. 
