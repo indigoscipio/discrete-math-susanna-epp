@@ -327,11 +327,47 @@ sn = [the minimum number of moves needed to transfer the entire tower of n disks
 let left most = A, right most = D
 a. s1: 
 s1 = [the minimum number of moves needed to transfer the entire tower of 1 disks from the left-most to the right-most pole.]
-total steps = 3, by first moving A -> B, then B -> C, then C -> D
+total steps = 1, from A -> D
 s2 = [the minimum number of moves needed to transfer the entire tower of 2 disks from the left-most to the right-most pole.]
-move 1: move smaller form A -> D (3 moves)
-move 2: move larger disk from A -> C (2 moves)
-move 3: move smaller disk from D to B (2 moves)
-move 4: move larger disk from C to D (1 move)
-move 5: move smaller disk from B to D (2 move), completing the step
-total move: 3+2+2+1+2 = 10
+move 1: move smaller form A -> B (1 move)
+move 2: move larger disk from A -> D (1 move)
+move 3: move smaller disk from B -> D (1 move)
+total move: 3   
+s3 = [the minimum number of moves needed to transfer the entire tower of 2 disks from the left-most to the right-most pole.]
+disk 1 = smallest, disk 2 = mid, disk 3 = largest
+move 1: move disk 1 from A -> B
+move 2: move disk 2 from A -> C
+move 3: move disk 3 from A -> D
+move 4: move disk 2 from C -> D
+move 5: move disk 1 from B -> D
+total move = 5
+
+b. find s4
+generalized solution
+move 1: move top smallest n-1 disk from A -> B
+move 2: move largest n disk from A -> D
+move 3: move the top smallest n-1 disk back from B -> D
+
+
+20. Tower of Hanoi Poles in a Circle: Suppose that 
+instead of being lined up in a row, the three poles 
+for the original Tower of Hanoi are placed in a 
+circle. The monks move the disks one by one from 
+one pole to another, but they may only move disks 
+one over in a clockwise direction and they may 
+never move a larger disk on top of a smaller one. 
+Let cn be the minimum number of moves needed 
+to transfer a pile of n disks from one pole to the 
+next adjacent pole in the clockwise direction.
+a. justify the inequality ck <= 4c(k-1) + 1 for each integer k>=2
+b. the expression 4c(k-1) + 1 is not the minimum number of moves needed
+to transfer a pile of k disks from one pole to another explain for example why
+c3 does not equal 4c2+1
+
+answer:
+a. move top k-1 smaller disk from P1 to P3 (2 . ck-1 move)
+move largest disk k from P1 to P2 (1 move)
+then finally move back top k-1 smaller disk from P3 to P1 (2 . ck-1 move)
+total move = 2ck-c + 1 + 2ck-1 = 4ck-1 + 1
+
+21. 
