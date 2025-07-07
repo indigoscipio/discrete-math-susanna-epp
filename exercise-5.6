@@ -309,4 +309,29 @@ move 3: move the larger disk from A -> B (1 move)
 move 4: move the smaller disk back from C -> B, (bk-1 move) completing the tower
 total = 3. bk-1 + 1
 
-19. 
+19. Four-Pole Tower of Hanoi: Suppose that the 
+Tower of Hanoi problem has four poles in a row 
+instead of three. Disks can be transferred one by 
+one from one pole to any other pole, but at no time 
+may a larger disk be placed on top of a smaller 
+disk. Let sn be the minimum number of moves 
+needed to transfer the entire tower of n disks from 
+the left-most to the right-most pole.
+
+a. find s1, s2, and s3
+b. find s4
+c. show that sk <= 2s(k-2) + 3 for every integer k>= 3
+
+answer:
+sn = [the minimum number of moves needed to transfer the entire tower of n disks from the left-most to the right-most pole.]
+let left most = A, right most = D
+a. s1: 
+s1 = [the minimum number of moves needed to transfer the entire tower of 1 disks from the left-most to the right-most pole.]
+total steps = 3, by first moving A -> B, then B -> C, then C -> D
+s2 = [the minimum number of moves needed to transfer the entire tower of 2 disks from the left-most to the right-most pole.]
+move 1: move smaller form A -> D (3 moves)
+move 2: move larger disk from A -> C (2 moves)
+move 3: move smaller disk from D to B (2 moves)
+move 4: move larger disk from C to D (1 move)
+move 5: move smaller disk from B to D (2 move), completing the step
+total move: 3+2+2+1+2 = 10
