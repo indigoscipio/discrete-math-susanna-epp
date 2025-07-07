@@ -370,4 +370,29 @@ move largest disk k from P1 to P2 (1 move)
 then finally move back top k-1 smaller disk from P3 to P1 (2 . ck-1 move)
 total move = 2ck-c + 1 + 2ck-1 = 4ck-1 + 1
 
-21. 
+b. let mn be the minium moves to transfer n disk one step clockwise
+let an be the Minimum num of moves to transfer n disk two step clockwise
+
+mk = 2ak-1 + 1
+ak = 2mk-1 + 2
+
+22. Fibonacci Variation: A single pair of rabbits 
+(male and female) is born at the beginning of a 
+year. Assume the following conditions (which are 
+somewhat more realistic than Fibonacci’s):
+
+1. rabbit pairs are not fertile during first months of life but thereafter
+give birth to four new male/female pairs at the end of every month
+2. no rabbits die
+
+a. let rn = the number of pairs of rabbits alive at 
+the end of month n, for each integer n >= 1, and
+let r0 = 1. find a recurrence relation for r0, r1, r2 ... justify your answer
+b. compute r0, r1, r2, r3, r4, r5 and r6
+c. how many rabbits will three be at the end of the year?
+
+answer:
+a.
+rk represents the total number of rabbit pairs alive at the end of month k.rkr
+rk = [total rabit alive at the end of month k] + [total rabit alive at the end of the month k - 2]
+= ... [4 . rk - 2]
