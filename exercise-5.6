@@ -431,4 +431,36 @@ c. how many rabbits wil there be at the end of the year?
 answer:
 a. sk represents the number of pairs of rabbits alive at the end of month k
 sk = [pairs alive at the end of month sk-1] + [pairs alive at the end of month k]
-= sk-2 + 3.sk-3
+= sk-1 + 3.sk-3
+justification:
+sk-1 is all of the rabbit pairs alive up to month k-1 because no rabbits die its accumulated
+3.sk-3 is the newborn pair at the last month k and because by the rule rabbits are fertile at the end of 3rd month
+they give birth to 3 additional pairs.
+
+b. 
+s0 = 1
+s1 = 1
+s2 = 1
+s3 = sk2 + 3.sk0 = 1 + 3.1 = 4 
+s4 = sk3 + 3.sk1 = 4 + 3.1 = 7
+s5 = sk4 + 3.sk2 = 7 + 3.1 = 10
+s6 = sk5 + 3.sk3 = 10 + 3.4 = 22
+
+c. rabits at the end of the year = 904
+
+in 24 - 34, f0, f1, f2, ... is the fibonacci sequence
+24. use the recurrence relation and values for f0,f1,f2,... given in example 5.6.6 to compute f13 and f14
+base case: f0 = 1, f1 = 1
+f13 = f12 + f11 = 233 + 144 = 377
+f14 = f13 + f12 = 377 + 233 = 610
+
+25. the fibonacci sequence satisfies the recurrence relation
+fk = fk-1 + fk-2 for every integer k>=2
+a. explain why the following is true
+fk+1 = fk + fk-1 for each integer k>=1
+
+b. write an equation expression fk+2 in terms of fk+1 and fk
+
+c. write an equation expressing fk+3 in terms of fk+2 and fk+1
+
+26. prove that 
