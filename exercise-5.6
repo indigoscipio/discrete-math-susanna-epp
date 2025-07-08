@@ -458,9 +458,40 @@ f14 = f13 + f12 = 377 + 233 = 610
 fk = fk-1 + fk-2 for every integer k>=2
 a. explain why the following is true
 fk+1 = fk + fk-1 for each integer k>=1
+this is esentially shifting the index by adding1 based on fk so it's the same thing
 
 b. write an equation expression fk+2 in terms of fk+1 and fk
+fk+2 = fk+1 + fk
 
 c. write an equation expressing fk+3 in terms of fk+2 and fk+1
+fk+3 = fk+2 + fk+1
 
-26. prove that 
+26. prove that fk = 3fk-3 + 2fk-4 for every integer k>=4
+
+we know that fibonaci number is the sum of the two preceding ones
+fk = fk-1 + fk-2
+
+then we can shift the terms
+fk-2 = fk-3 + fk-4
+and substitute back to the original fk
+fk = fk-1 + (fk-3 + fk-4)
+
+then for fk-1 we can use the same thing
+fk-1 = fk-2 + fk-3
+and substitute back
+fk = (fk-2 + fk-3) + (fk-3 + fk-4)
+fk = fk-2 + 2.fk-3 + fk-4
+subsitute fk-2 once more
+fk = (fk-3 + fk-4) + 2fk-3 + fk-4
+fk = 3fk-3 + 2fk-4
+
+therefore it's proven
+
+
+27. prove that f^2k - f^2k-1 = fk . fk+1 - fk-1 . fk+1 for every integer k>= 1
+28. prove that f^2k+1 - f^2k - f^2k-1 = 2fk . fk-1 for each integer k>=1
+29. prove that f^2k+1 - f^2k = fk-1 . fk+2 for every integer k>=1
+
+30. use math induction to prove tat for each integer n>=0, fn+2 . fn - f^2n+1 = (-1)^n
+
+37. compound interest: suppost a certain amount of money 
