@@ -393,6 +393,42 @@ c. how many rabbits will three be at the end of the year?
 
 answer:
 a.
-rk represents the total number of rabbit pairs alive at the end of month k.rkr
-rk = [total rabit alive at the end of month k] + [total rabit alive at the end of the month k - 2]
-= ... [4 . rk - 2]
+rk represents the total number of rabbit pairs alive at the end of month k
+rk = [pairs alive from prev month] + [newborn pairs at the end of month k]
+rk = rk-1 + [4 . rk - 2]
+
+justification:
+rk-1 is the pair that is alive from the previous month - these pairs ae still alive on month k because no rabbits die
+4 . rk-2 is the newborn pairs at the end of month k because by the rule rabbit are fertile at the end of 2nd month
+and they give birth to 4 new ones. rk-2 because needs at least 2 months to be fertile and pairs that are alive
+
+b. r0 = 1,
+r1 = 1
+r2 = 5
+r3 = r2 + [4 . r1] = 5 + 4.1 = 9
+r4 = r3 + [4 . r2] = 9 + 4.5 = 29
+r5 = r4 + [4 . r3] = 29 + 4.9 = 65
+r6 = r5 + [4 . r4] = 65 + 4.29 = 181
+
+c. how many rabbits will there be at the end of the year?
+r12 = r11 + [4 . r10] = 49661
+
+23. A single pair of rabbits 
+(male and female) is born at the beginning of a 
+year. Assume the following conditions:
+1. Rabbit pairs are not fertile during their first 
+two months of life, but thereafter give birth 
+to three new male/female pairs at the end of 
+every month.
+2. no rabbits die
+
+a. let sn = the number of pairs of rabits alive at the end of month n,
+for each integer n>=1 and lset s0 = 1
+find a recurrence relation for s0, s1, s2,... justify your answer
+b. compute s0,s1...,s5
+c. how many rabbits wil there be at the end of the year?
+
+answer:
+a. sk represents the number of pairs of rabbits alive at the end of month k
+sk = [pairs alive at the end of month sk-1] + [pairs alive at the end of month k]
+= sk-2 + 3.sk-3
