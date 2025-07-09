@@ -516,16 +516,32 @@ fk = fk-1 + fk-2
 
 RHS -> 2fk . fk-1
 = 2(fk-1 + fk-2) . fk-1
-= 2fk-1 + 2fk-2 . fk-1
+= 2f^2k-1 + 2fk-2fk-1
 
 LHS -> f^2k+1 - f^2k - f^2k-1
 fk+1 = fk + fk-1 - substitute into f^2k+1
 
 (fk+fk-1)^2 - f^2k - f^2k-1
 = f^2k + 2fkfk-1 + f^2k-1 - f^2k - f^2k-1
-= 
+= 2fk . fk-1
 
 29. prove that f^2k+1 - f^2k = fk-1 . fk+2 for every integer k>=1
+by the definition of fibonaci,
+fk = fk-1 + fk-2
+
+RHS -> fk-1 . (fk + fk+1)
+= fk-1 . fk + fk + fk-1
+= fk-1 . 2fk + fk-1
+
+
+LHS -> f^2k+1 - f^2k
+= (fk+1 - fk) (fk+1 + fk)
+
+fk+1 = fk + fk-1
+=  (fk + fk-1 - fk) (fk + fk-1 + fk)
+= fk-1 (2fk + fk-1)
+
+therefore proven
 
 30. use math induction to prove tat for each integer n>=0, fn+2 . fn - f^2n+1 = (-1)^n
 
