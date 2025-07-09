@@ -487,8 +487,30 @@ fk = 3fk-3 + 2fk-4
 
 therefore it's proven
 
-
 27. prove that f^2k - f^2k-1 = fk . fk+1 - fk-1 . fk+1 for every integer k>= 1
+by the main definition of fibonacci
+fk = fk-1 + fk-2
+
+RHS of f^2k - f^2k-1
+= fk . fk+1 - fk-1 . fk+1 
+= fk+1 (fk-fk-1)
+= fk+1 (fk-1 + fk-2 - fk-1)
+= fk+1 . fk-2
+
+now LHS
+f^2k - f^2k-1
+= (fk-fk-1)(fk+fk-1)
+= (fk-1 + fk-2 - fk-1) (fk-1 + fk-2 + fk-1)
+= fk-2 . (2fk-1 + fk-2)
+
+show that (2fk-1 + fk-2) = fk+1
+fk+1 = fk + fk-1
+fk+1 = fk-1 + fk-2 + fk-1
+fk+1 = 2fk-1 + fk-2
+
+therefore its proven
+
+
 28. prove that f^2k+1 - f^2k - f^2k-1 = 2fk . fk-1 for each integer k>=1
 29. prove that f^2k+1 - f^2k = fk-1 . fk+2 for every integer k>=1
 
