@@ -544,5 +544,25 @@ fk+1 = fk + fk-1
 therefore proven
 
 30. use math induction to prove tat for each integer n>=0, fn+2 . fn - f^2n+1 = (-1)^n
+answer:
+
+base case: n = 0
+we know f0 = 1 , f1 = 1, f2 = 2
+= f0+2 . f0 - f^20+1 = (-1)^0
+=f2 . 1 - f1^2 = 1
+= 2 . 1 - 1 = 1
+1 = 1
+
+inductive hyphotesis
+assume that the statement is true for arbitrary integer k>=0
+assume that fk+2 . fk - f^2k+1 = (-1)^k is true
+
+we need to show that f(k+1) is true
+we need to show that fk+3 . fk+1 - f^2k+2 = (-1)^k+1 is true
+
+LHS -> fk+3 . fk+1 - f^2k+2
+= (fk+2 + fk+1) . fk+1 - f^2k+2
+RHS -> (-1)^k+1
+
 
 37. compound interest: suppost a certain amount of money 
