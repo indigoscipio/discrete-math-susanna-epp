@@ -593,4 +593,66 @@ b.
 r4 (end of fourth quarter/1 year) = 1.01 . $151.505 =  5203.02005
 
 c. find the APY for the account
-= ??
+= 4.06%
+
+38. Compound Interest: Suppose a certain amount of 
+money is deposited in an account paying 3% an
+nual interest compounded monthly. For each
+positive integer n, let sn = the amount on deposit 
+at the end of the nth month, and let S0 be the ini
+tial amount deposited.
+
+a. find recurrence relation s0,s1,s2,... assuming no additional deposits or withdrawls
+during the year. justify your answer
+b. if s0 = $10,000, find the amount of money on deposit at the endo f one year
+c. find the APY for the account
+
+answer:
+a. let
+sk = the amount on deposit at the end of the k-th month
+recurrence relation = sk-1 + (0.03 / 12) . sk-1
+= sk-1 + 0.0025 . sk-1
+= sk-1(1 + 0.0025)
+= 1.0025 . sk-1
+
+justification: sk-1 -> is the total deposit value (initial principal + all accumulated interest at the end of previous month k-1)
+0.0025 . sk-1 -> the monthly interset gained at the end of the current month
+
+b. s0 = $10,000
+s1 = 1.0025 . $10,000 = $10025
+s12 = approximately $10,304.51
+
+c. APY = $3.0416%
+
+38. With each step you take when climbing a stair
+case, you can move up either one stair or two 
+stairs. As a result, you can climb the entire 
+staircase taking one stair at a time, taking two at a 
+time, or taking a combination of one- and two
+stair increments. For each integer n >= 1, if the 
+staircase consists of n stairs, let cn be the number 
+of different ways to climb the staircase. Find a 
+recurrence relation for c1, c2, c3, ... Justify your 
+answer.
+
+let step = s
+s+1 or s+2 for each step
+
+c1 = the number of different ways to climb 1 stair staircase = 1 way -> s+1
+c2 = the number of different ways to climb 2 stair staircase = 2 way -> (s+1 + s+1) or (s+2)
+
+assume we are standing at the very top nth stair.
+the very last step we take to get here is either
+take 1 stair or 2 stair
+
+case 1: we take 1 stair approach to get to the top of nth stair
+in this case we are standing on n-1 stair before we get to nth stair
+so cn-1
+
+case 2: we take 2 stair approach to get to the top of nth stair
+in this case we are standing on n-2 stair before we get to the top nth stair
+so cn-2
+
+= [the number of was to climb to stair n-1] + [number of ways to climb to stair n-2]
+cn = cn-1 + cn-2
+
