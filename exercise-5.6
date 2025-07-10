@@ -565,4 +565,32 @@ LHS -> fk+3 . fk+1 - f^2k+2
 RHS -> (-1)^k+1
 
 
-37. compound interest: suppost a certain amount of money 
+37. Suppose a certain amount of 
+money is deposited in an account paying 4% an
+nual interest compounded quarterly. For each posi
+tive integer n, let Rn = the amount on deposit at 
+the end of the nth quarter, assuming no additional 
+deposits or withdrawals, and let R0 be the initial 
+amount deposited.
+
+a. recurrence relation for r0, r1, r2, r... justify your answer
+b. if r0 = $5,000 find the amount of money on deposit at the end of one year
+c. find the APY for the account
+
+answer:
+a.b
+rn = the amount on deposit at the end of the nth quarter.
+r0 = $5000
+r1 (end of first quarter) = $5000 + ((0.04 / 4) . $5000) = $5000 + $50 = $5050
+r2  (end of second quarter) = $5050 + ((0.04 / 4) . $5050) = $5050 + $50.5 = $5100.5
+r3  (end of third quarter) = $5100.5 + ((0.04 / 4) . $5100.5) = $5100.5 + $51.005 = $5151.505
+recurrence relation = (interest accumlated until previous quarter rk-1) + [(0.04 / 4) . interest gained on rk-1]
+= rk-1 + 0.01 (rk-1)
+
+because at the end of each quarter we gain 0.01% and we want to add it to all of the previous interest tat we've accumulated
+
+b. 
+r4 (end of fourth quarter/1 year) = 1.01 . $151.505 =  5203.02005
+
+c. find the APY for the account
+= ??
