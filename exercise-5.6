@@ -656,3 +656,58 @@ so cn-2
 = [the number of was to climb to stair n-1] + [number of ways to climb to stair n-2]
 cn = cn-1 + cn-2
 
+40. A set of blocks contains blocks of heights 1, 2, 
+and 4 centimeters. Imagine constructing towers by 
+piling blocks of different heights directly on top 
+of one another. (A tower of height 6 cm could be 
+obtained using six 1-cm blocks, three 2-cm blocks 
+one 2-cm block with one 4-cm block on top, one 
+4-cm block with one 2-cm block on top, and so 
+forth.) Let tn be the number of ways to construct 
+a tower of height n cm using blocks from the set. 
+(Assume an unlimited supply of blocks of each 
+size.) Find a recurrence relation for t1, t2, t3... 
+Justify your answer
+
+answer:
+tk = the number of ways to construct a tower of height k cm using blocks from the set
+t1 -> number of ways to construct a tower of height 1 cm using blocks from the set.
+there can only be 1 way for this, which is using the 1cm variant
+
+t2 -> the number of ways to construct a tower of height 2 cm using blocks from the set.
+we can do this in two ways: (2x 1cm) OR (1x 2cm) 
+
+t3 -> the number of ways to construct a tower of height 3 cm using blocks from the set.
+we can do this in 3 ways:
+3x 1cm blocks
+1x 1cm + 1x 2cm
+1x 2cm + 1x 1cm
+
+t4 ->  the number of ways to construct a tower of height 4 cm using blocks from the set.
+(1,1,1,1)
+(1,1,2)
+(1,2,1)
+(2,1,1)
+(2,2)
+(4)
+therefore there is 6 ways
+
+we want to find recurrence relation tk
+
+when buiding a tower of height kcm, the possible height for the last block are
+1cm
+2cm
+4cm each of these are mutually exclusive
+
+case 1:
+top/last block k is 1cm -> the tower's height before this block is placed is k-1
+
+case 2:
+the last/top block k is 2cm -> the tower's height before this block is placed is k-2
+
+case 3:
+the last block k is 4cm -> the tower's height before this block is k-4
+
+therefore since its mutualy exclusive
+recurrence relation tk = [tk-1] + [tk-2] + [tk-4]
+with the base case t0 = 1, t1 = 1, t2 = 3, and t4 = 6
