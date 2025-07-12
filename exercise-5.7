@@ -59,4 +59,29 @@ use this fact to solve each of the following problem
 
 a. if i is an integer and i>=1, find a formula for the expression 1+2 + 2^2+... + 2^i-1
 b. if n is an integer and n>=1, find a formula for the expression 3^n-1 + 3^n-2+...+3^2+3+1
-c. if n is an integer and n>=1, find a formula for the expression 3 + 3.2 + 3.3 + ... +3n+n
+c. if n is an integer and n>=2, find a formula for the expression 2^n + 2^n-2. 3 + 2^n-3 . 3 + ... + 2^2.3 + 2.3 + 3
+d. if n is an integer and n>=1, finda  formula for the expression 2^n - 2^n-1 + 2^n-2 - 2^n-3 + ... + (-1)^n-1 . 2 + (-1)^n
+
+answer:
+a. ratio = 2
+n = i-1
+plug in the formula
+2^i-1+1 - 1 / 2-1
+= 2^i - 1
+
+b. 3^n-1 + 3^n-2+...+3^2+3+1 -> a reversed version of the example pattern
+ratio = 3
+n = n-1
+plug in the formula
+3^n-1+1 - 1 / 3-1
+= 3^n - 1 / 2
+
+c. 2^n + 2^n-2. 3 + 2^n-3 . 3 + ... + 2^2.3 + 2.3 + 3
+2^n + 3 . (2^n-2 + 2^n-3 + ... + 2^2 + 2 + 1)
+= 2^n + 3 . (1 + 2 + 2^2 + ... + 2^n-3 + 2^n-2)
+= 2^n + 3 . 2^n-2+1 - 1 / 2-1
+= 2^n + 3 . 2^n-1 - 1
+= 2 . 2^n-1 + 3 . 2^n-1  + 3
+= 2 + 3 . 2^n-1 - 3
+= 5 . 2^n-1 - 3
+
