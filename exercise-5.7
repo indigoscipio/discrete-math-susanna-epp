@@ -3,26 +3,60 @@ Test yourself
 1. to use iteration to find an explicit formula for a recursively defined squence,
 start with the ___ and use sucsessive substitution into the ___
 to look for a numerical pattern
+answer; first term/initial condition, recurrence relation
 
 2. at every step of the iteration process, it is important to eliminate ___
+answer: the parenthesis
 
 3. if a single number, say a is added to itself k times in one of the steps of the iteration
-replace the sum by the expression ___
+replace the sum by the expression 
+answer: a.k
 
 4. if a single number, say a is multiplied by itself k times in one of the steps of the iteratios
-replace the product by the expression ___
+replace the product by the expression a^k
 
-5. a general arithmetic sequecne a0,a1,aa2 ... with initial value a0 and fixed constant summand d
+5. a general arithmetic sequecne a0,a1,a2 ... with initial value a0 and fixed constant summand d
 satisfies the recurrence relation ___ and has the explicit formula ___
+ak = ak-1 + d  , an = a0 + dn
 
 6. a general geometric sequence a0,a1,a2 ... with initial value a0 and fixed constant multiplier r
 satisfies the recurrense relation ____ and has the explicit formula ___
+ak = ra k-1, an = a0r^n
 
 7. when an explicit formula for a recursively defined sequence has been obtained by iteration
-its correctness can be checked by 
+its correctness can be checked by
+strong mathematical induction
 
 Exercise set 5.7
-a. the formula 1+2+3+ ...+n = n(n+1)/2
+1. the formula 1+2+3+ ...+n = n(n+1)/2
 is true for every integer n>=1. use this fact to solve each of the following problems:
-1. if k is an integer and k>=2, find a formula for the expression 1+2+3+...+(k-1)
 
+a. if k is an integer and k>=2, find a formula for the expression 1+2+3+...+(k-1)
+b. if n is an integer and n>=1, find a formula for the expression 5+2+4+6+8...+(2n)
+c. if n is an integer and n>=1, find a formula for the expression 3 + 3.2 + 3.3 + ... +3n+n
+
+answer:
+a. k-1(k-1+1)/2
+= k-1 . k / 2
+= k(k-1) / 2
+= k^2-k / 2
+
+b. 5 + 2n(2n+1)/2
+= 5 + 2 . n(n+1)/2
+= 5 + n(n+1)
+
+c. 3 + 3.2 + 3.3 + ... + 3n + n
+= 3 (1 + 2 + 3 + ... + n) + n
+= 3 .  n(n+1)/2 + n
+= 3n (n+1)/2 + n
+= (3n^2 + 3n) / 2 + n
+= (3n^2 + 3n) / 2 + 2n/2
+= 3n^2 + 5n / 2
+
+2. the formula 1+r+r^2+...+r^n = r^n+1 - 1 / r-1
+is true for every real number r except r = 1 and for every integer n>=1
+use this fact to solve each of the following problem
+
+a. if i is an integer and i>=1, find a formula for the expression 1+2 + 2^2+... + 2^i-1
+b. if n is an integer and n>=1, find a formula for the expression 3^n-1 + 3^n-2+...+3^2+3+1
+c. if n is an integer and n>=1, find a formula for the expression 3 + 3.2 + 3.3 + ... +3n+n
