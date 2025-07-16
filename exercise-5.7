@@ -316,13 +316,38 @@ therefore proven
 19. a worker is promised a bonus if he can increase his productivity by 2 units a day every day for a period of 30 days
 if on day 0 he produces 170 units, how many units must he produce on day 30 to qualify for the bonus?
 
+frequency = 2 units daily
+duration = 30 day
+d0 = 170 units
+d30 = ???
+
+formula guess = [prev accumulated unit] + 2
+d1 = 170
+d2 = d1 + 2 = (170 + 2)
+d3 = d2 + 2 = (170 + 2) + 2
+d4 = d3 + 2 = ((170 + 2) + 2) + 2
+
+dk = d0 + 2k
+d30 = d0 + 2.30 = 170 + 60 = 230
+
 20. A runner targets herself to improve her time on a 
 certain course by 3 seconds a day. If on day 0 she 
 runs the course in 3 minutes, how fast must she 
 run it on day 14 to stay on target?
+
+answer:
+duration: 3s/day
+d0 = 3m -> 3.60 = 180s
+d1 = 180 - 3
+d2 = d1 - 3 = 180 - 3 - 3
+d3 = d2 - 3 = 180 - 3 - 3 - 3
+
+dk = d0 - 3k
+d14 = 180 - 3.14 = 180 - 42 = 138 = 2 minutes 18 seconds
 
 21. Suppose r is a fixed constant and a0, a1, a2 ... is 
 a sequence that satisfies the recurrence relation 
 ak5rak21, for each integer k>=1 and a0=a. Use 
 mathematical induction to prove that an=ar^n, for 
 every integer n>=0.
+
