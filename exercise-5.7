@@ -375,3 +375,48 @@ a(k+1) = ar^(k+1)
 
 therefore it's proven
 
+22. As shown in Example 5.6.8, if a bank pays interest 
+at a rate of i compounded m times a year, then the 
+amount of money Pk at the end of k time periods 
+(where one time period = 1/mth of a year) satis
+fies the recurrence relation Pk = [1 + (i/m)] . Pk-1 
+with initial condition P0 = initial amount 
+deposited. Find an explicit formula for Pn.
+
+answer:
+p0 = initial amount, lets assume it's 10000
+and let interest rate i = 4% (0.04), compounded anually
+so time period = 0.4/12
+p1 = 1 + (0.04/1) . p0 = 1.04 . 10000 = 10400
+p2 = 1 + (0.04/1) . p1 = 1.04 . 10400 = 10816
+
+pk = [1 + (i/m)] . pk-1
+let R = [1 + (i/m)]
+p1 = R . p0
+p2 = R . (R . p0-1)
+p3 = R . R . (R . p0)
+
+explicit formula guess
+pk = r^k . p0
+pk = [1 + (i/m)]^k . p0
+
+23. Suppose the population of a country increases 
+at a steady rate of 3% per year. If the population 
+is 50 million at a certain time, what will it be 
+25 years later?
+
+answer:
+rate = 0.03
+population = 50m
+p0 = 50
+p1 = 50 + (50 . 0.03) = 51.5
+p2 = 51.5 + (51.5 . 0.03) = 51.5+1.545 = 53.045 
+
+we want to find p25
+recurrence relation & explicit formula guess
+pk = p(k-1) + r . p(k-1)  for integer k>=1
+pk = p(k-1) (1 + r)
+
+explicit formula guess
+an = a0 . r^n
+an = 50 . 0.03^n
