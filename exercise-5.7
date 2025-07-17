@@ -347,7 +347,26 @@ d14 = 180 - 3.14 = 180 - 42 = 138 = 2 minutes 18 seconds
 
 21. Suppose r is a fixed constant and a0, a1, a2 ... is 
 a sequence that satisfies the recurrence relation 
-ak5rak21, for each integer k>=1 and a0=a. Use 
+ak=rak-1, for each integer k>=1 and a0=a. Use 
 mathematical induction to prove that an=ar^n, for 
 every integer n>=0.
 
+answer: we want to prove that an=ar^n is the solution to recurrence relation ak = rak-1
+
+let p(n) be the following: an=ar^n
+step 1: show that p(0) is true
+a0 = ar^0
+a0 = a.1
+a0 = a -> therefore p(0) is true
+
+step 2: inductive hypothesis
+assume that p(k) is true
+p(k) -> ak = ar^k
+
+we need to show that p(k+1) is true
+p(k+1) -> a(k+1) = ar^k+1
+a(k+1) = rak+1-1
+a(k+1) = rak
+
+since we assume ak = ar^k in the inductive hypothesis we can substitute
+a(k+1) = 
