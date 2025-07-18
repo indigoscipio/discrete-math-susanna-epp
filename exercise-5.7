@@ -448,9 +448,45 @@ number of terms = k
 25. A certain computer algorithm executes twice 
 as many operations when it is run with an input 
 of size k as when it is run with an input of size 
-k21 (where k is an integer that is greater than 1). 
+k-1 (where k is an integer that is greater than 1). 
 When the algorithm is run with an input of size 1, 
 it executes seven operations. How many opera
 tions does it execute when it is run with an input 
 of size 25?
 
+n1 = 7
+n2 = 2.7
+n3 = 2.2.7
+n4 = 2.2.2.7
+
+we want to find n25
+nk = 7 . 2^k-1
+n25 = 7 . 2^24 = 7 . 16777216 = 117440512
+
+26. A person saving for retirement makes an initial 
+deposit of $1,000 to a bank account earning inter
+est at a rate of 3% per year compounded monthly, 
+and each month she adds an additional $200 to the 
+account.
+
+a. for each nonnegative intger n, let An be the amount in the 
+account at the end of n months. find recurrence relation relating 
+Ak to Ak-1
+
+answer:
+interest = 3% -> 0.03 yearly = 0.0025 per month
+compound frequency = monthly
+monthly deposit = $200
+
+ak = [total interest acc previously incl deposit] + [interest gained in new preiod]
+a0 = 1000
+ak =  ak-1 * 1.0025 + 200
+
+b. use iteration to find an explicit formula for An
+
+a0 = 1000
+a1 = (1000 * 1.0025) + 200
+a2 = ((1000 * 1.0025) + 200) . 1.0025 + 200 = 
+
+explicit formula guess
+an = ???
