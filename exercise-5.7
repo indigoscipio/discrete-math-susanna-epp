@@ -418,5 +418,39 @@ pk = p(k-1) + r . p(k-1)  for integer k>=1
 pk = p(k-1) (1 + r)
 
 explicit formula guess
-an = a0 . r^n
-an = 50 . 0.03^n
+we know that if ak = rak-1 then an = a0 . r^n
+then we can substitute
+pk = 50 . 1.03^k
+then p25 = 50 . (1.03)^25
+= approx 104.69 million
+
+24. A chain letter works as follows: One person sends 
+a copy of the letter to five friends, each of whom 
+sends a copy to five friends, each of whom sends 
+a copy to five friends, and so forth. How many 
+people will have received copies of the letter after 
+the twentieth repetition of this process, assuming 
+no person receives more than one copy?
+
+
+r1 = 5 -> one person sends to 5, no person receive more than one copy
+r2 = 5 * 5
+r3 = (5 * 5) . 5
+
+rk = r^k -> (5^1 + 5^2 + 5^3 ... 5^k)
+first term = 5^1
+common ratio = 5
+number of terms = k
+5 (5^20 - 1) / 5 - 1
+5 (5^20- 1) / 4
+= 119209289550780
+
+25. A certain computer algorithm executes twice 
+as many operations when it is run with an input 
+of size k as when it is run with an input of size 
+k21 (where k is an integer that is greater than 1). 
+When the algorithm is run with an input of size 1, 
+it executes seven operations. How many opera
+tions does it execute when it is run with an input 
+of size 25?
+
