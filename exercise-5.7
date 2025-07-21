@@ -547,4 +547,31 @@ b. assume that the person does not place any additional charges on the card and 
 $150 each month to pay off the loan. let Bn be the balance owed on the card after n months
 find explicit formula for bn
 
-c. 
+answer:
+b1 = (3000 * 1.015) - 150
+b2 = (((3000 * 1.015) - 150)) * 1.015) - 150) = 3000 * 1.015 * 1.015 - 150 * 1.015 - 150 = 3000 * 1.015^2 - 150 * 1.015 - 150
+b3 = ((3000 * 1.015^2 - 150 * 1.015 - 150)) * 1.015) - 150 = (3000 * 1.015^3) - (150 * 1.015^2) - 150 * 1.015 - 150
+
+bk is a geometric series
+first term = 150 . 1.015^0 = 150
+ratio = 1.015
+terms = k
+
+bk = 10000 - 7000 . 1.015^k
+
+c. how long will be rquired to pay off debt?
+
+0 = 10000 - 7000 . 1.015^n
+7000 . 1.015^n = 10000 - 7000 . 1.015^n + 7000 . 1.015^n
+7000 . 1.015^n = 10000
+1.015^n = 10000/7000
+1.015^n = 10/7
+1.996 years
+
+d. what is the total amount of money the person will have paid for the loan?
+24* 150 = 3600
+
+In 28–42 use mathematical induction to verify the cor
+rectness of the formula you obtained in the referenced 
+exercise.
+28. 
