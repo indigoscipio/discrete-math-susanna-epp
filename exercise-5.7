@@ -574,4 +574,31 @@ d. what is the total amount of money the person will have paid for the loan?
 In 28–42 use mathematical induction to verify the cor
 rectness of the formula you obtained in the referenced 
 exercise.
-28. 
+
+28. exercise 3
+
+3. ak = k . ak-1 for each integer k>=1
+a0 = 1
+guess for explicit formula: an = n!
+
+answer:
+we want to show that an = n! satisfies recurrence relation ak = k . ak-1
+
+step 1: base case p(0)
+a0 = 0!
+a0 = 1
+threfore the base case a0 is true
+
+step 2: inductive case: assume that p(k) is true
+ak = k!
+
+we want to show that p(k+1) is true
+we want to show ak+1 = k+1! is true
+
+from the recurrence relation we have
+ak+1 = k+1 . ak+1-1
+ak+1 = k+1 . ak -> since we assumed that ak = k! we can substitue
+ak+1 = k+1 . k! -> from the definition of factorial we can simplify
+ak+1 = k+1!
+therefore this matches the form of the given explicit formula
+
