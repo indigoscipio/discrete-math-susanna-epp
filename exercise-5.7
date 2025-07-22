@@ -602,3 +602,43 @@ ak+1 = k+1 . k! -> from the definition of factorial we can simplify
 ak+1 = k+1!
 therefore this matches the form of the given explicit formula
 
+29. exercise 4
+4. bk = bk-1 / 1 + bk-1 for each integer k>=1
+b0 = 1
+explicit formula guess:
+bn = 1/n+1
+
+answer:
+base case p(0)
+p0 = 1/0+1 = 1/1 -> base case is true
+
+inductive case: p(k)
+assume that p(k) is true, that is
+p(k) = 1/k+1 is true
+
+we need to show that p(k+1) is true
+p(k+1) = 1/k+1+1 = 1/k+2 is true
+
+from the recurrence relation
+p(k+1) = pk+1-1 / 1 + pk+1-1
+p(k+1) = pk / 1 + pk
+
+since we assumed that pk = 1/k+1 we can substitute
+p(k+1) = 1/k+1 / 1 + 1/k+1
+
+denominator
+1 + 1/k+1 = k+1/k+1 + 1/k+1 = 1/k+1
+
+p(k+1) = 1/k+1 / k+2 / k+1
+= 1/k+1 * k+1 / k+2
+= k+1 / k+1 * k+2
+= 1 / k+2
+
+30. exercise 5
+5. ck = 3ck-1 + 1 for each integer k>=2
+c1 = 1
+explicit formula guess cn = 3^n - 1 / 2
+
+step 1: base case p(0)
+p0 = 3^0 - 1 / 2 = 1 - 1 / 2 = 0 / 2 = 0
+= ??
