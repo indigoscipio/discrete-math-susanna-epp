@@ -775,3 +775,49 @@ pk+1 = 1 / 2^k - 1 / ((1 / 2^k - 1) + 2.2^k - 1 / 2^k - 1)
 pk+1 = 1 / 2^k+1 - 1
 therefore it's proven
 
+36. exercise 11
+11. pk = pk-1 + 2.3^k for each integer k>=2
+p1 = 2
+explicit formula guess
+pn = 3^n+1 - 7
+
+base case p1
+p1 = 3^1+1 - 7 = 9 - 7 = 2
+therefore the base case is true
+
+IH pk
+pk = 3^k+1 - 7
+we need to show that pk+1 is true
+from the recurrence relation we know
+
+pk = pk-1 + 2.3^k, then we can substitute k+1
+pk+1 = pk+1-1 + 2.3^k+1
+pk+1 = pk + 2.3^k+1
+
+since we assumed pk earlier we can substitute
+pk+1 = (3^k+1 - 7) + 2 . 3^k+1
+pk+1 = 3.3^k+1 - 7
+pk+1 = 3^k+2 - 7
+therefor eproven
+
+37. exercise 12
+12. sk = sk-1 + 2k for each integer k>=1
+s0 = 3
+
+explicit guess formula
+sn = 3 + n^2 + n
+
+base case p0
+p0 = 3 + 0^2 + 0 = 3
+therefore base case is true
+
+IH pk
+pk = 3 + k^2 + k
+we need to show pk+1 is true from this assumption
+
+from the recurrence relation we know
+pk = pk-1 + 2k, then we can substitute for k+1
+pk+1 = pk+1-1 + 2k+1
+pk+1 = pk + 2k+1
+
+since we know pk earlier we can substiute
