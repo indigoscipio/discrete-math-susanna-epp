@@ -719,3 +719,59 @@ pk+1 = 4^k+1 . 11 - 20 /3 + 15 / 3
 pk+1 = 4^k+1 . 11 - 5 / 3
 
 22. exercise 8
+
+8. fk = fk-1 + 2^k for each integer k>=2
+f1 = 1
+
+explicit formula guess
+fn = 2^n+1 - 3
+
+answer:
+base case p(1) -> 2^2 - 3 = 1
+therfore the base case is true
+
+p(k) -> 2^k+1 - 3
+assume that pk is true, we need to show that pk+1 is true
+
+we need to show this is true 
+pk+1 -> 2^k+2 - 3
+
+from the recurrence relation we know
+pk+1 = pk+1-1 + 2^k+1
+pk+1 = pk + 2^k+1
+
+since we assumed pk earlier we can substitute
+pk+1 = 2^k+1 - 3 + 2^k+1
+pk+1 = 2^k+1 + 2^k+1 - 3
+pk+1 = 2^k+2 - 3
+therefore its proven
+
+34. exercise 9
+9. gk = gk-1 / gk-1 + 2 for each integer k>=2
+g1 = 1
+
+explicit formula guess
+gn = 1 / 2^n - 1
+
+base case p1
+g1 = 1 / 2^1 - 1
+g1 = 1 / 2 - 1 = 1
+therefore base case is true
+
+inductive hypothesis pk
+pk = 1 / 2^k - 1
+
+we need to show that pk+1 is true
+pk+1 = 1 / 2^k+1 - 1
+
+from therecurrence relation we know
+pk = pk-1 / pk-1 + 2 , then
+pk+1 = pk+1-1 / pk+1-1 + 2
+pk+1 = pk / pk + 2
+
+since we asumed pk earlier we can substitue
+pk+1 = 1 / 2^k - 1 / ((1 / 2^k - 1) + 2)
+pk+1 = 1 / 2^k - 1 / ((1 / 2^k - 1) + 2.2^k - 1 / 2^k - 1)
+pk+1 = 1 / 2^k+1 - 1
+therefore it's proven
+
