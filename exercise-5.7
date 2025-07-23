@@ -821,3 +821,40 @@ pk+1 = pk+1-1 + 2k+1
 pk+1 = pk + 2k+1
 
 since we know pk earlier we can substiute
+pk+1 = (3 + k^2 + k) + 2 (k+1)
+pk+1 = (3 + k^2 + k) + (2k + 2)
+pk+1 = k^2 + 3k + 5
+
+38. exercise 13
+
+13. tk = tk-1 + 3k + 1 for each integer k>=1
+t0 = 0
+
+explicit guess formula
+tn = n(3n + 5) / 2
+
+base case p0
+= 0(3.0 + 5) / 2 = 0
+therefore the base case t0 is true
+
+IH pk
+pk = k(3k + 5) / 2
+
+we need to show pk+1 is true from the assumption IH
+pk+1 = k+1 (3k+1 + 5) / 2
+from the recurrene relation we know
+
+tk = tk-1 + 3k + 1, we can substitute
+tk+1 = tk+1-1 + 3k+1 + 1
+tk+1 = tk + 3k+1 + 1
+
+since we know pk from ih we can substitue back
+pk+1 = pk + 3k+1 + 1
+pk+1 = k(3k + 5) / 2 + 3(k+1) + 1
+pk+1 = 3k^2 + 5k / 2 + 3(k+1) + 1
+pk+1 = 3k^2 + 5k / 2 + 3k + 4
+pk+1 = 3k^2 + 5k / 2 + 2(3k + 4) / 2
+pk+1 = 3k^2 + 5k / 2 + 6 k + 8 / 2
+pk+1 = 3k^2 + 5k + 6k + 8/ 2
+pk+1 = 3k^2 + 11k + 8 / 2
+
