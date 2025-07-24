@@ -858,3 +858,70 @@ pk+1 = 3k^2 + 5k / 2 + 6 k + 8 / 2
 pk+1 = 3k^2 + 5k + 6k + 8/ 2
 pk+1 = 3k^2 + 11k + 8 / 2
 
+39. exercise 15
+15. yk = yk-1 + k^2 for each integer k>=2
+y1 = 1
+
+explicit formula guess
+yn = n(n+1)(2n+1)/6
+
+base case p1
+y1 = 1(1+1)(2.1+1) / 6
+y1 = 1 . 2 . 3 / 6 = 6/6 = 1
+therefore the base case is true
+
+IH pk
+pk = k(k+1)(2k+1)/6
+
+we need to show pk+1 is true based on this asumption
+
+pk+1= k+1(k+1+1)(2k+1+1)/6
+pk+1 = k+1(k+2)(2k+2)/6
+
+from the recurrence relatio nwe know
+yk = yk-1 + k^2, we can substiute
+yk+1 = yk+1-1 + k+1^2
+yk+1 = yk + k+1^2
+
+since we assumed pk eaerlier we can substitute
+pk+1 = pk + k+1^2
+pk+1 = k(k+1)(2k+1)/6 + k+1^2
+pk+1 = k+1 []
+
+41. exercise 16 (tower of hanoi)
+ak = 3ak-1 + 2 
+a1 = 2
+explicit formula guess
+an = 3^n-1
+
+base case p1
+3^1 - 1 = 2, therefore the base case is true
+
+pk IH
+pk = 3^k - 1
+
+we need to show pk+1 is true
+pk+1 = 3^k+1 - 1
+
+from the recirrence relation
+ak = 3ak-1 + 2 , we can substitue
+pk+1 = 3pk+1-1 + 2
+pk+1 = 3pk + 2
+
+since we assumed pk eaelier we know
+pk+1 = 3 (3^k - 1) + 2
+pk+1 = 3.3^k - 3.1 + 2
+pk+1 = 3^k+1 - 3 + 2
+pk+1 = 3^k+1 - 1
+
+43. In each of 43–49 a sequence is defined recursively. (a) Use 
+iteration to guess an explicit formula for the sequence. 
+(b) Use strong mathematical induction to verify that the 
+formula of part (a) is correct.
+
+43. ak = ak-1 / 2ak-1 - 1 for each inteer k>=1 
+a0 = 2
+
+explicit formula guess
+a1 = a0 / 2(a0) - 1 = 2 / 2.2 -1 = 2/3 
+a2 = a1 / 2(a1) - 1 = 2/3 / 2(2/3) - 1 = 2/
