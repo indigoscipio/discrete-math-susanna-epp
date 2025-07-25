@@ -3,17 +3,17 @@ Test yourself
 relation with constant coefficients is a recur
 rence relation of the form ___ for every integer 
 k >= ___, where  ___
-answer:
+answer:  ak = Aak-1 + Bak-2 , 2, b are does not equal 0
 
 2. given a recurrence realtion of form ak = Ak-1 + Bak-2 for every integer k>=2
 the characterstic equation of the relations is___
-answer: t^2 - t + B = 0
+answer: r^2 - At - B = 0
 
 3. if a sequence a1, a2, a3 ... is deined by second-order lienar homogeneous recurrence relation
 with constant coefficients and the characteristic equation for the relation has two distinct roots r 
 and s (which could be complex numbers), then the sequence is given by an explicit formula of the 
 form ____
-answer: C() + D()
+answer: an = Cr^n + Ds^n
 
 4. if a sequence a1, a2, a3, ...  is defined by a second
 order linear homogeneous recurrence relation with 
@@ -21,6 +21,48 @@ constant coefficients and the characteristic equa
 tion for the relation has only a single root r, then 
 the sequence is given by an explicit formula of the 
 form ___
-answer: 
+answer: an = Cr^n + Dnr^n
 
 Exercise set 2.8
+1. which of the following are second order linear homogenuous recurrence relations with
+constant coeffieicnt?
+a. ak = 2ak-1 - 5ak-2
+answer: true
+b. bk = kbk-1 + bk-2
+answer: false (kbk-1) contains k
+c. ck = 3ck-1 . ck^2k-2
+answer: false, contains c and ^2 on the 2nd one
+d. dk = 3dk-1 + dk-2
+answer: true
+e. rk = rk-1 + rk-2 - 2
+answer: false (2 at the end)
+f. sk = 10sk-2
+answer: true
+
+2. which of the following are second order linear homogenuous recurrence relations with
+constant coeffieicnt?
+a. ak = (k-1)ak-1 + 2kak-2
+answer: false, because of  (k-1) and 2k coeffieicnt
+b. bk = -bk-1 + 7bk-2
+answer: true
+c. ck-1 + 1
+answer: false (no 2nd recurrence relation)
+d. dk = 3d^2k-1 + dk-2
+answer: false (because of the 3d^2k)
+e. rk = rk-1 - 6rk-3
+answer: false, because jump from k-1 to k-3
+f. sk = sk-1 + 10sk-2
+answr: true
+
+3. let a0, a1, a2, ... be the sequence defined by the explicit formula
+an = c . 2^n + d for every integer n>= 0
+where c and d are areal numbers
+
+a. find c & d so that a0 = 1 and a1 = 3.
+what is a2 in this case?
+answer: 
+??
+
+
+b. find c & d so that a0 = 0 and a1 = 2.
+what is a2 in this case?
