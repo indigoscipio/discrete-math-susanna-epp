@@ -170,3 +170,27 @@ b2 = c . 3^2 + d(-2)^2
 b2 = 2 . 9 + -2^2
 b2 = 18 + 4
 b2 = 22
+
+5. let a0, a2, ... be the sequence defined by the explicit formula
+
+an = a . 2^n + d for each integer n>= 0
+where c and d are real numbers. show that for any choice of c and d,
+
+ak = 3ak-1 - 2ak-2 for every integer k>=2
+
+answer:
+ak = c  . 2^k + d
+
+ak-1 = c . 2^k-1 + d
+
+ak-2 = c . 2^k-2 + d
+
+now substitute into the recurrence relation
+
+3ak-1 - 2ak-2
+3(c . 2^k-1 + d) - 2(c . 2^k-2 + d)
+= (3c . 2^k-1 + 3d) - (2c . 2^k-2 -2d)
+= (3c . 2^k-1 - 2c . 2^k-2) + (3d - 2d)
+= c . 2^k-3 + d
+
+6. 
