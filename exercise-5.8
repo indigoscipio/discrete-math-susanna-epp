@@ -200,4 +200,57 @@ now substitute into the recurrence relation
 = c . 2^k + d
 
  
-6. 
+6. let b0, b1, b2, ... be the sequence defined by the explicit formula
+
+bn = c . 3^n + d(-2)^n for each integer n>= 0
+where c and d are real numbers. show that for any choice of c and d,
+
+bk = bk-1 + 6bk-2 for every integer k>=2
+
+answer:
+bk = c . 3^k + d(-2)^k
+bk-1 = c . 3^k-1 + d(-2)^k-1
+bk-2 = c . 3^k-2 + d(-2)^k-2
+
+now substitute into the recurrence relation
+bk = bk-1 + 6bk-2
+bk = (c . 3^k-1 + d(-2)^k-1) + 6(c . 3^k-2 + d(-2)^k-2)
+= c . 3^k-1 + d(-2)^k-1 + 6c . 3^k-2 + 6d (-2)^k-2
+= c.3^k-1 + 6c . 3^k-2 + d(-2)^k-1 + 6d . (-2)k^2
+= c (3^k-1 + 6.3^k-2) + d ((-2)^k-1 + 6(-2)^k-2)
+= c (3.3^k-2 + 6.3^k-2) + d (-2 . (-2)^k-2 + 6 . (-2)^k-2)
+= c (9 . 3^k-2) + d (4 . (-2)^k-2)
+= c (3^2 . 3^k-2) + d (-2^2 . (-2)^k-2)
+= c (3^k) + d (-2^k)
+
+8. In each of 8–10: (a) suppose a sequence of the form  
+1, t, t2, t3, ... , tn ... where t does not equal 0, satisfies the given recur
+rence relation (but not necessarily the initial conditions), 
+and find all possible values of t: (b) suppose a sequence sat
+isfies the given initial conditions as well as the recurrence 
+relation, and find an explicit formula for the sequence.
+
+8. ak = 2ak-1 + 3ak-2 for every integer k>=2 
+a0 = 1, a1 = 2
+
+answer:
+substitute into recurrence relation
+ak = tk
+tk = 2t^k-1 + 3t^k-2, lowest power is k-2
+t^2 = -3 + -4
+t^2 = 2t + 3
+
+multiply = -3
+add = -2
+-3 and 1, so quadratic can be factored as
+(t - 3)(t + 1) = 0
+
+1st: t - 3 = 0
+t = 3
+
+2nd: t + 1 = 0
+t = -1
+
+9. bk = 7bk-1 - 10bk-2 for every intger k>=2
+b0 = 2, b1 = 2
+
