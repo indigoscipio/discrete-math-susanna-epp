@@ -328,3 +328,46 @@ c = 8/3
 
 therefore the explicit formula is
 bn = 8/3 . 2^n - 2/3 . 5^n
+
+10. ck = ck-1 + 6ck-2 for every integer k>=2 
+c0 = 0, c1 = 3
+
+answer:
+substitute into recurrence relation
+ck = tk
+t^k = t^k-1 + 6t^k-2 -> lowest power = k-2, divide all sides
+t^k/t^k-2 = t^k-1/t^k-2 + 6t^k-2/t^k-2
+t^2 = t^1 + 6t^0
+t^2 = t + 6
+
+factor into quadratic form
+t^2 - t - 6 = 0
+multiply = -6, add = -1
+(t - 3) (t + 2)
+
+1st root
+t - 3 = 0
+t = 3
+
+2nd root
+t + 2 = 0
+t = -2
+
+part b: find explicit formula
+an = c . r1^n + d . r2^n
+where r1 = 3 and r2 = -2
+
+c0 = c . 3^0 + d . -2^0
+c0 = c + d
+0 = c + d
+c = -d
+
+c1 = c . 3^1 + d . -2^1
+c1 = 3c -2d
+3 = 3c - 2d
+3 = 3(-d) -2d
+3 = -3d - 2d
+3 = -5d
+d = -3/5, therefore c = 3/5
+
+final explicit formula
