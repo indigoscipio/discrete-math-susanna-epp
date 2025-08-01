@@ -1,27 +1,65 @@
 Test yourself
 1. the base for a recursive definition of a set is ___
-answer: 
+answer: a statement that the basic element belongs to a set
 
 2. the recursion for a recursive definition of a set is ___
-answer:
+answer: a collection of rules stating how to build new sets from existing object in the set
 
 3. the restrcition for a recursive definition of a set is __
-answer: 
+answer: a statement that no object can belong to a set except those built from base case and recursion
 
 4. one way to show that a given element is in a recursively defined set
-is to start with an element or elements in the ___and apply the rules from
+is to start with an element or elements in the ___ and apply the rules from
 the ___ until you obtain the given element
-answer: 
+answer: base case, recursive case
 
 5. To use structural induction to prove that every 
 element in a recursively defined set S satisfies a 
 certain property, you show that ___
 and that, for each rule in the recursion, if ___  then ___
-answer: 
+answer: the base case is true, the rule is applied for objects in the base case, the objects defined by the rule is also true
 
 6.  A function is said to be defined recursively if, and 
 only if ___
-answer: 
+answer: its rule refers to itself
 
 Exercise set 5.9
-1. 
+1. Consider the set of Boolean expressions defined in 
+Example 5.9.1. Give derivations showing that each 
+of the following is a Boolean expression over the 
+English alphabet {a,b,c,...,x,y,z}
+
+notes/from example 5.9.1:
+~ = negation
+V = OR
+A = AND
+I. Base: Each symbol of the alphabet is a Boolean expression.
+II. Recursion: If P and Q are Boolean expressions, then the following are also Boolean expressions:
+II(a) P A Q
+II(b) P V Q
+II(c) ~P
+II(d) (P)
+III. Restriction: There are no Boolean expressions over the alphabet other than those ob
+tained from the base and the recursion.
+
+
+a. ~p V (q A (r V ~s) )
+answer: 
+1. by I, the symbol p, q, r, and s is a boolean expression
+2. by 1, II(c), ~p and ~s is a boolean expression
+3. by 2, II(b), II(a), II(d) (r V ~s) is a boolean expression
+4. by 3, II(d), II(a), (q A (r V ~s)) is a boolean expression
+5. by 4, II(b), ~p V (q A (r V ~s)) is a boolean expression
+
+
+b. (p v q) V ~((p A ~s) A r)
+answer:
+
+
+2. Consider the set C of parenthesis structures defined in Examples 5.9.2.
+Give derivations showing that each of the following is in C.
+a. ()(())
+b. (())(())
+
+3. let s be the set of all strings over a finite set A and let a,b, and c be any characters in A.
+a. usin
