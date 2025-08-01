@@ -54,12 +54,32 @@ answer:
 
 b. (p v q) V ~((p A ~s) A r)
 answer:
+1. by I, p, q, r, and s is a boolean expression
+2. by 1, II(c), ~s is a boolean expression
+3. by 2, II(a), p A ~s is a boolean expression
+4. by 3, II(a), II(b), II(d), ((p A ~s) A r) and (p v q) is a boolean expression
+5. by 4, II(c), II(b), (p v q) V ~((p A ~s) A r) is a boolean expression
 
 
 2. Consider the set C of parenthesis structures defined in Examples 5.9.2.
 Give derivations showing that each of the following is in C.
+notes from example 5.9.2
+I. Base: () is in C.
+II. Recursion:
+II(a) If E is in C, so is (E).
+II(b) If E and F are in C, so is EF.
+III. Restriction: No parenthesis structures are in P other than those obtained from the base and the recursion.
+
+
 a. ()(())
+answer:
+1. by I, () is in C
+2. by 1, IIa, (()) is in C
+3, by 2, IIb, ()(()) is in C
+
 b. (())(())
+answer:
+
 
 3. let s be the set of all strings over a finite set A and let a,b, and c be any characters in A.
 a. usin
