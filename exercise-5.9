@@ -100,13 +100,79 @@ answer:
 let a,b, and c be any characters in A.
 we need to show that (ab)c = a(bc)
 1. since a,b,and c are characters in A, therefore each of them is a string in S
+2. since a and b are strings in s, then we can concatenate ab. So ab is in S
+3. since ab is a string and c is a string, (ab)c is in S
+4. likewise, since a is a string and bc is a string, a(bc) is in s
+5. since both (ab)c and a(bc) represent the same sequence and string they must be equal
 
 
 b. show that ab is a string in S. then us the result of part (a) to conclude that a(bc) is a string in S.
 (this exercise shows that parentheses are not needed when writing the string abc)
+answer:
+1. since a,b,and c are characters in S, each of them is a string in S
+2. since a and b are strings in s then we can concatenate it inti ab , so ab is in S
+3. since ab is a string and c is a chracter, we can concatenate it into (ab)c, so (ab)c is in S
+4. from the result of a, we know that (ab)c = a(bc)
+5. therefore since (ab)c is a string we can conclude a(bc) is also in s
 
 4. consider the MIU-system discussed in example 5.9.4. give derivations showing that each of the following is in the MIU system.
-a. M I U I
-b. M U I I U
+example 5.9.4
+I. Base: M I is in the M I U-system.
+ II. Recursion:
+II(a)  If x I is in the M I U-system, where x is a string, then x I U is in the M I U-system. 
+(In other words, you can add a U to any string that ends in I. For example, since 
+M I is in the system, so is M I U.)
+II(b)  If M x is in the M I U-system, where x is a string, then M x x is in the M I U-system. 
+(In other words, you can repeat all the characters in a string that follow an initial 
+M. For example, if M U I is in the system, so is M U I U I.)
+II(c)  If x I I I y is in the M I U-system, where x and y are strings (possibly null), then x 
+U y is also in the M I U-system. (In other words, you can replace I I I by U. For 
+example, if M I I I I is in the system, so are M I U and M U I.)
+II(d)  If x U U y is in the M I U-system, where x and y are strings (possibly null), then  
+x U y is also in the M I U-system. (In other words, you can replace U U by U. For 
+example, if M I I U U is in the system, so is M I I U.)
 
-5. the set of arithmetic expression
+a. M I U I
+answer:
+1. start with M I since its the base case
+2. by rule IIc, we can repeat it into M I I
+3. by rule IIc, we can repeat it into M I I I I 
+3. by rule IIc, we can repeat it into M I I I I I I I I
+
+
+b. M U I I U
+answer:
+1. start with M I since it's the base case
+2. by rule 2c, we can repeat the I into M I I
+3. by rule 2c, we can repeat the I in to M I I I I
+4. by rule 2c, we can repeat the I into M I I I I I I I I
+5. by rule 2b, turn the first triple I into U = M U I I I I I
+6. by rule 2b, turn the last triple I into U =  M U I I U
+
+5. the set of arithmetic expression over the real numbers can be defined recursively as follows:
+I. base : each real number r is an arithmetic expression
+II. recursion: if u and v are arithmetic expr, then the following are also arithmetic expr
+IIa. (+u)
+IIb. (-u)
+IIc. (u + v)
+IId. (u - v)
+IIe. (u * v)
+IIf. (u / v)
+III. restriction: there are no arithmetic expr over the real nombers other than those obtaind from I and II
+note that the artihemtic expr u/v is allowed to be 
+an arithmetic expression even though the value 
+of v may be 0.)
+
+Give derivations showing that each of the following is an arithmetic expression.
+a. ((2 . (0.3 - 4.2)) + (-7))
+answer:
+1. by rule I, 2, 0.3, 4.2, and 7 is a real number r, and is therefore an arithmetic expression
+2, by 1 and IIb, -7 is an arithmetic expression
+2. by 1 and IId, (0.3 - 4.2) is an arithmetic expression
+3. by 1, 3, and IIe, (2 * (0.3 - 4.2)) is an arithmetic expression
+4. by 2, 4, and  rule IIc, ((2 * (0.3 - 4.2)) + (-7)) is an arithmetic expression
+
+b. ((9 . (6.1+2))/((4-7).6))
+
+6. let S be a set of integers defined recursively as follows:
+I. base: 5 in S
