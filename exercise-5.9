@@ -173,6 +173,33 @@ answer:
 4. by 2, 4, and  rule IIc, ((2 * (0.3 - 4.2)) + (-7)) is an arithmetic expression
 
 b. ((9 . (6.1+2))/((4-7).6))
+answer:
+1. by rule I, 9,6,1,2,4,7 are real number r and is therefore an arithmetic expression
+2. by 1 and IIe, 6 * 1 is an arithmetic expression
+3. by 2 and IIc, 6 * 1 + 2 is an arithmetic expression
+4. by 1 and rule IId, 4 - 7 is an arithmetic expression
+5. by 3, 4, and rule IIe, (9 * (6 . 1 + 2)) and ((4 - 7) * 6) is an arithmetic expression
+6. by rule IIf, ((9 . (6.1+2))/((4-7).6)) is an arithmetic expression
 
 6. let S be a set of integers defined recursively as follows:
 I. base: 5 in S
+II. Recursion:  Recursion: Given any integer n in S, n + 4 is in S
+III. restriction: no integers are in S other than those derived from rules I and II above.
+
+use structural induction to prove that for every integer n in S, n mod 2 = 1
+answer:
+
+proof by structural induction
+base case -> show that p(n) is true for each integer n in the base for S
+the only object is 5 in S, so 5 mod 2 = 1 is true since it leaves a reminder of 1
+
+inductive hypothesis: assume that for an arbitrary integer n in S, the property n mod 2 = 1 is true
+so n = 2k + 1
+
+we must show that p(n+4) is true, that is n+4 mod 2 = 1 is true
+we can rewrite n+4 mod 2 = 1 as
+n + 4 = 2k + 1 -> since earlier we assumed n = 2k+1 we can substitute
+2k+1+4
+2 (k + 2) + 1
+therefore proven
+
