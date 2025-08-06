@@ -390,12 +390,34 @@ in other words, assume that k is divisble by 3. this means we can write k = 3n w
 inductive step: we must show that the property holds for new integers created by recursive rules
 
 case 1: k + 3 -> since we assumed k =3n we can substitute
-3n + 3 = 3 (n+1) -> since n+1 is an integer therefore this is divisible by 5
+3n + 3 = 3 (n+1) -> since n+1 is an integer therefore this is divisible by 3
 
 case 2: k - 3 -> since we ssumed k = 3n we can substitute
-3n - 3 = 3 (n-1) -> since n - 1 is an integer therefore it's also divisible by 5
+3n - 3 = 3 (n-1) -> since n - 1 is an integer therefore it's also divisible by 3
 
 since the property holds for both cases therefore its proven
 
 
-15. 
+16. give recursive definition for the set of all strings of 0's and 1's
+that have the same number of 0's as 1's
+
+answer:
+define a set S of strings recursively as follows:
+I. base: "" (empty string)
+II. recursion: 
+IIa. 10s
+IIb. s10
+IIc. 1s0
+IId. 0s1
+IId. st
+III. restriction: nothing is in S other than objects defined in I and II above
+
+17. give recursive definition for the set of all strings of 0s and 1s for which all 0s
+precede all the 1s
+
+answer: 
+I. base: "" (the empty string)
+II. recursion:
+iia. if s is in s, then 0s is in S
+IIb. if s is in s, then s1 is in S
+III. restriction: nothing is in S other than objects defined in I and II above
