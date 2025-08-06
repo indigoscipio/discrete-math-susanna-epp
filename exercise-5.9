@@ -203,3 +203,140 @@ n + 4 = 2k + 1 -> since earlier we assumed n = 2k+1 we can substitute
 2 (k + 2) + 1
 therefore proven
 
+7. Define a set S of strings over the set {0, 1} recursively as follows:
+I. base: 1 E (is an element of ) S
+II. recursion: if s E S, then
+IIa 0s E S
+IIb 1s E S
+III. restriction: nothing in S other than objects defined in I and II above
+use structural induction to prove that every string in S ends in a 1
+
+answer:
+proof by structural induction
+base case -> p(s) = every string ends in S ends in a 1
+since the base case is 1 E S, then 1 is the only emeent in S and it ends in a 1 so true
+
+inductive hypothesis: assume that a string s in S ends in a 1
+
+show that the recursive rules are true
+0s E S -> the last character here is 1 since we assumed in p(s). the new string s created by prepending 0 to string s
+1s E S -> the last character here is 1 since we assumed in p(s). the new string s is created by prepending 1 to string s
+therefore proven
+
+8. define a set S of string over the set {a,b} recursively as follows:
+I. base: a E (is an element of ) S
+II. recursion: if s E S, then
+IIa. sa E S
+IIb. sb E S
+III. restriction: nothing in S other than objects defined in I and II above
+use structural induction to prove that every string in S begins with an a
+
+answer:
+proof by structural induction
+base case -> p(s) =  every string in S begins with an a
+since the base case we only have one string a in S, S begins and ends with a. Therefore the base case is true
+
+inductive hypothesis: assume that a string s in S begins with an a
+
+we must show the recursive step is correct
+sa E S -> the first character here is s. but we assumed earlier that string s always begins with an a.
+the new string s is created by appending a to the end of string s. so sa begins with an a. Therefore true
+
+sb E S -> the first character here is s. but we assumed earlier that string s always begins with an a.
+the new string s is created by appending b to the end of string s. so sa begins with an a. Therefore true
+
+since we know both recursive cases are true then its proven
+
+9. define a set S of strings over the set {a,b} recursively as follows:
+I. base: l (empty string) E (is an element of) s
+II. recursion: if s E S, then
+IIa. bs E S
+IIb. sb E S
+IIc. saa E S
+IId. aas E S
+III. resctiction: nothing is in S other than objects defined in I and II above
+use structural induction to prove that every string in S contains an even number of a's
+
+answer:
+proof by structural inductoin
+base case: p(s) -> every string in S contains an even number of a's
+since in the base case only contains empty string, therefore it contains an even number of a's (0 is even)
+
+inductive hypothesis: assume that every string in S contains an even number of a's
+
+we must show the recursive cases are true
+bs E S -> here we are prepending b into s.
+Since in IH we assumed string s has an even number of a's therefore this is even because b is not a and it doesn't count
+
+sb E S -> here we are appending b into s.
+Since in IH we assumed string s has an even number of a's therefore this is even because b is not a and it doesn't count
+
+saa E S -> here we are appending two as into s
+Since in IH we assumed string s has an even number of a's, therefore this is even because even + 2a (even) = even by parity
+
+aas E S -> here we are prepending two as into s
+Since in IH we assumed string s has an even number of a's, therefore this is even because 2a (even) + even = even by parity
+
+therefore proven
+
+10. define a set S of strings over the set of all integers recursively as follows:
+I. base: 1 E S, 2 E S, ... 9 E S
+II. recursion: if s E S and t E S then
+IIa s0 E S
+IIb st E S
+III restriction: nothing is in S other tha nobjects defined in I and II above
+
+use structural induction to prove that no string in S represents an integer with a leading zero
+
+answer:
+proof by structural induction
+base case: since 1 - 9 the a single digit number with no leading zero, therefore they don't contain zero
+
+inductive hypothesis: no string in S represents an integer with a leading zero
+
+we must show the recursive rules are true
+s0 E S -> here we are appending 0 into string s. but since we assumed earlier that s doesn't contain integer with a leading zero
+this means that s always starts with a non-zero integer (1 - 9)
+
+st E S -> we are prepending the s into t. but since we assumed earlier that s doesn't contain integer with a leading zeor,
+this means the first character is s. And we know s is  a non-zero integer (1 - 9)
+
+threfore both casese aretrue and proven
+
+11. define a set S of strings over the set of all integers recursively as follows:
+I. base: 1 E S, 3 E S, 5 E S, 7 E S, 9 E S
+II. recursion: if s E S and t E S then
+IIa. st E S
+IIb. 2s E S
+IIc. 4s E S
+IId. 6s E S
+IIe. 8s E S
+
+III. restriction: nothing is in S other than objects defined in I and II above
+
+use structural induction to prove that eveyr string in S represents an odd integer when written in decimal notation
+
+answer:
+proof by structural induction
+base case: 1,3,5 ... 9 is in S
+since we know the sequence are odd integers and is written in decimal notation, threfore the base case is true
+
+inductive hypothesis: assume that  eveyr string in S represents an odd integer when written in decimal notation is true
+
+we must show the recursive rules are true
+st E S -> here we are appending t into s. since we assumed every string in s is an odd integer written in decimal,
+therefore t also odd integer written in decimal
+
+2s E S -> here we are prepending 2 into s. since we assumed every string in s is an odd integer written in decimal,
+therefore this is also an odd integer in decimal (21, 23, 25, 27.... is odd)
+
+4s E S -> here we are prepending 2 into s. since we assumed every string in s is an odd integer written in decimal,
+therefore this is also an odd integer in decimal (41, 43, 45, 47.... is odd)
+
+6s E S -> here we are prepending 2 into s. since we assumed every string in s is an odd integer written in decimal,
+therefore this is also an odd integer in decimal (61, 63, 65, 67.... is odd)
+
+8s E S -> here we are prepending 2 into s. since we assumed every string in s is an odd integer written in decimal,
+therefore this is also an odd integer in decimal (81, 83, 85, 87.... is odd)
+
+therefore since all recursive cases are true its proven
