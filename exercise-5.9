@@ -421,3 +421,56 @@ II. recursion:
 iia. if s is in s, then 0s is in S
 IIb. if s is in s, then s1 is in S
 III. restriction: nothing is in S other than objects defined in I and II above
+
+18. give recursive definiton for the set of all string of a's and b's that contain an odd number of a's
+answer:
+
+I. base: a (since empty string doesn't contain odd numberof a)
+II. recursion:
+iia. aas
+iib. saa
+iic. sb
+iid. bs
+III. restrictioN: nothing is in S other then the objects defined in I and II above
+
+
+19. gie a recursive definition for the set of all strings of a's and b's that contain exactly one A
+I. base: a
+II. recursion:
+iia. sb
+iib. bs
+III. restriction: nothing is in S other then the objects defined in I and II above
+
+20. 
+a. let A be any finite set ad L be the lnegth function on the set
+of all strings over A. prove that for every character in A, L(a) = 1
+
+answer:
+by definition, a string is a sequence of chars. the length function
+is defined as a num of chars in the sequence s.
+
+for any character a in set A, the string only consists of the character a,
+therefore by the defiition l(a) = 1
+
+
+b. if A is a finite set, define a set S of strings over A as follows:
+i. base: every character in A is a string in S
+II. recursion: if s is any string in S, then for every character c in A, csc is a string in S
+III. restriction: nothing in S except strings obtained from the base case and recursion
+
+use structural induction to prove that given any string s in S, the length of s, l(s) is an odd integer
+
+answer:
+proof by structural induction
+
+base case: l(a) -> since we only have 1 character inside the set, therefore the length = 1
+which is odd. Therefore the base case is true
+
+inductive hypothesis: assume that p(s) is true, that is 
+p(s) = given any string s in S, the length of s, l(s) is an odd integer
+
+inductive step: we must show the recursive cases are true
+csc is a string in S -> we are appending and prepending the character c into s,
+but we assumed earlier that s the length is an odd integer
+adding 2 characters to odd doesn't change the parity (even + odd) = odd
+therefore the inductive step is true
