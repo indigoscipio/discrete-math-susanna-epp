@@ -474,3 +474,23 @@ csc is a string in S -> we are appending and prepending the character c into s,
 but we assumed earlier that s the length is an odd integer
 adding 2 characters to odd doesn't change the parity (even + odd) = odd
 therefore the inductive step is true
+
+22. if S is the set of all strings over a finite set A and if u is any string in S, define the string reversal function, Rev
+as follows:
+a. rev(l/lambda/empty) = l
+b. for every string u is in S and for every character a in A, rev(ua) = aRev(u)
+
+use structural induction to prove that for all strings u and v in S, Rev(uv) = Rev(V)Rev(U)
+
+answer:
+base case -> rev(l)
+rev(ul) = rev(l)rev(u), since l is an empty string therefore
+rev(u) = rev(u)
+
+
+inductive hypothesis: 
+assume p(s) is true, that is,  for all strings w and v in S, Rev(uw) = Rev(w)Rev(u) is true
+
+inductive step:
+we need to show the recursive case is true, we need to show hat
+Rev(u(w)) = rev(w)rev(u)
