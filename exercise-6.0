@@ -36,23 +36,66 @@ answer: they are disjointed
 
 Exercise set 6.1
 1. in each of a - f , answer the following questions:
-is A C (is a subset of) B? is B C A ?
-is either A or B a proper subset of the other?
+- is A C (is a subset of) B?
+- is B C A ?
+- is either A or B a proper subset of the other?
 
-a. A = {}
-B = {}
+a. A = {2,{2},sqrt(2)^2}
+B = {2,{2},{{2}}}
 
-b. A = {}
-B = {}
+answer:
+after evaluation
+A = {2, {2}}
+B = {2,{2},{{2}}}
 
-c. A = {}
-B = {}
+is A C B ? true because all elements in A is within B, that is the number 2 and set {2}
+is B C A ? false because the set A doesn't contain {{2}}
+is A is a proper subset of B ? yes becuase A is a subset of B but B has extra element (A does not equal B)
+is B is a proper subset of A ? no beacuse B is not a subset of A
 
-d. A = {}
-B = {}
+b. A = {3, sqrt(5^2-4^2),24mod7}
+B = {8mod5}
 
-e. A = {}
-B = {}
+answer:
+after evaluation
+A = {3}
+B = {3}
 
-f. A = {}
-B = {}
+is A C B ? true because number 3 is in B
+is B C A ? true because number 3 is in A
+is A is a proper subset of B ? false even though A is a subset of B, A = B
+is B is a proper subset of A ? false even though B is a subset of A, B = A
+
+c. A = {{1,2},{2,3}}
+B = {1,2,3}
+
+is A C B ?
+is B C A ?
+is A is a proper subset of B ?
+is B is a proper subset of A ?
+
+d. A = {a,b,c}
+B = {{a},{b},{c}}
+
+is A C B ?
+is B C A ?
+is A is a proper subset of B ?
+is B is a proper subset of A ?
+
+e. A = {sqrt(16),{4}}
+B = {4}
+
+is A C B ?
+is B C A ?
+is A is a proper subset of B ?
+is B is a proper subset of A ?
+
+f. A = {x E (is an element of ) R | cos x E Z}
+B = {x E R | sin x E Z}
+
+is A C B ?
+is B C A ?
+is A is a proper subset of B ?
+is B is a proper subset of A ?
+
+2. complete the proof from example 6.1.3. prove that B is a subset of A where
