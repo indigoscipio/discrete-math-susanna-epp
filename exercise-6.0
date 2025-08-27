@@ -1,0 +1,58 @@
+Test yourself
+
+1. the notation A C B is read ___ and means that ___
+answer: A is a subset of B, all elements of a is an element of B B
+for every x, if X E A, then X E B
+
+2. to use an element argument for proving that a set X is a subset of Y, you suppose that ____ and show that ___
+answer: any arbitrary chosen element of X, X is included in Y
+
+3. to disprove that a set X is a subset of a set Y, you show that there is ___
+answer: no element in set X is contained in set Y
+
+4. an element x is in A U B if, and only if, __
+answer: x is in at least either A or B
+
+5. and element x is in A A B if, and only if, __
+answer: x must be in both A and B
+
+6. and lemeent x is in B - A if and only if ___
+answer: x is not contained in a and x is in B
+
+7. an element x is in A^c if and only if ____
+answer: x is not contained in universe set and x is not in A
+
+8. the empty set is a set with ____
+answer: no element at all
+
+9. the power set of a set A is ___
+answer: the set of all subsets of A
+
+10. sets A and B are disjoint if and only if ___
+answer: the intersection of a and b is empty set, (elements in set A has nothing in common with element in set B)
+
+11. a collection of nonempty sets a1, a2, ... is a partition of set A if and only if ____
+answer: they are disjointed
+
+Exercise set 6.1
+1. in each of a - f , answer the following questions:
+is A C (is a subset of) B? is B C A ?
+is either A or B a proper subset of the other?
+
+a. A = {}
+B = {}
+
+b. A = {}
+B = {}
+
+c. A = {}
+B = {}
+
+d. A = {}
+B = {}
+
+e. A = {}
+B = {}
+
+f. A = {}
+B = {}
