@@ -37,7 +37,7 @@ answer: they are disjointed
 Exercise set 6.1
 1. in each of a - f , answer the following questions:
 - is A C (is a subset of) B?
-- is B C A ?
+- is B C (is a subset of) A ?
 - is either A or B a proper subset of the other?
 
 a. A = {2,{2},sqrt(2)^2}
@@ -68,34 +68,61 @@ is B is a proper subset of A ? false even though B is a subset of A, B = A
 
 c. A = {{1,2},{2,3}}
 B = {1,2,3}
-
-is A C B ?
-is B C A ?
-is A is a proper subset of B ?
-is B is a proper subset of A ?
+answer:
+is A C B ? no because set B doesn't contain {1,2} and {2,3}
+is B C A ? no because set A doesn't contain the numbers 1, 2, 3
+is A is a proper subset of B ? no because set A is not a subest of B
+is B is a proper subset of A ? no because set B is not a subset of A
 
 d. A = {a,b,c}
 B = {{a},{b},{c}}
-
-is A C B ?
-is B C A ?
-is A is a proper subset of B ?
-is B is a proper subset of A ?
+answer:
+is A C B ? no because the set B doesn't contain a,b,c
+is B C A ? no because set A doesn't contain {a}, {b} , {c}
+is A is a proper subset of B ? no because A is not a subset of B
+is B is a proper subset of A ? no because B is not a subset of A
 
 e. A = {sqrt(16),{4}}
 B = {4}
+answer:
+after evaluation
+A = {4,{4}}
+B = {4}
 
-is A C B ?
-is B C A ?
-is A is a proper subset of B ?
-is B is a proper subset of A ?
+is A C B ? no because the set B doesn't have {4}
+is B C A ? yes because 4 is included in set A
+is A is a proper subset of B ? no because A is not a subset of B
+is B is a proper subset of A ? yes because B is a subset of A and set B does not equal to set A
 
 f. A = {x E (is an element of ) R | cos x E Z}
 B = {x E R | sin x E Z}
 
-is A C B ?
-is B C A ?
-is A is a proper subset of B ?
-is B is a proper subset of A ?
+answer:
+after evaluation
 
-2. complete the proof from example 6.1.3. prove that B is a subset of A where
+is A C B ? fals ebecause all elements in A is not withint B
+is B C A ? false  because all elements in A is not withint B
+is A is a proper subset of B ? false because A is not a subset of B
+is B is a proper subset of A ? false because B is not a subset of A
+
+2. complete the proof from example 6.1.3.
+prove that B is a subset of A where
+
+A = {m E Z | m = 2a for some integer a} and 
+B = {n E Z | n = 2b-2 for some integer b}
+
+answer: 
+suppose X is a particular but arbitrarily chosen element of B
+[we must show that x E A. by definition of A, this means we must show that x = 2 . some integer]
+
+by definition of B, there is an integer b such that x = 2b - 2
+this can be factored as x = 2(b - 1)
+which has the form 2 some integer
+
+thus by definition x is an element of A
+[as to be shown]
+
+3. let sets R, S, and T be defined as follows:
+R = {}
+S = {}
+T = {}
