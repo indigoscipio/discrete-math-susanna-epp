@@ -123,6 +123,96 @@ thus by definition x is an element of A
 [as to be shown]
 
 3. let sets R, S, and T be defined as follows:
-R = {}
-S = {}
-T = {}
+R = {x E Z | X is divisible by 2}
+S = {y E Z | y is divisible by 3}
+T = {z E Z | z is divisible by 6}
+
+prove or disprove each of the following statements
+a. R C (is a subset of) T
+answer:
+
+we need to find one element in R that is not in T
+the number 4 is in set R but it's not in set t
+therefore we found a counterexample
+
+b. T C R
+
+disprove attempt
+find one element in T not in R
+it seems a number divisibel by 2 is also divisble by 2
+
+proof attempt
+lets pick an arbitrary element x from set T
+by the definition of T, x is divisible by 6 -> x = 6k for some integer k
+
+but by definition of R, an integer is divisble by 2 -> 2 . some integer
+
+since we know 2 is a factor of 6 we can rewrite 2(3 . some integer)
+which fits the definiton of R
+
+therefore proven
+
+c. T C S
+
+disprove attempt
+find one element in T that's not in S
+it seems a number divisible by 6 is also divisible by 3
+
+proof attempt
+lets pick an arbitrary element x from set T
+by the definition of T, x is divisble by 6, we can write this as x = 6k for some integer k
+then we can refactor x = 3(2k). since 2k is an integer we know
+this fits the definiton of S which is 3 . some integer
+threfore proven
+
+4. let A = {n E Z | n = 5r for some integer r}
+let B = {m E Z | m = 20s for some integer s}
+Prove or disprove each of the following statements.
+a. A C (is a subset of ) B
+answer:
+
+
+we need to find an element in A that is not in B
+we need to find an element that's a multiple of 5 but not a multiple of 20
+counterexample: the number 5
+
+5 is in set A but not in set B
+therefore proven
+
+b. B C A
+answer:
+
+disproof attempt
+we need to find an element in B that's not in A
+that is, we need to find integer multiple of 20 but not a multiple of 5
+this is impossible because all multiple of 20 always have a factor of 5.
+
+
+proof attempt:
+suppose x is a particular but arbitraryly chosen element of B
+we must show that x is an element of A, we must show that x = 5r for some integer r
+by the defintion of B, we know that x = 20s for some integer s
+
+step 2: show that x is also in A
+we can rewrite this to fit A's definition
+x = 5(4s) for some integer s
+since 4s is an integer, this fits the definition of A
+thus proven
+
+
+4. let C = {n E Z | n = 6r-5 for some integer r}
+let D = {m E Z | m = 20s for some integer s}
+Prove or disprove each of the following statements.
+a. A C (is a subset of ) B
+answer:
+
+suppose x is a particular but arbitraryly chosen element of A
+we must show that x is an element of B, we must show that x = 6r-5 for some integer r
+
+step 1:
+
+step 2:
+
+
+b. B C A
+answer:
