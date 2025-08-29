@@ -200,19 +200,74 @@ since 4s is an integer, this fits the definition of A
 thus proven
 
 
-4. let C = {n E Z | n = 6r-5 for some integer r}
-let D = {m E Z | m = 20s for some integer s}
+5. let C = {n E Z | n = 6r-5 for some integer r}
+let D = {m E Z | m = 3s+1 for some integer s}
 Prove or disprove each of the following statements.
-a. A C (is a subset of ) B
+a. C C (is a subset of ) D
 answer:
 
-suppose x is a particular but arbitraryly chosen element of A
-we must show that x is an element of B, we must show that x = 6r-5 for some integer r
+proof attempt:
+suppose x is a particular but arbitrarily chosen element of C
+we must show that x is an element of D, we must show that x = 3s + 1 for some integer s
 
+by the definition of C, we know that x = 6r-5 for some integer r
+6r - 5 = 6r - 6 + 1
+factor out the 6
+3(2r-2) + 1
+since 2r-2 is an integer (lets call it s)
+we show that 3s+1 is true
+therefore this fits the definition of D
+proven
+
+
+b. D C C
+answer:
+
+proof attempt:
 step 1:
+suppose x is a particular but arbitrarily chosen element of D
+we must show that x is an element of C, we must show that x = 6r-5 for some integer r
 
 step 2:
+show that x is also in C
+6r-5 = ???
+
+doesn't seem right, lets try to disprove it
+pick 1 elment in D ->
 
 
-b. B C A
-answer:
+3(-2)+1 = -5
+3(-1)+1 = -2
+3(0)+1 = 1
+3(1)+1 = 4
+3(2)+1 = 7
+3(3)+1 = 10
+3(4)+1 = 13
+
+6(-1)-5 = -11
+6(0)-5 = -5
+6(1)-5 = 1
+6(2)-5 = 7
+6(3)-5 = 13
+
+therefore 4 is a counterexample
+
+6. let A = {x E Z | x = 5a+2 for some integer a}
+let B = {y E Z | y = 10b-3 for some integer b}
+let C = {z E Z | y = 10c+7 for some integer c}
+Prove or disprove each of the following statements.
+a. A C (is a subset of) B
+b. B C (is a subset of) A
+c. B = C
+
+7.  let A = {x E Z | x = 6a+4 for some integer a}
+let B = {y E Z | y = 18b-2 for some integer b}
+let C = {z E Z | y = 18c+16 for some integer c}
+Prove or disprove each of the following statements.
+a. A C (is a subset of) B
+b. B C (is a subset of) A
+c. B = C
+
+8. write in words how to reac each of the following out loud
+then write each set using the symbols union, intersection, set difference, or set complement
+1. 
