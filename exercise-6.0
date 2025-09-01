@@ -513,16 +513,32 @@ answer: A union C means its in either a or c
 e. A A C
 answer: A intersect C means x has to be in both A and C
 A = (0,2]
-B = (0,2]
-C = (0,2]
+C = [3,9)
+it's the empty set since theres nothing in common
 
 f. B^c
+answer: complement of B means x is in everything but B
+since B is [1,4), then the complement is
+{x E R | x < 1 or x >= 4}
+
 g. A^c A B^c
+answer: intersect of a complement and b complement
+first we need to eval a complement and b complement, then intersect the two sets
+start with a complement. this means x is in everything but A
+we know that the set A = (0,2], then its complmeent is
+A^c = {x E R | x <= 0 or x > 2}
+
+we know from previous exercise B complement is the following
+B^c = {x E R | x < 1 or x >= 4}
+
+then we can find the intersect of both setes
+
+
 h. A^c U B^c
+
 i. (A A B)^c
+
 j. (A U B)^c
-
-
 
 12. let the universal set br R, and te set of all real numbers, let
 A = 
