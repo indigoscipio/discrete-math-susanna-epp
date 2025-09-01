@@ -331,18 +331,88 @@ secondly, we need to prove
 C C (is a subset of) B
 
 step 1:
-suppose x is a particular but arbitrarily chosen element of B
-we must show that x is an element of C, we must show that x = 10c+7 some integer c
+suppose x is a particular but arbitrarily chosen element of C
+we must show that x is an element of B, we must show that x = 10b - 3 some integer b
 
+step 2:
+show that x is also in B
+by the definition of C, x = 10c + 7
+then
+x = ... - 3
+x = 10c + 10 - 3
+x = 10(c + 1) - 3
+since c + 1 is an integer (lets call it b)
+then this fits the deifnition of B
 
+therefore both proven
 
 7.  let A = {x E Z | x = 6a+4 for some integer a}
 let B = {y E Z | y = 18b-2 for some integer b}
-let C = {z E Z | y = 18c+16 for some integer c}
+let C = {z E Z | z = 18c+16 for some integer c}
 Prove or disprove each of the following statements.
 a. A C (is a subset of) B
+disprove attempt
+a = -1 -> x = 6(-1)+4 = -2
+a = 0 -> x = 6(0)+4 = 4
+a = 1 -> x = 6(1)+4 = 10
+a = 2 -> x = 6(2)+4 = 16
+a = 3 -> x = 6(3)+4 = 22
+a = 4 -> x = 6(4)+4 = 28
+a = 5 -> x = 6(5)+4 = 34
+
+b = 0 -> y = 18(0)-2 = -2
+b = 1 -> y = 18(1)-2 = 16
+b = 2 -> y = 18(2)-2 = 34
+b = 3 -> y = 18(3)-2 = 52
+
+counterexample is 10 because 10 is in set A but not in B
+
 b. B C (is a subset of) A
+answer:
+we need to find an element in B that's not in A
+seems to be true from calculation in a), but i'm not sure
+proof attempt
+
+step 1
+suppose x is a particular but arbitrarily chosen element of B
+we must show that x is an element of A, we must show that x = 6a + 4 some integer a
+
+step 2:
+by the definition of B, x = 18b-2
+x = ... + 4
+x = 18b - 6 + 4
+x = 6(3b - 1) + 4
+since 3b - 1 is an integer (lets call it a), therefore we have 6a + 4
+this fits the definition of A threfore provn
+
 c. B = C
+to prove this we need to show two things:
+B is a subset of C
+and C is a subset of B
+
+case 1: we need to show that B is  a subset of C
+
+b = 0 -> y = 18(0)-2 = -2
+b = 1 -> y = 18(1)-2 = 16
+b = 2 -> y = 18(2)-2 = 34
+b = 3 -> y = 18(3)-2 = 52
+
+c = 0 -> y = 18(0)+16 = 16
+c = 0 -> y = 18(1)+16 = 34
+c = 0 -> y = 18(2)+16 = 52
+c = 0 -> y = 18(3)+16 = 70
+
+seems to be true, lets go with a general proof
+step 1:
+suppose x is a particular but arbitrarily chosen element of B
+we must show that x is an element of C, we must show that x = 18c+16 some integer c
+
+
+step 2:
+by the definition of B, x = 18b-2
+x = ... + 4
+
+
 
 8. write in words how to reac each of the following out loud
 then write each set using the symbols union, intersection, set difference, or set complement
