@@ -492,13 +492,40 @@ A = {x E R | 0 < x <= 2}
 B = {x E R | 1 <= x < 4}
 C = {x E R | 3 <= x < 9}
 find each of the following:
+
 a. A U B
+answer: {x E R | 0 < x < 4}
+
 b. A A B
-c. a U B
-d. a U B
-e. a U B
-f. a U B
-g. a U B
-h. a U B
-i. a U B
-j. a U B
+intersect so we need to find most common
+answer: {x E R | 1 <= x <= 2}
+
+c. A^c
+answer:
+complement of A means everyhing but A
+the negation of (0,2] which means from 0 to minus infinity, and 2 up to infinity
+{x E R | x <= 0 or x > 2 }
+
+d. A U C
+answer: A union C means its in either a or c
+{x E R | 0 < x <= 2 or 3 <= x < 9}
+
+e. A A C
+answer: A intersect C means x has to be in both A and C
+A = (0,2]
+B = (0,2]
+C = (0,2]
+
+f. B^c
+g. A^c A B^c
+h. A^c U B^c
+i. (A A B)^c
+j. (A U B)^c
+
+
+
+12. let the universal set br R, and te set of all real numbers, let
+A = 
+B = 
+C = 
+find each of hte following
