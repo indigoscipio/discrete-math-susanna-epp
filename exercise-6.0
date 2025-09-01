@@ -431,4 +431,74 @@ since both cases aretrue therefore proven
 
 8. write in words how to reac each of the following out loud
 then write each set using the symbols union, intersection, set difference, or set complement
-1. 
+a. {x E U | x E A and x E B}
+answer:
+written form: x is an element of U such that x is an element of A and x is an element of B
+symbols union: A A (intersect) B
+
+b. {x E U | x E A or x E B}
+answer:
+written form: X is an element of U such that x is an element of A or x is an element of B
+symbol: A U (union) B
+
+b. {x E U | x E A and x E(slash) B}
+answer:
+written form: X is an element of U such that x is an element of A and x is not an element of B
+symbol: A - B (set difference)
+
+
+b. {x E U | x E(slash A)}
+answer:
+written form: X is an element of U such that x is not an element of A
+symbol: A^c
+
+9. complete the folowing sentences without using the symbols U(union), A(intersect), or -(difference)
+a. x E(slash) A U B, if and only if ____
+answer: a union b means x is either in a or b, so what makes x is not in this set is
+its outside of a or b. so x is not an element of a and x is not an element of B
+
+b. x E(slash) A A B, if and only if ____
+answer: a intersect b means x has to be in both a and b. so what makes x is not in this set is
+the negation of that, so x is not in A or x is not in B
+
+c. x E(slash) A - B, if and only if ____
+answer: a - b means x is in A but it's not in B. so what makes x not in this set is the negation of that.
+so x is not in a or x is in b
+
+10. let A = {1,3,5,7,9}
+let B = {3,6,9}
+let C = {2,4,6,8}
+find each of the following
+a. A U B
+answer: {1,3,5,6,7,9}
+b. A A(intersect) B
+answer: {3,9}
+c. A U C
+answer: {1,2,3,4,5,6,7,8,9}
+d. A A C
+answer: {}/the empty set
+e. A - B
+answer: {1,5,7}
+f. B - A
+answer: {6}
+g. B U C
+answer: {2,3,4,6,8,9}
+h. B A C
+answer: {6}
+
+11. Let the universal set be R, the set of all real 
+numbers, and let
+A = {x E R | 0 < x <= 2}
+B = {x E R | 1 <= x < 4}
+C = {x E R | 3 <= x < 9}
+find each of the following:
+a. A U B
+b. A A B
+c. a U B
+d. a U B
+e. a U B
+f. a U B
+g. a U B
+h. a U B
+i. a U B
+j. a U B
