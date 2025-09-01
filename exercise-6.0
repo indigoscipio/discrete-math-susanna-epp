@@ -410,8 +410,23 @@ we must show that x is an element of C, we must show that x = 18c+16 some intege
 
 step 2:
 by the definition of B, x = 18b-2
-x = ... + 4
+x = ... +16
+x = 18b - 18 + 16
+x = 18(b - 1) + 16
+since b-1 is an integer, lets call it c, therefore this fits the definition of C
 
+case 2, we need to prove C is a subset of B
+step 1:
+suppose x is a particular but arbitrarily chosen element of C
+we must show that x is an element of B, we must show that x = 18b-2 some integer b
+
+by the definition of C, x = 18c+16
+x = ... - 2
+x = 18c + 18 - 2
+x = 18(c + 1) - 2
+since c+1 is an integer, lets call it b, therefore this fits the definition of B
+
+since both cases aretrue therefore proven
 
 
 8. write in words how to reac each of the following out loud
