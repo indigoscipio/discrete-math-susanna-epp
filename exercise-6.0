@@ -583,3 +583,21 @@ answer: same as h.
 
 j. (A U B)^c
 answer: same as g.
+
+13. let S be the set of all strings of 0s and 1s of length 4s
+let A and b be the following subsets of S:
+A = {1110, 1111, 1000, 1001}
+B = {1100, 0100, 1111, 0111}
+find each of the following:
+a. A A(intersect) B
+answer: {1111}
+b. A U B
+answer: {1110, 1100, 1111, 0100, 1000, 1001, 0111}
+c. A - B
+answr: {1110, 1000, 1001}
+d. B - A
+answer: {1100, 0100, 0111}
+
+14. 
+
+16.
