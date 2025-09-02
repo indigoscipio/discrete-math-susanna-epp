@@ -521,27 +521,65 @@ answer: complement of B means x is in everything but B
 since B is [1,4), then the complement is
 {x E R | x < 1 or x >= 4}
 
-g. A^c A B^c
+g. A^c A (intersect) B^c
 answer: intersect of a complement and b complement
-first we need to eval a complement and b complement, then intersect the two sets
-start with a complement. this means x is in everything but A
-we know that the set A = (0,2], then its complmeent is
-A^c = {x E R | x <= 0 or x > 2}
-
-we know from previous exercise B complement is the following
-B^c = {x E R | x < 1 or x >= 4}
-
-then we can find the intersect of both setes
+this is the same as (A U B)^c
+we know previously that A U B = {x E R | 0 < x < 4}
+so the conmplement of that is {x E R | 0 <= x or x >= 4}
 
 
 h. A^c U B^c
+answer: this is the same as (A A B)^c
+since we know from previous exercise that A A B = {x E R | 1 <= x <= 2}
+the complement of that is {x E R | x < 1 or x > 2}
 
 i. (A A B)^c
+same as above, {x E R | x < 1 or x > 2}
 
 j. (A U B)^c
+{x E R | 0 <= x or x >= 4}
 
-12. let the universal set br R, and te set of all real numbers, let
-A = 
-B = 
-C = 
+12. let the universal set be R, and te set of all real numbers, let
+A = {x E R | -3 <= x <= 0}
+B = {x E R | -1 < x < 2}
+C = {x E R | 6 < x <= 8}
 find each of hte following
+a. A U B
+answer: the union of set A and B is
+{x E R | -3 <= x < 2}
+
+b. A A(intersect) B
+answer: the intersect of set A and B is 
+{x E R | -1 < x <= 0}
+
+c. A^c
+answer: The ocmplement of set A is 
+{x E R | x < -3 or x > 0}
+
+d. A U C
+answer: the union of set A and set C is 
+{x E R | -3 <= x <= 0 or 6 < x <= 8}
+
+e. A A C
+answer: the intersect of set A and set C is
+{x E R | {}} or the empty set
+
+f. B^c
+answer: the complement of set B is 
+{x E R | x <= -1 or x >= 2}
+
+g. A^c A B^c
+answer: this is the same as (A U B)^c
+since we know A U B is {x E R | -3 <= x < 2} from the previous exercise, its complement is
+{x E R | x < -3 or x >= 2}
+
+h. A^c U B^c
+answer: this is the same as (A A B)^c
+since we know A A B is {x E R | -1 < x <= 0}, then its intersect is
+{x E R | x <= -1 or x > 0}
+
+i. (A A B)^c
+answer: same as h.
+
+j. (A U B)^c
+answer: same as g.
