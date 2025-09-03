@@ -666,3 +666,69 @@ yes because {empty set} contains an element which is the empty set
 d. is empty set E empty set? why?
 no because by definition empty set contains no element. therefore nothing, not even the empty set
 it self can be an element of it
+
+19. let Ai = {i, i^2} for each integer i = 1,2,3,4
+a. A1 U A2 U A3 U A4 = ?
+answer:
+A1 = {1}
+A2 = {2, 4}
+A3 = {3, 9}
+A4 = {4, 16}
+A1 U A2 U A3 U A4 = {1,2,3,4,9,16}
+
+b. A1 A A2 A A3 A A4 = ?
+answer: {}/the empty set
+
+
+c. are a1, a2, a3 and a4 mutually disjoint? explain
+no because A2 and A4 shares element in common which is 4
+sets are defined tob e mutually disjoint if each of them have nothing in common at all
+
+20. let Bi = {x E R | 0 <= x <= i} for each integer i = 1,2,3,4
+a. B1 U B2 U B3 U B4 = ?
+answer:
+B1 = {0 <= x <= 1}
+B2 = {0 <= x <= 2}
+B3 = {0 <= x <= 3}
+B4 = {0 <= x <= 4}
+
+the union of all four sets is {0 <= x <= 4}
+
+b. B1 A B2 A B3 A B4 = ?
+the intersect of all four sets is {0 <= x <= 1}
+
+c. are b1, b2, b3 and b4 mutually disjoint? explain
+no because they all have an intersect
+
+21. let ci = {i, -i} for each nonnegative integer i.
+
+a. the union of C sub i from i = 0 to 4 = ?
+answer:
+C0 = {0}
+C1 = {1,-1}
+C2 = {2,-2}
+C3 = {3,-3}
+C4 = {4,-4}
+the union = {-4,-3,-2,-1,0,1,2,3,4}
+
+b. the intersect of C sub i from i = 0 to 4 = ?
+C0 = {0}
+C1 = {1,-1}
+C2 = {2,-2}
+C3 = {3,-3}
+C4 = {4,-4}
+the intersect = {}/the empty set since all of the 5 sets have nothing in common
+
+c. are c0, c1, c2, ... mutually disjoint? explain
+yes because the intersect of c0,c1,c2... is the empty set/they have nothing in common
+a set is mutually disjoint by definition if they have nothing in common
+
+d. the union of C sub i from i = 0 to n = ?
+answer:
+
+
+e. the intersect of C sub i from i = 0 to n = ?
+
+f. the union of C sub i from i = 0 to infinity = ?
+
+e. the intersect of C sub i from i = 0 to infinity = ?
