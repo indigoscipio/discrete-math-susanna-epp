@@ -598,6 +598,71 @@ answr: {1110, 1000, 1001}
 d. B - A
 answer: {1100, 0100, 0111}
 
-14. 
+14. In each of the following, draw a Venn diagram for 
+sets A, B, and C that satisfy the given conditions.
+a. A C(is a subset of ) B, C C B, A A C = empty set
+b. C C A, B A C = empty set
 
-16.
+15.
+
+16.Let A= {a, b, c},
+B={b, c, d}, and
+C={b, c, e}.
+
+a. Find A U (B A C), (A U B) A C, and 
+(A U B) A (A U C). Which of these sets are equal?
+answer:
+A U (B A C)
+evaluate B A C = {b, c}
+A U (B A C) = {a,b,c}
+
+(A U B) A C
+evaluate A U B = {a,b,c,d}
+(A U B) A C = {b,c,d}
+
+(A U B) A (A U C)
+we know that A U B = {a,b,c,d}
+and A U C = {a,b,c,e}
+then (A U B) A (A U C) = {b,c}
+
+the two equal sets are (A U B) A (A U C) and A U (B A C)
+
+
+b. find A A (B U C), (A A B) U C, and (A A B) U (A A C)
+which of these sets are equal?
+(B U C) = {b,c,d,e}
+A A (B U C) = {b,c}
+
+(A A B) U C
+A A B = {b,c}
+(A A B) U C = {b,c,e}
+
+(A A B) U (A A C)
+since we know A A B = {b,c}
+A A C = {b,c}
+then (A A B) U (A A C) = {b,c}
+
+the equal sets are A A (B U C)  and (A A B) U (A A C)
+
+c. find (A - B) - C and A - (B - C). are these sets equal?
+A - B = {a}
+(A - B) - C = {}/the empty set
+
+(B - C) = {d}
+A - (B - C) = {a,b,c}
+
+no they are not equal
+
+18.
+a. is the number 0 in the empty set? why?
+no because an empty set is just a set with empty element. 0 contains the number 0 whihc is 1 item
+
+b. is empty set = {empty set}? why?
+no because the empty set is just a set with no element. {} contains ane elmeent with an empty set (1 ellement)
+
+c. is empty set E (is an element of) {empty set}? why?
+yes because {empty set} contains an element which is the empty set
+
+d. is empty set E empty set? why?
+no because by definition empty set contains no element. therefore nothing, not even the empty set
+it self can be an element of it
