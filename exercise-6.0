@@ -725,10 +725,40 @@ a set is mutually disjoint by definition if they have nothing in common
 
 d. the union of C sub i from i = 0 to n = ?
 answer:
+let n = 3
+C0 = {0}
+C1 = {1,-1}
+C2 = {2,-2}
+C3 = {3,-3}
+union: {-3,-2,-1,0,1,2,3}
 
+for abitary n, smallest number = -n
+largest numer = n
+so {-n, -n+1, -n+2 ..., n-2, n-1, n}
+{x E R | -n <= x <= n}
 
 e. the intersect of C sub i from i = 0 to n = ?
+let n = 3
+C0 = {0}
+C1 = {1,-1}
+C2 = {2,-2}
+C3 = {3,-3}
+intersect: {}/the empty set
+since 0 is not in any other setand it's the only common element therefore there are no common elements
+therefore for abrary number of n, intersect is {}
 
 f. the union of C sub i from i = 0 to infinity = ?
+{-infinity, -infinity + 1, ..., infinity - 1, infinity}
+the set of all integeres
 
 e. the intersect of C sub i from i = 0 to infinity = ?
+the empty set
+
+22. let Di = {x E R | -i <= x <= i} = [-i,i] for each nonnegative integer i
+a. the union of d sub i from i = 0 to 4 = ?
+b. the intersect of d sub i from i = 0 to 4 = ?
+c. are d0, d1, d2, ... mutually disjoint? explain
+d. the union of d sub i from i = 0 to n = ?
+e. the intersect of d sub i from i = 0 to n = ?
+f. the union of d sub i from i = 0 to infinity = ?
+g. the intersect of d sub i from i = 0 to infinity = ?
