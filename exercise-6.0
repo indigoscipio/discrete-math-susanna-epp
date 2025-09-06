@@ -872,16 +872,33 @@ the union is still w0
 e. the intersect of w sub i from i = 0 to infinity = ?
 the empty set {}
 
-
 25. let Ri = {x E R | 1 <= x <= 1 + 1/i} = [1,1 + 1/i] for each nonnegative integer i
 a. the union of r sub i from i = 0 to 4 = ?
+r0 = {x E R | 1 <= x <= 1 + 1/0} = undefined
+r1 = {x E R | 1 <= x <= 1 + 1/1}
+r2 = {x E R | 1 <= x <= 1 + 1/2}
+r3 = {x E R | 1 <= x <= 1 + 1/3}
+r4 = {x E R | 1 <= x <= 1 + 1/4}
+the union of these sets are r1
 
 b. the intersect of r sub i from i = 0 to 4 = ?
+the intersect of these sets are r4
+
 c. are r0, r1, r2, ... mutually disjoint? explain
+no because take r1 and r2. the intersect of these set if r2. therefore since r2 has a intersect
+the collection of set is not mutually dijoint
+
 d. the union of r sub i from i = 0 to n = ?
+r1
+
 e. the intersect of r sub i from i = 0 to n = ?
+{x E R | 1 <= x <= 1 + 1/n}
+
 f. the union of r sub i from i = 0 to infinity = ?
+r1
+
 g. the intersect of r sub i from i = 0 to infinity = ?
+empty set
 
 26. let Si = {x E R | 1 < x < 1 + 1/i} = (1,1 + 1/i) for each nonnegative integer i
 a. the union of S sub i from i = 0 to 4 = ?
@@ -915,3 +932,104 @@ the union is still s1
 
 e. the intersect of s sub i from i = 0 to infinity = ?
 the intersect is {}/the empty set
+
+
+27.a. is {{a, d, e}, {b, c}, {d, f}} a partition of  
+{a, b, c, d, e, f}?
+annswer: A collection of sets must be mutually disjoint to be a partitiob
+subce tge set {a,d,e} and {d,f} both contain d, they are not disjoint thefeo
+
+b.  Is {{w, x, v}, {u, y, q}, {p, z}} a partition of  
+{p, q, u, v, w, x, y, z}?
+union : p,q,u,v,w,x,y,z which is the original set
+now we need to prove if its mutually disjoint
+{w, x, v}, {u, y, q} = empty intersect
+{w, x, v}, {p,z} = empty intersect
+{u, y, q}, {p, z} = empty intersect
+therefore its mutually disjoint. therefore its a partition
+
+c. Is {{5, 4}, {7, 2}, {1, 3, 4}, {6, 8}} a partition of 
+{1, 2, 3, 4, 5, 6, 7, 8}?
+answer: the union is {5,4,7,2,1,3,6,8} = {1,2,3,4,5,6,7,8} which is corect
+however one of the set contains intersect
+{5, 4} and {1, 3, 4} has 4 as common element therefore not mutually disjiont
+and threfore its not a partition
+
+d. Is {{3, 7, 8}, {2, 9}, {1, 4, 5}} a partition of  
+{1, 2, 3, 4, 5, 6, 7, 8, 9}?
+answer: the union is {3,7,8,2,9,1,4,5} = {1,2,3,4,5,7,8,9} but it missing a 6
+therefore its not partition
+
+e. Is {{1, 5}, {4, 7}, {2, 8, 6, 3}} a partition of  
+{1, 2, 3, 4, 5, 6, 7, 8}?
+answer: the union is {1,5,4,7,2,8,6,3} = {1,2,3,4,5,6,7,8} which is correct
+now check disjoint
+{1, 5}, {4, 7} = empty intersect
+{4, 7}, {2, 8, 6, 3} = empty intersect
+{1, 5}, {2, 8, 6, 3} = empty intesect
+therefire its mutually disjoint. therefore its a partition
+
+28. let E be the set of all even integers and O be the set of all odd integers.
+is {E,O} a partition of Z, the set of all integers? epxlain
+
+E = {...,-4,-2,0,2,4,...}
+O = {...,-3,-1,1,3,...}
+
+lets check for union
+E U O = is the essentially the set of all integers by definition of integer
+E A O = {}/the empty set since there is no common element and is therefore mutually disjoint
+therefore {E,O} is a partition of Z
+
+29. let R be te set of all real numbers.
+ is {R^+, R^-, {0}} a partition of R? Explain your answer
+
+ R+ = {all positive real number}
+ ZERO = {0}
+ R- = {all negative real number}
+
+ lets check for union
+ The union of all these set makes up a real number by definition
+
+ now check for disjoint
+ R+ and ZERO doesn't have a common element = intersect is {}
+ R+ and R- doesn't have a common element = intersect is {}
+ R- and ZERO doesn't have common element = intersect is {}
+ therefore its mutually disjoint, therefore its a parition
+
+ 30. let Z be the set of all integerse and let
+
+ A0 = {n E Z | n = 4k, for some integer k}
+ A1 = {n E Z | n = 4k + 1, for some integer k}
+ A2 = {n E Z | n = 4k + 2, for some integer k}
+ A3 = {n E Z | n = 4k + 3, for some integer k}
+
+ is {A0,A1,A2,A3} a partition of Z? Explain your answer
+
+ first lets check for union of all these set is the set of all integers
+
+ A0 = {...,-8,-4,0,4,8...}
+ A1 = {...,-9,-5,1,5,9...}
+ A2 = {...,-10,-6,2,6,10...}
+ A3 = {...,-11,-7,3,7,11...}
+ the union is the set of all integers
+
+ now for intersect
+ since all of the four sets doesn't have common element its mutually disjoint
+ therefore its a partition
+
+
+31. supposer A = {1,2} and B = {2,3}.
+find each o the ofllowing
+
+a. P (pwoer set of) (A A B)
+A A B = 2
+so the power set of 2 is {{},{2}}
+
+b. P (A)
+pwoer set of A is {{},{1},{2},{1,2}}
+c. P (A U B)
+A U B = {1,2,3}
+power set of A U B is {{},{1},{2},{3},{1,2},{1,3},{2,3},{1,2,3}}
+
+
+32. 
