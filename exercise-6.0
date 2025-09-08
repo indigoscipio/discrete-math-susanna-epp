@@ -1063,7 +1063,82 @@ A x (B U C) = {a,b} x (1,2,3)
 b. (A x B) U (A x C)
 answer: 
 A x B = {(a,1),(a,2),(b,1),(b,2)}
-A x C = {}
+A x C = {(a,2),(a,3),(b,2),(b,3)}
+(A x B) U (A x C) = {(a,1),(a,2),(a,3),(b,1),(b,2),(b,3)}
 
 c. A x (B A C)
+answer: B A C = {2}
+= {a,b} x {2}
+= {(a,2),(b,2)}
+
 d. (A x B) A (A x C)
+{(a,1),(a,2),(b,1),(b,2)}
+{(a,2),(a,3),(b,2),(b,3)}
+= {(a,2),(b,2)}
+
+36.  Trace the action of Algorithm 6.1.1 on the vari
+ables i, j, found, and answer for m=3, n=3,  
+and sets A and B represented as the arrays
+a[1] = u, a[2] = v, a[3] = w, b[1] = w, b[2] = u, and b[3] = v
+
+answer:
+ Algorithm 6.1.1 Testing Whether A  B
+
+i = 1,
+answer = "A is a subset of B"
+while (i <= m and answer = "A is a subset of B")
+    j = 1, found := "no"
+        while (j<=n and found = "no")
+            if a[i] = b[j] , then found := "yes"
+            else j = j + 1
+        end while
+    [if found that has not given the value "yes" when execution reaches this point, then a[i] is not a subset of b]
+    if found = "no", then answer =  "A is not a subset of B"   
+    i:= i + 1
+end while
+output: answer is a string
+
+before iteration (iteration 0)
+i = 1
+m = 3
+n = 3
+a = {u,v,w}
+b = {w,u,v}
+answer = "A is a subset of B"
+
+outer iteration 1:
+test outer while loop
+is i <= m? true, 1 <= 3
+is answer = "A is a subset of B"? true. runs while loop
+j = 1, found:= no.
+
+inner iteration 1
+test inner while loop
+is j <= n ? true. 1 <= 3
+is found = no? true - inner loop passes
+checks if a[1] = b[1] -> u = w? false
+j = 1 + 1 = 2
+
+inner iteration 2
+test inner loop again
+is j<= n? true. 2 <= 3
+is found = no? true - inner loop passes
+checks if a[1] = b[2] -> u = u? true
+set found to "yes", end while for the inner loop
+set i:= i + 1
+
+outer iteration 2
+i = 2, found = no
+test outer while loop
+is i <= m? true, 2 <= 3
+is answer = "A is a subset of B"? true. runs while loop
+j = 1, found:= no.
+
+inner iteration 1
+test inner while loop
+is j <= n ? true. 1 <= 3
+is found = no? true - inner loop passes
+checks if a[2] = b[1] -> u = w? false
+j = 1 + 1 = 2
+
+... you get the point.
