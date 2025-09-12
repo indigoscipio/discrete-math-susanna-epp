@@ -76,3 +76,125 @@ answer:
 2.A
 3.B
 4.A
+
+in 3 and 4, supply explanations of the steps in the given proof
+3. theorem: for all stes A,B,and C, if A is a subset of B, B is a subset of C, then A is a subset of C
+proof:
+
+Statement - Explanation
+Suppose A, B, and C are any sets such that A C (is a subset of ) B and B C C - starting point
+we must show that A C C - conclusion to be shown
+let x be any element in A - start of an element proof
+then x is in b - (a)
+it follows that x is in c - (b)
+thus every element in a is in c - (since x could be any element of a)
+therefore, A C C [as was to be shown] - (c)
+
+answer:
+a. by the definition of subset (A C B)
+b. since B is a subset of C
+c.  by the definition of a subset/transitivity
+
+4. theorem: for all sets a and b, if A C (is a subset of) B,
+then A U B C B
+proof:
+Statement - Explanation
+Suppose A, B, and C are any sets such that A C B - starting point
+we must show that A U B C B - conclusion to be shown
+let x be any element in A U B - start of an element proof
+then x is in A or x is in B - (a)
+in case x is in A, then x is in b - (b)
+in case x is in b, then x is in b - tautology p -> p
+so in either case x is in b - proof by division into cases
+thus every element in A U B is in B - since x culd be any element of A U B
+therefore, A U B C B [as was to be shown] - (c)
+
+answer:
+a. by the definition of union
+b. by the definition of a subset (A C B)
+c. by the definition of subset
+
+5. prove that for all sets of A and B, (B - A) = B A A^c
+
+first we need to prove B - A is a subset of B A A^C
+
+First Part
+step 1:
+let x be any element of B - A
+by the definition of -, x is not in a
+but x is in b
+
+step 2: connect the right side
+by the definition of intersect, x must be in both B and A^c
+but A^c means x is not in A
+so x is in b
+
+this means (B - A is a subset of B A A^c
+
+Second Part
+step 1:
+let x be any element of B A A^c
+by the definitino of intersect, x must be in both B and A^C
+but thedefinition of complement said its not in A,
+so X is in B
+
+step 2:
+let x be any element of B - A
+by the definition of -, x is in b and x is not in a
+so x is in b
+
+since the two are equal, B A A^c is a subset of B - A
+therefore we've proven both parts and theefore equal
+
+
+6. let A and U stand for the words "intersection" and "union" respectiveyl
+fill in the blanks in the following proof that for all sets a,b,and c,
+
+A A (B U C) = (A A B) U (A A C)
+
+Proof: Suppose A, B, and C are any sets.
+
+(1) Proof that A ∩ (B ∪ C) ⊆ (A ∩ B) ∪ (A ∩ C):
+Let x ∈ A ∩ (B ∪ C). [We must show that x ∈ ___(a)___].
+
+By definition of ∩, x ∈ ___(b)___ and x ∈ B ∪ C.
+Thus x ∈ A and, by definition of ∪, x ∈ B or ___(c)___.
+
+Case 1 (x ∈ A and x ∈ B): In this case, x ∈ A ∩ B by definition of ∩.
+
+Case 2 (x ∈ A and x ∈ C): In this case, x ∈ A ∩ C by definition of ∩.
+
+By cases 1 and 2, x ∈ A ∩ B or x ∈ A ∩ C, and so, by definition of ∪, ___(d)___.
+
+[So A ∩ (B ∪ C) ⊆ (A ∩ B) ∪ (A ∩ C) by definition of subset.]
+
+(2) Proof that (A ∩ B) ∪ (A ∩ C) ⊆ A ∩ (B ∪ C):
+Let x ∈ (A ∩ B) ∪ (A ∩ C). [We must show that x ∈ A ∩ (B ∪ C).]
+
+By definition of ∪, x ∈ A ∩ B ___(a)___ x ∈ A ∩ C.
+
+Case 1 (x ∈ A ∩ B): In this case, by definition of ∩, x ∈ A and x ∈ B.
+Since x ∈ B, then x ∈ B ∪ C by definition of ∪.
+
+Case 2 (x ∈ A ∩ C): In this case, by definition of ∩, x ∈ A ___(b)___ x ∈ C.
+Since x ∈ C, then x ∈ B ∪ C by definition of ∪.
+
+In both cases x ∈ A and x ∈ B ∪ C, and so, by definition of ∩, ___(c)___.
+
+[So (A ∩ B) ∪ (A ∩ C) ⊆ A ∩ (B ∪ C) by definition of ⊆.]
+
+(3) Conclusion: [Since both subset relations have been proved, it follows, by definition of set equality, that (a).]
+
+
+answer:
+1a) (A ∩ B) ∪ (A ∩ C):
+1b) A
+1c) C
+1d) x is in (A ∩ B) ∪ (A ∩ C)
+
+2a)
+2b)
+2c)
+2d)
+
+3a)
