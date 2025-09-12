@@ -192,9 +192,57 @@ answer:
 1c) C
 1d) x is in (A ∩ B) ∪ (A ∩ C)
 
-2a)
-2b)
-2c)
-2d)
+2a) or
+2b) and
+2c) x is in a and x is in B U C
+2d) subset
 
-3a)
+3a) A A (B U C) = (A A B) U (A A C)
+
+use an element argument to prove each statement in 7 - 22.
+assume that all sets are subsets of a universal set U
+
+7. for all sets A and B, (A A B)^c = A^C U B^c
+
+suppose a and b are any sets, and x E (A A B)^c
+we want to show that (A A B)^c = A^C U B^c, that is
+
+(A A B)^c is a subset of A^C U B^c, and
+A^C U B^c is a subset of (A A B)^c.
+
+Part 1: show that (A A B)^c is a subset of A^C U B^c
+by the definition of complement, it is not the case that (x is in both A and B)
+so X is not in A or x is not in B -> A^c U B ^c
+this also fits morgan's law = (A A B)^c = A^C U B^c
+
+part 2: show that A^c U B^c is a subset of (A A B)^c.
+by the definition of union, x is in A^c or B^c
+by the definition of complement, it is not the case that x is in A or it is not the case that x is in B
+this is equal to (A A B)^c by morgan's law
+therefore A^C U B^c is a subset of (A A B)^c.
+
+therefore the two sets are equal
+
+
+8. for all sets A and B, (A A B) U (A A B^c) = A
+(this property is used in section 9.9)
+
+suppose a and b are any sets, and x E (A A B) U (A A B^c)
+we want to show (A A B) U (A A B^c) = A,
+that is, we want to show that
+1. (A A B) U (A A B^c) is a subset of A
+2. A is a subset of (A A B) U (A A B^c)
+
+part 1: show that (A A B) U (A A B^c) is a subset of A
+
+
+
+9. for all sets A,B, and C
+(A - B) U (C - B) = (A U C) - B
+
+10. for all sets A,B, and C,
+(A U B) A C is a subset of A U (B A C)
+
+11. for all sets A, B, and C,
+A A (B - C) is a subset of (A A B) - (A A C)
+
