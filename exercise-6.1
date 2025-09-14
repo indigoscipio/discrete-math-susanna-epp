@@ -234,8 +234,24 @@ that is, we want to show that
 2. A is a subset of (A A B) U (A A B^c)
 
 part 1: show that (A A B) U (A A B^c) is a subset of A
-assume 
-by the definition of ...
+assume that x is in (A A B) U (A A B^c)
+by the definition of union, x is in (A A B) or (A A B^c)
+A A B -> by the definition of intersect, x is both in A and B.
+(A A B^c) -> by the definition of complement, x is not in B. but its intersect so x is not in B.
+so x is in A
+
+therefore, (A A B) U (A A B^c) is a subset of A.
+
+part 2: show that A is a subset of (A A B) U (A A B^c)
+assume that x is in A.
+
+case 1: if x E B: then x E A and x E B
+so x E A A B
+
+case 2: if x is not an element of B, then x E B^c
+since x E A, x E A A B^c
+
+in either case, x E A A B U A A B^c
 
 
 9. for all sets A,B, and C
