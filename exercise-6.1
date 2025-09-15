@@ -253,12 +253,72 @@ since x E A, x E A A B^c
 
 in either case, x E A A B U A A B^c
 
-
 9. for all sets A,B, and C
 (A - B) U (C - B) = (A U C) - B
 
+suppose a, b, and c are any sets and x E (A - B) U (C - B)
+we must show (A - B) U (C - B) = (A U C) - B, that is
+we must show the following:
+
+1. (A - B) U (C - B) is a subest of  (A U C) - B
+2. (A U C) - B is a subset of (A - B) U (C - B)
+
+part 1: show that (A - B) U (C - B) is a subest of (A U C) - B
+asume that x is in (A - B) U (C - B)
+
+case 1: assume x is in (A - B)
+this means x is in A and x is not in B
+does the conclusion (A U C) - B follows?
+(A U C) -> since x is in a, this is true by definition of union
+- B -> x is not in B so its true
+
+case 2: assume x is in (C - B)
+this means x is in C but not in B
+does the conclusion (A U C) - B follows?
+this means (A U C) -> since x is in C, is true by definition of union
+and x is not in B, so this is true
+
+part 2: show that (A U C) - B is a subset of (A - B) U (C - B)
+assume that x is in (A U C) - B
+by the definition of union, x is in A or x is in C
+by the definition of differnce, x is not in B
+
+case 1: x is in A
+(A - B) U (C - B)
+since we know x is not in B, the first part is true (A - B)
+therefore by definition of union there only neesd to be 1 true the whole thing true
+
+case 2: x is in C
+(A - B) U (C - B)
+since we know x is not in B, the second part is true (C - B)
+therefore by definition of union there only neesd to be 1 true the whole thing true
+
+since we proved two parts, therefore  (A - B) U (C - B) = (A U C) - B
+
+
 10. for all sets A,B, and C,
 (A U B) A C is a subset of A U (B A C)
+
+suppose a, b, and c are any sets and x (A U B) A C
+we must show that x is in A U (B A C)
+
+by the definition of intersect, x is in (A U B) and x is in C
+
+case 1: x is in A
+A U (B A C)
+since we know x is in A, then by the definition of union, the 1st part is true and
+therefore the whole thing is true.
+
+case 2: x is in B
+A U (B A C)
+by the definition of intersect, x is in B and x is in C
+since we assumed earlier that x is in C, therefore the 2nd expression (B A C) istrue
+and by the definitino of union, this makes the whole expression true
+
+Since the conclusion holds for both cases, (A∪B)∩C is a subset of A∪(B∩C).
+
+
+
 
 11. for all sets A, B, and C,
 A A (B - C) is a subset of (A A B) - (A A C)
