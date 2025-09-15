@@ -317,10 +317,55 @@ and by the definitino of union, this makes the whole expression true
 
 Since the conclusion holds for both cases, (A∪B)∩C is a subset of A∪(B∩C).
 
-
-
-
 11. for all sets A, B, and C,
 A A (B - C) is a subset of (A A B) - (A A C)
 
-gg
+suppose a, b, and c are any sets and x A A (B - C) 
+we must show that x is in (A A B) - (A A C)
+
+assume that x E A A (B - C) 
+by the definition of intersect, x is in A and x is in (B - C)
+by thedefinition of difference, x is in B and x is not in C
+so x is in A and x is in B, but x is not in C.
+this is what we know so far
+
+(A A B) - (A A C)
+(A A B) -> since we know x is in A and x is in B, therefore this part is correct
+(A A C) -> by the definition of intersect, x is in A and x is in C - so this part is false
+
+and by the definition of negation,  - (A A C) makes it true
+therefore the whole expression is true
+
+12. for all sets a, b, and c
+(A U B) - C is a subset of (A - C) U (B - C)
+
+suppose a, b, and c are any sets and x E (A U B) - C
+we must show x E (A - C) U (B - C)
+
+by the definition of difference x is not in C
+by the definition of union, x is in A or x is in B
+
+case 1: x is in A
+does the conclusion (A - C) U (B - C) follows?
+(A - C) U (B - C)
+1st part -> since we know x is in A and x is not in C. therefore this first part is true
+and by the definiton of union, we odn't need to check the 2nd part since 1stp art alredy true
+
+case 2: x is in B
+(A - C) U (B - C)
+2dn part -> since we know that x is in b and x is not in C, therefore this part is true
+and by the definiton of union, we odn't need to check the 1nd part since 2stp art alredy true
+
+therefore since we prove both cases its true
+
+
+13. for all sets a,b,andc,
+(A - B) A (C - B) = (A A C) - B 
+
+suppose a, b, and c are any sets and x E (A - B) A (C - B)
+we must show that x is in (A A B) - (A A C)
+
+
+14. for all sets a and b, A U (A A B) = A
+
+15, for eveyr set A , A U O (the empty set) = A
