@@ -363,7 +363,30 @@ therefore since we prove both cases its true
 (A - B) A (C - B) = (A A C) - B 
 
 suppose a, b, and c are any sets and x E (A - B) A (C - B)
-we must show that x is in (A A B) - (A A C)
+we must show that (A - B) A (C - B) = (A A C) - B 
+that is, we must show 2 things:
+
+1. (A - B) A (C - B) is a subset of (A A C) - B 
+2. (A A C) - B  is a subset of (A - B) A (C - B)
+
+part 1: show that (A - B) A (C - B) is a subset of (A A C) - B
+assume that x E (A - B) A (C - B) 
+we must show that x E (A A C) - B 
+
+by the definition of intersect, x is in (A - B) and x is in (C - B) 
+by the definition of difference, x is not in B
+so x is in A and x is in C but x is not in B
+these are the things we know so far.
+
+(A A C) - B 
+by the defintion of intersect, x is in A and x is in C
+since we assumed earlier that x is in A and x is in C, the first part is true (A A C)
+and since we also know that x is not in B, the - B part is also true
+therefore the whole expression is true
+
+part 2: show that (A A C) - B  is a subset of (A - B) A (C - B)
+by the definition of intersect, x is in A and x is in C
+and by the definition of difference, x is not in B
 
 
 14. for all sets a and b, A U (A A B) = A
