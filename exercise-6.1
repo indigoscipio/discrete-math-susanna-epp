@@ -493,14 +493,127 @@ but we know that x is not in B, therefore x can not in A
 therefore x E A^c
 
 
-19. For all sets A, B, and C, if A is a subset of B and A is a s ubset of C then A is a subset of B A C
+19. For all sets A, B, and C, if A is a subset of B and A is a subset of C then A is a subset of B A C
+
+suupose a,b and c are any sets and A is a subset of B and A is a subset of C
+
+we must show that A is a subset of B A C
+
+let x be any element in A
+from the premise we know A is a subset of B and A is a subset of C
+so x E B and x E C
+
+by the definition of intersection, this means B A C
+since every element in A is also an element in B A C, therefore proven
+
 
 20. for all sets A, B and C, if A is a subset of C and B is a subset of C then A U B is a subset of C
+suppose a,b , and c are any sets and a is a subset of C and B is a subset of C
+
+we must show that A U B is a subset of C
+
+let x be any element in A U B
+
+case 1: x is in A
+show that x is in C
+from the premise we know that A is a subset of C
+therefore every element in A is also in C, therefore x E C
+
+case 2: x is in B
+we must show that x is in C
+from the premise we know that B is a subset of C
+therefore every element in B is also in C, therefore x E C
+
+in either case x E C, therefore provem
 
 21. for all sts A, B, and C,
 
 A x (B U C) = (A x B) U (A x C)
 
-22. 
+suppose a,b , and c are any sets and A x (B U C)
+we need tos how that A x (B U C) = (A x B) U (A x C)
+
+that is, we need to show 2 things:
+1. A x (B U C) is a subset of (A x B) U (A x C)
+2. (A x B) U (A x C) is a subset of A x (B U C)
+
+part 1: show that A x (B U C) is a subset of (A x B) U (A x C)
+
+let x,y be any element in A x (B U C)
+by the definition of cartesian product, this mean
+
+1. x E A
+2. y E (B U C) -> this means y is in B or y is in C
+
+case 1: y is in B
+since x is in A and y is in B, by the definition of cartesian this means
+(A x B)
+
+case 2: y is in C
+since x is in A and y is in C, by the definitino of catesian product this means
+(A x C)
+
+and by the definition of union, x is in (A x B) or x is in (A x C)
+
+part 2: show that (A x B) U (A x C) is a subset of A x (B U C)
+
+let x,y be any element in (A x B) U (A x C)
+we must show x is in A x (B U C)
+
+by the definition of union, x is in (A x B) or x is in (A x C)
+
+case 1: x,y is in (A x B)
+by the definition of cartesian product, this means:
+1. x E A
+2. y E B
+
+case 2: x,y is in (A x C)
+by the definition of cartesian product, this mean
+1. x E A
+2. y E C
+
+in either case, x E A and y E B or y E C
+
+since both parts are proven, the whle thing proven
+
+
+22.  for all sets a,b, and c
+
+A x (B A C) = (A x B) A (A x C)
+
+suppose a,b,and c are any sets and A x (B A C) 
+we need to show A x (B A C) = (A x B) A (A x C)
+
+that is, we need to show 2 things:
+1. A x (B A C) is a subst of  (A x B) A (A x C)
+2. (A x B) A (A x C) is a subst of A x (B A C)
+
+part 1: show that A x (B A C) is a subst of  (A x B) A (A x C)
+
+let (x,y) be any element in A x (B A C)
+by the definition of cartesian product, this means
+1. x is in A
+2. y is in (B A C) - by the definition of intersect, y is in B and y is in C
+
+therfore (x,y) is in (A x B)
+and (x,y) is in (A x C)
+
+part 2: (A x B) A (A x C) is a subst of A x (B A C)
+
+let (x,y) be any element in (A x B) A (A x C)
+by hte definition of intersect this means
+(x,y) is in (A x B) and (x,y) is in (A x C)
+
+(A x B)
+by the definitino of cartesian product, x E A and y E B
+
+(A x C)
+by the definition of cartesian product, x E A and y E C
+
+in either case, x is in A and y is in B and x is in C
+ytherefore proven for bot haprts
+
+
+
 
 23. 
