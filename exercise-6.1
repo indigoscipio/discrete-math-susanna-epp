@@ -614,6 +614,151 @@ in either case, x is in A and y is in B and x is in C
 ytherefore proven for bot haprts
 
 
+23. Find the mistake in the following “proof” that 
+for all sets A, B, and C, if A ⊆ B and B ⊆ C then 
+A ⊆ C.
+
+“Proof:” Suppose A, B, and C are any sets such that 
+A ⊆ B and B ⊆ C. Since A ⊆ B, there is an element 
+x such that x ∈ A and x ∈ B, and since B ⊆ C, 
+there is an element x such that x ∈ B and x ∈ C. 
+Hence there is an element x such that x ∈ A and 
+x ∈ C and so A ⊆ C.
 
 
-23. 
+answer: Let x be any arbitrary element in A.
+instead of there is an element in X such that ...
+
+24. Find the mistake in the following “proof.”
+
+“Theorem:” For all sets A and B, Aᶜ ∪ Bᶜ ⊆ (A ∪ B)ᶜ.
+
+“Proof:” Suppose A and B are any sets, and 
+x ∈ Aᶜ ∪ Bᶜ. Then x ∈ Aᶜ or x ∈ Bᶜ by definition 
+of union. It follows that x ∉ A or x ∉ B by 
+definition of complement, and so x ∉ A ∪ B 
+by definition of union. Thus x ∈ (A ∪ B)ᶜ 
+by definition of complement, and hence 
+Aᶜ ∪ Bᶜ ⊆ (A ∪ B)ᶜ.
+
+answer: the incorrect part starts from 
+"so x is not an element A U B". without proving (A U B)^c. 
+it just jumpts to conclusion that x E (A U B)^c
+we want to show x E (A U B)^c, so it needs to start from there eg let x be any element x E (A U B)^c... etc
+
+27. Fill in the blanks in the following proof that for all 
+sets A and B, (A – B) ∩ (B – A) = ∅.
+
+Proof: Let A and B be any sets and suppose 
+(A – B) ∩ (B – A) ≠ ∅. That is, suppose there 
+is an element x in (a). By definition of (b), 
+x ∈ A – B and x ∈ (c). Then by definition of 
+set difference, x ∈ A and x ∉ B and x ∈ (d) 
+and x ∉ (e). In particular x ∈ A and x ∉ (f), 
+which is a contradiction. Hence [the supposition that 
+(A – B) ∩ (B – A) ≠ ∅ is false, and so] (g).
+
+answer:
+a) (A – B) ∩ (B – A
+b) intersect
+c) (B - A)
+d) B
+e) A
+f) A
+g) (A – B) ∩ (B – A) = ∅.
+
+29. For all sets A, B, and C,
+    (A – C) ∩ (B – C) ∩ (A – B) = ∅.
+
+answer:
+suppose a,b,and c are any sets and x E (A – C) ∩ (B – C) ∩ (A – B)
+we must show (A – C) ∩ (B – C) ∩ (A – B) = ∅.
+
+show that (A – C) ∩ (B – C) ∩ (A – B) is a subset of ∅.
+let x be any element in (A – C) ∩ (B – C) ∩ (A – B) and assume its not empty
+we must show x E the empty set
+by the definition of intersect, x is the following:
+x E (A - C)
+and x E (B - C)
+and x E (A - B)
+
+(A - C) -> by the definition of difference, x is in A but not in C
+(B - C) -> by the definition of difference, x is in B but not in C
+(A - B) ->  by the definition of difference, x is in A but not in B
+
+but this is a contradiction because x cannot be in B but not in B,
+since our initial assumptio (set is not empty) leads to a contradiction
+therefore the assumption must be false. therefore the set must be empty
+
+
+30. For every subset A of a universal set U,
+    A ∩ Aᶜ = ∅.
+
+suppose a is any sets and x E (A A A^c) and the set is not empty
+we must show x E ∅
+
+let x be any element in A ∩ Aᶜ
+by the definition of complement, x is not in A
+by the definition of intersect, x is in A and x is not in A
+however this is a contradiction since x cannot be in a and not in A
+
+since we found a contradiction, this proves the initial assumption is false
+(that the set A A A^c is not empty). So the set must be empty
+
+31. If U denotes a universal set, then Uᶜ = ∅.
+
+
+32. For every set A, A × ∅ = ∅.
+
+suppose a is any sets and that A x ∅
+we ust show A × ∅ = ∅.
+we assume opposite assumption -> A × ∅ does not equal ∅.
+this means there must be at least one element in the set
+
+by the definition of cartesian product,
+(x,y) is in (A x ∅)
+so x E A
+and y E ∅
+but by the definition of empty set, empty set cannot contain any element
+therefore we found a contradiction
+
+since the initial assumption (A x ∅ is not empty) leads to a logical impossibility,
+the assumption must be false. therefore the set must be empty
+
+33. For all sets A and B, if A ⊆ B then A ∩ Bᶜ = ∅.
+
+34. For all sets A and B, if B ⊆ Aᶜ then A ∩ B = ∅.
+
+35. For all sets A, B, and C, if A ⊆ B and B ∩ C = ∅
+    then A ∩ C = ∅.
+
+36. For all sets A, B, and C, if C ⊆ B – A, then
+    A ∩ C = ∅.
+
+37. For all sets A, B, and C,
+    if B ∩ C ⊆ A, then (C – A) ∩ (B – A) = ∅.
+
+38. For all sets A, B, C, and D,
+    if A ∩ C = ∅ then (A × B) ∩ (C × D) = ∅.
+
+Prove each statement in 39–44.
+
+39. For all sets A and B,
+    a. (A – B) ∪ (B – A) ∪ (A ∩ B) = A ∪ B
+    b. The sets (A – B), (B – A), and (A ∩ B) are
+       mutually disjoint.
+
+40. For every positive integer n, if A and B₁, B₂, B₃, … 
+    are any sets, then
+
+       A ∩ ( ⋃ (i=1 to n) Bᵢ ) = ⋃ (i=1 to n) (A ∩ Bᵢ).
+
+41. For every positive integer n, if A₁, A₂, A₃, … and B 
+    are any sets, then
+
+       ⋃ (i=1 to n) (Aᵢ – B) = ( ⋃ (i=1 to n) Aᵢ ) – B.
+
+42. For every positive integer n, if A₁, A₂, A₃, … and B 
+    are any sets, then
+
+       ⋂ (i=1 to n) (Aᵢ – B) = ( ⋂ (i=1 to n) Aᵢ ) – B.
