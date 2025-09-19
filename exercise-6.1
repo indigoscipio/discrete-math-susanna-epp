@@ -726,17 +726,77 @@ since the initial assumption (A x ∅ is not empty) leads to a logical impossibi
 the assumption must be false. therefore the set must be empty
 
 33. For all sets A and B, if A ⊆ B then A ∩ Bᶜ = ∅.
+suppse a and b are any sets and that A ⊆ B
+we need to show A ∩ Bᶜ = ∅
+we assume opposite assumption -> A ∩ Bᶜ does not equal ∅
+this means there must be at least one element in the set
+
+by the definition of subset, A ⊆ B means every element in A is also in B
+
+A ∩ Bᶜ = ∅.
+by the definition of intesect, x is in A and x is not in B
+however, the premise says that every element in A is also in B
+but here it says x is not in B
+we have reached a contraidction
+
+since the initla assumption reached a conradiction, it must be false.
+therefore the set must be empty
+
 
 34. For all sets A and B, if B ⊆ Aᶜ then A ∩ B = ∅.
+suppose a and b are any sets and B ⊆ Aᶜ
+we need to show A ∩ B = ∅.
+
+assume the opposite: that the set A ∩ B is non-empty
+this means theres an element x in A ∩ B
+
+B ⊆ Aᶜ
+by the definition of subset, every element in B is not in A
+
+A ∩ B
+by the definition of intersect, x is in A and x is in B,
+however, the given premise  says that every element in B is not in A
+therefore we have reached a contradiction
+
 
 35. For all sets A, B, and C, if A ⊆ B and B ∩ C = ∅
     then A ∩ C = ∅.
+assume a,b,and c are any sets and A ⊆ B and B ∩ C = ∅
+we need to show A ∩ C = ∅
+
+premise:
+A ⊆ B -> this means every element in A is also in B
+B ∩ C = ∅-> this means no element that is in both B and in C
+
+conclusion:
+A ∩ C = ∅
+by the definition of intersect, there is no element that is in both A and c
+we know from the premise that eveyr element in A is also in B
+and we know that there's no element that is in both B and in C
+therefore there is no element in A is also in C
+
 
 36. For all sets A, B, and C, if C ⊆ B – A, then
     A ∩ C = ∅.
+assume a,b,and c are any sets and C ⊆ B – A
+we need to show A ∩ C = ∅.
+
+premise
+ C ⊆ B – A
+by the definition of intersect, x is in B but not in A
+by the definition of subset, every element in C is also in B but not in A
+
+conclusion
+A ∩ C = ∅.
+let x be any element in A ∩ C
+by the definition of intersect, this means there is no element that is in both A and C
+but from the premise we know that eveyr element in C is in B but not in A
+therefore contradiction since an element cannot be  in both in and not at the same time
+
 
 37. For all sets A, B, and C,
     if B ∩ C ⊆ A, then (C – A) ∩ (B – A) = ∅.
+    
 
 38. For all sets A, B, C, and D,
     if A ∩ C = ∅ then (A × B) ∩ (C × D) = ∅.
