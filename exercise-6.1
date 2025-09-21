@@ -892,23 +892,60 @@ by the definition of union, this mean x is in A or x is in B
 
 case 1: x is in A
 we must show x is in (A – B) ∪ (B – A) ∪ (A ∩ B)
+subcas 1: x is also in B
+(A ∩ B) -> by the definition of intersect, this means x is in a and b
+therefore x is in (A – B) ∪ (B – A) ∪ (A ∩ B)
 
+subcas 2: x is not in B
+(A – B) -> by the definition of difference, x is in a but not in b
+therefore x is in (A – B) ∪ (B – A) ∪ (A ∩ B) 
 
 case 2: x is in B
+subcase: x is also in A
+(A ∩ B) -> by the definition of intersect, x is in both a and b
+therefore x is in (A – B) ∪ (B – A) ∪ (A ∩ B)
 
-b)
+subcase: x is not in A
+(B – A) -> by the definition of difference, x is in b but not in a
+therefore x is in (A – B) ∪ (B – A) ∪ (A ∩ B)
+
+therefore proven
+
+b)The sets (A – B), (B – A), and (A ∩ B) are mutually disjoint.
+answer: mutually disoint means the intersection of any two of these sets is the empty set
+(A–B)∩(B–A)=∅
+let x be any element in (A–B)∩(B–A)
+by the definition of differnece, x is in a but not in b
+and x is in b but not in a, therefore the two sets have nothing in common
+
+(A–B)∩(A∩B)=∅. assume the element exist
+by the definiton of difference,
+x is in A but not in B
+by the definition of intersect, x is in A and B
+however x cnanot be in B but not in b at the same time. therefore the itnersection is empty
+
+(B–A)∩(A∩B)=∅.
+by the definition of difference, x is in b but not in a
+by the defintion of intersect, x is in a but not in B
+however x cannot be in a and not in a at  the same time. tehrefore contradiction
+since we proved everything its proevn
+
 
 40. For every positive integer n, if A and B₁, B₂, B₃, … 
     are any sets, then
 
-       A ∩ ( ⋃ (i=1 to n) Bᵢ ) = ⋃ (i=1 to n) (A ∩ Bᵢ).
+       A ∩ ( ⋃ (i=1 to n) Bᵢ ) = ⋃ (i=1 to 1) (A ∩ Bᵢ).
+answer:
+base case: n = 1 - > 
+A ∩ ( ⋃ (i=1 to 1) Bᵢ ) = ⋃ (i=1 to n) (A ∩ Bᵢ).
+A ∩ b1 = A ∩ b1
 
-41. For every positive integer n, if A₁, A₂, A₃, … and B 
-    are any sets, then
+inductive hypothesis -> assume statmeent is true for some arbitrary possiitve integer k
+A ∩ ( ⋃ (i=1 to k) Bᵢ ) = ⋃ (i=1 to k) (A ∩ Bᵢ).
 
-       ⋃ (i=1 to n) (Aᵢ – B) = ( ⋃ (i=1 to n) Aᵢ ) – B.
 
-42. For every positive integer n, if A₁, A₂, A₃, … and B 
-    are any sets, then
+inductive step ->  we must show the statement is true for n = k+1
+that is, we need to show that 
+A ∩ ( ⋃ (i=1 to k+1) Bᵢ ) = ⋃ (i=1 to k+1) (A ∩ Bᵢ).
 
-       ⋂ (i=1 to n) (Aᵢ – B) = ( ⋂ (i=1 to n) Aᵢ ) – B.
+= A ∩ ( ⋃ (i=1 to k) Bᵢ ) U Bk + 1 = ⋃ (i=1 to k+1) (A ∩ Bᵢ).
