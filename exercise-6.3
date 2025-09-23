@@ -1,0 +1,164 @@
+Test yourself
+1. Given a proposed set identity involving set vari
+ables A, B, and C, the most common way to show 
+that the equation does not hold in general is to find 
+concrete sets A, B, and C that, when substituted for 
+the set variables in the equation, ___
+answer: results in a contradiction/logical error
+make the LHS unequal to the RHS
+result in different values
+
+2. When using the algebraic method for proving a set 
+identity, it is important to ___ for every step.
+answer: cite one of the properties from theorem 6.2.2
+
+3. When applying a property from Theorem 6.2.2, it 
+must be used ___  as it is stated.
+answer: exactly
+
+
+Theorem 6.2.2
+Theorem 6.2.2 – Properties of Set Operations
+
+Commutative Laws:
+- A ∪ B = B ∪ A
+- A ∩ B = B ∩ A
+
+Associative Laws:
+- (A ∪ B) ∪ C = A ∪ (B ∪ C)
+- (A ∩ B) ∩ C = A ∩ (B ∩ C)
+
+Distributive Laws:
+- A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C)
+- A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C)
+
+Identity Laws:
+- A ∪ ∅ = A
+- A ∩ U = A
+
+Complement Laws:
+- A ∪ Aᶜ = U
+- A ∩ Aᶜ = ∅
+
+Idempotent Laws:
+- A ∪ A = A
+- A ∩ A = A
+
+De Morgan’s Laws:
+- (A ∪ B)ᶜ = Aᶜ ∩ Bᶜ
+- (A ∩ B)ᶜ = Aᶜ ∪ Bᶜ
+
+exercise set 6.3
+For each of 1–4 find a counterexample to show that the 
+statement is false. Assume all sets are subsets of a univer
+sal set U.
+
+1. for all sets a,b, and c,
+(A U B) A C = A U (B A C)
+
+(A U B) A C  - an element is here if its in a or b and c
+A U (B A C) - an element is here if its in a or if its both in b and c
+
+let A = {1}
+let B = {2,3}
+let C = {3,4}
+
+A U B = {1,2,3}
+A U B A C = {3}
+
+B∩C={2,3}∩{3,4}={3}
+
+A∪(B∩C)={1}∪{3}={1,3}
+since counterrexample is found tehrefore false
+
+2. for all sets a and b, (A U B)^c = A^c U B^c
+answer:
+
+let the universal set U be {1,2,3}
+let A = {1}
+let B = {2}
+
+LHS: (A U B)^c
+this means an element is here if its not in A and not in B
+A U B = 1,2
+(A U B)^c = 3
+
+RHS: A^c U B^c
+this means an element is here if it's not in A or not in B
+A^c = {2,3}
+B^c = {1,3}
+A^c U B^c = {1,2,3}
+
+since RHS does not equal to RHS, therefore we found a counterexample and the statement is false
+
+
+3. for all sets a,b,and c, if a is not a subset of b and b is not a subsetof c then
+a is not a subset of c
+
+premise
+1. A is not a subset of B
+2. B is not a subset of C
+
+
+conclusoin
+A is not a subset of C -> this means every element in A is not in C
+to find a counterexample, we need to show that A is a subset of C
+
+let A = {1}
+let B = {2}
+let C = {1,3}
+
+
+
+4. for all sets A,B, and C, if B U C is a subset of A then
+(A - B) A (A - C) = empty set
+premise
+B U C is a subset of A
+this means every element in B or C is in A
+
+conclusion
+(A - B) A (A - C) = empty set
+to find counterexample we need to find at least one elemnt in (A - B) and (A - C)
+
+let A = {1,2,3}
+let B = {2}
+let C = {3}
+
+since we found a counterexample theefore the statement is false
+
+For each of 5–21 prove each statement that is true and 
+find a counterexample for each statement that is false. 
+Assume all sets are subsets of a universal set U
+
+5. for all sets A,B, and C
+A - (B - C) = (A - B) - C
+
+answer: is the statement true or false?
+this seems like a simple commutative law for difference of sets so it must be true but I'm not sure
+
+let A = {1,2,3}
+let B = {2}
+let C = {}
+
+LHS -> A - (B - C)
+an element is in this set if its in A AND if its not in (B - C) -> B^c or C^c
+so x is in LHS if x is in A and (x is not in B or x is in C)
+
+
+RHS -> (A - B) - C
+an element is in this set if its in (A - B) and not in C
+so x is in  RHS if its (x is in A and x is not in b) AND x is not in C
+this means to find the counterexample we need to make LHS does not equal to RHS
+
+let A = {1,2}
+let B = {1}
+let C = {2}
+
+6. for all sets A and B, A A (A U B) = A
+
+7. for all sets A, B, and C,
+(A - B) A (C - B) = A - (B U C)
+
+8. for all sets A and B, if A^c is a subset of B, then A U B = U
+
+9. for all sets A,B, and C, if A is a subset of C and B is a subset oc C then A U B is a subset of C
