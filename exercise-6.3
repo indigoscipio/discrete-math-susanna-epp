@@ -156,9 +156,75 @@ let C = {2}
 
 6. for all sets A and B, A A (A U B) = A
 
+LFS -> A A (A U B)
+this means:
+x must be in A
+x must be in A or B
+
+LHS = A
+this means x must be in A
+
+to find a counterexample, we need to make LHS does not equal to RHS
+
+let A = {1}
+let B = {2}
+
+LHS -> 1 A {1,2} = 1
+RHS -> 1
+
+not valid, need a different example
+let A = {}
+let B = {1}
+
+seems to be true, but not sure. lets try to prove it
+suppost a,b are any sets
+we must show A A (A U B) = A, that is
+we must show 2 things:
+1) A A (A U B) is a subset of A
+2) A is a subset of A (A U B)
+
+part 1:
+let x be any eleemnt in 
+A A (A U B)
+this means x is in a and
+x is in A or B
+
+since x is in a, therefore A A (A U B) is a subset of A
+
+part 2:
+A is a subset of A A (A U B)
+A -> x is in A
+(A U B) -> by thedefinition of union, x is in A or x is in B
+since we know x is in A, therfore this is true
+therefore the statment is true
+
+
 7. for all sets A, B, and C,
 (A - B) A (C - B) = A - (B U C)
+
+LHS -> (A - B) A (C - B)
+x is in A but not in B
+and
+x is in C but not in B
+
+RHS -> A - (B U C)
+x is in a
+but not in (B or C)
+
+to find a coutnerexample, we need to make LHS does not equal RHS
+
+let A = {1,4}
+let B = {2}
+let C = {3}
+
+LHS -> (1,4 - 2) A (3 - 2) = {}
+
+RHS -> 1,4 - 2,3 = 1,4
+
+therfore counterexample found
 
 8. for all sets A and B, if A^c is a subset of B, then A U B = U
 
 9. for all sets A,B, and C, if A is a subset of C and B is a subset oc C then A U B is a subset of C
+
+
