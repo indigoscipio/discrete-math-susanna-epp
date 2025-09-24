@@ -272,3 +272,121 @@ since we know that A is a subset of C from the premise, then x is in C
 A U B
 case 2: x is in B
 since we know that B is in C by from the premise, then x isi n C
+
+10. for all sets A,B, if A is a subset of B,
+then A A B^c = the empty set
+
+premise - what we know
+A is a subset of B
+this means every element in A is in B
+
+conclusion - what we need to prove
+A A B^c = the empty set
+this means A and not b contains no element
+
+we must show the conclusion holds
+A A B^c = the empty Set
+suppose x is in A A B^c
+this means x is in A and x is not in B
+but we konw from the premise that every element in A is in B
+so an element cannot be in B and not in B at the same time
+therefore the supposition is false
+
+11. for all sets a,b, and c, if A is a subset of B, then
+A A (B A C)^c = the empty set
+
+12. for all sets A,B,and C,
+A A (B - C) = (A A B) - (A A C)
+
+13. for all sets a,b, and c
+A U (B - C) = (A U B) - (A U C)
+
+H 14. For all sets A, B, and C, if A ⊆ B ∩ C and A ∪ C ⊆ B ∪ C, then A = B.
+
+H 15. For all sets A, B, and C, (A − B) ∪ C ⊆ A ∪ (C − B).
+
+H 16. For all sets A and B, if A ∩ B = ∅ then A × B = ∅.
+
+17. For all sets A and B, if A ⊆ B then P(A) ⊆ P(B).
+
+18. For all sets A and B, P(A ∪ B) ⊆ P(A) ∪ P(B).
+
+H 19. For all sets A and B, P(A) ∪ P(B) ⊆ P(A ∪ B).
+
+20. For all sets A and B, P(A ∩ B) = P(A) ∩ P(B).
+
+21. For all sets A and B, P(A × B) = P(A) × P(B).
+
+22. Write a negation for each of the following statements.
+Indicate which is true, the statement or its negation. Justify your answers.
+a. ∀ sets S, ∃ a set T such that S ∩ T = ∅.
+b. ∃ a set S such that ∀ sets T, S ∪ T = ∅.
+
+H 23. Let S = {a, b, c}, and for each integer i = 0, 1, 2, 3, let Sᵢ be the set of all subsets of S that have i elements.
+List the elements in S₀, S₁, S₂, and S₃. Is {S₀, S₁, S₂, S₃} a partition of P(S)?
+
+24. Let A = {t, u, v, w}, and let S₁ be the set of all subsets of A that do not contain w and S₂ the set of all subsets of A that contain w.
+a. Find S₁.
+b. Find S₂.
+c. Are S₁ and S₂ disjoint?
+d. Compare the sizes of S₁ and S₂.
+e. How many elements are in S₁ ∪ S₂?
+f. What is the relation between S₁ ∪ S₂ and P(A)?
+
+H 25. Use mathematical induction to prove that for every integer n ≥ 2, if a set S has n elements, then the number of subsets of S with an even number of elements equals the number of subsets of S with an odd number of elements.
+
+H 26. The following problem, devised by Ginger Bolton, appeared in the January 1989 issue of the College Mathematics Journal (Vol. 20, No. 1, p. 68):
+
+Given a positive integer n ≥ 2, let S be the set of all nonempty subsets of {2, 3, …, n}. For each Sᵢ ∈ S, let Pᵢ be the product of the elements of Sᵢ. Prove or disprove that
+
+Σ (i = 1 to 2ⁿ⁻¹) Pᵢ = ((n + 1)! / 2) − 1.
+
+27. For all sets A, B, and C,
+(A ∪ B) ∩ C = (A ∩ C) ∪ (B ∩ C).
+
+Proof: Suppose A, B, and C are any sets. Then
+(A ∪ B) ∩ C = C ∩ (A ∪ B) (by commutativity)
+= (C ∩ A) ∪ (C ∩ B) (by distributivity)
+= (A ∩ C) ∪ (B ∩ C) (by commutativity).
+
+H 28. For all sets A, B, and C,
+(A ∪ B) − (C − A) = A ∪ (B − C).
+
+Proof: Suppose A, B, and C are any sets. Then
+(A ∪ B) − (C − A) = (A ∪ B) ∩ (C − A)ᶜ (by set difference law)
+= (A ∪ B) ∩ (C ∩ Aᶜ)ᶜ (by definition of difference)
+= (A ∪ B) ∩ (Cᶜ ∪ A) (by De Morgan’s law)
+= (A ∪ B) ∩ (A ∪ Cᶜ)
+= A ∪ (B ∩ Cᶜ)
+= A ∪ (B − C).
+
+H 29. Some steps are missing from the following proof:
+For all sets A and B, (A ∪ B)ᶜ − Bᶜ = (A − B) ∪ Bᶜ.
+
+Proof: Let any sets A and B be given. Then
+(A ∪ B)ᶜ − Bᶜ = (A ∪ B)ᶜ ∩ (Bᶜ)ᶜ (by set difference law)
+= (A ∪ B)ᶜ ∩ B (by double complement law)
+= (Aᶜ ∩ Bᶜ) ∩ B (by De Morgan’s law)
+= Aᶜ ∩ (Bᶜ ∩ B) (by associativity)
+= Aᶜ ∩ ∅ (by complement law)
+= ∅.
+
+Thus, (A ∪ B)ᶜ − Bᶜ = ∅.
+
+30. For all sets A, B, and C,
+(A ∩ B) ∪ C = (A ∪ C) ∩ (B ∪ C).
+
+31. For all sets A and B,
+A ∪ (B − A) = A ∪ B.
+
+32. For all sets A and B,
+(A ∪ B) ∪ (A ∩ B) = A ∪ B.
+
+33. For all sets A and B,
+(A ∩ B) ∪ (A − B) = A.
+
+34. For all sets A, B, and C,
+A − (B − C) = (A − B) ∪ (A ∩ C).
+
+35. For all sets A, B, and C,
+A − (A − B) = A ∩ B.
