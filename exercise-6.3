@@ -223,7 +223,30 @@ RHS -> 1,4 - 2,3 = 1,4
 
 therfore counterexample found
 
-8. for all sets A and B, if A^c is a subset of B, then A U B = U
+8. for all sets A and B,
+if A^c is a subset of B, then A U B = U
+
+premise - what we know
+A^c is a subset of B
+this means every element not in A is in B
+
+conclusion
+A U B = U
+a or b makes up the universal set
+
+we need to show 2 things:
+1 - A U B is a subset of U
+2 - U is a subset of A U B
+
+part 1: A U B is a subset of U
+let x be an arbitrary element in the universal set U
+case 1: x is in A
+since x is in A therefore x E A U B by the definition of unio
+
+case 2: x is not in A
+since we know from the premise every element not in A is in B, then x is in B, therfore x E A U B
+
+
 
 9. for all sets A,B, and C, if A is a subset of C and B is a subset oc C then A U B is a subset of C
 
