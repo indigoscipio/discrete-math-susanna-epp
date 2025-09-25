@@ -364,7 +364,46 @@ threfore satifisd
 13. for all sets a,b, and c
 A U (B - C) = (A U B) - (A U C)
 
-H 14. For all sets A, B, and C, if A ⊆ B ∩ C and A ∪ C ⊆ B ∪ C, then A = B.
+let A = {1}
+let B = {2}
+let C = {3}
+
+A U (B - C) = {1,2}
+(A U B) - (A U C) = {1-2} - {1,3} = {2}
+
+therefore is false
+
+H 14. For all sets A, B, and C,
+if A A C = B A C and A U C = B U C, then A = B
+
+premise - what we know
+A A C = B U C
+A A C -> x is in A and x is in C
+B U C -> x is in B or x is in C
+A A C = B U C -> every element in A and C is a subset of B or C, and
+every element in B or C is a subset of A and C
+
+conclusion - what we need to prove
+A = B
+
+we must prove 2 things:
+1. A is a subset of B
+2. B is a subset of A
+
+1. show that A is a subset of B, that is we need to show x is in B
+case 1: x E C
+since we know x E A and x E C therefore x E A A C
+therefore x E B U C
+
+case 2: x is not in C
+since x E A, we know that A U C because premise 2 (A U C = B U C)
+therefore x must be in B U C
+x E B UC means x is in B or x is in C
+since x is not in C, therefore x isi n B
+
+2. 
+
+
 
 H 15. For all sets A, B, and C, (A − B) ∪ C ⊆ A ∪ (C − B).
 
