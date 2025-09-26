@@ -509,8 +509,36 @@ case 2: x E P(B)
 since x is an element of P(B), then by the definition of power set x is a subset of B
 since both cases are prove, therefore true
 
-
 20. For all sets A and B, P(A ∩ B) = P(A) ∩ P(B).
+
+let A = {1}
+let B = {2}
+
+P(A) = P(1) = {{empty set},{1}}
+P(B) = P(2) = {{empty set},{2}}
+P(A A B) = P(empty set) = {{the empty set}}
+P(A) ∩ P(B) = {{the empty set}}
+
+seems toe be true. general proof:
+
+part 1: prove P(A ∩ B) is a subset of P(A) ∩ P(B).
+let x be any element in P(A ∩ B)
+we must show x is in P(A) ∩ P(B).
+by the definition of power set, x is a subset of A A B
+by the definition of intersection, since A A B is a subset of A and A A B is a subset of B,
+then x is a subset of A and x is a subset of B
+since x is a subset of a, then x E P(A)
+cine x is a subset of b, then x E P(B)
+since x is an element of P(A) and x is an element of P(B), then X E P(A) A P(B)
+
+part 2 : prove P(A) ∩ P(B) is a subset of P(A ∩ B)
+let x be arbitary element in  P(A) ∩ P(B).
+by the definition of intersection, x is in P(A) and x is in P(B)
+by the definition of power set, x is a subset of A and x is a subset of B
+since x is a subset of A and x is a subset of B,
+every element must be in A and B, therefore x is a subset of A A B
+by the definition of power set, since X is a subseto f A A B, then X E P(A A B)
+
 
 21. For all sets A and B, P(A × B) = P(A) × P(B).
 
