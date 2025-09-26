@@ -401,13 +401,46 @@ therefore x must be in B U C
 x E B UC means x is in B or x is in C
 since x is not in C, therefore x isi n B
 
-2. 
+2. B is a subset of A
+show that B is a subset of A, that is we need to show x is in a
+
+case 1: x E C
+since x E b and x E C, therefore B A C -> therefore A A C, therefore x E A
+
+case 2: x is not in C
+since x E B, x E B U C. threfore x must be in A U C. since x E AU C means x E A or x E C,
+we know x is not in x E C, therefore x is in A
 
 
+H 15. For all sets A, B, and C,
+(A − B) ∪ C ⊆ A ∪ (C − B).
 
-H 15. For all sets A, B, and C, (A − B) ∪ C ⊆ A ∪ (C − B).
+let x be any element in (A − B) ∪ C
+we must show x is in A ∪ (C − B)
+
+LHS -> (A − B) ∪ C
+x is in (A but not in B) or x is in C
+
+RHS -> A ∪ (C − B)
+x is in A or (x is in C and not in B)
+
+case 1: x E (A - B)
+since we know x E A - B, by the definition of union x is in A
+therefore x E A ∪ (C − B).
+
+case 2: x E C
+1: x E A
+since we know x E C and x E A, therefore by the definition of union x E (A - B) U C
+
+2: x is not in a
+since x is not in A, then it's on the other part of union (C - B)
+for x to be in (C - B). it must satify 2 conditions:
+condition 1: x E C -> we know this from case 2
+condition 2: x is not in B
 
 H 16. For all sets A and B, if A ∩ B = ∅ then A × B = ∅.
+
+
 
 17. For all sets A and B, if A ⊆ B then P(A) ⊆ P(B).
 
