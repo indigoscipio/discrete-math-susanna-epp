@@ -440,13 +440,75 @@ condition 2: x is not in B
 
 H 16. For all sets A and B, if A ∩ B = ∅ then A × B = ∅.
 
+pick arbitrary set
+let A = {1}
+let B = {2}
 
+A x B = (1,2)
+therefore this statement is false since we found a counterexample
 
 17. For all sets A and B, if A ⊆ B then P(A) ⊆ P(B).
 
+lets try picking arbitrary set
+let A = {1}
+let B = {1,2}
+
+PA = {empty set, 1}
+PB = {empty set, 1, 2, (1,2)}
+
+seems to be true.
+try with Proof
+
+premise: A is a subset of B
+by the definition of subset, every element in A is in B
+
+conclusion: P(A) is a subset of P(B)
+let x be arbitrary element in P(A)
+since x is an element of a power set, then by the definition of power set , x is a set (not a regular elemenet)
+so x E A , since we know x E A and a E B, therefore x E B
+and by the definition of power set, p(A) is a subst of P(B)
+
+
 18. For all sets A and B, P(A ∪ B) ⊆ P(A) ∪ P(B).
 
+counterexample
+A = {1}
+B = {2}
+
+P(A U B) = P(1,2) = {{empty set},{1},{2},{1,2}}
+
+P(A) = P(1) = {{empty set},{1}}
+P(B) = P(2) = {{empty set},{2}}
+P(A) ∪ P(B) = {{empty set},{1},{2}}
+therefore the satement is false
+
 H 19. For all sets A and B, P(A) ∪ P(B) ⊆ P(A ∪ B).
+
+counterexample attempt
+A = {1}
+B = {2}
+
+
+P(A) = P(1) = {{empty set},{1}}
+P(B) = P(2) = {{empty set},{2}}
+P(A) ∪ P(B) = {{empty set},{1},{2}}
+P(A U B) = P(1,2) = {{empty set},{1},{2},{1,2}}
+
+looks correct, seems like a subset
+general proof
+
+let x be arbitratry element in P(A) ∪ P(B)
+we mst show x is in P(A ∪ B)
+
+by the definition of union, x E P(A) or x E P(B)
+
+case 1: x E P(A)
+since x is an element of P(A), then by the definition of power set x is a subset of A
+
+case 2: x E P(B)
+since x is an element of P(B), then by the definition of power set x is a subset of B
+since both cases are prove, therefore true
+
 
 20. For all sets A and B, P(A ∩ B) = P(A) ∩ P(B).
 
