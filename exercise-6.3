@@ -539,18 +539,52 @@ since x is a subset of A and x is a subset of B,
 every element must be in A and B, therefore x is a subset of A A B
 by the definition of power set, since X is a subseto f A A B, then X E P(A A B)
 
-
 21. For all sets A and B, P(A × B) = P(A) × P(B).
+
+let A = {1}
+let B = {2}
+P(A) = P(1) = {{empty set},{1}}
+P(B) = P(2) = {{empty set},{2}}
+P(A)×P(B)={(∅,∅),(∅,{2}),({1},∅),({1},{2})}
+(A x B) = {(1,2)}
+P(A x B) = P(1,2) = {{empty set},{1,2}}
+since its diffrent we've found a counterexample
+
 
 22. Write a negation for each of the following statements.
 Indicate which is true, the statement or its negation. Justify your answers.
 a. ∀ sets S, ∃ a set T such that S ∩ T = ∅.
 b. ∃ a set S such that ∀ sets T, S ∪ T = ∅.
 
+answer:
+a. for all sets S, there exists a set T such that S intersect T equals the empty set
+negation: E sets S, A set T such that ~((S A T) = empty set)
+E sets s, A set T such that S^c U T^c does not equal the empty set
+
+which is corect negation or original statement?
+to provce, we must find for any given set S we can always find there at least one set T
+such that there is no element in common
+
+let S = {1,2,3}
+let T = empty set
+
+S A empty set = empty set
+
+b. ∃ a set S such that ∀ sets T, S ∪ T = ∅.
+answer:
+negation: A set such that E sets T, S U T does not equal the empty set
+is it true or fale?
+
+to prove origianl statement is true, find one specific set S
+that mekes the condition true for every single set T
+let S = {}
+let T = ...
+
 H 23. Let S = {a, b, c}, and for each integer i = 0, 1, 2, 3, let Sᵢ be the set of all subsets of S that have i elements.
 List the elements in S₀, S₁, S₂, and S₃. Is {S₀, S₁, S₂, S₃} a partition of P(S)?
 
-24. Let A = {t, u, v, w}, and let S₁ be the set of all subsets of A that do not contain w and S₂ the set of all subsets of A that contain w.
+24. Let A = {t, u, v, w}, and let S₁ be the set of all subsets of A that do not contain w and
+S₂ the set of all subsets of A that contain w.
 a. Find S₁.
 b. Find S₂.
 c. Are S₁ and S₂ disjoint?
@@ -558,29 +592,31 @@ d. Compare the sizes of S₁ and S₂.
 e. How many elements are in S₁ ∪ S₂?
 f. What is the relation between S₁ ∪ S₂ and P(A)?
 
-H 25. Use mathematical induction to prove that for every integer n ≥ 2, if a set S has n elements, then the number of subsets of S with an even number of elements equals the number of subsets of S with an odd number of elements.
-
-H 26. The following problem, devised by Ginger Bolton, appeared in the January 1989 issue of the College Mathematics Journal (Vol. 20, No. 1, p. 68):
-
-Given a positive integer n ≥ 2, let S be the set of all nonempty subsets of {2, 3, …, n}. For each Sᵢ ∈ S, let Pᵢ be the product of the elements of Sᵢ. Prove or disprove that
-
-Σ (i = 1 to 2ⁿ⁻¹) Pᵢ = ((n + 1)! / 2) − 1.
+answer:
+a. S1 = {{empty set},{t},{u},{v},{t,u},{t.v},{u,v},{t,u,v}}
+b. s2 = {{empty set},{t},{u},{v},{w},{t,u},{t.v},{u,v},{t,u,v}}...
+c. are s1 and s2 disjoint? yes because their intersection is the empty set
 
 27. For all sets A, B, and C,
 (A ∪ B) ∩ C = (A ∩ C) ∪ (B ∩ C).
 
 Proof: Suppose A, B, and C are any sets. Then
-(A ∪ B) ∩ C = C ∩ (A ∪ B) (by commutativity)
-= (C ∩ A) ∪ (C ∩ B) (by distributivity)
-= (A ∩ C) ∪ (B ∩ C) (by commutativity).
+(A ∪ B) ∩ C = C ∩ (A ∪ B) by (a)
+= (C ∩ A) ∪ (C ∩ B) by (b)
+= (A ∩ C) ∪ (B ∩ C) by(c)
+
+answer:
+a)
+b)
+c)
 
 H 28. For all sets A, B, and C,
 (A ∪ B) − (C − A) = A ∪ (B − C).
 
 Proof: Suppose A, B, and C are any sets. Then
-(A ∪ B) − (C − A) = (A ∪ B) ∩ (C − A)ᶜ (by set difference law)
-= (A ∪ B) ∩ (C ∩ Aᶜ)ᶜ (by definition of difference)
-= (A ∪ B) ∩ (Cᶜ ∪ A) (by De Morgan’s law)
+(A ∪ B) − (C − A) = (A ∪ B) ∩ (C − A)ᶜ (
+= (A ∪ B) ∩ (C ∩ Aᶜ)ᶜ 
+= (A ∪ B) ∩ (Cᶜ ∪ A)
 = (A ∪ B) ∩ (A ∪ Cᶜ)
 = A ∪ (B ∩ Cᶜ)
 = A ∪ (B − C).
@@ -589,11 +625,11 @@ H 29. Some steps are missing from the following proof:
 For all sets A and B, (A ∪ B)ᶜ − Bᶜ = (A − B) ∪ Bᶜ.
 
 Proof: Let any sets A and B be given. Then
-(A ∪ B)ᶜ − Bᶜ = (A ∪ B)ᶜ ∩ (Bᶜ)ᶜ (by set difference law)
-= (A ∪ B)ᶜ ∩ B (by double complement law)
-= (Aᶜ ∩ Bᶜ) ∩ B (by De Morgan’s law)
-= Aᶜ ∩ (Bᶜ ∩ B) (by associativity)
-= Aᶜ ∩ ∅ (by complement law)
+(A ∪ B)ᶜ − Bᶜ = (A ∪ B)ᶜ ∩ (Bᶜ)ᶜ
+= (A ∪ B)ᶜ ∩ B (
+= (Aᶜ ∩ Bᶜ) ∩ B 
+= Aᶜ ∩ (Bᶜ ∩ B) 
+= Aᶜ ∩ ∅ (
 = ∅.
 
 Thus, (A ∪ B)ᶜ − Bᶜ = ∅.
