@@ -697,9 +697,47 @@ answer:
 = empty set by identity law
 
 34. For all sets A, B, and C,
-A − (B − C) = A - (B U C)
+(A − B) − C = A - (B U C)
 
 answer:
+(A − B) − C = (A A B^c) - C by set difference law
+= (A A B^c) A C^c by set difference Law
+= A A (B^c A C^c) by associateive law
+
+RHS
+A - (B U C) = A A (B U C)^c by set difference law
+= A A (B^c A C^c) by de morgans law
+
+therefore proven
+
 
 35. For all sets A, B, and C,
 A − (A − B) = A ∩ B.
+
+answer:
+A − (A − B) = A A (A - B)^c by set difference law
+= A A (A A B^c)^c by set differnce law
+= A A (A^c U B) by double complement law\
+= (A A A^c) U (A A B) by distributive law
+= empty set U (A A B) by identity law
+= A A B by identity law
+
+36. for all sets A and B, ((A^c U B^c) - A)^c = A
+answer: 
+((A^c U B^c) - A)^c = (A^c U B^c)^c - A^c by set difference law
+= (A A B) - A^c by double complement law
+= A^c^c by double complement
+= A 
+
+37. for all sets A and B, (B^c U (B^c - A))^c = B
+answer:
+(B^c U (B^c - A))^c = (B^c U (B^c A A^c))^c by set difference law
+= B U (B^c A A^c)^c by complement law
+= B U (B U A) by double complement law
+= ??
+
+38. for all sets a and b, (A A B)^c A A = A - B
+
+39. for all sets a and b, (A - B) U (B - A) = (A U B) - (A A B)
+
+40. for all ests a, b, and c, (A - B) - (B - C) = A - B
