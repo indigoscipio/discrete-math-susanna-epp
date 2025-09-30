@@ -634,20 +634,72 @@ g) by the definiton of difference
 In 30–40, construct an algebraic proof for the given state
 ment. Cite a property from Theorem 6.2.2 for every step.
 
+Commutative Laws:
+- A ∪ B = B ∪ A
+- A ∩ B = B ∩ A
+
+Associative Laws:
+- (A ∪ B) ∪ C = A ∪ (B ∪ C)
+- (A ∩ B) ∩ C = A ∩ (B ∩ C)
+
+Distributive Laws:
+- A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C)
+- A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C)
+
+Identity Laws:
+- A ∪ ∅ = A
+- A ∩ U = A
+
+Complement Laws:
+- A ∪ Aᶜ = U
+- A ∩ Aᶜ = ∅
+
+Idempotent Laws:
+- A ∪ A = A
+- A ∩ A = A
+
+De Morgan’s Laws:
+- (A ∪ B)ᶜ = Aᶜ ∩ Bᶜ
+- (A ∩ B)ᶜ = Aᶜ ∪ Bᶜ, etc
+
 30. For all sets A, B, and C,
 (A ∩ B) ∪ C = (A ∪ C) ∩ (B ∪ C).
+
+answer:
+(A ∩ B) ∪ C = C ∪ (A ∩ B) by commutative law
+= (C U A) A (C U B) by distributive law
+= (A U C) A (B U C) by commutative law law
 
 31. For all sets A and B,
 A ∪ (B − A) = A ∪ B.
 
+answer: 
+A ∪ (B − A) = A U (B A A^c) by set difference law
+= (A U B) A (A U A^c) by distributive law
+= (A U B) A U by complement law
+= A U B by identity law
+
 32. For all sets A and B,
-(A ∪ B) ∪ (A ∩ B) = A ∪ B.
+(A - B) ∪ (A ∩ B) = A
+
+answer: 
+(A - B) ∪ (A ∩ B) = (A A B^c) U (A A B) by set difference law
+= A A (B^c U B) by distributive law
+= A A U by complement law
+= A by identity law
 
 33. For all sets A and B,
-(A ∩ B) ∪ (A − B) = A.
+(A - B) ∩ (A ∩ B) = the empty set
+answer: 
+(A - B) ∩ (A ∩ B) = (A A B^c) A (A A B) by set difference law
+= A A (B^c A B) by distributive law
+= A A empty set by complement law
+= empty set by identity law
 
 34. For all sets A, B, and C,
-A − (B − C) = (A − B) ∪ (A ∩ C).
+A − (B − C) = A - (B U C)
+
+answer:
 
 35. For all sets A, B, and C,
 A − (A − B) = A ∩ B.
