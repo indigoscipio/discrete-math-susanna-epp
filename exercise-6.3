@@ -774,4 +774,49 @@ split into 2 part
 = B A (A A B)^c by set difference law
 = B A (A^c U B^c) by de morgans law
 = (B A A^c) U (B A B^c) by distributive law
-= 
+= (B A A^c) U empty set by identity law
+= B A A^c by identiy law
+
+commbine the tow
+(A A B^c) A (B A A^c)
+= (A A A^c) A (B A B^c) by commutative law
+= empty set A empty set by indeitity  law
+= empty set by identity law
+
+43. ((A A (B U C)) A (A - B)) A (B U C^c)
+answer:
+
+(A A (B U C))
+= (A A B) U (A A C) by distributive law
+
+(A - B)
+= A A B^c by set differnec law
+
+combine the two
+((A A B) U (A A C)) A (A A B^c)
+=  (A A B^c) A ((A A B) U (A A C)) by commutative law
+= ((A A B^c) A (A A B)) U ((A A B^c) A (A A C)) by distributive law
+
+spllit into 2 parts
+((A A B^c) A (A A B))
+= (A A A) A (B A B^c) by commutative law
+= (A A A) A empty set by identiy law
+= A A empty set by identiy law
+= empty set by identity law
+
+((A A B^c) A (A A C))
+= (A A A) A (B^c A C) by commutiative/associative law
+= A A (B^c A C) by identity law
+
+put all together again
+empty set  U A A (B^c A C)
+= A A (B^c A C) by identity law
+
+put everything from the start
+= (A A B^c A C) A (B U C^c)
+= (B U C^c) A (A A B^c A C) by commutative law
+= B A (A A B^c A C) U C^c A (A A B^c A C)
+= (B A A A B^c A C) U (C^c A A A B^c A C) by associateive law
+= empty set A (A A C) U empty set A (A A B^c) by identity law
+= empty set U empty set by identity law
+= empty set
