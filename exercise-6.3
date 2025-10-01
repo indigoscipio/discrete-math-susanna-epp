@@ -733,11 +733,45 @@ answer:
 answer:
 (B^c U (B^c - A))^c = (B^c U (B^c A A^c))^c by set difference law
 = B U (B^c A A^c)^c by complement law
-= B U (B U A) by double complement law
-= ??
 
 38. for all sets a and b, (A A B)^c A A = A - B
+(A A B)^c A A = (A^c U B^c) A A by complement/de morgans law
+= A A (A^c U B^c) by commutative law
+= (A A A^C) U (A A B^C) by distributive law
+= empty set U (A A B^C) by identity law
+= (A A B^c) by identity law
+= A - B by set difference
 
 39. for all sets a and b, (A - B) U (B - A) = (A U B) - (A A B)
 
-40. for all ests a, b, and c, (A - B) - (B - C) = A - B
+RHS
+(A U B) - (A A B) = (A U B) A (A A B)^c by set difference law
+= (A U B) A (A^c U B^c) by de morgans law
+
+In 41–43 simplify the given expression. Cite a property 
+from Theorem 6.2.2 for every step.
+
+41. A A ((B U A^c) A B^c)
+answer: 
+=  A A (B^c A (B U A^c)) by commutative law
+= A A ((B^c A B) U (B^c A A^c)) by identity law
+= A A (B^c A A^c) by identity/complemetn Law
+= A A A^c A B^c by commutative law
+= empty set A B^c by compleemnt law
+= the empty set by identity law
+
+42. (A - (A A B)) A (B - (A A B))
+answer:
+split into 2 part
+(A - (A A B)) 
+= A A (A A B)^c by set difference law
+= A A (A^c U B^c) by de morgans law
+= (A A A^c) U (A A B^c) by distributive law
+= empty set U (A A B^c) by identity law
+= A A B^c by identity law
+
+(B - (A A B))
+= B A (A A B)^c by set difference law
+= B A (A^c U B^c) by de morgans law
+= (B A A^c) U (B A B^c) by distributive law
+= 
