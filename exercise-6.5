@@ -621,4 +621,89 @@ f(bbab) = 2
 f(b) = 0
 the range of f = all nonnegative integer
 
-b. define g: s -> s as follows: for each string s inS,
+b. define g: s -> s as follows: for each string s in S,
+
+g(s) = the string obtained by writing the characters of s in reverse ordered
+
+find g(aba), g(bbab), and g(b)
+what is the range of g?
+
+g(aba) = aba
+g(bbab) = babb
+g(b) = b
+the range of g = the entire set S
+
+28. consider the coding and decoding functions E and D defined in Example 7.1.9
+a. find E(0110) and D(111111000111)
+b. find E(1010) and D(000000111111)
+
+answer
+a. E(0110) = 000111111000
+D(111111000111) = 1101
+
+b. E(1010) = 111000111000
+D(000000111111) = 0011
+
+29. consier the hamming distance function defined in example 7.1.10
+a. find H(10101, 00011)
+b. find H(00110, 10111)
+
+answer:
+a. H(10101, 00011) = 3 
+b. h(00110, 10111) = 2
+
+32. consider the three place boolean function f defined by the following rule:
+for each triple (x1,x2,x3) of 0s and 1s,
+
+f(x1,x2,x3) = 4x1 + 3x2 + 2x3 mod 2
+
+a. find f(1,1,1) and f(0,0,1)
+b. describe f using an input/output table
+
+answer:
+a. f(1,1,1)
+= (4 + 3 + 2) mod 2
+= 9 mod 2
+= 1
+
+f(0,0,1)
+= 0 + 0 + 1 mod 2
+= 1 mod 2
+= 1
+
+b.
+input
+x1 x2 x3 output
+1 1 1 1
+1 1 0 1
+1 0 1 0
+1 0 0 0
+0 1 1 1
+0 1 0 1
+0 0 1 0
+0 0 0 0
+
+33. student A tries to define a function g: Q -> Z by the rule
+g(m/n) = m - n for all integers m and n with n does not equal 0
+
+student b claims that g is not well defined
+justify student B's claim
+
+a funciton is well deifned if input corresponds to output
+so its unique
+
+lets see and pick an example
+
+let m = 1
+let n = 2
+g(1/2) = 1-2 = -1 -> an integer
+
+let m = 2
+let n = 4
+g(2/4) = 2-4 = -2 -> an integer but different output
+
+since a single input value results in two diferent outputs
+the function g is not well defined. therefore it violates the requirement
+that every input must have a unique output.
+
+
